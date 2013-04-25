@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/concurrent
+END
+GenerateTotalEntitlementReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/concurrent/GenerateTotalEntitlementReport.java
+END
+BasicTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/state_equal/!svn/ver/79/trunk/cdoe/src/main/java/com/cdoe/services/concurrent/BasicTask.java
+END
+TaskStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/state_equal/!svn/ver/79/trunk/cdoe/src/main/java/com/cdoe/services/concurrent/TaskStatus.java
+END
+GenerateNegativePaymentReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/concurrent/GenerateNegativePaymentReport.java
+END
+PerformSeMonthlyPaymentProcessing.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/concurrent/PerformSeMonthlyPaymentProcessing.java
+END
+GenerateSeCofrsPaymentReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/concurrent/GenerateSeCofrsPaymentReport.java
+END
+TaskMonitor.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/state_equal/!svn/ver/79/trunk/cdoe/src/main/java/com/cdoe/services/concurrent/TaskMonitor.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/state_equal/!svn/ver/79/trunk/cdoe/src/main/java/com/cdoe/services/concurrent/package.html
+END
+GenerateMillLevySummaryReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/concurrent/GenerateMillLevySummaryReport.java
+END
+GenerateSeMonthlyComparisonReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/state_equal/!svn/ver/208/trunk/cdoe/src/main/java/com/cdoe/services/concurrent/GenerateSeMonthlyComparisonReport.java
+END
+CompositeTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/state_equal/!svn/ver/79/trunk/cdoe/src/main/java/com/cdoe/services/concurrent/CompositeTask.java
+END
+GenerateSeMonthlyPaymentReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/concurrent/GenerateSeMonthlyPaymentReport.java
+END
+GenerateYtdPaymentWithholdingsReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/concurrent/GenerateYtdPaymentWithholdingsReport.java
+END
+DefaultMonitor.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/state_equal/!svn/ver/79/trunk/cdoe/src/main/java/com/cdoe/services/concurrent/DefaultMonitor.java
+END
+TaskIdentifer.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/concurrent/TaskIdentifer.java
+END
+GenerateSeCsiPaymentReportTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/state_equal/!svn/ver/237/trunk/cdoe/src/main/java/com/cdoe/services/concurrent/GenerateSeCsiPaymentReportTask.java
+END

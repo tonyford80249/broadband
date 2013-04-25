@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/impl/audit
+END
+ELPAUpdateManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/state_equal/!svn/ver/142/trunk/cdoe/src/main/java/com/cdoe/services/impl/audit/ELPAUpdateManager.java
+END
+UpdateStudentsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/state_equal/!svn/ver/142/trunk/cdoe/src/main/java/com/cdoe/services/impl/audit/UpdateStudentsManager.java
+END
+AuditTrackingManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/state_equal/!svn/ver/142/trunk/cdoe/src/main/java/com/cdoe/services/impl/audit/AuditTrackingManager.java
+END
+BillingUpdateManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/state_equal/!svn/ver/142/trunk/cdoe/src/main/java/com/cdoe/services/impl/audit/BillingUpdateManager.java
+END
+DataAdminManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/state_equal/!svn/ver/142/trunk/cdoe/src/main/java/com/cdoe/services/impl/audit/DataAdminManager.java
+END
+CreateUpdateAuditManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/state_equal/!svn/ver/142/trunk/cdoe/src/main/java/com/cdoe/services/impl/audit/CreateUpdateAuditManager.java
+END
+AudCDE40TransReimbFormManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/state_equal/!svn/ver/142/trunk/cdoe/src/main/java/com/cdoe/services/impl/audit/AudCDE40TransReimbFormManager.java
+END
+OrganizationInformationManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/state_equal/!svn/ver/142/trunk/cdoe/src/main/java/com/cdoe/services/impl/audit/OrganizationInformationManager.java
+END
+UploadStudentsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/state_equal/!svn/ver/142/trunk/cdoe/src/main/java/com/cdoe/services/impl/audit/UploadStudentsManager.java
+END
+ValidateSASIDsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/state_equal/!svn/ver/142/trunk/cdoe/src/main/java/com/cdoe/services/impl/audit/ValidateSASIDsManager.java
+END
+AuditSummaryManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/impl/audit/AuditSummaryManager.java
+END

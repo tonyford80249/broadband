@@ -1,0 +1,42 @@
+package com.cdoe.services;
+
+import java.util.List;
+import java.util.Map;
+
+import com.cdoe.biz.model.StateEqualReference;
+
+public interface IReferenceDataManager {
+
+	public String getOrganizationName(String orgCode);
+	
+	public Map<String, String> getAllOrganizationsMap();
+	
+	public Map<String, String> getOrganizationsMap(String orgType);
+	
+	public List<String> getMonthList();
+	
+	public List<String> getCrosswalkDataType();
+	
+	public List<String> getDistrictEntitlementPeriod();
+	
+	public List<String> getStateShareAdjustments();
+	
+	public String getLastPaymentDate();
+	
+	public List<String> getCrossWalkDataType();
+	
+	public List<String> getAuditRepaymentAdjustmentFrequencies();
+
+	public List<String> getCapitalOutlayDistricts();
+	
+	public List<String> getStateEqualAdjustments();
+	
+	public List<String> getUploadVariables();
+	
+	public List<String> getCalculationPeriods();
+	
+	public List<String> getElectionTopics();
+	
+	public List<StateEqualReference> findByGroupName(String groupName);
+
+}

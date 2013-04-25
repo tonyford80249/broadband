@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>us.co.state.cde</groupId>
+  <artifactId>cde-parent</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging> 
+  
+  <properties>
+    <svnUrl>https://svn.cde.state.co.us/svn</svnUrl>
+    <cdeRepoId>cde-repo</cdeRepoId>
+    <cdeRepoURL>file:///r:/repository</cdeRepoURL>
+  </properties>
+  
+   
+
+  <developers>
+    <developer>
+      <id>ims-t9</id>
+      <name>Jeff Yagey</name>
+      <email>jeff.yagey@wyantdata.com</email>
+      <organization>WDS</organization>
+    </developer>
+   
+   <developer>
+      <id>fsu-t1</id>
+      <name>Mark Siegman</name>
+      <email>mark.siegman@wyantdata.com</email>
+      <organization>WDS</organization>
+    </developer>
+
+	 <developer>
+      <id>gustafson_d</id>
+      <name>Dave Gustafson</name>
+      <email>dave.gustafson@wyantdata.com</email>
+      <organization>WDS</organization>
+    </developer>
+
+	<developer>
+      <id>ims-t3</id>
+      <name>Scott Lee</name>
+      <email>leels@wyantdata.com</email>
+      <organization>WDS</organization>
+    </developer>
+
+	<developer>
+      <id>clark_n</id>
+      <name>Nancy Clark</name>
+      <email>clark_n@cde.state.co.us</email>
+      <organization>WDS</organization>
+    </developer>
+
+    <developer>
+      <id>bruner_c</id>
+      <name>Cynthia Bruner</name>
+      <email>bruner_c@cde.state.co.us</email>
+      <organization>CDE</organization>
+    </developer>
+
+	 <developer>
+      <id>pullam_m</id>
+      <name>Martin Pullam</name>
+      <email>pullam_m@cde.state.co.us</email>
+      <organization>CDE</organization>
+    </developer>
+
+	 <developer>
+      <id>abueldahab_d</id>
+      <name>Dee Abueldahab</name>
+      <email>abueldahab_d@cde.state.co.us</email>
+      <organization>CDE</organization>
+    </developer>
+
+	 <developer>
+      <id>williams_w</id>
+      <name>Wesley Williams</name>
+      <email>williams_w@cde.state.co.us</email>
+      <organization>CDE</organization>
+    </developer>
+
+	 <developer>
+      <id>martellaro_h</id>
+      <name>Helena Martellaro</name>
+      <email>martellaro_h@cde.state.co.us</email>
+      <organization>CDE</organization>
+    </developer>
+
+	 <developer>
+      <id>waltrip_a</id>
+      <name>Alex Waltrip</name>
+      <email>waltrip_a@cde.state.co.us</email>
+      <organization>CDE</organization>
+    </developer>
+
+	 <developer>
+      <id>padelio_c</id>
+      <name>Cain Padelio</name>
+      <email>padelio_c@cde.state.co.us</email>
+      <organization>CDE</organization>
+    </developer>
+
+    <developer>
+      <id>kruus_j</id>
+      <name>Jani Kruus</name>
+      <email>kruus_j@cde.state.co.us</email>
+      <organization>CDE</organization>
+    </developer>
+
+	 <developer>
+      <id>stevenson_j</id>
+      <name>Jeff Stevenson</name>
+      <email>stevenson_j@cde.state.co.us</email>
+      <organization>CDE</organization>
+    </developer>
+
+	 <developer>
+      <id>glenn_k</id>
+      <name>Keith Glenn</name>
+      <email>glenn_k@cde.state.co.us</email>
+      <organization>CDE</organization>
+    </developer>
+
+	 <developer>
+      <id>kispert_c</id>
+      <name>Corey Kispert</name>
+      <email>kispert_c@cde.state.co.us</email>
+      <organization>CDE</organization>
+    </developer>
+
+     
+
+  </developers>
+
+  <repositories>
+     <repository>
+       <id>${cdeRepoId}</id>
+       <url>${cdeRepoURL}</url>
+     </repository>
+  </repositories>
+
+  <scm>
+     <developerConnection>scm:svn:${svnUrl}/${svnProject}/${svnSource}</developerConnection>
+     <url>${svnUrl}</url>
+  </scm>
+
+
+
+  <build>
+    <sourceDirectory>src/</sourceDirectory>
+    <outputDirectory>classes/</outputDirectory>
+   
+    <pluginManagement>
+     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.0.2</version>
+        <configuration>
+          <source>
+            1.6
+          </source>
+          <target>
+            1.6
+          </target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
+          <classesDirectory>classes/</classesDirectory>
+          <finalName>${project.name}</finalName>
+          <outputDirectory>deploy/</outputDirectory>
+		  <archive>
+		    <manifest>
+               <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+		   </manifest>
+           <manifestEntries>
+				<Implementation-Version>${buildVersion}</Implementation-Version>
+				<Build-Timestamp>${buildDateTime}</Build-Timestamp>
+			</manifestEntries>
+	      </archive>
+	     
+
+        </configuration>
+      </plugin>
+
+       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-scm-plugin</artifactId>
+        <version>1.7</version>
+        <configuration>
+          <connectionType>developerConnection</connectionType> 
+        <!--
+          <tag>HEAD</tag>
+    -->
+        </configuration>
+        
+        <executions>
+           <execution>   
+              <id>perform-checkout</id>   
+              <configuration>      
+                 <checkoutDirectory>build/</checkoutDirectory>   
+              
+              </configuration>   
+              <phase>initialize</phase>   
+              <goals>   
+                 <goal>checkout</goal>   
+              </goals>   
+            </execution>
+        </executions>
+      </plugin>
+      
+      <plugin> 
+        <groupId>org.codehaus.mojo</groupId> 
+        <artifactId>buildnumber-maven-plugin</artifactId>
+         <executions> 
+         <execution> 
+            <id>generate-buildnumber</id> 
+                <phase>initialize</phase> 
+            <goals> 
+                <goal>create</goal> 
+            </goals> 
+            <configuration> 
+                <useLastCommittedRevision>true</useLastCommittedRevision> 
+                <buildNumberPropertyName>buildRevision</buildNumberPropertyName>
+                <scmDirectory>build</scmDirectory>
+            </configuration> 
+          </execution> 
+        <execution> 
+            <id>generate-buildtimestamp</id> 
+            <phase>initialize</phase> 
+            <goals> 
+                <goal>create</goal> 
+            </goals> 
+            <configuration> 
+                <format>{0,date,yyyy-MM-dd HH:mm:ss}</format> 
+                <items> 
+                    <item>timestamp</item> 
+                </items> 
+                <buildNumberPropertyName>buildDateTime</buildNumberPropertyName> 
+            </configuration> 
+        </execution> 
+        <execution> 
+            <id>generate-timestamp</id> 
+            <phase>initialize</phase> 
+            <goals> 
+                <goal>create</goal> 
+            </goals> 
+            <configuration> 
+                <format>{0,date,yyyyMMdd}</format> 
+                <items> 
+                    <item>timestamp</item> 
+                </items> 
+                <buildNumberPropertyName>buildDate</buildNumberPropertyName> 
+            </configuration> 
+        </execution> 
+          <execution> 
+              <id>generate-versionnumber</id> 
+                  <phase>initialize</phase> 
+              <goals> 
+                  <goal>create</goal> 
+              </goals> 
+              <configuration>   
+                <format>V_{0}_{1}</format>
+                <items>
+                   <item>${buildDate}</item>
+                   <item>${buildRevision}</item>
+                </items>
+                <buildNumberPropertyName>buildVersion</buildNumberPropertyName> 
+              <!--
+                <providerImplementations>
+                  <svn>javasvn</svn>
+                </providerImplementations> 
+              -->
+                <revisionOnScmFailure>UNKOWN_NUM</revisionOnScmFailure>
+
+              </configuration> 
+          </execution> 
+        </executions>
+      </plugin> 
+
+    </plugins>
+    </pluginManagement>
+  </build>
+ </project>

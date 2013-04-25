@@ -1,0 +1,191 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/stateequal
+END
+INegativePaymentReportManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/INegativePaymentReportManager.java
+END
+IGenerateYtdPaymentWithholdingsReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IGenerateYtdPaymentWithholdingsReport.java
+END
+IImportAuditTransDataManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IImportAuditTransDataManager.java
+END
+IDisplayAdjustmentManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IDisplayAdjustmentManager.java
+END
+IPaymentReportManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IPaymentReportManager.java
+END
+IMillLevyCertManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/state_equal/!svn/ver/246/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IMillLevyCertManager.java
+END
+IMonthlyPaymentsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/state_equal/!svn/ver/237/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IMonthlyPaymentsManager.java
+END
+IPerformSeMonthlyPaymentProcessing.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IPerformSeMonthlyPaymentProcessing.java
+END
+ICrosswalkCollectionDataManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/state_equal/!svn/ver/264/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/ICrosswalkCollectionDataManager.java
+END
+IDistrictPaymentReportManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IDistrictPaymentReportManager.java
+END
+IMonthlyPaymentComparisonReportManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/state_equal/!svn/ver/150/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IMonthlyPaymentComparisonReportManager.java
+END
+IAuditSummaryReportManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IAuditSummaryReportManager.java
+END
+ICSICalculationsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/ICSICalculationsManager.java
+END
+IImportAuditsManager.java.edited
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IImportAuditsManager.java.edited
+END
+IElectionsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/state_equal/!svn/ver/233/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IElectionsManager.java
+END
+IOtherStateShareAdjustmentsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IOtherStateShareAdjustmentsManager.java
+END
+IYtdPaymenstAndWithholdingsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IYtdPaymenstAndWithholdingsManager.java
+END
+IHelpManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/state_equal/!svn/ver/289/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IHelpManager.java
+END
+ITotalEntitlementReportManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/ITotalEntitlementReportManager.java
+END
+ICalculateEntitlementsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/ICalculateEntitlementsManager.java
+END
+IMillLevyOverrideWorksheetManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/state_equal/!svn/ver/276/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IMillLevyOverrideWorksheetManager.java
+END
+IGenerateSeMonthlyPaymentReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IGenerateSeMonthlyPaymentReport.java
+END
+IReportsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IReportsManager.java
+END
+ISeCsiPaymentReportManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/state_equal/!svn/ver/204/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/ISeCsiPaymentReportManager.java
+END
+IMillLevySummaryReportManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IMillLevySummaryReportManager.java
+END
+IUploadVariablesManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/state_equal/!svn/ver/144/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IUploadVariablesManager.java
+END
+IGenerateSeCofrsPaymentReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/state_equal/!svn/ver/249/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IGenerateSeCofrsPaymentReport.java
+END
+IImportAuditsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IImportAuditsManager.java
+END
+ICommentsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/ICommentsManager.java
+END
+IViewReportsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/state_equal/!svn/ver/237/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IViewReportsManager.java
+END
+IGenerateSeMonthlyComparisonReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/stateequal/IGenerateSeMonthlyComparisonReport.java
+END

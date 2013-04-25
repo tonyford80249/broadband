@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/impl
+END
+DistrictDetailManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/state_equal/!svn/ver/39/trunk/cdoe/src/main/java/com/cdoe/services/impl/DistrictDetailManager.java
+END
+PaymentReportManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/services/impl/PaymentReportManager.java
+END
+UploadService.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/state_equal/!svn/ver/287/trunk/cdoe/src/main/java/com/cdoe/services/impl/UploadService.java
+END
+BaseManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/impl/BaseManager.java
+END
+MillLevyCertManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/state_equal/!svn/ver/66/trunk/cdoe/src/main/java/com/cdoe/services/impl/MillLevyCertManager.java
+END
+SE360CalculationManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/services/impl/SE360CalculationManager.java
+END
+MonthlyPaymentComparisonReportManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/services/impl/MonthlyPaymentComparisonReportManager.java
+END
+TransportationDataManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/state_equal/!svn/ver/266/trunk/cdoe/src/main/java/com/cdoe/services/impl/TransportationDataManager.java
+END
+AdjustmentStatusManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/state_equal/!svn/ver/115/trunk/cdoe/src/main/java/com/cdoe/services/impl/AdjustmentStatusManager.java
+END
+MailClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/state_equal/!svn/ver/287/trunk/cdoe/src/main/java/com/cdoe/services/impl/MailClient.java
+END
+ReferenceDataManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/state_equal/!svn/ver/307/trunk/cdoe/src/main/java/com/cdoe/services/impl/ReferenceDataManager.java
+END
+YtdPaymenstAndWithholdingsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/impl/YtdPaymenstAndWithholdingsManager.java
+END
+ViewReportsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/state_equal/!svn/ver/237/trunk/cdoe/src/main/java/com/cdoe/services/impl/ViewReportsManager.java
+END
+MillLevyOverrideWorksheetManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/state_equal/!svn/ver/276/trunk/cdoe/src/main/java/com/cdoe/services/impl/MillLevyOverrideWorksheetManager.java
+END
+AuditRepaymentAdjustmentManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/state_equal/!svn/ver/285/trunk/cdoe/src/main/java/com/cdoe/services/impl/AuditRepaymentAdjustmentManager.java
+END
+SeCofrsPaymentReportManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/impl/SeCofrsPaymentReportManager.java
+END
+ChangeAtRiskCountsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/state_equal/!svn/ver/115/trunk/cdoe/src/main/java/com/cdoe/services/impl/ChangeAtRiskCountsManager.java
+END
+ReportCacheManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/state_equal/!svn/ver/77/trunk/cdoe/src/main/java/com/cdoe/services/impl/ReportCacheManager.java
+END
+CoforsUploadManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/impl/CoforsUploadManager.java
+END

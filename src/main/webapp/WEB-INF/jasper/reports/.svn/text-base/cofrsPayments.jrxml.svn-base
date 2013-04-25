@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report4" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ff90509f-2841-4b12-bad7-794ac00e361b">
+    <property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="oddRow">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}.intValue() % 2 == 0]]></conditionExpression>
+			<style mode="Opaque" forecolor="#000000" backcolor="#CCCCCC"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="districtName" class="java.lang.String"/>
+	<field name="districtNumber" class="java.lang.String"/>
+	<field name="fiscalYear" class="java.lang.String"/>
+	<field name="month" class="java.lang.String"/>
+	<field name="accountingNumber" class="java.lang.String"/>
+	<field name="entitlement" class="java.lang.Double"/>
+	<field name="payment" class="java.lang.Double"/>
+	<field name="swap12" class="java.lang.Double"/>
+	<field name="charter12" class="java.lang.Double"/>
+	<field name="audit12" class="java.lang.Double"/>
+	<field name="csi12" class="java.lang.Double"/>
+	<field name="other12" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1dd604e4-319b-4ecb-bd14-ac63e14117e0" mode="Opaque" x="0" y="0" width="802" height="47" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<box leftPadding="10"/>
+				<textElement>
+					<font fontName="SansSerif" size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CDE]]></text>
+			</staticText>
+			<textField evaluationTime="Report">
+				<reportElement uuid="2c410d64-534d-43d4-bf6a-7cc8c7038b93" x="752" y="8" width="40" height="20" forecolor="#FFFFFF"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="9284409a-0ea8-479c-8157-7441a995df2a" x="268" y="8" width="334" height="25" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="SansSerif" size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Payment/Cofrs Report For Accounting]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="962e6863-2991-42ef-b1eb-bbfff3187274" x="77" y="20" width="156" height="20" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT of EDUCATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b2cf878b-4eb8-42cb-9e1d-2ad053d58bdf" x="77" y="8" width="100" height="20" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COLORADO]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="ca41c91c-a236-4bf0-bcf1-2041a7450832" x="672" y="8" width="80" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="d2848a65-97ff-45ef-b19e-503a20dff0a0" mode="Opaque" x="0" y="0" width="80" height="40" backcolor="#95B6D2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[District Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9c2d925d-78f4-419b-b954-28b87112005f" mode="Opaque" x="80" y="0" width="80" height="40" backcolor="#95B6D2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[District Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ff079f2f-19ba-42c5-92f6-81bb713d3f05" mode="Opaque" x="160" y="0" width="80" height="40" backcolor="#95B6D2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Accounting Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="48ec8f60-a0e7-40b9-a91b-d1419a115c66" mode="Opaque" x="240" y="0" width="80" height="40" backcolor="#95B6D2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monthly Entitlement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3ff4181c-ee88-490b-891e-4351ee89a05d" mode="Opaque" x="320" y="0" width="80" height="40" backcolor="#95B6D2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Swap-12 Adjustment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f02346de-4615-41b5-a465-c026310a69f1" mode="Opaque" x="400" y="0" width="80" height="40" backcolor="#95B6D2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Charter-12 Adjustment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4e455b1b-21c6-453d-8eaa-6e1ff6b69e24" mode="Opaque" x="480" y="0" width="80" height="40" backcolor="#95B6D2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Audit Adjustment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d9e0465e-4ed3-4e49-a821-ed61582806ff" mode="Opaque" x="560" y="0" width="80" height="40" backcolor="#95B6D2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CSI-12 Adjustment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ee483942-1ab4-4669-90c2-898ba3569731" mode="Opaque" x="640" y="0" width="80" height="40" backcolor="#95B6D2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Other-12 Adjustment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1a45d9b3-8c78-4bc9-9533-0c76cb575ce6" mode="Opaque" x="720" y="0" width="82" height="40" backcolor="#95B6D2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monthly Payment]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="05b9d8d2-17d9-4625-9e57-1855e59ca4c1" style="oddRow" x="0" y="0" width="80" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{districtNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="54c99c66-2441-459e-9b30-824e0928d8b3" style="oddRow" x="80" y="0" width="80" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{districtName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ce397bf4-129e-4bd1-b215-7e3374e97ec1" style="oddRow" x="160" y="0" width="80" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{accountingNumber}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,###,##0.00">
+				<reportElement uuid="bba8ed5c-8822-4226-93c5-0d7c0417c794" style="oddRow" x="240" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{entitlement} != null ? $F{entitlement} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,###,##0.00">
+				<reportElement uuid="c7ee0910-4fb5-43aa-b5c9-c16692f4dfce" style="oddRow" x="320" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{swap12} != null ? $F{swap12} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,###,##0.00">
+				<reportElement uuid="68c84b93-1084-44bf-8ddf-79c8139d8851" style="oddRow" x="400" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{charter12} != null ? $F{charter12} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,###,##0.00">
+				<reportElement uuid="1905ec30-eed0-4d67-8f42-580290fc47bd" style="oddRow" x="480" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{audit12} != null ? $F{audit12} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,###,##0.00">
+				<reportElement uuid="7909d927-9e86-4f5b-a585-f5c37546b5c9" style="oddRow" x="560" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{csi12} != null ? $F{csi12} :  new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,###,##0.00">
+				<reportElement uuid="1d41d5e5-39e3-4ef0-91f9-6ab7f66bcab8" style="oddRow" x="640" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{other12} != null ? $F{other12} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,###,##0.00">
+				<reportElement uuid="dcfef582-b908-4bc4-8a3e-209e37b8a691" style="oddRow" x="720" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{payment} != null ? $F{payment} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

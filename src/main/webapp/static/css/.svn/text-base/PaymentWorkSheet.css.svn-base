@@ -1,0 +1,495 @@
+
+#$5MileageTraveledForRegularPupilTransportationOnTheMileageCountDateLine3Cde40NearestToOctober1StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:21.0em;
+	text-align:right;
+	
+}
+
+#netCurrentOperExpendTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:128.0em;
+  top:19.25em;
+	
+}
+
+#$4MileageTraveledForTransportingMigrantEducationPupilsLine2Cde40StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:19.25em;
+	text-align:right;
+	
+}
+
+#capOutTranTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:128.0em;
+  top:17.5em;
+	
+}
+
+#$3NetCurrentOperatingExpendituresLine1MinusLine2StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:17.5em;
+	text-align:right;
+	
+}
+
+#operTranTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:128.0em;
+  top:15.75em;
+	
+}
+
+#$2CapitalOutlayExclusionForPupilTransportationForIndependentContractorsAsCalculatedByCdeStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:15.75em;
+	text-align:right;
+	
+}
+
+#pupilTranTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:128.0em;
+  top:14.0em;
+	
+}
+
+#$1TotalCurrentOperatingExpendituresForPupilTransportationLine1cFromCde40StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:14.0em;
+	text-align:right;
+	
+}
+
+#numberOfPupilsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#fiscalYearTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:72.0em;
+  top:5.25em;
+	
+}
+
+#fiscalYearStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:53.0em;
+  top:5.25em;
+	text-align:right;
+	
+}
+
+#textbox1678TextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:36.0em;
+  top:5.25em;
+	
+}
+
+#schoolDistrictNameAndNumberStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:5.25em;
+	text-align:right;
+	
+}
+
+#paymentWorksheetStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:1.75em;
+	text-align:right;
+	
+}
+
+#regDMilesTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:128.0em;
+  top:21.0em;
+	
+}
+
+#$6DaysOfSchoolHeldWhenPupilsWereTransportedIn20102011FiscalYearSchoolTermLine4Cde40StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:22.75em;
+	text-align:right;
+	
+}
+
+#regDaysTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:128.0em;
+  top:22.75em;
+	
+}
+
+#$7RegularEducationPupilTransportationMileageStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:24.5em;
+	text-align:right;
+	
+}
+
+#regDMilesTextbox_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:134.0em;
+  top:24.5em;
+	
+}
+
+#$8TransportationReimbursableMileageLine4PlusLine7StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:26.25em;
+	text-align:right;
+	
+}
+
+#totalReimMileageTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:128.0em;
+  top:26.25em;
+	
+}
+
+#$9MileageEntitlementLine8Times3787StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:28.0em;
+	text-align:right;
+	
+}
+
+#mileageEntitlementTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:128.0em;
+  top:28.0em;
+	
+}
+
+#$10ExcessCostsLine3MinusLine9StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:31.5em;
+	text-align:right;
+	
+}
+
+#exCostsTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:128.0em;
+  top:31.5em;
+	
+}
+
+#$11ExcessCostsEntitlementLine10Times3387StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:33.25em;
+	text-align:right;
+	
+}
+
+#exReimTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:128.0em;
+  top:33.25em;
+	
+}
+
+#$12MileageEntitlementPlusExcessCostEntitlementLine9PlusLine11StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:35.0em;
+	text-align:right;
+	
+}
+
+#mileageEntitlementTextbox_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:128.0em;
+  top:35.0em;
+	
+}
+
+#$13MaximumReimbursementEntitlementLine3Times90StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:36.75em;
+	text-align:right;
+	
+}
+
+#maxReimEntitlementTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:128.0em;
+  top:36.75em;
+	
+}
+
+#$14CalculatedReimbursementEntitlementFor20102011LessOfLines12Or13StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:38.5em;
+	text-align:right;
+	
+}
+
+#reimTranTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:128.0em;
+  top:38.5em;
+	
+}
+
+#$15CalculatedReimbursementEntitlementFor20092010SeeAttachedListStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:40.25em;
+	text-align:right;
+	
+}
+
+#reimTranLyTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:128.0em;
+  top:40.25em;
+	
+}
+
+#$16ReimbursementEntitlementFor20102011NotIncludingFinancialAidForBoardGreatOfLines14And15StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:42.0em;
+	text-align:right;
+	
+}
+
+#reimTranLyTextbox_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:144.0em;
+  top:42.0em;
+	
+}
+
+#$17FinancialAidForProvidingBoardNumberOfDaysBoardWasPaidForPupilsInLieuOfTransportationTimes1StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:43.75em;
+	text-align:right;
+	
+}
+
+#boardTranTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:137.0em;
+  top:43.75em;
+	
+}
+
+#$18ReimbursementEntitlementFor20102011Line16PlusLine17StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:45.5em;
+	text-align:right;
+	
+}
+
+#totalReimEntitlementTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:166.0em;
+  top:45.5em;
+	
+}
+
+#$19AdvanceReimbursementEntitlementFor20102011StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:47.25em;
+	text-align:right;
+	
+}
+
+#advPayLyTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:167.0em;
+  top:47.25em;
+	
+}
+
+#$20FinalReimbursementEntitlementFor20102011Line18MinusLine19StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:49.0em;
+	text-align:right;
+	
+}
+
+#finalReimEntitlementTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:157.0em;
+  top:49.0em;
+	
+}
+
+#$21FinalReimbursementEntitlementProratedLine20Times51718479StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:50.75em;
+	text-align:right;
+	
+}
+
+#finalReimProratedTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:162.0em;
+  top:50.75em;
+	
+}
+
+#$22AdvanceReimbursementEntitlementFor20112012Line18Times2StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:52.5em;
+	text-align:right;
+	
+}
+
+#advPayTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:162.0em;
+  top:52.5em;
+	
+}
+
+#$23AdditionalReimbursementForCourtDesegregationOrderStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:54.25em;
+	text-align:right;
+	
+}
+
+#desegReimTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:166.0em;
+  top:54.25em;
+	
+}
+
+#$24TotalPaymentFor20102011Line21PlusLine22PlusLine23StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:56.0em;
+	text-align:right;
+	
+}
+
+#districtDistributionTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:252.0em;
+  top:56.0em;
+	
+}
+
+#$25TotalActualMilesTraveledForActivityTripsFieldTripsAthleticTripsEtcFor20102011StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:57.75em;
+	text-align:right;
+	
+}
+
+#actMilesTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:128.0em;
+  top:57.75em;
+	
+}
+
+#$26TotalActualMilesTraveledForAnyPurposeIn20102011ExcludingTransportationSupportVehiclesStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:59.5em;
+	text-align:right;
+	
+}
+
+#totalMilesTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:148.0em;
+  top:59.5em;
+	
+}
+

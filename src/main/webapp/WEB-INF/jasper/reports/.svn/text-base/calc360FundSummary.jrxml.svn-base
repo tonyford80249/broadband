@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report7" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3da38e55-6776-413c-98ee-a6a97834f1d4">''
+    <property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="section">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{headingIndicator}]]></conditionExpression>
+			<style fontSize="10" isBold="true" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{heading2Indicator}]]></conditionExpression>
+			<style fontSize="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[($V{REPORT_COUNT}.intValue() % 2 == 0) && ($F{heading2Indicator} == false) && ($F{headingIndicator} == false) && ($F{title}.isEmpty() == false)]]></conditionExpression>
+			<style mode="Opaque" forecolor="#000000" backcolor="#CCCCCC"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="districtName" class="java.lang.String"/>
+	<field name="districtNumber" class="java.lang.String"/>
+	<field name="fiscalYear" class="java.lang.String"/>
+	<field name="headingIndicator" class="java.lang.Boolean"/>
+	<field name="heading2Indicator" class="java.lang.Boolean"/>
+	<field name="title" class="java.lang.String"/>
+	<field name="value" class="java.lang.String"/>
+	<field name="county" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="5cbc79f9-9329-4716-984f-936e16bb1cda" x="186" y="0" width="218" height="20"/>
+				<textElement/>
+				<text><![CDATA[COLORADO DEPARTMENT OF EDUCATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1bc1b5c3-cf44-4afd-86f7-28def442aec6" x="186" y="15" width="212" height="20"/>
+				<textElement/>
+				<text><![CDATA[PUBLIC SCHOOL FINANCE ACT OF 1994]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="22cbee01-6541-4784-82ee-8be117675c4b" x="188" y="30" width="232" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{fiscalYear} + " CALCULATION WORKSHEET"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="88a77d57-eae3-4558-80a7-abe29e1ca0c2" x="435" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="3f90f0e0-e953-4f1f-921a-a6c22b2bc109" x="515" y="0" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e61c8381-bc1c-4dce-aecd-ac9857c7870f" x="11" y="60" width="75" height="20"/>
+				<textElement/>
+				<text><![CDATA[District Name :]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="c27b810c-4127-4747-8576-661f7bcaa172" x="86" y="60" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{districtName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0a4210aa-10aa-4878-80a0-446769ff5988" x="371" y="60" width="84" height="20"/>
+				<textElement/>
+				<text><![CDATA[District Number :]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="90d04846-424b-43ff-9a86-24c965a770ab" x="455" y="60" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{districtNumber}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="6162b46b-b50c-43ea-a18d-af6e134408c9" x="435" y="0" width="121" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cfd49054-2455-4ca4-8cdb-fa478e441798" x="0" y="0" width="434" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="5ff85c4e-8931-4ff4-80c8-fb4a3fa70810" style="section" x="0" y="0" width="434" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="31415e7a-ab29-4247-abf4-4954e4e63fe9" style="section" x="434" y="0" width="121" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="138" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="3384ee03-7ced-4e96-aebe-cbf733eb00ef" x="39" y="50" width="464" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[-- TOTAL PROPERTY TAX MILL LEVIES DOES NOT INCLUDE ABATEMENT MILL LEVIES.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="425d891c-df65-43cb-9bae-f54c35f8471d" x="39" y="70" width="464" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[-- BUILDING & TECHNOLOGY FUND MILL LEVIES, BOND REDEMPTION FUND MILL LEVIES OR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a9ff9cff-53eb-498f-9c7a-af8f793be8f2" x="39" y="90" width="464" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[-- TRANSPORTATION FUND MILL LEVIES.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bafad613-3963-4941-8bad-e4771284d2dc" x="10" y="17" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Note:]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

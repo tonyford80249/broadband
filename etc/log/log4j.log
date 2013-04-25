@@ -1,0 +1,1522 @@
+11:21:05,304 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:05,304 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:05,304 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:05,304 DEBUG headers,main:268 - >> GET /hub/session/00096a6e-7a94-4109-baab-8ba9650cb627 HTTP/1.1
+11:21:05,304 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:05,304 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:05,304 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:05,319 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:05,319 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:05,319 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:05,319 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:05,319 DEBUG wire,main:63 - << "content-length: 282[\r][\n]"
+11:21:05,319 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:05,319 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:05 GMT[\r][\n]"
+11:21:05,319 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:05,319 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:05,319 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:05,319 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:05,319 DEBUG headers,main:255 - << connection: close
+11:21:05,319 DEBUG headers,main:255 - << content-length: 282
+11:21:05,319 DEBUG headers,main:255 - << server: httpd.js
+11:21:05,319 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:05 GMT
+11:21:05,319 DEBUG wire,main:77 - << "{"name":"getSessionCapabilities","sessionId":"00096a6e-7a94-4109-baab-8ba9650cb627","status":0,"value":{"cssSelectorsEnabled":true,"browserName":"firefox","handlesAlerts":true,"javascriptEnabled":true,"nativeEvents":true,"platform":"WINNT","takesScreenshot":true,"version":"7.0.1"}}"
+11:21:05,319 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:05,319 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:05,319 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:05,319 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:05,319 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:05,319 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:05,319 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:05,319 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:05,319 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:05,319 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:05,319 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:05,319 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:05,319 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:05,319 DEBUG DefaultClientConnection,main:264 - Sending request: POST /hub/session/00096a6e-7a94-4109-baab-8ba9650cb627/timeouts/implicit_wait HTTP/1.1
+11:21:05,319 DEBUG wire,main:63 - >> "POST /hub/session/00096a6e-7a94-4109-baab-8ba9650cb627/timeouts/implicit_wait HTTP/1.1[\r][\n]"
+11:21:05,319 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:05,319 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:05,319 DEBUG wire,main:63 - >> "Content-Length: 12[\r][\n]"
+11:21:05,319 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:05,319 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:05,319 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:05,319 DEBUG headers,main:268 - >> POST /hub/session/00096a6e-7a94-4109-baab-8ba9650cb627/timeouts/implicit_wait HTTP/1.1
+11:21:05,319 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:05,319 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:05,319 DEBUG headers,main:271 - >> Content-Length: 12
+11:21:05,319 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:05,319 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:05,319 DEBUG wire,main:77 - >> "{"ms":10000}"
+11:21:05,335 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:05,335 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:05,335 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:05,335 DEBUG wire,main:63 - << "content-length: 98[\r][\n]"
+11:21:05,335 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:05,335 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:05 GMT[\r][\n]"
+11:21:05,335 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:05,335 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:05,335 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:05,335 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:05,335 DEBUG headers,main:255 - << connection: close
+11:21:05,335 DEBUG headers,main:255 - << content-length: 98
+11:21:05,335 DEBUG headers,main:255 - << server: httpd.js
+11:21:05,335 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:05 GMT
+11:21:05,335 DEBUG wire,main:77 - << "{"name":"implicitlyWait","sessionId":"00096a6e-7a94-4109-baab-8ba9650cb627","status":0,"value":""}"
+11:21:05,335 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:05,335 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:05,335 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:05,335 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:05,335 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:05,335 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:05,335 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:05,335 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:05,335 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:05,335 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:05,335 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:05,335 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:05,335 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:05,335 DEBUG DefaultClientConnection,main:264 - Sending request: POST /hub/session/00096a6e-7a94-4109-baab-8ba9650cb627/url HTTP/1.1
+11:21:05,335 DEBUG wire,main:63 - >> "POST /hub/session/00096a6e-7a94-4109-baab-8ba9650cb627/url HTTP/1.1[\r][\n]"
+11:21:05,335 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:05,335 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:05,335 DEBUG wire,main:63 - >> "Content-Length: 63[\r][\n]"
+11:21:05,335 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:05,335 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:05,335 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:05,335 DEBUG headers,main:268 - >> POST /hub/session/00096a6e-7a94-4109-baab-8ba9650cb627/url HTTP/1.1
+11:21:05,335 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:05,335 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:05,335 DEBUG headers,main:271 - >> Content-Length: 63
+11:21:05,335 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:05,335 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:05,335 DEBUG wire,main:77 - >> "{"url":"http://localhost:8080/cdoe/secure/CoforsUpload/create"}"
+11:21:07,460 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:07,460 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:07,460 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:07,460 DEBUG wire,main:63 - << "content-length: 87[\r][\n]"
+11:21:07,460 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:07,460 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:07 GMT[\r][\n]"
+11:21:07,460 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:07,460 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:07,460 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:07,460 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:07,460 DEBUG headers,main:255 - << connection: close
+11:21:07,460 DEBUG headers,main:255 - << content-length: 87
+11:21:07,460 DEBUG headers,main:255 - << server: httpd.js
+11:21:07,460 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:07 GMT
+11:21:07,460 DEBUG wire,main:77 - << "{"name":"get","sessionId":"00096a6e-7a94-4109-baab-8ba9650cb627","status":0,"value":""}"
+11:21:07,460 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:07,460 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:07,460 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:07,460 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:07,460 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:07,460 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:07,460 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:07,460 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:07,460 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:07,460 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:07,460 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:07,460 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:07,460 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:07,460 DEBUG DefaultClientConnection,main:264 - Sending request: GET /hub/session/00096a6e-7a94-4109-baab-8ba9650cb627/title HTTP/1.1
+11:21:07,460 DEBUG wire,main:63 - >> "GET /hub/session/00096a6e-7a94-4109-baab-8ba9650cb627/title HTTP/1.1[\r][\n]"
+11:21:07,460 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:07,460 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:07,460 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:07,460 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:07,460 DEBUG headers,main:268 - >> GET /hub/session/00096a6e-7a94-4109-baab-8ba9650cb627/title HTTP/1.1
+11:21:07,460 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:07,460 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:07,460 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:07,460 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:07,476 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:07,476 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:07,476 DEBUG wire,main:63 - << "content-length: 112[\r][\n]"
+11:21:07,476 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:07,476 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:07 GMT[\r][\n]"
+11:21:07,476 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:07,476 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:07,476 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:07,476 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:07,476 DEBUG headers,main:255 - << connection: close
+11:21:07,476 DEBUG headers,main:255 - << content-length: 112
+11:21:07,476 DEBUG headers,main:255 - << server: httpd.js
+11:21:07,476 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:07 GMT
+11:21:07,476 DEBUG wire,main:77 - << "{"name":"getTitle","sessionId":"00096a6e-7a94-4109-baab-8ba9650cb627","status":0,"value":"Problem loading page"}"
+11:21:07,476 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:07,476 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:07,476 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:07,476 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:07,476 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:07,476 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:07,476 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:07,476 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:07,476 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:07,476 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:07,476 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:07,476 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:07,476 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:07,476 DEBUG DefaultClientConnection,main:264 - Sending request: DELETE /hub/session/00096a6e-7a94-4109-baab-8ba9650cb627 HTTP/1.1
+11:21:07,476 DEBUG wire,main:63 - >> "DELETE /hub/session/00096a6e-7a94-4109-baab-8ba9650cb627 HTTP/1.1[\r][\n]"
+11:21:07,476 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:07,476 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:07,476 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:07,476 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:07,476 DEBUG headers,main:268 - >> DELETE /hub/session/00096a6e-7a94-4109-baab-8ba9650cb627 HTTP/1.1
+11:21:07,476 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:07,476 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:07,476 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:07,476 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:07,476 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:07,476 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:07,476 DEBUG wire,main:63 - << "content-length: 88[\r][\n]"
+11:21:07,476 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:07,476 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:07 GMT[\r][\n]"
+11:21:07,476 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:07,476 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:07,476 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:07,476 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:07,476 DEBUG headers,main:255 - << connection: close
+11:21:07,476 DEBUG headers,main:255 - << content-length: 88
+11:21:07,476 DEBUG headers,main:255 - << server: httpd.js
+11:21:07,476 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:07 GMT
+11:21:07,476 DEBUG wire,main:77 - << "{"name":"quit","sessionId":"00096a6e-7a94-4109-baab-8ba9650cb627","status":0,"value":""}"
+11:21:07,476 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:07,476 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:07,476 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:07,476 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:11,415 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:11,415 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:11,415 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:11,415 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:11,415 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:11,415 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:11,415 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:11,415 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:11,415 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:11,415 DEBUG DefaultClientConnection,main:264 - Sending request: POST /hub/session HTTP/1.1
+11:21:11,415 DEBUG wire,main:63 - >> "POST /hub/session HTTP/1.1[\r][\n]"
+11:21:11,415 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:11,415 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:11,415 DEBUG wire,main:63 - >> "Content-Length: 79[\r][\n]"
+11:21:11,415 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:11,415 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:11,415 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:11,415 DEBUG headers,main:268 - >> POST /hub/session HTTP/1.1
+11:21:11,415 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:11,415 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:11,415 DEBUG headers,main:271 - >> Content-Length: 79
+11:21:11,415 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:11,415 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:11,415 DEBUG wire,main:77 - >> "{"desiredCapabilities":{"platform":"ANY","browserName":"firefox","version":""}}"
+11:21:11,431 DEBUG wire,main:63 - << "HTTP/1.1 303 See Other[\r][\n]"
+11:21:11,431 DEBUG wire,main:63 - << "location: http://127.0.0.1:7055/hub/session/fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc[\r][\n]"
+11:21:11,431 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:11,431 DEBUG wire,main:63 - << "content-length: 0[\r][\n]"
+11:21:11,431 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:11,431 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:11 GMT[\r][\n]"
+11:21:11,431 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:11,431 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 303 See Other
+11:21:11,431 DEBUG headers,main:252 - << HTTP/1.1 303 See Other
+11:21:11,431 DEBUG headers,main:255 - << location: http://127.0.0.1:7055/hub/session/fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc
+11:21:11,431 DEBUG headers,main:255 - << connection: close
+11:21:11,431 DEBUG headers,main:255 - << content-length: 0
+11:21:11,431 DEBUG headers,main:255 - << server: httpd.js
+11:21:11,431 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:11 GMT
+11:21:11,431 DEBUG DefaultRedirectStrategy,main:113 - Redirect requested to location 'http://127.0.0.1:7055/hub/session/fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc'
+11:21:11,431 DEBUG DefaultHttpClient,main:1067 - Redirecting to 'http://127.0.0.1:7055/hub/session/fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc' via HttpRoute[{}->http://127.0.0.1:7055]
+11:21:11,431 DEBUG DefaultClientConnection,main:165 - Connection closed
+11:21:11,431 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:11,431 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:11,431 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:11,431 DEBUG DefaultHttpClient,main:643 - Attempt 2 to execute request
+11:21:11,431 DEBUG DefaultClientConnection,main:264 - Sending request: GET /hub/session/fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc HTTP/1.1
+11:21:11,431 DEBUG wire,main:63 - >> "GET /hub/session/fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc HTTP/1.1[\r][\n]"
+11:21:11,431 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:11,431 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:11,431 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:11,431 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:11,431 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:11,431 DEBUG headers,main:268 - >> GET /hub/session/fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc HTTP/1.1
+11:21:11,431 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:11,431 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:11,431 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:11,431 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:11,431 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:11,431 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:11,431 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:11,431 DEBUG wire,main:63 - << "content-length: 282[\r][\n]"
+11:21:11,431 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:11,431 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:11 GMT[\r][\n]"
+11:21:11,431 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:11,431 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:11,431 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:11,431 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:11,431 DEBUG headers,main:255 - << connection: close
+11:21:11,431 DEBUG headers,main:255 - << content-length: 282
+11:21:11,431 DEBUG headers,main:255 - << server: httpd.js
+11:21:11,431 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:11 GMT
+11:21:11,431 DEBUG wire,main:77 - << "{"name":"getSessionCapabilities","sessionId":"fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc","status":0,"value":{"cssSelectorsEnabled":true,"browserName":"firefox","handlesAlerts":true,"javascriptEnabled":true,"nativeEvents":true,"platform":"WINNT","takesScreenshot":true,"version":"7.0.1"}}"
+11:21:11,431 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:11,431 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:11,431 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:11,431 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:11,446 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:11,446 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:11,446 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:11,446 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:11,446 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:11,446 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:11,446 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:11,446 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:11,446 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:11,446 DEBUG DefaultClientConnection,main:264 - Sending request: POST /hub/session/fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc/timeouts/implicit_wait HTTP/1.1
+11:21:11,446 DEBUG wire,main:63 - >> "POST /hub/session/fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc/timeouts/implicit_wait HTTP/1.1[\r][\n]"
+11:21:11,446 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:11,446 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:11,446 DEBUG wire,main:63 - >> "Content-Length: 12[\r][\n]"
+11:21:11,446 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:11,446 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:11,446 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:11,446 DEBUG headers,main:268 - >> POST /hub/session/fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc/timeouts/implicit_wait HTTP/1.1
+11:21:11,446 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:11,446 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:11,446 DEBUG headers,main:271 - >> Content-Length: 12
+11:21:11,446 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:11,446 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:11,446 DEBUG wire,main:77 - >> "{"ms":10000}"
+11:21:11,446 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:11,446 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:11,446 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:11,446 DEBUG wire,main:63 - << "content-length: 98[\r][\n]"
+11:21:11,446 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:11,446 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:11 GMT[\r][\n]"
+11:21:11,446 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:11,446 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:11,446 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:11,446 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:11,446 DEBUG headers,main:255 - << connection: close
+11:21:11,446 DEBUG headers,main:255 - << content-length: 98
+11:21:11,446 DEBUG headers,main:255 - << server: httpd.js
+11:21:11,446 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:11 GMT
+11:21:11,446 DEBUG wire,main:77 - << "{"name":"implicitlyWait","sessionId":"fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc","status":0,"value":""}"
+11:21:11,446 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:11,446 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:11,446 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:11,446 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:11,446 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:11,446 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:11,446 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:11,446 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:11,446 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:11,446 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:11,446 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:11,446 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:11,446 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:11,446 DEBUG DefaultClientConnection,main:264 - Sending request: POST /hub/session/fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc/url HTTP/1.1
+11:21:11,446 DEBUG wire,main:63 - >> "POST /hub/session/fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc/url HTTP/1.1[\r][\n]"
+11:21:11,446 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:11,446 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:11,446 DEBUG wire,main:63 - >> "Content-Length: 63[\r][\n]"
+11:21:11,446 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:11,446 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:11,446 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:11,446 DEBUG headers,main:268 - >> POST /hub/session/fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc/url HTTP/1.1
+11:21:11,446 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:11,446 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:11,462 DEBUG headers,main:271 - >> Content-Length: 63
+11:21:11,462 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:11,462 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:11,462 DEBUG wire,main:77 - >> "{"url":"http://localhost:8080/cdoe/secure/CoforsUpload/edit/1"}"
+11:21:13,540 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:13,540 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:13,540 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:13,540 DEBUG wire,main:63 - << "content-length: 87[\r][\n]"
+11:21:13,540 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:13,540 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:13 GMT[\r][\n]"
+11:21:13,556 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:13,556 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:13,556 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:13,556 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:13,556 DEBUG headers,main:255 - << connection: close
+11:21:13,556 DEBUG headers,main:255 - << content-length: 87
+11:21:13,556 DEBUG headers,main:255 - << server: httpd.js
+11:21:13,556 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:13 GMT
+11:21:13,556 DEBUG wire,main:77 - << "{"name":"get","sessionId":"fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc","status":0,"value":""}"
+11:21:13,556 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:13,556 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:13,556 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:13,556 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:13,556 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:13,556 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:13,556 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:13,556 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:13,556 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:13,556 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:13,556 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:13,556 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:13,556 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:13,556 DEBUG DefaultClientConnection,main:264 - Sending request: GET /hub/session/fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc/title HTTP/1.1
+11:21:13,556 DEBUG wire,main:63 - >> "GET /hub/session/fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc/title HTTP/1.1[\r][\n]"
+11:21:13,556 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:13,556 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:13,556 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:13,556 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:13,556 DEBUG headers,main:268 - >> GET /hub/session/fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc/title HTTP/1.1
+11:21:13,556 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:13,556 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:13,556 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:13,556 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:13,556 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:13,556 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:13,556 DEBUG wire,main:63 - << "content-length: 112[\r][\n]"
+11:21:13,556 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:13,556 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:13 GMT[\r][\n]"
+11:21:13,556 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:13,556 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:13,556 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:13,556 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:13,556 DEBUG headers,main:255 - << connection: close
+11:21:13,556 DEBUG headers,main:255 - << content-length: 112
+11:21:13,556 DEBUG headers,main:255 - << server: httpd.js
+11:21:13,556 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:13 GMT
+11:21:13,556 DEBUG wire,main:77 - << "{"name":"getTitle","sessionId":"fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc","status":0,"value":"Problem loading page"}"
+11:21:13,571 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:13,571 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:13,571 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:13,571 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:13,571 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:13,571 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:13,571 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:13,571 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:13,571 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:13,571 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:13,571 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:13,571 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:13,571 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:13,571 DEBUG DefaultClientConnection,main:264 - Sending request: DELETE /hub/session/fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc HTTP/1.1
+11:21:13,571 DEBUG wire,main:63 - >> "DELETE /hub/session/fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc HTTP/1.1[\r][\n]"
+11:21:13,571 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:13,571 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:13,571 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:13,571 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:13,571 DEBUG headers,main:268 - >> DELETE /hub/session/fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc HTTP/1.1
+11:21:13,571 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:13,571 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:13,571 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:13,571 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:13,571 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:13,571 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:13,571 DEBUG wire,main:63 - << "content-length: 88[\r][\n]"
+11:21:13,571 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:13,571 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:13 GMT[\r][\n]"
+11:21:13,571 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:13,571 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:13,571 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:13,571 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:13,571 DEBUG headers,main:255 - << connection: close
+11:21:13,571 DEBUG headers,main:255 - << content-length: 88
+11:21:13,571 DEBUG headers,main:255 - << server: httpd.js
+11:21:13,571 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:13 GMT
+11:21:13,571 DEBUG wire,main:77 - << "{"name":"quit","sessionId":"fe1c0bec-4a5a-43f5-bd54-a1ef11dee2bc","status":0,"value":""}"
+11:21:13,571 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:13,571 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:13,571 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:13,571 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:17,527 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:17,527 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:17,527 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:17,527 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:17,527 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:17,527 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:17,527 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:17,527 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:17,527 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:17,527 DEBUG DefaultClientConnection,main:264 - Sending request: POST /hub/session HTTP/1.1
+11:21:17,527 DEBUG wire,main:63 - >> "POST /hub/session HTTP/1.1[\r][\n]"
+11:21:17,527 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:17,527 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:17,527 DEBUG wire,main:63 - >> "Content-Length: 79[\r][\n]"
+11:21:17,527 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:17,527 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:17,527 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:17,527 DEBUG headers,main:268 - >> POST /hub/session HTTP/1.1
+11:21:17,527 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:17,527 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:17,527 DEBUG headers,main:271 - >> Content-Length: 79
+11:21:17,527 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:17,527 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:17,527 DEBUG wire,main:77 - >> "{"desiredCapabilities":{"platform":"ANY","browserName":"firefox","version":""}}"
+11:21:17,542 DEBUG wire,main:63 - << "HTTP/1.1 303 See Other[\r][\n]"
+11:21:17,542 DEBUG wire,main:63 - << "location: http://127.0.0.1:7055/hub/session/cba4065d-aaad-4535-95f6-341a64bd6468[\r][\n]"
+11:21:17,542 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:17,542 DEBUG wire,main:63 - << "content-length: 0[\r][\n]"
+11:21:17,542 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:17,542 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:17 GMT[\r][\n]"
+11:21:17,542 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:17,542 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 303 See Other
+11:21:17,542 DEBUG headers,main:252 - << HTTP/1.1 303 See Other
+11:21:17,542 DEBUG headers,main:255 - << location: http://127.0.0.1:7055/hub/session/cba4065d-aaad-4535-95f6-341a64bd6468
+11:21:17,542 DEBUG headers,main:255 - << connection: close
+11:21:17,542 DEBUG headers,main:255 - << content-length: 0
+11:21:17,542 DEBUG headers,main:255 - << server: httpd.js
+11:21:17,542 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:17 GMT
+11:21:17,542 DEBUG DefaultRedirectStrategy,main:113 - Redirect requested to location 'http://127.0.0.1:7055/hub/session/cba4065d-aaad-4535-95f6-341a64bd6468'
+11:21:17,542 DEBUG DefaultHttpClient,main:1067 - Redirecting to 'http://127.0.0.1:7055/hub/session/cba4065d-aaad-4535-95f6-341a64bd6468' via HttpRoute[{}->http://127.0.0.1:7055]
+11:21:17,542 DEBUG DefaultClientConnection,main:165 - Connection closed
+11:21:17,542 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:17,542 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:17,542 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:17,542 DEBUG DefaultHttpClient,main:643 - Attempt 2 to execute request
+11:21:17,542 DEBUG DefaultClientConnection,main:264 - Sending request: GET /hub/session/cba4065d-aaad-4535-95f6-341a64bd6468 HTTP/1.1
+11:21:17,542 DEBUG wire,main:63 - >> "GET /hub/session/cba4065d-aaad-4535-95f6-341a64bd6468 HTTP/1.1[\r][\n]"
+11:21:17,542 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:17,542 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:17,542 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:17,542 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:17,542 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:17,542 DEBUG headers,main:268 - >> GET /hub/session/cba4065d-aaad-4535-95f6-341a64bd6468 HTTP/1.1
+11:21:17,542 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:17,542 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:17,542 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:17,542 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:17,542 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:17,542 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:17,542 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:17,542 DEBUG wire,main:63 - << "content-length: 282[\r][\n]"
+11:21:17,542 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:17,542 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:17 GMT[\r][\n]"
+11:21:17,542 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:17,542 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:17,542 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:17,542 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:17,542 DEBUG headers,main:255 - << connection: close
+11:21:17,542 DEBUG headers,main:255 - << content-length: 282
+11:21:17,542 DEBUG headers,main:255 - << server: httpd.js
+11:21:17,542 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:17 GMT
+11:21:17,542 DEBUG wire,main:77 - << "{"name":"getSessionCapabilities","sessionId":"cba4065d-aaad-4535-95f6-341a64bd6468","status":0,"value":{"cssSelectorsEnabled":true,"browserName":"firefox","handlesAlerts":true,"javascriptEnabled":true,"nativeEvents":true,"platform":"WINNT","takesScreenshot":true,"version":"7.0.1"}}"
+11:21:17,542 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:17,542 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:17,542 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:17,542 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:17,542 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:17,542 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:17,542 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:17,542 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:17,542 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:17,542 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:17,558 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:17,558 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:17,558 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:17,558 DEBUG DefaultClientConnection,main:264 - Sending request: POST /hub/session/cba4065d-aaad-4535-95f6-341a64bd6468/timeouts/implicit_wait HTTP/1.1
+11:21:17,558 DEBUG wire,main:63 - >> "POST /hub/session/cba4065d-aaad-4535-95f6-341a64bd6468/timeouts/implicit_wait HTTP/1.1[\r][\n]"
+11:21:17,558 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:17,558 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:17,558 DEBUG wire,main:63 - >> "Content-Length: 12[\r][\n]"
+11:21:17,558 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:17,558 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:17,558 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:17,558 DEBUG headers,main:268 - >> POST /hub/session/cba4065d-aaad-4535-95f6-341a64bd6468/timeouts/implicit_wait HTTP/1.1
+11:21:17,558 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:17,558 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:17,558 DEBUG headers,main:271 - >> Content-Length: 12
+11:21:17,558 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:17,558 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:17,558 DEBUG wire,main:77 - >> "{"ms":10000}"
+11:21:17,558 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:17,558 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:17,558 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:17,558 DEBUG wire,main:63 - << "content-length: 98[\r][\n]"
+11:21:17,558 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:17,558 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:17 GMT[\r][\n]"
+11:21:17,558 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:17,558 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:17,558 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:17,558 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:17,558 DEBUG headers,main:255 - << connection: close
+11:21:17,558 DEBUG headers,main:255 - << content-length: 98
+11:21:17,558 DEBUG headers,main:255 - << server: httpd.js
+11:21:17,558 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:17 GMT
+11:21:17,558 DEBUG wire,main:77 - << "{"name":"implicitlyWait","sessionId":"cba4065d-aaad-4535-95f6-341a64bd6468","status":0,"value":""}"
+11:21:17,558 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:17,558 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:17,558 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:17,558 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:17,558 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:17,558 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:17,558 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:17,558 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:17,558 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:17,558 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:17,558 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:17,558 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:17,558 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:17,558 DEBUG DefaultClientConnection,main:264 - Sending request: POST /hub/session/cba4065d-aaad-4535-95f6-341a64bd6468/url HTTP/1.1
+11:21:17,558 DEBUG wire,main:63 - >> "POST /hub/session/cba4065d-aaad-4535-95f6-341a64bd6468/url HTTP/1.1[\r][\n]"
+11:21:17,558 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:17,558 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:17,573 DEBUG wire,main:63 - >> "Content-Length: 61[\r][\n]"
+11:21:17,573 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:17,573 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:17,573 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:17,573 DEBUG headers,main:268 - >> POST /hub/session/cba4065d-aaad-4535-95f6-341a64bd6468/url HTTP/1.1
+11:21:17,573 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:17,573 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:17,573 DEBUG headers,main:271 - >> Content-Length: 61
+11:21:17,573 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:17,573 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:17,573 DEBUG wire,main:77 - >> "{"url":"http://localhost:8080/cdoe/secure/CoforsUpload/list"}"
+11:21:19,714 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:19,714 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:19,714 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:19,714 DEBUG wire,main:63 - << "content-length: 87[\r][\n]"
+11:21:19,714 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:19,714 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:19 GMT[\r][\n]"
+11:21:19,714 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:19,714 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:19,714 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:19,714 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:19,714 DEBUG headers,main:255 - << connection: close
+11:21:19,714 DEBUG headers,main:255 - << content-length: 87
+11:21:19,714 DEBUG headers,main:255 - << server: httpd.js
+11:21:19,714 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:19 GMT
+11:21:19,714 DEBUG wire,main:77 - << "{"name":"get","sessionId":"cba4065d-aaad-4535-95f6-341a64bd6468","status":0,"value":""}"
+11:21:19,714 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:19,714 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:19,714 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:19,714 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:19,714 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:19,714 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:19,714 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:19,714 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:19,714 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:19,714 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:19,730 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:19,730 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:19,730 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:19,730 DEBUG DefaultClientConnection,main:264 - Sending request: GET /hub/session/cba4065d-aaad-4535-95f6-341a64bd6468/title HTTP/1.1
+11:21:19,730 DEBUG wire,main:63 - >> "GET /hub/session/cba4065d-aaad-4535-95f6-341a64bd6468/title HTTP/1.1[\r][\n]"
+11:21:19,730 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:19,730 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:19,730 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:19,730 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:19,730 DEBUG headers,main:268 - >> GET /hub/session/cba4065d-aaad-4535-95f6-341a64bd6468/title HTTP/1.1
+11:21:19,730 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:19,730 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:19,730 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:19,730 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:19,730 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:19,730 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:19,730 DEBUG wire,main:63 - << "content-length: 112[\r][\n]"
+11:21:19,730 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:19,730 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:19 GMT[\r][\n]"
+11:21:19,730 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:19,730 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:19,730 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:19,730 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:19,730 DEBUG headers,main:255 - << connection: close
+11:21:19,730 DEBUG headers,main:255 - << content-length: 112
+11:21:19,730 DEBUG headers,main:255 - << server: httpd.js
+11:21:19,730 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:19 GMT
+11:21:19,730 DEBUG wire,main:77 - << "{"name":"getTitle","sessionId":"cba4065d-aaad-4535-95f6-341a64bd6468","status":0,"value":"Problem loading page"}"
+11:21:19,730 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:19,730 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:19,730 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:19,730 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:19,730 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:19,730 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:19,730 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:19,730 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:19,730 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:19,730 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:19,730 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:19,730 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:19,730 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:19,730 DEBUG DefaultClientConnection,main:264 - Sending request: DELETE /hub/session/cba4065d-aaad-4535-95f6-341a64bd6468 HTTP/1.1
+11:21:19,730 DEBUG wire,main:63 - >> "DELETE /hub/session/cba4065d-aaad-4535-95f6-341a64bd6468 HTTP/1.1[\r][\n]"
+11:21:19,745 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:19,745 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:19,745 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:19,745 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:19,745 DEBUG headers,main:268 - >> DELETE /hub/session/cba4065d-aaad-4535-95f6-341a64bd6468 HTTP/1.1
+11:21:19,745 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:19,745 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:19,745 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:19,745 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:19,745 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:19,745 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:19,745 DEBUG wire,main:63 - << "content-length: 88[\r][\n]"
+11:21:19,745 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:19,745 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:19 GMT[\r][\n]"
+11:21:19,745 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:19,745 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:19,745 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:19,745 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:19,745 DEBUG headers,main:255 - << connection: close
+11:21:19,745 DEBUG headers,main:255 - << content-length: 88
+11:21:19,745 DEBUG headers,main:255 - << server: httpd.js
+11:21:19,745 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:19 GMT
+11:21:19,745 DEBUG wire,main:77 - << "{"name":"quit","sessionId":"cba4065d-aaad-4535-95f6-341a64bd6468","status":0,"value":""}"
+11:21:19,745 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:19,745 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:19,745 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:19,745 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:23,671 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:23,671 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:23,671 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:23,671 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:23,671 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:23,671 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:23,671 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:23,671 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:23,671 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:23,671 DEBUG DefaultClientConnection,main:264 - Sending request: POST /hub/session HTTP/1.1
+11:21:23,671 DEBUG wire,main:63 - >> "POST /hub/session HTTP/1.1[\r][\n]"
+11:21:23,671 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:23,671 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:23,671 DEBUG wire,main:63 - >> "Content-Length: 79[\r][\n]"
+11:21:23,671 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:23,671 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:23,671 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:23,671 DEBUG headers,main:268 - >> POST /hub/session HTTP/1.1
+11:21:23,671 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:23,671 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:23,671 DEBUG headers,main:271 - >> Content-Length: 79
+11:21:23,671 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:23,671 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:23,671 DEBUG wire,main:77 - >> "{"desiredCapabilities":{"platform":"ANY","browserName":"firefox","version":""}}"
+11:21:23,671 DEBUG wire,main:63 - << "HTTP/1.1 303 See Other[\r][\n]"
+11:21:23,671 DEBUG wire,main:63 - << "location: http://127.0.0.1:7055/hub/session/4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2[\r][\n]"
+11:21:23,671 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:23,671 DEBUG wire,main:63 - << "content-length: 0[\r][\n]"
+11:21:23,671 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:23,671 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:23 GMT[\r][\n]"
+11:21:23,671 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:23,671 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 303 See Other
+11:21:23,671 DEBUG headers,main:252 - << HTTP/1.1 303 See Other
+11:21:23,671 DEBUG headers,main:255 - << location: http://127.0.0.1:7055/hub/session/4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2
+11:21:23,671 DEBUG headers,main:255 - << connection: close
+11:21:23,671 DEBUG headers,main:255 - << content-length: 0
+11:21:23,671 DEBUG headers,main:255 - << server: httpd.js
+11:21:23,671 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:23 GMT
+11:21:23,687 DEBUG DefaultRedirectStrategy,main:113 - Redirect requested to location 'http://127.0.0.1:7055/hub/session/4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2'
+11:21:23,687 DEBUG DefaultHttpClient,main:1067 - Redirecting to 'http://127.0.0.1:7055/hub/session/4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2' via HttpRoute[{}->http://127.0.0.1:7055]
+11:21:23,687 DEBUG DefaultClientConnection,main:165 - Connection closed
+11:21:23,687 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:23,687 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:23,687 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:23,687 DEBUG DefaultHttpClient,main:643 - Attempt 2 to execute request
+11:21:23,687 DEBUG DefaultClientConnection,main:264 - Sending request: GET /hub/session/4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2 HTTP/1.1
+11:21:23,687 DEBUG wire,main:63 - >> "GET /hub/session/4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2 HTTP/1.1[\r][\n]"
+11:21:23,687 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:23,687 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:23,687 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:23,687 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:23,687 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:23,687 DEBUG headers,main:268 - >> GET /hub/session/4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2 HTTP/1.1
+11:21:23,687 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:23,687 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:23,687 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:23,687 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:23,702 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:23,702 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:23,702 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:23,702 DEBUG wire,main:63 - << "content-length: 282[\r][\n]"
+11:21:23,702 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:23,702 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:23 GMT[\r][\n]"
+11:21:23,702 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:23,702 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:23,702 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:23,702 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:23,702 DEBUG headers,main:255 - << connection: close
+11:21:23,702 DEBUG headers,main:255 - << content-length: 282
+11:21:23,702 DEBUG headers,main:255 - << server: httpd.js
+11:21:23,702 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:23 GMT
+11:21:23,702 DEBUG wire,main:77 - << "{"name":"getSessionCapabilities","sessionId":"4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2","status":0,"value":{"cssSelectorsEnabled":true,"browserName":"firefox","handlesAlerts":true,"javascriptEnabled":true,"nativeEvents":true,"platform":"WINNT","takesScreenshot":true,"version":"7.0.1"}}"
+11:21:23,702 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:23,702 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:23,702 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:23,702 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:23,702 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:23,702 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:23,702 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:23,702 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:23,702 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:23,702 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:23,702 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:23,702 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:23,702 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:23,702 DEBUG DefaultClientConnection,main:264 - Sending request: POST /hub/session/4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2/timeouts/implicit_wait HTTP/1.1
+11:21:23,702 DEBUG wire,main:63 - >> "POST /hub/session/4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2/timeouts/implicit_wait HTTP/1.1[\r][\n]"
+11:21:23,702 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:23,702 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:23,702 DEBUG wire,main:63 - >> "Content-Length: 12[\r][\n]"
+11:21:23,702 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:23,702 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:23,702 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:23,702 DEBUG headers,main:268 - >> POST /hub/session/4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2/timeouts/implicit_wait HTTP/1.1
+11:21:23,702 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:23,702 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:23,702 DEBUG headers,main:271 - >> Content-Length: 12
+11:21:23,702 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:23,702 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:23,702 DEBUG wire,main:77 - >> "{"ms":10000}"
+11:21:23,702 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:23,702 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:23,702 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:23,702 DEBUG wire,main:63 - << "content-length: 98[\r][\n]"
+11:21:23,702 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:23,702 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:23 GMT[\r][\n]"
+11:21:23,718 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:23,718 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:23,718 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:23,718 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:23,718 DEBUG headers,main:255 - << connection: close
+11:21:23,718 DEBUG headers,main:255 - << content-length: 98
+11:21:23,718 DEBUG headers,main:255 - << server: httpd.js
+11:21:23,718 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:23 GMT
+11:21:23,718 DEBUG wire,main:77 - << "{"name":"implicitlyWait","sessionId":"4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2","status":0,"value":""}"
+11:21:23,718 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:23,718 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:23,718 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:23,718 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:23,718 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:23,718 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:23,718 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:23,718 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:23,718 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:23,718 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:23,718 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:23,718 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:23,718 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:23,718 DEBUG DefaultClientConnection,main:264 - Sending request: POST /hub/session/4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2/url HTTP/1.1
+11:21:23,718 DEBUG wire,main:63 - >> "POST /hub/session/4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2/url HTTP/1.1[\r][\n]"
+11:21:23,718 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:23,718 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:23,718 DEBUG wire,main:63 - >> "Content-Length: 53[\r][\n]"
+11:21:23,718 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:23,718 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:23,718 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:23,718 DEBUG headers,main:268 - >> POST /hub/session/4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2/url HTTP/1.1
+11:21:23,718 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:23,718 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:23,718 DEBUG headers,main:271 - >> Content-Length: 53
+11:21:23,718 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:23,718 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:23,718 DEBUG wire,main:77 - >> "{"url":"http://localhost:8080/cdoe/secure/Comments/"}"
+11:21:25,827 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:25,827 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:25,827 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:25,827 DEBUG wire,main:63 - << "content-length: 87[\r][\n]"
+11:21:25,827 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:25,827 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:25 GMT[\r][\n]"
+11:21:25,827 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:25,827 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:25,843 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:25,843 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:25,843 DEBUG headers,main:255 - << connection: close
+11:21:25,843 DEBUG headers,main:255 - << content-length: 87
+11:21:25,843 DEBUG headers,main:255 - << server: httpd.js
+11:21:25,843 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:25 GMT
+11:21:25,843 DEBUG wire,main:77 - << "{"name":"get","sessionId":"4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2","status":0,"value":""}"
+11:21:25,843 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:25,843 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:25,843 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:25,843 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:25,843 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:25,843 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:25,843 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:25,843 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:25,843 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:25,843 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:25,843 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:25,843 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:25,843 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:25,843 DEBUG DefaultClientConnection,main:264 - Sending request: GET /hub/session/4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2/title HTTP/1.1
+11:21:25,843 DEBUG wire,main:63 - >> "GET /hub/session/4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2/title HTTP/1.1[\r][\n]"
+11:21:25,843 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:25,843 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:25,843 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:25,843 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:25,843 DEBUG headers,main:268 - >> GET /hub/session/4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2/title HTTP/1.1
+11:21:25,843 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:25,843 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:25,843 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:25,843 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:25,843 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:25,843 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:25,843 DEBUG wire,main:63 - << "content-length: 112[\r][\n]"
+11:21:25,843 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:25,843 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:25 GMT[\r][\n]"
+11:21:25,843 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:25,843 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:25,843 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:25,843 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:25,843 DEBUG headers,main:255 - << connection: close
+11:21:25,843 DEBUG headers,main:255 - << content-length: 112
+11:21:25,843 DEBUG headers,main:255 - << server: httpd.js
+11:21:25,843 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:25 GMT
+11:21:25,859 DEBUG wire,main:77 - << "{"name":"getTitle","sessionId":"4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2","status":0,"value":"Problem loading page"}"
+11:21:25,859 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:25,859 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:25,859 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:25,859 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:25,859 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:25,859 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:25,859 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:25,859 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:25,859 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:25,859 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:25,859 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:25,859 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:25,859 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:25,859 DEBUG DefaultClientConnection,main:264 - Sending request: DELETE /hub/session/4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2 HTTP/1.1
+11:21:25,859 DEBUG wire,main:63 - >> "DELETE /hub/session/4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2 HTTP/1.1[\r][\n]"
+11:21:25,859 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:25,859 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:25,859 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:25,859 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:25,859 DEBUG headers,main:268 - >> DELETE /hub/session/4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2 HTTP/1.1
+11:21:25,859 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:25,859 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:25,859 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:25,859 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:25,859 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:25,859 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:25,859 DEBUG wire,main:63 - << "content-length: 88[\r][\n]"
+11:21:25,859 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:25,859 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:25 GMT[\r][\n]"
+11:21:25,859 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:25,859 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:25,859 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:25,859 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:25,859 DEBUG headers,main:255 - << connection: close
+11:21:25,859 DEBUG headers,main:255 - << content-length: 88
+11:21:25,859 DEBUG headers,main:255 - << server: httpd.js
+11:21:25,859 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:25 GMT
+11:21:25,859 DEBUG wire,main:77 - << "{"name":"quit","sessionId":"4d585e77-d5ee-4f8e-a8cc-261a8d28e4b2","status":0,"value":""}"
+11:21:25,859 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:25,859 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:25,859 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:25,859 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:29,704 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:29,704 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:29,704 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:29,704 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:29,704 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:29,704 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:29,704 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:29,704 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:29,704 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:29,704 DEBUG DefaultClientConnection,main:264 - Sending request: POST /hub/session HTTP/1.1
+11:21:29,704 DEBUG wire,main:63 - >> "POST /hub/session HTTP/1.1[\r][\n]"
+11:21:29,704 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:29,704 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:29,704 DEBUG wire,main:63 - >> "Content-Length: 79[\r][\n]"
+11:21:29,704 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:29,704 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:29,704 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:29,704 DEBUG headers,main:268 - >> POST /hub/session HTTP/1.1
+11:21:29,704 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:29,704 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:29,704 DEBUG headers,main:271 - >> Content-Length: 79
+11:21:29,704 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:29,704 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:29,704 DEBUG wire,main:77 - >> "{"desiredCapabilities":{"platform":"ANY","browserName":"firefox","version":""}}"
+11:21:29,767 DEBUG wire,main:63 - << "HTTP/1.1 303 See Other[\r][\n]"
+11:21:29,767 DEBUG wire,main:63 - << "location: http://127.0.0.1:7055/hub/session/acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b[\r][\n]"
+11:21:29,767 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:29,767 DEBUG wire,main:63 - << "content-length: 0[\r][\n]"
+11:21:29,767 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:29,767 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:29 GMT[\r][\n]"
+11:21:29,767 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:29,767 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 303 See Other
+11:21:29,767 DEBUG headers,main:252 - << HTTP/1.1 303 See Other
+11:21:29,767 DEBUG headers,main:255 - << location: http://127.0.0.1:7055/hub/session/acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b
+11:21:29,767 DEBUG headers,main:255 - << connection: close
+11:21:29,767 DEBUG headers,main:255 - << content-length: 0
+11:21:29,767 DEBUG headers,main:255 - << server: httpd.js
+11:21:29,767 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:29 GMT
+11:21:29,767 DEBUG DefaultRedirectStrategy,main:113 - Redirect requested to location 'http://127.0.0.1:7055/hub/session/acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b'
+11:21:29,767 DEBUG DefaultHttpClient,main:1067 - Redirecting to 'http://127.0.0.1:7055/hub/session/acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b' via HttpRoute[{}->http://127.0.0.1:7055]
+11:21:29,767 DEBUG DefaultClientConnection,main:165 - Connection closed
+11:21:29,767 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:29,767 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:29,767 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:29,767 DEBUG DefaultHttpClient,main:643 - Attempt 2 to execute request
+11:21:29,767 DEBUG DefaultClientConnection,main:264 - Sending request: GET /hub/session/acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b HTTP/1.1
+11:21:29,767 DEBUG wire,main:63 - >> "GET /hub/session/acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b HTTP/1.1[\r][\n]"
+11:21:29,767 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:29,767 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:29,767 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:29,767 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:29,767 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:29,767 DEBUG headers,main:268 - >> GET /hub/session/acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b HTTP/1.1
+11:21:29,767 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:29,767 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:29,767 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:29,767 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:29,767 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:29,767 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:29,767 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:29,767 DEBUG wire,main:63 - << "content-length: 282[\r][\n]"
+11:21:29,767 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:29,767 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:29 GMT[\r][\n]"
+11:21:29,767 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:29,767 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:29,767 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:29,767 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:29,767 DEBUG headers,main:255 - << connection: close
+11:21:29,767 DEBUG headers,main:255 - << content-length: 282
+11:21:29,767 DEBUG headers,main:255 - << server: httpd.js
+11:21:29,767 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:29 GMT
+11:21:29,783 DEBUG wire,main:77 - << "{"name":"getSessionCapabilities","sessionId":"acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b","status":0,"value":{"cssSelectorsEnabled":true,"browserName":"firefox","handlesAlerts":true,"javascriptEnabled":true,"nativeEvents":true,"platform":"WINNT","takesScreenshot":true,"version":"7.0.1"}}"
+11:21:29,783 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:29,783 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:29,783 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:29,783 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:29,783 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:29,783 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:29,783 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:29,783 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:29,783 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:29,783 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:29,783 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:29,783 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:29,783 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:29,783 DEBUG DefaultClientConnection,main:264 - Sending request: POST /hub/session/acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b/timeouts/implicit_wait HTTP/1.1
+11:21:29,783 DEBUG wire,main:63 - >> "POST /hub/session/acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b/timeouts/implicit_wait HTTP/1.1[\r][\n]"
+11:21:29,783 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:29,783 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:29,783 DEBUG wire,main:63 - >> "Content-Length: 12[\r][\n]"
+11:21:29,783 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:29,783 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:29,783 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:29,783 DEBUG headers,main:268 - >> POST /hub/session/acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b/timeouts/implicit_wait HTTP/1.1
+11:21:29,783 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:29,783 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:29,783 DEBUG headers,main:271 - >> Content-Length: 12
+11:21:29,783 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:29,783 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:29,783 DEBUG wire,main:77 - >> "{"ms":10000}"
+11:21:29,783 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:29,783 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:29,783 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:29,783 DEBUG wire,main:63 - << "content-length: 98[\r][\n]"
+11:21:29,783 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:29,783 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:29 GMT[\r][\n]"
+11:21:29,783 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:29,783 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:29,798 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:29,798 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:29,798 DEBUG headers,main:255 - << connection: close
+11:21:29,798 DEBUG headers,main:255 - << content-length: 98
+11:21:29,798 DEBUG headers,main:255 - << server: httpd.js
+11:21:29,798 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:29 GMT
+11:21:29,798 DEBUG wire,main:77 - << "{"name":"implicitlyWait","sessionId":"acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b","status":0,"value":""}"
+11:21:29,798 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:29,798 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:29,798 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:29,798 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:29,798 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:29,798 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:29,798 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:29,798 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:29,798 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:29,798 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:29,798 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:29,798 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:29,798 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:29,798 DEBUG DefaultClientConnection,main:264 - Sending request: POST /hub/session/acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b/url HTTP/1.1
+11:21:29,798 DEBUG wire,main:63 - >> "POST /hub/session/acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b/url HTTP/1.1[\r][\n]"
+11:21:29,798 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:29,798 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:29,798 DEBUG wire,main:63 - >> "Content-Length: 68[\r][\n]"
+11:21:29,798 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:29,798 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:29,798 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:29,798 DEBUG headers,main:268 - >> POST /hub/session/acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b/url HTTP/1.1
+11:21:29,798 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:29,798 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:29,798 DEBUG headers,main:271 - >> Content-Length: 68
+11:21:29,798 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:29,798 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:29,798 DEBUG wire,main:77 - >> "{"url":"http://localhost:8080/cdoe/secure/CrosswalkCollectionData/"}"
+11:21:31,908 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:31,923 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:31,923 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:31,923 DEBUG wire,main:63 - << "content-length: 87[\r][\n]"
+11:21:31,923 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:31,923 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:31 GMT[\r][\n]"
+11:21:31,923 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:31,923 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:31,923 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:31,923 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:31,923 DEBUG headers,main:255 - << connection: close
+11:21:31,923 DEBUG headers,main:255 - << content-length: 87
+11:21:31,923 DEBUG headers,main:255 - << server: httpd.js
+11:21:31,923 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:31 GMT
+11:21:31,923 DEBUG wire,main:77 - << "{"name":"get","sessionId":"acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b","status":0,"value":""}"
+11:21:31,923 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:31,923 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:31,923 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:31,923 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:31,923 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:31,923 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:31,923 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:31,923 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:31,923 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:31,923 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:31,923 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:31,923 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:31,923 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:31,923 DEBUG DefaultClientConnection,main:264 - Sending request: GET /hub/session/acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b/title HTTP/1.1
+11:21:31,923 DEBUG wire,main:63 - >> "GET /hub/session/acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b/title HTTP/1.1[\r][\n]"
+11:21:31,923 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:31,923 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:31,923 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:31,923 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:31,923 DEBUG headers,main:268 - >> GET /hub/session/acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b/title HTTP/1.1
+11:21:31,923 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:31,923 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:31,923 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:31,923 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:31,939 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:31,939 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:31,939 DEBUG wire,main:63 - << "content-length: 112[\r][\n]"
+11:21:31,939 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:31,939 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:31 GMT[\r][\n]"
+11:21:31,939 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:31,939 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:31,939 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:31,939 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:31,939 DEBUG headers,main:255 - << connection: close
+11:21:31,939 DEBUG headers,main:255 - << content-length: 112
+11:21:31,939 DEBUG headers,main:255 - << server: httpd.js
+11:21:31,939 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:31 GMT
+11:21:31,939 DEBUG wire,main:77 - << "{"name":"getTitle","sessionId":"acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b","status":0,"value":"Problem loading page"}"
+11:21:31,939 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:31,939 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:31,939 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:31,939 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:31,939 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:31,939 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:31,939 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:31,939 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:31,939 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:31,939 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:31,939 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:31,939 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:31,939 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:31,939 DEBUG DefaultClientConnection,main:264 - Sending request: DELETE /hub/session/acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b HTTP/1.1
+11:21:31,939 DEBUG wire,main:63 - >> "DELETE /hub/session/acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b HTTP/1.1[\r][\n]"
+11:21:31,939 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:31,939 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:31,939 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:31,939 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:31,939 DEBUG headers,main:268 - >> DELETE /hub/session/acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b HTTP/1.1
+11:21:31,939 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:31,939 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:31,939 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:31,939 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:31,939 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:31,939 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:31,939 DEBUG wire,main:63 - << "content-length: 88[\r][\n]"
+11:21:31,939 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:31,939 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:31 GMT[\r][\n]"
+11:21:31,939 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:31,939 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:31,939 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:31,939 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:31,939 DEBUG headers,main:255 - << connection: close
+11:21:31,954 DEBUG headers,main:255 - << content-length: 88
+11:21:31,954 DEBUG headers,main:255 - << server: httpd.js
+11:21:31,954 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:31 GMT
+11:21:31,954 DEBUG wire,main:77 - << "{"name":"quit","sessionId":"acbb18c2-5a81-44dd-81bb-bb4e3fd6b04b","status":0,"value":""}"
+11:21:31,954 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:31,954 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:31,954 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:31,954 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:35,660 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:35,660 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:35,660 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:35,660 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:35,660 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:35,660 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:35,660 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:35,660 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:35,660 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:35,660 DEBUG DefaultClientConnection,main:264 - Sending request: POST /hub/session HTTP/1.1
+11:21:35,660 DEBUG wire,main:63 - >> "POST /hub/session HTTP/1.1[\r][\n]"
+11:21:35,660 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:35,660 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:35,660 DEBUG wire,main:63 - >> "Content-Length: 79[\r][\n]"
+11:21:35,660 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:35,660 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:35,660 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:35,660 DEBUG headers,main:268 - >> POST /hub/session HTTP/1.1
+11:21:35,660 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:35,660 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:35,660 DEBUG headers,main:271 - >> Content-Length: 79
+11:21:35,660 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:35,660 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:35,660 DEBUG wire,main:77 - >> "{"desiredCapabilities":{"platform":"ANY","browserName":"firefox","version":""}}"
+11:21:35,660 DEBUG wire,main:63 - << "HTTP/1.1 303 See Other[\r][\n]"
+11:21:35,660 DEBUG wire,main:63 - << "location: http://127.0.0.1:7055/hub/session/7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b[\r][\n]"
+11:21:35,660 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:35,660 DEBUG wire,main:63 - << "content-length: 0[\r][\n]"
+11:21:35,660 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:35,660 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:35 GMT[\r][\n]"
+11:21:35,660 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:35,660 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 303 See Other
+11:21:35,660 DEBUG headers,main:252 - << HTTP/1.1 303 See Other
+11:21:35,660 DEBUG headers,main:255 - << location: http://127.0.0.1:7055/hub/session/7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b
+11:21:35,660 DEBUG headers,main:255 - << connection: close
+11:21:35,675 DEBUG headers,main:255 - << content-length: 0
+11:21:35,675 DEBUG headers,main:255 - << server: httpd.js
+11:21:35,675 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:35 GMT
+11:21:35,675 DEBUG DefaultRedirectStrategy,main:113 - Redirect requested to location 'http://127.0.0.1:7055/hub/session/7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b'
+11:21:35,675 DEBUG DefaultHttpClient,main:1067 - Redirecting to 'http://127.0.0.1:7055/hub/session/7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b' via HttpRoute[{}->http://127.0.0.1:7055]
+11:21:35,675 DEBUG DefaultClientConnection,main:165 - Connection closed
+11:21:35,675 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:35,675 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:35,675 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:35,675 DEBUG DefaultHttpClient,main:643 - Attempt 2 to execute request
+11:21:35,675 DEBUG DefaultClientConnection,main:264 - Sending request: GET /hub/session/7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b HTTP/1.1
+11:21:35,675 DEBUG wire,main:63 - >> "GET /hub/session/7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b HTTP/1.1[\r][\n]"
+11:21:35,675 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:35,675 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:35,675 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:35,675 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:35,675 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:35,675 DEBUG headers,main:268 - >> GET /hub/session/7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b HTTP/1.1
+11:21:35,675 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:35,675 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:35,675 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:35,675 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:35,675 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:35,675 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:35,675 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:35,675 DEBUG wire,main:63 - << "content-length: 282[\r][\n]"
+11:21:35,675 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:35,675 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:35 GMT[\r][\n]"
+11:21:35,675 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:35,675 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:35,675 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:35,675 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:35,675 DEBUG headers,main:255 - << connection: close
+11:21:35,675 DEBUG headers,main:255 - << content-length: 282
+11:21:35,675 DEBUG headers,main:255 - << server: httpd.js
+11:21:35,675 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:35 GMT
+11:21:35,675 DEBUG wire,main:77 - << "{"name":"getSessionCapabilities","sessionId":"7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b","status":0,"value":{"cssSelectorsEnabled":true,"browserName":"firefox","handlesAlerts":true,"javascriptEnabled":true,"nativeEvents":true,"platform":"WINNT","takesScreenshot":true,"version":"7.0.1"}}"
+11:21:35,675 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:35,675 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:35,675 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:35,675 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:35,675 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:35,675 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:35,675 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:35,675 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:35,675 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:35,675 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:35,675 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:35,675 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:35,675 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:35,691 DEBUG DefaultClientConnection,main:264 - Sending request: POST /hub/session/7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b/timeouts/implicit_wait HTTP/1.1
+11:21:35,691 DEBUG wire,main:63 - >> "POST /hub/session/7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b/timeouts/implicit_wait HTTP/1.1[\r][\n]"
+11:21:35,691 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:35,691 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:35,691 DEBUG wire,main:63 - >> "Content-Length: 12[\r][\n]"
+11:21:35,691 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:35,691 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:35,691 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:35,691 DEBUG headers,main:268 - >> POST /hub/session/7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b/timeouts/implicit_wait HTTP/1.1
+11:21:35,691 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:35,691 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:35,691 DEBUG headers,main:271 - >> Content-Length: 12
+11:21:35,691 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:35,691 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:35,691 DEBUG wire,main:77 - >> "{"ms":10000}"
+11:21:35,691 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:35,691 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:35,691 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:35,691 DEBUG wire,main:63 - << "content-length: 98[\r][\n]"
+11:21:35,691 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:35,691 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:35 GMT[\r][\n]"
+11:21:35,691 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:35,691 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:35,691 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:35,691 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:35,691 DEBUG headers,main:255 - << connection: close
+11:21:35,691 DEBUG headers,main:255 - << content-length: 98
+11:21:35,691 DEBUG headers,main:255 - << server: httpd.js
+11:21:35,691 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:35 GMT
+11:21:35,691 DEBUG wire,main:77 - << "{"name":"implicitlyWait","sessionId":"7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b","status":0,"value":""}"
+11:21:35,691 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:35,691 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:35,691 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:35,691 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:35,691 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:35,691 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:35,691 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:35,691 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:35,691 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:35,691 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:35,691 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:35,691 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:35,691 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:35,691 DEBUG DefaultClientConnection,main:264 - Sending request: POST /hub/session/7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b/url HTTP/1.1
+11:21:35,691 DEBUG wire,main:63 - >> "POST /hub/session/7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b/url HTTP/1.1[\r][\n]"
+11:21:35,691 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:35,691 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:35,691 DEBUG wire,main:63 - >> "Content-Length: 74[\r][\n]"
+11:21:35,691 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:35,691 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:35,691 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:35,691 DEBUG headers,main:268 - >> POST /hub/session/7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b/url HTTP/1.1
+11:21:35,691 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:35,691 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:35,691 DEBUG headers,main:271 - >> Content-Length: 74
+11:21:35,691 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:35,691 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:35,706 DEBUG wire,main:77 - >> "{"url":"http://localhost:8080/cdoe/secure/CrosswalkCollectionData/create"}"
+11:21:37,800 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:37,800 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:37,816 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:37,816 DEBUG wire,main:63 - << "content-length: 87[\r][\n]"
+11:21:37,816 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:37,816 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:37 GMT[\r][\n]"
+11:21:37,816 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:37,816 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:37,816 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:37,816 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:37,816 DEBUG headers,main:255 - << connection: close
+11:21:37,816 DEBUG headers,main:255 - << content-length: 87
+11:21:37,816 DEBUG headers,main:255 - << server: httpd.js
+11:21:37,816 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:37 GMT
+11:21:37,816 DEBUG wire,main:77 - << "{"name":"get","sessionId":"7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b","status":0,"value":""}"
+11:21:37,816 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:37,816 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:37,816 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:37,816 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:37,816 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:37,816 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:37,816 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:37,816 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:37,816 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:37,816 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:37,816 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:37,816 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:37,816 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:37,816 DEBUG DefaultClientConnection,main:264 - Sending request: GET /hub/session/7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b/title HTTP/1.1
+11:21:37,816 DEBUG wire,main:63 - >> "GET /hub/session/7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b/title HTTP/1.1[\r][\n]"
+11:21:37,816 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:37,816 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:37,816 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:37,816 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:37,816 DEBUG headers,main:268 - >> GET /hub/session/7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b/title HTTP/1.1
+11:21:37,816 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:37,816 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:37,816 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:37,816 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:37,816 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:37,816 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:37,816 DEBUG wire,main:63 - << "content-length: 112[\r][\n]"
+11:21:37,816 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:37,816 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:37 GMT[\r][\n]"
+11:21:37,816 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:37,816 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:37,816 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:37,816 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:37,816 DEBUG headers,main:255 - << connection: close
+11:21:37,816 DEBUG headers,main:255 - << content-length: 112
+11:21:37,831 DEBUG headers,main:255 - << server: httpd.js
+11:21:37,831 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:37 GMT
+11:21:37,831 DEBUG wire,main:77 - << "{"name":"getTitle","sessionId":"7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b","status":0,"value":"Problem loading page"}"
+11:21:37,831 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:37,831 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:37,831 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:37,831 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:37,831 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:37,831 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:37,831 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:37,831 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:37,831 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:37,831 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:37,831 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:37,831 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:37,831 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:37,831 DEBUG DefaultClientConnection,main:264 - Sending request: DELETE /hub/session/7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b HTTP/1.1
+11:21:37,831 DEBUG wire,main:63 - >> "DELETE /hub/session/7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b HTTP/1.1[\r][\n]"
+11:21:37,831 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:37,831 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:37,831 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:37,831 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:37,831 DEBUG headers,main:268 - >> DELETE /hub/session/7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b HTTP/1.1
+11:21:37,831 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:37,831 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:37,831 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:37,831 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:37,831 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:37,831 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:37,831 DEBUG wire,main:63 - << "content-length: 88[\r][\n]"
+11:21:37,831 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:37,831 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:37 GMT[\r][\n]"
+11:21:37,831 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:37,831 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:37,831 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:37,831 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:37,831 DEBUG headers,main:255 - << connection: close
+11:21:37,831 DEBUG headers,main:255 - << content-length: 88
+11:21:37,831 DEBUG headers,main:255 - << server: httpd.js
+11:21:37,831 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:37 GMT
+11:21:37,831 DEBUG wire,main:77 - << "{"name":"quit","sessionId":"7ddcf06f-2165-4dc1-9caa-af4ecc1b9a0b","status":0,"value":""}"
+11:21:37,831 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:37,831 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:37,831 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:37,831 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:41,505 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:41,505 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:41,505 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:41,505 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:41,505 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:41,505 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:41,505 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:41,505 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:41,505 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:41,505 DEBUG DefaultClientConnection,main:264 - Sending request: POST /hub/session HTTP/1.1
+11:21:41,505 DEBUG wire,main:63 - >> "POST /hub/session HTTP/1.1[\r][\n]"
+11:21:41,505 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:41,505 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:41,505 DEBUG wire,main:63 - >> "Content-Length: 79[\r][\n]"
+11:21:41,505 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:41,505 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:41,505 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:41,505 DEBUG headers,main:268 - >> POST /hub/session HTTP/1.1
+11:21:41,505 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:41,505 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:41,505 DEBUG headers,main:271 - >> Content-Length: 79
+11:21:41,505 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:41,505 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:41,505 DEBUG wire,main:77 - >> "{"desiredCapabilities":{"platform":"ANY","browserName":"firefox","version":""}}"
+11:21:41,505 DEBUG wire,main:63 - << "HTTP/1.1 303 See Other[\r][\n]"
+11:21:41,505 DEBUG wire,main:63 - << "location: http://127.0.0.1:7055/hub/session/f2b31770-c2af-4227-8f84-c89f55e0125a[\r][\n]"
+11:21:41,505 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:41,505 DEBUG wire,main:63 - << "content-length: 0[\r][\n]"
+11:21:41,505 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:41,505 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:41 GMT[\r][\n]"
+11:21:41,505 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:41,505 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 303 See Other
+11:21:41,505 DEBUG headers,main:252 - << HTTP/1.1 303 See Other
+11:21:41,505 DEBUG headers,main:255 - << location: http://127.0.0.1:7055/hub/session/f2b31770-c2af-4227-8f84-c89f55e0125a
+11:21:41,505 DEBUG headers,main:255 - << connection: close
+11:21:41,505 DEBUG headers,main:255 - << content-length: 0
+11:21:41,505 DEBUG headers,main:255 - << server: httpd.js
+11:21:41,505 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:41 GMT
+11:21:41,505 DEBUG DefaultRedirectStrategy,main:113 - Redirect requested to location 'http://127.0.0.1:7055/hub/session/f2b31770-c2af-4227-8f84-c89f55e0125a'
+11:21:41,521 DEBUG DefaultHttpClient,main:1067 - Redirecting to 'http://127.0.0.1:7055/hub/session/f2b31770-c2af-4227-8f84-c89f55e0125a' via HttpRoute[{}->http://127.0.0.1:7055]
+11:21:41,521 DEBUG DefaultClientConnection,main:165 - Connection closed
+11:21:41,521 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:41,521 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:41,521 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:41,521 DEBUG DefaultHttpClient,main:643 - Attempt 2 to execute request
+11:21:41,521 DEBUG DefaultClientConnection,main:264 - Sending request: GET /hub/session/f2b31770-c2af-4227-8f84-c89f55e0125a HTTP/1.1
+11:21:41,521 DEBUG wire,main:63 - >> "GET /hub/session/f2b31770-c2af-4227-8f84-c89f55e0125a HTTP/1.1[\r][\n]"
+11:21:41,521 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:41,521 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:41,521 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:41,521 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:41,521 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:41,521 DEBUG headers,main:268 - >> GET /hub/session/f2b31770-c2af-4227-8f84-c89f55e0125a HTTP/1.1
+11:21:41,521 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:41,521 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:41,521 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:41,521 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:41,521 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:41,521 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:41,521 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:41,521 DEBUG wire,main:63 - << "content-length: 282[\r][\n]"
+11:21:41,521 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:41,521 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:41 GMT[\r][\n]"
+11:21:41,521 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:41,521 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:41,521 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:41,521 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:41,521 DEBUG headers,main:255 - << connection: close
+11:21:41,521 DEBUG headers,main:255 - << content-length: 282
+11:21:41,521 DEBUG headers,main:255 - << server: httpd.js
+11:21:41,521 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:41 GMT
+11:21:41,521 DEBUG wire,main:77 - << "{"name":"getSessionCapabilities","sessionId":"f2b31770-c2af-4227-8f84-c89f55e0125a","status":0,"value":{"cssSelectorsEnabled":true,"browserName":"firefox","handlesAlerts":true,"javascriptEnabled":true,"nativeEvents":true,"platform":"WINNT","takesScreenshot":true,"version":"7.0.1"}}"
+11:21:41,521 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:41,521 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:41,521 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:41,521 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:41,521 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:41,521 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:41,521 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:41,521 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:41,521 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:41,521 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:41,521 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:41,521 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:41,521 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:41,521 DEBUG DefaultClientConnection,main:264 - Sending request: POST /hub/session/f2b31770-c2af-4227-8f84-c89f55e0125a/timeouts/implicit_wait HTTP/1.1
+11:21:41,521 DEBUG wire,main:63 - >> "POST /hub/session/f2b31770-c2af-4227-8f84-c89f55e0125a/timeouts/implicit_wait HTTP/1.1[\r][\n]"
+11:21:41,521 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:41,521 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:41,521 DEBUG wire,main:63 - >> "Content-Length: 12[\r][\n]"
+11:21:41,521 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:41,521 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:41,521 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:41,521 DEBUG headers,main:268 - >> POST /hub/session/f2b31770-c2af-4227-8f84-c89f55e0125a/timeouts/implicit_wait HTTP/1.1
+11:21:41,521 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:41,521 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:41,521 DEBUG headers,main:271 - >> Content-Length: 12
+11:21:41,521 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:41,521 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:41,521 DEBUG wire,main:77 - >> "{"ms":10000}"
+11:21:41,537 DEBUG wire,main:63 - << "HTTP/1.1 200 OK[\r][\n]"
+11:21:41,537 DEBUG wire,main:63 - << "content-type: application/json; charset=UTF-8[\r][\n]"
+11:21:41,537 DEBUG wire,main:63 - << "connection: close[\r][\n]"
+11:21:41,537 DEBUG wire,main:63 - << "content-length: 98[\r][\n]"
+11:21:41,537 DEBUG wire,main:63 - << "server: httpd.js[\r][\n]"
+11:21:41,537 DEBUG wire,main:63 - << "date: Mon, 21 Jan 2013 19:21:41 GMT[\r][\n]"
+11:21:41,537 DEBUG wire,main:63 - << "[\r][\n]"
+11:21:41,537 DEBUG DefaultClientConnection,main:249 - Receiving response: HTTP/1.1 200 OK
+11:21:41,537 DEBUG headers,main:252 - << HTTP/1.1 200 OK
+11:21:41,537 DEBUG headers,main:255 - << content-type: application/json; charset=UTF-8
+11:21:41,537 DEBUG headers,main:255 - << connection: close
+11:21:41,537 DEBUG headers,main:255 - << content-length: 98
+11:21:41,537 DEBUG headers,main:255 - << server: httpd.js
+11:21:41,537 DEBUG headers,main:255 - << date: Mon, 21 Jan 2013 19:21:41 GMT
+11:21:41,537 DEBUG wire,main:77 - << "{"name":"implicitlyWait","sessionId":"f2b31770-c2af-4227-8f84-c89f55e0125a","status":0,"value":""}"
+11:21:41,537 DEBUG DefaultClientConnection,main:152 - Connection shut down
+11:21:41,537 DEBUG ThreadSafeClientConnManager,main:272 - Released connection is not reusable.
+11:21:41,537 DEBUG ConnPoolByRoute,main:434 - Releasing connection [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:41,537 DEBUG ConnPoolByRoute,main:679 - Notifying no-one, there are no waiting threads
+11:21:41,537 DEBUG ThreadSafeClientConnManager,main:221 - Get connection: HttpRoute[{}->http://127.0.0.1:7055], timeout = 120000
+11:21:41,537 DEBUG ConnPoolByRoute,main:350 - [HttpRoute[{}->http://127.0.0.1:7055]] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+11:21:41,537 DEBUG ConnPoolByRoute,main:523 - No free connections [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:41,537 DEBUG ConnPoolByRoute,main:369 - Available capacity: 2000 out of 2000 [HttpRoute[{}->http://127.0.0.1:7055]][null]
+11:21:41,537 DEBUG ConnPoolByRoute,main:549 - Creating new connection [HttpRoute[{}->http://127.0.0.1:7055]]
+11:21:41,537 DEBUG DefaultClientConnectionOperator,main:145 - Connecting to 127.0.0.1:7055
+11:21:41,537 DEBUG RequestAddCookies,main:132 - CookieSpec selected: best-match
+11:21:41,537 DEBUG RequestAuthCache,main:75 - Auth cache not set in the context
+11:21:41,537 DEBUG DefaultHttpClient,main:643 - Attempt 1 to execute request
+11:21:41,537 DEBUG DefaultClientConnection,main:264 - Sending request: POST /hub/session/f2b31770-c2af-4227-8f84-c89f55e0125a/url HTTP/1.1
+11:21:41,537 DEBUG wire,main:63 - >> "POST /hub/session/f2b31770-c2af-4227-8f84-c89f55e0125a/url HTTP/1.1[\r][\n]"
+11:21:41,537 DEBUG wire,main:63 - >> "Accept: application/json, image/png[\r][\n]"
+11:21:41,537 DEBUG wire,main:63 - >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:21:41,537 DEBUG wire,main:63 - >> "Content-Length: 74[\r][\n]"
+11:21:41,537 DEBUG wire,main:63 - >> "Host: 127.0.0.1:7055[\r][\n]"
+11:21:41,537 DEBUG wire,main:63 - >> "Connection: Keep-Alive[\r][\n]"
+11:21:41,537 DEBUG wire,main:63 - >> "[\r][\n]"
+11:21:41,537 DEBUG headers,main:268 - >> POST /hub/session/f2b31770-c2af-4227-8f84-c89f55e0125a/url HTTP/1.1
+11:21:41,537 DEBUG headers,main:271 - >> Accept: application/json, image/png
+11:21:41,537 DEBUG headers,main:271 - >> Content-Type: application/json; charset=utf-8
+11:21:41,537 DEBUG headers,main:271 - >> Content-Length: 74
+11:21:41,537 DEBUG headers,main:271 - >> Host: 127.0.0.1:7055
+11:21:41,537 DEBUG headers,main:271 - >> Connection: Keep-Alive
+11:21:41,537 DEBUG wire,main:77 - >> "{"url":"http://localhost:8080/cdoe/secure/CrosswalkCollectionData/edit/1"}"

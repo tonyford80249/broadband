@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report6" language="groovy" pageWidth="2380" pageHeight="1684" orientation="Landscape" columnWidth="2380" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="6bf8c9ed-57d5-43e5-892c-7127593bd72b">
+	<property name="net.sf.jasperreports.export.xls.detect.cell.type" value="true"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="forOddRows">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}.intValue() % 2 == 0]]></conditionExpression>
+			<style mode="Opaque" forecolor="#FFFFFF" backcolor="#D2D8DE"/>
+		</conditionalStyle>
+	</style>
+	<style name="highlighter" forecolor="#FFFFFF" backcolor="#FFFFFF">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}.intValue() % 2 == 0]]></conditionExpression>
+			<style mode="Opaque" forecolor="#6A7D99" backcolor="#FFFFFF"/>
+		</conditionalStyle>
+	</style>
+	<style name="districtName" forecolor="#000000" fontSize="10" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{SCHOOL_DAYS} == null]]></conditionExpression>
+			<style forecolor="#197A9B" fontSize="10" isItalic="false" isUnderline="false" isStrikeThrough="true"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="fiscalYear" class="java.lang.String">
+		<defaultValueExpression><![CDATA[20112012]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select  m.organization_code as DISTRICT_NUMBER,
+      m.organization_name,
+      t.OPER_TRAN,
+      t.MIG_MILES,
+      t.REG_D_MILES,
+      t.SCHOOL_DAYS,
+      t.BOARD_TRAN,
+      t.PUPIL_TRAN,
+      t.ACT_MILES,
+      t.TOTAL_MILES,
+      t.CAP_OUT_TRAN,
+      t.REIM_TRAN_LY,
+      t.ADV_PAY
+from  organization_unit_master m
+left outer join transportation t
+on  t.district_number = m.organization_code
+and   t.FISCAL_YEAR =$P{fiscalYear}
+where  m.ORGANIZATION_UNIT_TYPE in ('DISTRICT','CSI')
+ and   substr(m.organization_code, 0,1) != 't'
+ and m.DATE_OPERATIONAL <= sysdate
+ and m.DATE_CLOSED IS NULL
+ or  m.organization_code in ('9025','9701')
+order by m.organization_code]]>
+	</queryString>
+	<field name="DISTRICT_NUMBER" class="java.lang.String"/>
+	<field name="ORGANIZATION_NAME" class="java.lang.String"/>
+	<field name="OPER_TRAN" class="java.math.BigDecimal"/>
+	<field name="MIG_MILES" class="java.math.BigDecimal"/>
+	<field name="REG_D_MILES" class="java.math.BigDecimal"/>
+	<field name="SCHOOL_DAYS" class="java.math.BigDecimal"/>
+	<field name="BOARD_TRAN" class="java.math.BigDecimal"/>
+	<field name="PUPIL_TRAN" class="java.math.BigDecimal"/>
+	<field name="ACT_MILES" class="java.math.BigDecimal"/>
+	<field name="TOTAL_MILES" class="java.math.BigDecimal"/>
+	<field name="CAP_OUT_TRAN" class="java.math.BigDecimal"/>
+	<field name="REIM_TRAN_LY" class="java.math.BigDecimal"/>
+	<field name="ADV_PAY" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="34dc6b5e-579e-4654-9d23-4293dceeb884" mode="Opaque" x="0" y="0" width="130" height="80" forecolor="#000000" backcolor="#95B6D2"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="1.25" lineColor="#003876"/>
+					<bottomPen lineWidth="1.25" lineStyle="Solid" lineColor="#003876"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Bottom" rotation="None">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[District Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f46a94c2-5a9e-4527-a323-249d67971c20" mode="Opaque" x="130" y="0" width="125" height="80" forecolor="#000000" backcolor="#95B6D2"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="1.25" lineColor="#003876"/>
+					<bottomPen lineWidth="1.25" lineStyle="Solid" lineColor="#003876"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[District Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="67915305-7aee-4050-90b6-ce000e2547ac" mode="Opaque" x="255" y="0" width="125" height="80" forecolor="#000000" backcolor="#95B6D2"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="1.25" lineColor="#003876"/>
+					<bottomPen lineWidth="1.25" lineStyle="Solid" lineColor="#003876"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current Operating Expenditures]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a7a03c37-1ed1-44dc-9efc-2f76e293fac5" mode="Opaque" x="380" y="0" width="125" height="80" forecolor="#000000" backcolor="#95B6D2"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="1.25" lineColor="#003876"/>
+					<bottomPen lineWidth="1.25" lineStyle="Solid" lineColor="#003876"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Mileage Travelled Transporting Migrant Pupils]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a27cdfa9-c209-461d-ac8c-4c23af61a512" mode="Opaque" x="505" y="0" width="125" height="80" forecolor="#000000" backcolor="#95B6D2"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="1.25" lineColor="#003876"/>
+					<bottomPen lineWidth="1.25" lineStyle="Solid" lineColor="#003876"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mileage Scheduled for Regular Pupil Transport]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="12b3f905-470a-4486-848f-87b8baaf75d7" mode="Opaque" x="630" y="0" width="125" height="80" forecolor="#000000" backcolor="#95B6D2"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="1.25" lineColor="#003876"/>
+					<bottomPen lineWidth="1.25" lineStyle="Solid" lineColor="#003876"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Days School was in Session]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e91f6d4c-72e0-4f94-8829-bb1b00c724fc" mode="Opaque" x="755" y="0" width="125" height="80" forecolor="#000000" backcolor="#95B6D2"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="1.25" lineColor="#003876"/>
+					<bottomPen lineWidth="1.25" lineStyle="Solid" lineColor="#003876"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Days Room and Board was Paid for Pupils in Lieu of Transport]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="46dd1ce5-df4b-443e-84b2-5399ac75f6f6" mode="Opaque" x="880" y="0" width="105" height="80" forecolor="#000000" backcolor="#95B6D2"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="1.25" lineColor="#003876"/>
+					<bottomPen lineWidth="1.25" lineStyle="Solid" lineColor="#003876"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pupils Scheduled to be Transported at Public Expense]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="97ac3f3f-b9eb-4a06-9483-b666fdc84240" mode="Opaque" x="985" y="0" width="125" height="80" forecolor="#000000" backcolor="#95B6D2"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="1.25" lineColor="#003876"/>
+					<bottomPen lineWidth="1.25" lineStyle="Solid" lineColor="#003876"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Actual Miles Traveled for Trips]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="270796a4-650b-49de-bc90-cb995cadb787" mode="Opaque" x="1110" y="0" width="125" height="80" forecolor="#000000" backcolor="#95B6D2"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="1.25" lineColor="#003876"/>
+					<bottomPen lineWidth="1.25" lineStyle="Solid" lineColor="#003876"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Actual Miles Traveled for Any Purpose]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6e54c19a-65ee-4458-bfaa-66b57a1a97b4" mode="Opaque" x="1235" y="0" width="125" height="80" forecolor="#000000" backcolor="#95B6D2"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="1.25" lineColor="#003876"/>
+					<bottomPen lineWidth="1.25" lineStyle="Solid" lineColor="#003876"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Capital Outlay]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0329cf9d-a758-43f7-9d5c-3f73ca143044" mode="Opaque" x="1360" y="0" width="125" height="80" forecolor="#000000" backcolor="#95B6D2"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="1.25" lineColor="#003876"/>
+					<bottomPen lineWidth="1.25" lineStyle="Solid" lineColor="#003876"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Calculated Reimbursement Entitlement (Previous Year)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e5bde255-8eb4-417c-a4ab-a15eaa4e57c4" mode="Opaque" x="1485" y="0" width="134" height="80" forecolor="#000000" backcolor="#95B6D2"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="1.25" lineColor="#003876"/>
+					<bottomPen lineWidth="1.25" lineStyle="Solid" lineColor="#003876"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Advance Reimbursement Entitlement (Current Entitlement Period)]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement uuid="5bfad029-c80f-4fb2-bc41-ac2a2e77f374" x="0" y="0" width="130" height="22"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{DISTRICT_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9c1d0655-8925-49b9-8251-237a4b2713fe" style="districtName" x="130" y="0" width="125" height="22"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ORGANIZATION_NAME}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Auto" pattern="$ #,##0.00">
+				<reportElement uuid="f4463ae3-e927-4a75-93d4-bbc025f1cd68" x="255" y="0" width="125" height="22"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{OPER_TRAN} != null ? $F{OPER_TRAN} : new BigDecimal(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.0">
+				<reportElement uuid="b9aaf94a-0817-4ada-b73a-7e47702a770d" x="380" y="0" width="125" height="22"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{MIG_MILES} != null ? $F{MIG_MILES} : new BigDecimal(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.0">
+				<reportElement uuid="22fa4ba9-5904-45fd-80b7-de7fedaf2be1" x="505" y="0" width="125" height="22"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{REG_D_MILES} != null ? $F{REG_D_MILES} : new BigDecimal(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0">
+				<reportElement uuid="65131134-49cb-47ed-bad4-93fec8061f83" x="630" y="0" width="125" height="22"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{SCHOOL_DAYS} != null ? $F{SCHOOL_DAYS} : new BigDecimal(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.0">
+				<reportElement uuid="f0d14613-430c-470f-903c-447442392e1d" x="755" y="0" width="125" height="22"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{BOARD_TRAN} != null ? $F{BOARD_TRAN} : new BigDecimal(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0">
+				<reportElement uuid="4d88f46a-53c3-46ff-a576-87f2fe30f960" x="880" y="0" width="105" height="22"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{PUPIL_TRAN} != null ? $F{PUPIL_TRAN} : new BigDecimal(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.0">
+				<reportElement uuid="d109a04e-234a-4a42-9f51-d18c60a3ffab" x="985" y="0" width="125" height="22"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ACT_MILES} != null ? $F{ACT_MILES} : new BigDecimal(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.0">
+				<reportElement uuid="0f239f31-9f0c-42c2-8912-c2873faa106b" x="1110" y="0" width="125" height="22"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{TOTAL_MILES} != null ? $F{TOTAL_MILES} : new BigDecimal(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="02f90454-73f2-425f-96d4-51b9bbac7074" x="1235" y="0" width="125" height="22"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{CAP_OUT_TRAN} != null ? $F{CAP_OUT_TRAN} : new BigDecimal(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="6856b5a6-f88d-42e5-9bfd-836d875474cd" x="1360" y="0" width="125" height="22"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{REIM_TRAN_LY} != null ? $F{REIM_TRAN_LY} : new BigDecimal(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="6a69c981-95a6-4551-be3f-90dc2d0bfcb7" x="1485" y="0" width="134" height="22"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ADV_PAY} != null ? $F{ADV_PAY} : new BigDecimal(0.0)]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="32" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="finalMillLevySummary" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="e18d55d1-327d-459a-985b-d81d49541fef">
+	<property name="net.sf.jasperreports.export.xls.detect.cell.type" value="true"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="oddRows">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{isTotalLine}]]></conditionExpression>
+			<style isBold="true">
+				<paragraph lineSpacing="Single"/>
+			</style>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="county" class="java.lang.String"/>
+	<field name="fiscalYear" class="java.lang.String"/>
+	<field name="districtNumber" class="java.lang.String"/>
+	<field name="districtName" class="java.lang.String"/>
+	<field name="netAssessedValuation" class="java.lang.Double"/>
+	<field name="totalProgramMillLevy" class="java.lang.Double"/>
+	<field name="categoricalBuyoutMillLevy" class="java.lang.Double"/>
+	<field name="holdHarmlessMillLevy" class="java.lang.Double"/>
+	<field name="excessHoldHarmlessMillLevy" class="java.lang.Double"/>
+	<field name="voterApprovedMillLevy" class="java.lang.String"/>
+	<field name="abatementMillLevy" class="java.lang.Double"/>
+	<field name="bondRedemptionMillLevy" class="java.lang.Double"/>
+	<field name="transportationMillLevy" class="java.lang.Double"/>
+	<field name="specialBuildingTechnologyMillLevy" class="java.lang.Double"/>
+	<field name="fulldayKindergartenMillLevy" class="java.lang.Double"/>
+	<field name="otherMillLevy" class="java.lang.Double"/>
+	<field name="totalMillLevy" class="java.lang.Double"/>
+	<field name="isTotalLine" class="java.lang.Boolean"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1dd604e4-319b-4ecb-bd14-ac63e14117e0" mode="Opaque" x="0" y="0" width="802" height="47" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<box leftPadding="10"/>
+				<textElement>
+					<font fontName="SansSerif" size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CDE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b2cf878b-4eb8-42cb-9e1d-2ad053d58bdf" x="77" y="8" width="100" height="20" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COLORADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9284409a-0ea8-479c-8157-7441a995df2a" x="268" y="8" width="334" height="25" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="SansSerif" size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Final Mill Levy Summary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="962e6863-2991-42ef-b1eb-bbfff3187274" x="77" y="20" width="156" height="20" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT of EDUCATION]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="47065876-77a4-4373-8568-9bd663334cf4" x="487" y="13" width="100" height="20" forecolor="#FFFFFF"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{fiscalYear}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="103fb2d6-29cd-47e4-87e5-567c419fdfc0" x="667" y="8" width="80" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="1d4f85e1-f273-4bd7-8788-d7def1f17ede" x="757" y="8" width="40" height="20" forecolor="#FFFFFF"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="7d705dcf-e631-4071-8b66-3c3ad4635527" x="0" y="0" width="80" height="61"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[County Of Assessed Valuation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9cdf37f2-c577-43eb-8c49-2224e0bcf7cc" x="80" y="0" width="100" height="61"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[School District]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8517f328-ce31-4d37-999a-229965642646" x="180" y="0" width="82" height="61"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Net Assessed Valuation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="38f477a5-347d-44fa-af70-a8f4ff197568" x="262" y="0" width="45" height="61"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Program Mils]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0bc105c6-3e66-4e75-b03b-5311072364e1" x="307" y="0" width="45" height="61"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CAT Butouy Mils]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6a9e4e51-6922-42b9-b79f-dcb0c659735e" x="352" y="0" width="45" height="61"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HOLD Harnless Override Mils]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a946aa86-1f0f-46f6-a76e-ae8183b38b7e" x="397" y="0" width="45" height="61"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Excess HOLD Harmless Override Mils]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="20aede72-f7c6-4f61-a92d-8f8dbdeaf157" x="442" y="0" width="45" height="61"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Voter Approved Override Mils]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d0e1553b-afbc-43b6-bcd8-c92af0ccd168" x="487" y="0" width="45" height="61"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Abate Mills]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7a893dd6-5153-49ee-a91d-5e36c25af277" x="577" y="0" width="45" height="61"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Transp. Mils]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bf78bf02-4063-4723-8275-875c640cc3c2" x="667" y="0" width="45" height="61"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Full Day Kindergarten Mills]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="063a993d-f78f-436b-a47c-78929ba1374f" x="532" y="0" width="45" height="61"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bond Redemp. Mils]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cdee94eb-8f3e-415a-8a07-62d65cf666bd" x="622" y="0" width="45" height="61"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Spec BLDG. & Tech Mills]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3a02fa3b-a1b1-4107-995f-8ae8050fbbe4" x="712" y="0" width="45" height="61"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Other Mills]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="56f9e263-71f7-4a4f-81a2-c3a9654cd85f" x="757" y="0" width="45" height="61"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Mill Levy]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="8538e40d-7ee4-4b50-a168-79245988095a" style="oddRows" x="0" y="0" width="80" height="20">
+					<printWhenExpression><![CDATA[!$F{isTotalLine}]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{county}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f42b67d8-6a74-4972-a4cb-e2f0f3a0c7e0" style="oddRows" x="80" y="0" width="100" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{districtName}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,##0.00">
+				<reportElement uuid="9239707e-5f16-4343-9cb1-42fe1af959f9" style="oddRows" x="180" y="0" width="82" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{netAssessedValuation} != null ? $F{netAssessedValuation} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="##0.000">
+				<reportElement uuid="14508590-d767-40e9-975b-6d046908bf02" style="oddRows" x="262" y="0" width="45" height="20" forecolor="#203C73">
+					<printWhenExpression><![CDATA[$F{isTotalLine}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalProgramMillLevy} != null ? $F{totalProgramMillLevy} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="##0.000">
+				<reportElement uuid="29cfd82e-24a7-46bd-843f-7da648d1781d" style="oddRows" x="307" y="0" width="45" height="20" forecolor="#203C73">
+					<printWhenExpression><![CDATA[$F{isTotalLine}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{categoricalBuyoutMillLevy} != null ? $F{categoricalBuyoutMillLevy} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="##0.000">
+				<reportElement uuid="435069eb-dfdb-4ead-a734-27ffc056f816" style="oddRows" x="352" y="0" width="45" height="20" forecolor="#203C73">
+					<printWhenExpression><![CDATA[$F{isTotalLine}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{holdHarmlessMillLevy} != null ? $F{holdHarmlessMillLevy} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="##0.000">
+				<reportElement uuid="1a8da07d-ecd0-4b5b-862c-b99b96deec8e" style="oddRows" x="397" y="0" width="45" height="20" forecolor="#203C73">
+					<printWhenExpression><![CDATA[$F{isTotalLine}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{excessHoldHarmlessMillLevy} != null ? $F{excessHoldHarmlessMillLevy} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="##0.000">
+				<reportElement uuid="9eb767f9-ba73-4153-bdcd-10eb327b41e3" style="oddRows" x="442" y="0" width="45" height="20" forecolor="#203C73">
+					<printWhenExpression><![CDATA[$F{isTotalLine}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{voterApprovedMillLevy} != null ? $F{voterApprovedMillLevy} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="##0.000">
+				<reportElement uuid="169cec7c-4a3b-4810-908f-e2bb721544fe" style="oddRows" x="487" y="0" width="45" height="20" forecolor="#203C73">
+					<printWhenExpression><![CDATA[$F{isTotalLine}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{abatementMillLevy} != null ? $F{abatementMillLevy} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="##0.000">
+				<reportElement uuid="f4c02b2a-a2dd-40c1-95f8-763aaf62f419" style="oddRows" x="532" y="0" width="45" height="20" forecolor="#203C73">
+					<printWhenExpression><![CDATA[$F{isTotalLine}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bondRedemptionMillLevy} != null ? $F{bondRedemptionMillLevy} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="##0.000">
+				<reportElement uuid="4a2d13f0-4773-4b86-880d-7fd473697894" style="oddRows" x="577" y="0" width="45" height="20" forecolor="#203C73">
+					<printWhenExpression><![CDATA[$F{isTotalLine}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{transportationMillLevy} != null ? $F{transportationMillLevy} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="##0.000">
+				<reportElement uuid="dbbdc8c1-5787-4867-8dce-792e933d9c72" style="oddRows" x="622" y="0" width="45" height="20" forecolor="#203C73">
+					<printWhenExpression><![CDATA[$F{isTotalLine}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{specialBuildingTechnologyMillLevy} != null ? $F{specialBuildingTechnologyMillLevy} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="##0.000">
+				<reportElement uuid="9ddf05fe-f1e2-4d61-aa7c-7a281ea2125d" style="oddRows" x="667" y="0" width="45" height="20" forecolor="#203C73">
+					<printWhenExpression><![CDATA[$F{isTotalLine}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fulldayKindergartenMillLevy} != null ? $F{fulldayKindergartenMillLevy} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="##0.000">
+				<reportElement uuid="46997e71-293d-4e1e-a6f5-55294a3afc52" style="oddRows" x="712" y="0" width="45" height="20" forecolor="#203C73">
+					<printWhenExpression><![CDATA[$F{isTotalLine}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{otherMillLevy} != null ? $F{otherMillLevy} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="##0.000">
+				<reportElement uuid="5a1ad216-b724-4418-9521-b49449045890" style="oddRows" x="757" y="0" width="45" height="20" forecolor="#203C73">
+					<printWhenExpression><![CDATA[$F{isTotalLine}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalMillLevy} != null ? $F{totalMillLevy} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="2caed748-2396-444a-8ffa-4ee7d4856bd5" x="0" y="0" width="80" height="20">
+					<printWhenExpression><![CDATA[$F{isTotalLine}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total :]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

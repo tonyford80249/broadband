@@ -1,0 +1,143 @@
+
+#downloadToExcelButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:29.0em;
+  top:22.75em;
+  
+}
+
+#confirmSendToCofrsButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:22.75em;
+  
+}
+
+#totalAmountToBePaidTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:35.0em;
+  top:19.25em;
+	
+}
+
+#totalAmountToBePaidStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:12.0em;
+  top:19.25em;
+	text-align:right;
+	
+}
+
+#firstPaymentDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:29.0em;
+  top:15.75em;
+	
+}
+
+#organizationNameDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:14.0em;
+  top:15.75em;
+	
+}
+
+#districtNumberDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:15.75em;
+	
+}
+
+#transportationGridDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:12.25em;
+  
+}
+
+#dateToBePaidTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:54.0em;
+  top:8.75em;
+	
+}
+
+#dateToBePaidStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:39.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#monthDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:5.0em;
+  top:8.75em;
+ 	
+}
+
+#monthStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#batchNumberTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:51.0em;
+  top:7.0em;
+	
+}
+
+#batchNumberStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:39.0em;
+  top:7.0em;
+	text-align:right;
+	
+}
+
+#fiscalYearTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:11.0em;
+  top:7.0em;
+	
+}
+
+#coforsUploadStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#fiscalYearStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:7.0em;
+	text-align:right;
+	
+}
+

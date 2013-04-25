@@ -1,0 +1,147 @@
+
+package com.cdoe.services.impl;
+
+import java.util.List;
+
+import org.apache.log4j.Logger;
+
+import com.cdoe.services.IMonthlyPaymentsManager;
+import com.cdoe.biz.IMonthlyPaymentsDAO;
+import com.cdoe.biz.model.*;
+import com.cdoe.ui.form.SeMonthlyPaymentProcessingForm;
+import com.cdoe.util.DateUtil;
+import com.cdoe.util.UserInfo;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class MonthlyPaymentsManager extends BaseManager implements IMonthlyPaymentsManager {
+
+        private static final Logger LOGGER = Logger.getLogger(MonthlyPaymentsManager.class);
+	
+	private IMonthlyPaymentsDAO monthlyPaymentsDAO;
+        
+        
+	
+	public void saveOrUpdate(SeMonthlyPaymentProcessingForm form) {
+                /*
+		long id = form.getId();
+		District obj = findById(District.class, id); 
+		if (obj == null) {
+			obj = new District();
+		}
+		obj.setCode(form.getCode());
+		obj.setName(form.getName());
+		obj.setYear(form.getYear());
+                * */
+		saveOrUpdate(null);
+	}
+	
+        @Override
+	public SeMonthlyPaymentProcessingForm setupForm( UserInfo userInfo) {
+		SeMonthlyPaymentProcessingForm form = new SeMonthlyPaymentProcessingForm();
+                
+                Set<Entry<String, String>> districtList =  userInfo.getDistrictMap().entrySet();                                    
+                 
+                
+                List<SeMonthly> seMonthlyPayments = monthlyPaymentsDAO.findByMonthAndYear(DateUtil.getCurrentFiscalYear(), FiscalMonth.getCurrentMonth());
+                
+                Map<String,SeMonthly> monthlyPaymentProcessingMap = new HashMap<String,SeMonthly>();
+                for (SeMonthly seMonthly : seMonthlyPayments) {
+                 monthlyPaymentProcessingMap.put(seMonthly.getDistrictNumber(), seMonthly);   
+                }
+                
+                /**
+                 * 
+                 */
+                for (String districtCode:  userInfo.getAllDistrictCodes()) {               
+                                    
+                  if (monthlyPaymentProcessingMap.containsKey(districtCode)) {
+                   String districtName =  userInfo.getDistrictMap().get(districtCode);   
+                   Payee payee = new Payee(districtName, districtCode);
+                                    
+                   form.getCandidatePayees().add(payee);
+                  }
+                }
+                
+                 List<String> allMonths = DateUtil.getFullMonthList(false);                                  
+                 
+                 List<String> availableYears = DateUtil.getLongFiscalYears(-10);
+                 
+                 Collections.sort(availableYears);
+                
+                 for (String month : allMonths) {
+                  form.getAvailableMonths().add(month);
+                 }
+
+                 for (String year : availableYears) {
+                   form.getAvailableYears().put(year, DateUtil.getFiscalYearFormattedShort(year));
+                 }
+        
+		return form;
+	}
+	
+        @Override
+	public SeMonthlyPaymentProcessingForm setupForm( UserInfo userInfo, String fiscalYear, String fiscalMonth) {
+		SeMonthlyPaymentProcessingForm form = new SeMonthlyPaymentProcessingForm();
+                
+                Set<Entry<String, String>> districtList =  userInfo.getDistrictMap().entrySet();                                    
+                 
+                
+                List<SeMonthly> seMonthlyPayments = monthlyPaymentsDAO.findByMonthAndYear(fiscalYear, FiscalMonth.getInstance(fiscalMonth));
+                
+                Map<String,SeMonthly> monthlyPaymentProcessingMap = new HashMap<String,SeMonthly>();
+                for (SeMonthly seMonthly : seMonthlyPayments) {
+                 monthlyPaymentProcessingMap.put(seMonthly.getDistrictNumber(), seMonthly);   
+                }
+                
+                /**
+                 * 
+                 */
+                for (String districtCode:  userInfo.getAllDistrictCodes()) {               
+                                    
+                  if (monthlyPaymentProcessingMap.containsKey(districtCode)) {
+                   String districtName =  userInfo.getDistrictMap().get(districtCode);   
+                   Payee payee = new Payee(districtName, districtCode);
+                                    
+                   form.getCandidatePayees().add(payee);
+                  }
+                }
+                
+                 List<String> allMonths = DateUtil.getFullMonthList(false);                                  
+                 
+                 List<String> availableYears = DateUtil.getLongFiscalYears(-10);
+                 
+                 Collections.sort(availableYears);
+                
+                 for (String month : allMonths) {
+                  form.getAvailableMonths().add(month);
+                 }
+
+                 for (String year : availableYears) {
+                   form.getAvailableYears().put(year, DateUtil.getFiscalYearFormattedShort(year));
+                 }
+        
+		return form;
+	}
+        
+    @Override
+	public SeMonthlyPaymentProcessingForm setupForm(long id) {
+		District obj = findById(District.class, id); 
+		
+		SeMonthlyPaymentProcessingForm form = new SeMonthlyPaymentProcessingForm();
+		//form.setId(obj.getId());
+		//orm.setCode(obj.getCode());
+		//form.setName(obj.getName());
+		//form.setYear(obj.getYear());
+                
+		return form;
+	}
+	
+	public void setMonthlyPaymentsDAO(IMonthlyPaymentsDAO monthlyPaymentsDAO) {
+		this.monthlyPaymentsDAO = monthlyPaymentsDAO;
+	}
+	
+}

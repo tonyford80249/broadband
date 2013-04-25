@@ -1,0 +1,328 @@
+
+#fiscalYearTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:35.0em;
+  top:0.0em;
+	
+}
+
+#staticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:35.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#textboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:37.0em;
+  top:3.5em;
+	
+}
+
+#emailAddressStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:54.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#emailAddressTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:69.0em;
+  top:3.5em;
+	
+}
+
+#staticText_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:67.0em;
+  top:5.25em;
+	text-align:right;
+	
+}
+
+#amountOfStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:69.0em;
+  top:10.5em;
+	text-align:right;
+	
+}
+
+#remaningStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:54.0em;
+  top:10.5em;
+	text-align:right;
+	
+}
+
+#districtNumberTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:69.0em;
+  top:5.25em;
+	
+}
+
+#totalPurchaseStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:11.0em;
+  top:10.5em;
+	text-align:right;
+	
+}
+
+#$10YearStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:27.0em;
+  top:10.5em;
+	text-align:right;
+	
+}
+
+#previouslyStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:40.0em;
+  top:10.5em;
+	text-align:right;
+	
+}
+
+#ofStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:86.0em;
+  top:10.5em;
+	text-align:right;
+	
+}
+
+#capitalOutlayReimbursementYearStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:0.0em;
+	text-align:right;
+	
+}
+
+#schoolDistrictNameAndNumberStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#nameOfPersonPreparingTheReportStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:5.25em;
+	text-align:right;
+	
+}
+
+#nameOfPersonPreparingTheReportTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:37.0em;
+  top:5.25em;
+	
+}
+
+#phoneStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:54.0em;
+  top:5.25em;
+	text-align:right;
+	
+}
+
+#prevDepreciatedAmtY9TextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:36.0em;
+  top:17.5em;
+	
+}
+
+#remainingAmtY9TextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:50.0em;
+  top:17.5em;
+	
+}
+
+#depreciationPyY9TextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:64.0em;
+  top:17.5em;
+	
+}
+
+#contractorMilesY9DynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:82.0em;
+  top:17.5em;
+	
+}
+
+#outlayExclusionY9TextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:95.0em;
+  top:17.5em;
+	
+}
+
+#capitalOutlayTotalFundingStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:66.0em;
+  top:21.0em;
+	text-align:right;
+	
+}
+
+#capitalOutlayTotalFundingTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:95.0em;
+  top:21.0em;
+	
+}
+
+#bUSaveElectronicsSignatureStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:56.0em;
+  top:24.5em;
+	text-align:right;
+	
+}
+
+#priceForAllStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:6.0em;
+  top:12.25em;
+	text-align:right;
+	
+}
+
+#depreciationStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:22.0em;
+  top:12.25em;
+	text-align:right;
+	
+}
+
+#depreciatedStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:36.0em;
+  top:12.25em;
+	text-align:right;
+	
+}
+
+#amountToBeStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:50.0em;
+  top:12.25em;
+	text-align:right;
+	
+}
+
+#depreciationForStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:64.0em;
+  top:12.25em;
+	text-align:right;
+	
+}
+
+#contractorStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:82.0em;
+  top:12.25em;
+	text-align:right;
+	
+}
+
+#outlayStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:95.0em;
+  top:12.25em;
+	text-align:right;
+	
+}
+
+#capitalOutlayGridDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:14.0em;
+  
+}
+
+#depreciationCycleY9TextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:22.0em;
+  top:17.5em;
+	
+}
+
+#totalPurchasePriceY9DynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:6.0em;
+  top:17.5em;
+	
+}
+
+#capitalStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:100.0em;
+  top:10.5em;
+	text-align:right;
+	
+}
+
+#fiscalYearDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:17.5em;
+	
+}
+

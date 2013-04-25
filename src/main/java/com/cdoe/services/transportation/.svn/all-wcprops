@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/state_equal/!svn/ver/189/trunk/cdoe/src/main/java/com/cdoe/services/transportation
+END
+IDistributionAmountsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/transportation/IDistributionAmountsManager.java
+END
+ICde40TransReimbFormManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/transportation/ICde40TransReimbFormManager.java
+END
+ICde40SummaryManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/transportation/ICde40SummaryManager.java
+END
+IPaymentWorkSheetManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/transportation/IPaymentWorkSheetManager.java
+END
+ICapitalOutlayManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/state_equal/!svn/ver/189/trunk/cdoe/src/main/java/com/cdoe/services/transportation/ICapitalOutlayManager.java
+END
+IBaseManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/transportation/IBaseManager.java
+END

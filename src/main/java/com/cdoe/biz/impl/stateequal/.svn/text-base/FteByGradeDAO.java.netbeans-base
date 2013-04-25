@@ -1,0 +1,37 @@
+package com.cdoe.biz.impl.stateequal;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+
+import com.cdoe.biz.model.equal.FteByGrade;
+import com.cdoe.biz.model.transportation.CapitalOutlay;
+import com.cdoe.biz.stateequal.IFteByGradeDAO;
+import com.cdoe.db.hibernate.HibernateDAO;
+
+@SuppressWarnings("unchecked")
+public class FteByGradeDAO extends HibernateDAO implements IFteByGradeDAO {
+
+	@Override
+	public FteByGrade findByUniqueKey(String districtNumber, String fiscalYear,
+			String gradeLevel) {
+		Session session = getCurrentSession();
+		Query query = session.createQuery("from FteByGrade where districtNumber = :districtNumber and fiscalYear = :fiscalYear and gradeLevel = :gradeLevel");
+		query.setString("districtNumber", districtNumber);
+		query.setString("fiscalYear", fiscalYear);
+		query.setString("gradeLevel", gradeLevel);
+		return (FteByGrade)query.uniqueResult();
+	}
+	
+	
+	public List<FteByGrade> getByDistrictYear(String districtNumber, String fiscalYear) {
+		Session session = getCurrentSession();
+		Query query = session.createQuery("from FteByGrade where districtNumber = :districtNumber and fiscalYear = :fiscalYear");
+		query.setString("districtNumber", districtNumber);
+		query.setString("fiscalYear", fiscalYear);
+		return (List<FteByGrade>) query.list();
+	}
+
+
+}

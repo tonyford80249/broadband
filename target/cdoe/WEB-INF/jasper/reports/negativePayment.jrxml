@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="negativePayment" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e0dd274b-693c-4446-99cf-f7fc808b9e01">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="oddRow">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}.intValue() % 2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#CCCCCC"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="county" class="java.lang.String"/>
+	<field name="fiscalYear" class="java.lang.String"/>
+	<field name="districtNumber" class="java.lang.String"/>
+	<field name="districtName" class="java.lang.String"/>
+	<field name="monthlyEntitlement" class="java.lang.Double"/>
+	<field name="currentEntitlement" class="java.lang.Double"/>
+	<field name="previousEntitlement" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1dd604e4-319b-4ecb-bd14-ac63e14117e0" mode="Opaque" x="0" y="0" width="555" height="47" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<box leftPadding="10"/>
+				<textElement>
+					<font fontName="SansSerif" size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CDE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="962e6863-2991-42ef-b1eb-bbfff3187274" x="77" y="20" width="156" height="20" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT of EDUCATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b2cf878b-4eb8-42cb-9e1d-2ad053d58bdf" x="77" y="8" width="100" height="20" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COLORADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d162beff-6a71-4a23-9b55-183504261829" x="0" y="47" width="555" height="34" forecolor="#203C73"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[MONTHLY ENTITLEMENTS EQUAL TO OR LESS THAN ZERO]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="9c1db0c9-b766-4e84-8742-5eeb87cf0bf0" x="422" y="8" width="80" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="7ff35bee-dade-4d18-bdd3-0c43ce0a91ff" x="502" y="8" width="40" height="20" forecolor="#FFFFFF"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement uuid="86d18b17-741b-4451-9131-baf622a589d6" x="254" y="0" width="100" height="20" forecolor="#FFFFFF"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="a0f8ca1d-bb91-4d2a-bfdd-b49bb6a989b7" x="0" y="0" width="105" height="33"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[District Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="21570b04-6ce9-49c8-8ee0-977e5245bee3" x="105" y="0" width="105" height="33"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[District Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="749ab794-74b7-402a-948f-3d8a9db26c0a" x="210" y="0" width="105" height="33"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[New Monthly Entitlement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="695c013f-98c4-435c-be53-03f1ce9bc130" x="315" y="0" width="105" height="33"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[  New YTD Entitlement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7d48610d-caee-4887-ab06-4cd293048af2" x="420" y="0" width="100" height="33"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Previous YTD Entitlement]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="ec20b429-90b0-4834-a3f3-5844d62fd63c" style="oddRow" x="0" y="0" width="105" height="20">
+					<printWhenExpression><![CDATA[$F{monthlyEntitlement} <= 0.001]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{districtNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="59de819c-4a92-47f9-8d7f-20cad5acf19f" style="oddRow" x="105" y="0" width="105" height="20">
+					<printWhenExpression><![CDATA[$F{monthlyEntitlement} <= 0.001]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{districtName}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,##0.00">
+				<reportElement uuid="f5323353-6259-4bd5-b0fe-fc1f984c1984" style="oddRow" x="210" y="0" width="105" height="20">
+					<printWhenExpression><![CDATA[$F{monthlyEntitlement} <= 0.001]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{monthlyEntitlement} != null ? $F{monthlyEntitlement} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,##0.00">
+				<reportElement uuid="f4261045-2aea-4828-9dd5-e64565d54cd7" style="oddRow" x="315" y="0" width="105" height="20">
+					<printWhenExpression><![CDATA[$F{monthlyEntitlement} <= 0.001]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{currentEntitlement} != null ? $F{currentEntitlement} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,##0.00">
+				<reportElement uuid="0d875891-7f6b-4fcb-86e5-d80e332f561c" style="oddRow" x="420" y="0" width="100" height="20">
+					<printWhenExpression><![CDATA[$F{monthlyEntitlement} <= 0.001]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{previousEntitlement} != null ? $F{previousEntitlement} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

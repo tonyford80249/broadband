@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/state_equal/!svn/ver/266/trunk/cdoe/src/main/java/com/cdoe/biz/impl/transportation
+END
+CapitalOutlayDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/biz/impl/transportation/CapitalOutlayDAO.java
+END
+Cde40SummaryDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/biz/impl/transportation/Cde40SummaryDAO.java
+END
+DistrictPaymentReportDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/state_equal/!svn/ver/224/trunk/cdoe/src/main/java/com/cdoe/biz/impl/transportation/DistrictPaymentReportDAO.java
+END
+DistributionAmountsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/biz/impl/transportation/DistributionAmountsDAO.java
+END
+TransportationDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/state_equal/!svn/ver/266/trunk/cdoe/src/main/java/com/cdoe/biz/impl/transportation/TransportationDAO.java
+END
+PaymentWorkSheetDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/biz/impl/transportation/PaymentWorkSheetDAO.java
+END
+Cde40TransReimbFormDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/biz/impl/transportation/Cde40TransReimbFormDAO.java
+END

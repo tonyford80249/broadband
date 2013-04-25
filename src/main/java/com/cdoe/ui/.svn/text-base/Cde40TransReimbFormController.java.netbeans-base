@@ -1,0 +1,167 @@
+/*
+ * Copyright ResQSoft, Inc. 2011
+ */
+package com.cdoe.ui;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.Validator;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.json.MappingJacksonJsonView;
+
+import com.cdoe.biz.model.Transportation;
+import com.cdoe.services.ICapitalOutlayManager;
+import com.cdoe.services.ICde40TransReimbFormManager;
+import com.cdoe.ui.form.TransportationForm;
+import com.cdoe.util.UserInfo;
+import com.resqsoft.util.RequestUtils;
+
+@Controller
+@RequestMapping("/secure/Cde40TransReimbForm")
+public class Cde40TransReimbFormController {
+	private static final Logger logger = Logger
+			.getLogger(Cde40TransReimbFormController.class);
+
+	@Autowired
+	private ICde40TransReimbFormManager cde40TransReimbFormManager;
+	@Autowired
+	private Validator cde40TransFormValidator;
+	@Autowired
+	private ICapitalOutlayManager capitalOutlayManager;
+	@Autowired
+	MappingJacksonJsonView standardJsonView;
+
+	
+	
+	@RequestMapping(method = RequestMethod.GET)
+	public String index(Model model, HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		UserInfo userInfo = (UserInfo) session.getAttribute("USER_INFO");
+		String districtCode = null;
+		Object[] districtCodes = null;
+		
+		if (userInfo.isAdminUser()) {
+			districtCodes = userInfo.getAllDistrictCodes().toArray();
+
+			districtCode = userInfo.getAllDistrictCodes().get(1);
+		} else {
+			districtCode = userInfo.getUsersDistricts().get(0);
+		}
+		
+		TransportationForm form = cde40TransReimbFormManager.setupForm(districtCode);
+		
+		form.setDistrictNumber(districtCode);
+		String districtName = userInfo.lookupDistrict(districtCode);
+		form.setDistrictName(districtName);
+		if ("None".equalsIgnoreCase(form.getErrors()))
+			form.setMessage("Cde40 Transportation Reimbursement Information already saved successfully. No more updates will be saved");
+		else 
+			form.setMessage("Cde40 Transportation Reimbursement Information needs to be completed and submitted");
+
+
+		if (districtCodes != null) {
+			model.addAttribute("districtNumbers", districtCodes);
+		}
+
+		model.addAttribute("transportationForm", form);
+		return ".Cde40TransReimbForm-index";
+	}
+
+	@RequestMapping(value = "/json", method = RequestMethod.GET)
+	public ModelAndView retrieve(@RequestParam String districtNumber,HttpServletRequest request) {
+		try {
+			Map<String, Object> parameterMap = new HashMap<String, Object>();
+
+			HttpSession session = request.getSession();
+			UserInfo userInfo = (UserInfo) session.getAttribute("USER_INFO");
+			String districtName = userInfo.getDistrictMap().get(districtNumber);
+			TransportationForm form = cde40TransReimbFormManager.setupForm(districtNumber);
+			form.setDistrictNumber(districtNumber);
+			form.setDistrictName(districtName);
+
+			if ("None".equalsIgnoreCase(form.getErrors()))
+				form.setMessage("Cde40 Transportation Reimbursement Information already saved successfully. No more updates will be saved.");
+			else 
+				form.setMessage("Cde40 Transportation Reimbursement Information for the district needs to be completed and submitted for the fiscal year.");
+
+			parameterMap.put("transportationForm", form);
+
+			return new ModelAndView(standardJsonView, parameterMap);
+		} catch (Throwable t) {
+			logger.error("Exception occurred during retrieve.", t);
+		} finally {
+			logger.info("generating json response ");
+		}
+
+		return null;
+	}
+
+	@RequestMapping(value = "/save", method = RequestMethod.POST)
+	public String save(Model model,
+			@ModelAttribute TransportationForm transportationForm,
+			BindingResult result, HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		UserInfo userInfo = (UserInfo) session.getAttribute("USER_INFO");
+
+		if (userInfo.isAdminUser()) {
+			Object[] districtCodes = userInfo.getAllDistrictCodes().toArray();
+
+			model.addAttribute("districtNumbers", districtCodes);
+		}
+
+		cde40TransFormValidator.validate(transportationForm, result);
+		if (result.hasErrors()) {
+			return ".Cde40TransReimbForm-index";
+		}
+		/*if ("None".equalsIgnoreCase(transportationForm.getErrors())) {
+			transportationForm
+					.setMessage("Cde40 Transportation Reimbursement Information already saved before. No updates were done");
+			return ".Cde40TransReimbForm-index";
+		}*/
+
+		cde40TransReimbFormManager.saveOrUpdate(transportationForm);
+
+		transportationForm.setMessage("Cde40 Transportation Reimbursement Information saved successfully");
+		model.addAttribute("saved", true);
+
+		session.setAttribute("preparerEmailId",transportationForm.getEmailPreparerCde40());
+		session.setAttribute("preparerPhoneNos",transportationForm.getPhonePreparerCde40());
+		session.setAttribute("preparerName",transportationForm.getNamePreparerCde40());
+		logger.debug(transportationForm.getDistrictNumber());
+
+		session.setAttribute("districtNos",transportationForm.getDistrictNumber());
+		session.setAttribute("fiscalYear", transportationForm.getFiscalYear());
+		session.setAttribute("districtName",transportationForm.getDistrictName());
+		if (transportationForm.getIsCapitalOutLay()) {
+			return "redirect:" + RequestUtils.getContextPath(request)
+					+ "/secure/CapitalOutlay";
+		}
+
+		return ".Cde40TransReimbForm-index";
+	}
+
+	@RequestMapping(value = "/list", method = RequestMethod.GET)
+	public String list(Model model) {
+		List<Transportation> transportations = cde40TransReimbFormManager
+				.findAll(Transportation.class);
+		model.addAttribute("transportations", transportations);
+		return ".Cde40TransReimbForm-list";
+	}
+
+}

@@ -1,0 +1,138 @@
+
+package com.cdoe.biz.model;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
+
+import org.hibernate.annotations.Immutable;
+import org.hibernate.annotations.Where;
+
+@XmlRootElement
+@Entity
+@Table(name = "ORGANIZATION_UNIT_MASTER", schema="DEVDETAILMGR")
+@Immutable
+@Where(clause="((DATE_CLOSED is null " +
+"or DATE_CLOSED > sysdate) and ((DATE_OPERATIONAL is null) or (DATE_OPERATIONAL < sysdate)))")
+public class OrganizationUnitMaster implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@Column(name = "ORGANIZATION_CODE")
+	private String organizationCode;
+	@Column(name = "ORGANIZATION_NAME")
+	private String organizationName;
+	@Column(name = "ORGANIZATION_UNIT_TYPE")
+	private String organizationUnitType;
+
+        @OneToMany(mappedBy="organization") 
+        private Set<CountyInfo> countyInfo;
+        
+    public OrganizationUnitMaster() {
+		super();
+	}
+
+	public String getOrganizationCode () {
+        return this.organizationCode;
+    }
+
+    public void setOrganizationCode (String organizationCode) {
+        this.organizationCode = organizationCode;
+    }
+
+    public String getOrganizationName () {
+        return this.organizationName;
+    }
+
+    public void setOrganizationName (String organizationName) {
+        this.organizationName = organizationName;
+    }
+
+	public String getOrganizationUnitType() {
+		return organizationUnitType;
+	}
+
+	public void setOrganizationUnitType(String organizationUnitType) {
+		this.organizationUnitType = organizationUnitType;
+	}
+
+    public Set<CountyInfo> getCountyInfo() {
+        return countyInfo;
+    }
+
+    public void setCountyInfo(Set<CountyInfo> countyInfo) {
+        this.countyInfo = countyInfo;
+    }
+    
+    public String getPrimaryCounty() {
+     for (CountyInfo county : this.countyInfo)  {
+       if (county.isPrimaryCounty()) return county.getCountyName();
+     }
+     
+     return null;
+    }
+    
+    public List<String> getAllCounties() {
+      List<String> result = new ArrayList<String>();
+      
+       for (CountyInfo county : this.countyInfo)  {
+        result.add(county.getCountyName());
+       }
+       
+       return result;
+    }
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime
+				* result
+				+ ((organizationCode == null) ? 0 : organizationCode.hashCode());
+		result = prime
+				* result
+				+ ((organizationName == null) ? 0 : organizationName.hashCode());
+		result = prime
+				* result
+				+ ((organizationUnitType == null) ? 0 : organizationUnitType
+						.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		OrganizationUnitMaster other = (OrganizationUnitMaster) obj;
+		if (organizationCode == null) {
+			if (other.organizationCode != null)
+				return false;
+		} else if (!organizationCode.equals(other.organizationCode))
+			return false;
+		if (organizationName == null) {
+			if (other.organizationName != null)
+				return false;
+		} else if (!organizationName.equals(other.organizationName))
+			return false;
+		if (organizationUnitType == null) {
+			if (other.organizationUnitType != null)
+				return false;
+		} else if (!organizationUnitType.equals(other.organizationUnitType))
+			return false;
+		return true;
+	}
+
+}

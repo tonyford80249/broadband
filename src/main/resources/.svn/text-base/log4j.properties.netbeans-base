@@ -1,0 +1,75 @@
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+
+# For JBoss: Avoid to setup Log4J outside $JBOSS_HOME/server/default/deploy/log4j.xml!
+# For all other servers: Comment out the Log4J listener in web.xml to activate Log4J.
+#log4j.rootLogger=INFO, stdout, logfile
+
+#log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+#log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+#log4j.appender.stdout.layout.ConversionPattern=%d %p [%l] - <%m>%n
+
+#log4j.appender.logfile=org.apache.log4j.RollingFileAppender
+#log4j.appender.logfile.File=${godzillow.root}/WEB-INF/log/godzillow.log
+#log4j.appender.logfile.MaxFileSize=512KB
+# Keep three backup files.
+#log4j.appender.logfile.MaxBackupIndex=3
+# Pattern to output: date priority [category] - message
+#log4j.appender.logfile.layout=org.apache.log4j.PatternLayout
+#log4j.appender.logfile.layout.ConversionPattern=%d %p [%l] - %m%n
+
+# Global logging configuration
+log4j.rootLogger=debug, stdout, fileout
+
+#, chainsaw
+#log4j.threshold=ALL
+#log4j.debug = true
+
+
+#log4j.logger.org.acegisecurity=DEBUG, stdout, fileout
+
+# Console output...
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+#log4j.appender.stdout.layout.conversionPattern=[%p,%c{1},%t] %m%n
+log4j.appender.stdout.layout.ConversionPattern=%d{ABSOLUTE} %5p %c{1}:%L - %m%n
+
+# Rolling log file output...
+log4j.appender.fileout=org.apache.log4j.RollingFileAppender
+log4j.appender.fileout.File=etc/log/log4j.log
+#log4j.appender.fileout.File=${webapp.root}/WEB-INF/log4j.log
+log4j.appender.fileout.MaxFileSize=2048KB
+log4j.appender.fileout.MaxBackupIndex=1
+log4j.appender.fileout.layout=org.apache.log4j.PatternLayout
+log4j.appender.fileout.layout.conversionPattern=%d{ABSOLUTE} %5p %c{1},%t:%L - %m%n
+
+log4j.appender.chainsaw=org.apache.log4j.net.SocketAppender
+log4j.appender.Chainsaw.remoteHost=10.1.37.87
+log4j.appender.Chainsaw.port=4445
+log4j.appender.Chainsaw.locationInfo=true
+
+
+
+#log4j.logger.net.spy.memcached.MemcachedConnection=warn
+#log4j.logger.org.springframework.jdbc.core.JdbcTemplate=debug
+#log4j.logger.org.springframework.security=debug
+#log4j.logger.org.hibernate.cache=debug
+
+#log4j.logger.org.hibernate=info
+#log4j.logger.org.hibernate.SQL=debug
+#log4j.logger.org.hibernate.type=ALL
+
+
+
+#log4j.logger.org.hibernate=INFO, hb
+#log4j.logger.org.hibernate.SQL=DEBUG
+#log4j.logger.org.hibernate.type=TRACE
+#log4j.logger.org.hibernate.hql.ast.AST=info
+#log4j.logger.org.hibernate.tool.hbm2ddl=warn
+#log4j.logger.org.hibernate.hql=debug
+#log4j.logger.org.hibernate.cache=info
+#log4j.logger.org.hibernate.jdbc=debug
+
+#log4j.appender.hb=org.apache.log4j.ConsoleAppender
+#log4j.appender.hb.layout=org.apache.log4j.PatternLayout
+#log4j.appender.hb.layout.ConversionPattern=HibernateLog --> %d{HH:mm:ss} %-5p %c - %m%n

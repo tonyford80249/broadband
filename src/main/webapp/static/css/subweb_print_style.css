@@ -1,0 +1,55 @@
+
+body {
+	font-family : arial, sans-serif;
+	font-size : 10pt;
+}
+#content h1 {
+	font-size : 16px;
+}
+#content h2 {
+	font-size : 14px;
+}
+#content h3, h4, h5 {
+	font-size : 12px;
+}
+#header {
+background-color : #1f9dc5;
+	display : none;
+}
+#headcdetext {
+	font-weight : bold;
+}
+#topnav {
+	display : none;
+}
+#breadcrumb {
+	display : none;
+}
+#sidebar {
+	display : none;
+}
+#footercontent {
+	display : none;
+}
+
+#bannersection {
+	font-size : 18px;
+	color : #ffffff;
+	font-family : arial;
+	font-weight : bold;
+	margin : 0px;
+	padding-top : 20px;
+	padding-bottom : 3px;
+/*
+	background-image : url("../images2/genbanner2.jpg");
+	background-position : top left;
+	background-repeat : no-repeat;
+*/
+display : block;
+
+vertical-align : top;
+float : left;
+width : 500px;
+padding-top:25px;
+}
+

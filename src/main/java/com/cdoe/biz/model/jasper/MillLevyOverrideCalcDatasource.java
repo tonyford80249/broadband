@@ -1,0 +1,100 @@
+package com.cdoe.biz.model.jasper;
+
+import java.util.Iterator;
+
+import net.sf.jasperreports.engine.JRDataSource;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JRField;
+
+/**
+ *
+ * @author Sandeep Sarkar
+ * 
+ */
+public class MillLevyOverrideCalcDatasource implements JRDataSource {
+    public static final String DISTRICT_NAME = "districtName";
+    public static final String DISTRICT_NUMBER = "districtNumber";
+    public static final String TAX_YEAR = "taxYear";
+    public static final String GRAND_TOTAL_PROG = "grandTotalProg";
+    public static final String COST_OF_LIVING = "costOfLiving";
+    public static final String MIN_OVERRIDE_ALLOWED = "minOverrideAllowed";
+    public static final String QUARTER_OF_TOTAL_PROG = "quarterOfTotalProg";
+    public static final String TOTAL_OVERRIDE_ALLOWED = "totalOverrideAllowed";
+    public static final String ALLOWABLE_OVERRIDE = "allowableOverride";
+    public static final String PROPERTY_TAX_REVENUE = "propertyTaxRevenue";
+    public static final String REMAINING_BALANCE = "remainingBalance";
+    
+    
+    private MillLevyOverrideCalcCollection collection;
+    private Iterator<MillLevyOverrideCalculation> iterator = null;
+    private MillLevyOverrideCalculation currentMillLevyCalculation = null;
+
+   
+	public static final String IS_BOLD = "isBold";
+    public static final String IS_INDENTED = "isIndented";
+    public static final String TITLE = "title";
+  
+    
+    
+    public MillLevyOverrideCalcDatasource(MillLevyOverrideCalcCollection collection) {
+		
+		this.collection = collection;
+	}
+    
+   
+  
+    @Override
+    public Object getFieldValue(JRField jrf) throws JRException {
+    
+    	 if (this.currentMillLevyCalculation == null) {
+    	        this.currentMillLevyCalculation = this.iterator.next();
+    	 }
+
+        if (jrf.getName().equals(DISTRICT_NAME) && collection != null) {
+            return collection.getDistrictName();
+        } else if (jrf.getName().equals(DISTRICT_NUMBER) && collection != null) {
+            return collection.getDistrictNumber();
+        } else if (jrf.getName().equals(TAX_YEAR) && collection != null) {
+            return collection.getTaxYear();
+        }  else if (jrf.getName().equals(GRAND_TOTAL_PROG) && collection != null) {
+        	return collection.getGrandTotalProg();
+        }  else if (jrf.getName().equals(COST_OF_LIVING) && collection != null) {
+            return collection.getCostOfLiving();
+        } else if (jrf.getName().equals(MIN_OVERRIDE_ALLOWED) && collection != null) {
+            return collection.getMinOverrideAllowed();
+        }  else if (jrf.getName().equals(QUARTER_OF_TOTAL_PROG) && collection != null) {
+            return collection.getQuarterOfTotalProg();
+        }  else if (jrf.getName().equals(TOTAL_OVERRIDE_ALLOWED) && collection != null) {
+            return collection.getTotalOverrideAllowed();
+        }  else if (jrf.getName().equals(ALLOWABLE_OVERRIDE) && collection != null) {
+            return collection.getAllowableOverride();
+        }  else if (jrf.getName().equals(PROPERTY_TAX_REVENUE) && collection != null) {
+            return collection.getPropertyTaxRevenue();
+        }  else if (jrf.getName().equals(REMAINING_BALANCE) && collection != null) {
+            return collection.getRemainingBalance();
+        }
+
+        return null;
+    }
+    
+    
+	public MillLevyOverrideCalcDatasource() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public boolean next() throws JRException {
+		// TODO Auto-generated method stub
+		 currentMillLevyCalculation = null;
+
+	        if (this.iterator == null && collection != null) {
+	            this.iterator = collection.getCalculations().iterator();
+	        }
+
+	        if (this.iterator == null) {
+	            return false;
+	        }
+
+	        return this.iterator.hasNext();
+	}
+}

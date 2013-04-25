@@ -1,0 +1,24 @@
+
+package com.cdoe.services.stateequal;
+
+
+import com.cdoe.biz.model.jasper.MillLevyOverrideCalcDatasource;
+import com.cdoe.biz.model.jasper.SeMillLevyOverrideDatasource;
+import com.cdoe.services.transportation.IBaseManager;
+import com.cdoe.ui.form.VDataForm;
+import com.cdoe.ui.form.stateequal.MillLevyForm;
+import com.cdoe.ui.form.stateequal.MillLevyOverrideForm;
+
+public interface IMillLevyOverrideWorksheetManager extends IBaseManager {
+
+	void saveOrUpdate(MillLevyOverrideForm millLevyOverrideForm);
+	
+	MillLevyOverrideForm setupForm();
+	
+	MillLevyOverrideForm setupForm(long id);
+	
+	MillLevyOverrideForm setupForm(String districtCode, String fiscalYear);
+
+	SeMillLevyOverrideDatasource createDataSource(MillLevyOverrideForm form);
+
+}

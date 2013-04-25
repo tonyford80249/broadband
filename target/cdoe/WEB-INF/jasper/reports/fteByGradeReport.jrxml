@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="fteByGradeReport" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0422a827-f15a-4d3a-a6f6-5a1208fcb946">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select District_Number
+       ,Grade_Level
+       ,Cde_Member
+       ,Parttime_H
+       ,Parttime_F
+       ,Fte_Not_Elig
+       ,Fte_Elig
+       ,Funded_Count
+       ,Out_Of_Dist
+   from crosswalk_fte_by_grade
+   order by District_Number
+       ,Grade_Level]]>
+	</queryString>
+	<field name="DISTRICT_NUMBER" class="java.lang.String"/>
+	<field name="GRADE_LEVEL" class="java.lang.String"/>
+	<field name="CDE_MEMBER" class="java.math.BigDecimal"/>
+	<field name="PARTTIME_H" class="java.math.BigDecimal"/>
+	<field name="PARTTIME_F" class="java.math.BigDecimal"/>
+	<field name="FTE_NOT_ELIG" class="java.math.BigDecimal"/>
+	<field name="FTE_ELIG" class="java.math.BigDecimal"/>
+	<field name="FUNDED_COUNT" class="java.math.BigDecimal"/>
+	<field name="OUT_OF_DIST" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="490021fe-02bf-4260-8462-addad12c5b5a" mode="Opaque" x="0" y="0" width="100" height="20" backcolor="#B7C1CD"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DISTRICT_NUMBER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f0591991-21d1-4dff-8400-d6e5510a12fa" mode="Opaque" x="100" y="0" width="100" height="20" backcolor="#B7C1CD"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[GRADE_LEVEL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="10e1ebc8-d641-45a7-b924-b8f2f956c474" mode="Opaque" x="200" y="0" width="100" height="20" backcolor="#B7C1CD"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CDE_MEMBER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1d2afd79-3a67-4b2c-938e-72cefc0b3400" mode="Opaque" x="300" y="0" width="100" height="20" backcolor="#B7C1CD"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PARTTIME_H]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="beba3879-5a7d-47da-82d2-59ce74eb2932" mode="Opaque" x="400" y="0" width="100" height="20" backcolor="#B7C1CD"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PARTTIME_F]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c5ae632b-7979-4a9c-835f-a9123c97dd9f" mode="Opaque" x="500" y="0" width="100" height="20" backcolor="#B7C1CD"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FTE_NOT_ELIG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3f7335c4-2b41-435c-b995-70f6280defc3" mode="Opaque" x="600" y="0" width="102" height="20" backcolor="#B7C1CD"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FTE_ELIG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3c0bdf44-8862-4762-b810-a436309ee3fc" mode="Opaque" x="702" y="0" width="100" height="20" backcolor="#B7C1CD"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FUNDED_COUNT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement uuid="09ecf367-5a7f-4256-b791-3e8c62062d21" x="0" y="0" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DISTRICT_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="91853f26-6858-408b-b6d3-7686b67bedda" x="100" y="0" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{GRADE_LEVEL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f0901be2-08b0-4fda-baaf-2f9a0fea4701" x="200" y="0" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CDE_MEMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="99f6c2e0-bef4-4164-b9d1-977143fb6ee8" x="300" y="0" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{PARTTIME_H}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="153e059d-2211-4bd9-8810-c16947936ccc" x="400" y="0" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{PARTTIME_F}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="caee3308-ca7a-4202-b357-2192013d872d" x="500" y="0" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{FTE_NOT_ELIG}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6fab7add-eba2-4f0f-95de-39c6b5a59008" x="602" y="0" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{FTE_ELIG}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f3568d43-a504-42d3-a9b1-9d06bb09021a" x="702" y="0" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{FUNDED_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

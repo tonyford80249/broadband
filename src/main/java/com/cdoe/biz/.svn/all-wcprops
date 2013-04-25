@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/biz
+END
+IAudCDE40TransReimbFormDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/state_equal/!svn/ver/111/trunk/cdoe/src/main/java/com/cdoe/biz/IAudCDE40TransReimbFormDAO.java
+END
+IDistrictDetailDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/cdoe/biz/IDistrictDetailDAO.java
+END
+IDistrictsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/state_equal/!svn/ver/111/trunk/cdoe/src/main/java/com/cdoe/biz/IDistrictsDAO.java
+END
+IMillLevyCertDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/cdoe/biz/IMillLevyCertDAO.java
+END
+IDistrictPaymentReportDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/state_equal/!svn/ver/111/trunk/cdoe/src/main/java/com/cdoe/biz/IDistrictPaymentReportDAO.java
+END
+IOrganizationUnitMasterDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/state_equal/!svn/ver/40/trunk/cdoe/src/main/java/com/cdoe/biz/IOrganizationUnitMasterDAO.java
+END
+IAdjustmentStatusDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/cdoe/biz/IAdjustmentStatusDAO.java
+END
+IAuditSummaryDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/state_equal/!svn/ver/112/trunk/cdoe/src/main/java/com/cdoe/biz/IAuditSummaryDAO.java
+END
+ICreateAuditDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/state_equal/!svn/ver/111/trunk/cdoe/src/main/java/com/cdoe/biz/ICreateAuditDAO.java
+END
+IAuditRepaymentAdjustmentDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/state_equal/!svn/ver/281/trunk/cdoe/src/main/java/com/cdoe/biz/IAuditRepaymentAdjustmentDAO.java
+END
+IGeneratedReportDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/state_equal/!svn/ver/237/trunk/cdoe/src/main/java/com/cdoe/biz/IGeneratedReportDao.java
+END
+ISSOLoginDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/state_equal/!svn/ver/66/trunk/cdoe/src/main/java/com/cdoe/biz/ISSOLoginDAO.java
+END
+IChangeAtRiskCountsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/state_equal/!svn/ver/111/trunk/cdoe/src/main/java/com/cdoe/biz/IChangeAtRiskCountsDAO.java
+END
+ICoforsUploadDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/state_equal/!svn/ver/111/trunk/cdoe/src/main/java/com/cdoe/biz/ICoforsUploadDAO.java
+END
+IAudSumUpdateDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/state_equal/!svn/ver/111/trunk/cdoe/src/main/java/com/cdoe/biz/IAudSumUpdateDAO.java
+END

@@ -1,0 +1,175 @@
+
+#horizontalLine114HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:1.75em;
+	
+}
+
+#importPriorYearAuditedPupilAndLunchCountsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#horizontalLine116HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:5.25em;
+	
+}
+
+#auditsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#selectAllCBDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:17.5em;
+  
+}
+
+#auditEqualGridDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:19.25em;
+  
+}
+
+#districtNumberDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:8.0em;
+  top:22.75em;
+	
+}
+
+#dateChangedDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:54.0em;
+  top:22.75em;
+	
+}
+
+#noteAuditsShouldNotShowOnceUploadedStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:4.0em;
+  top:31.5em;
+	text-align:right;
+	
+}
+
+#horizontalLine886HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:26.25em;
+	
+}
+
+#uploadButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:28.0em;
+  
+}
+
+#organizationCodeDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:22.0em;
+  top:22.75em;
+	
+}
+
+#availableAsOfDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:37.0em;
+  top:22.75em;
+	
+}
+
+#reopenAuditsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:70.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#checkbox881CheckboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:22.75em;
+  
+}
+
+#selectAllDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:5.0em;
+  top:17.5em;
+	
+}
+
+#resetButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:68.0em;
+  top:15.75em;
+  
+}
+
+#districtNumberDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:82.0em;
+  top:14.0em;
+ 	
+}
+
+#districtCodeStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:68.0em;
+  top:14.0em;
+	text-align:right;
+	
+}
+
+#fiscalYearDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:82.0em;
+  top:12.25em;
+ 	
+}
+
+#fiscalYearStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:68.0em;
+  top:12.25em;
+	text-align:right;
+	
+}
+

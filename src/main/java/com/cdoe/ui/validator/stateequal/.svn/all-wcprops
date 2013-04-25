@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/ui/validator/stateequal
+END
+CalculateEntitlementsValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/ui/validator/stateequal/CalculateEntitlementsValidator.java
+END
+MillLevyValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/state_equal/!svn/ver/246/trunk/cdoe/src/main/java/com/cdoe/ui/validator/stateequal/MillLevyValidator.java
+END
+MillLevyOverrideValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/state_equal/!svn/ver/232/trunk/cdoe/src/main/java/com/cdoe/ui/validator/stateequal/MillLevyOverrideValidator.java
+END
+CsiValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/ui/validator/stateequal/CsiValidator.java
+END
+AdjustmentValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/ui/validator/stateequal/AdjustmentValidator.java
+END
+CommentInfoValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/state_equal/!svn/ver/232/trunk/cdoe/src/main/java/com/cdoe/ui/validator/stateequal/CommentInfoValidator.java
+END
+DisplayAdjustmentsValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/state_equal/!svn/ver/285/trunk/cdoe/src/main/java/com/cdoe/ui/validator/stateequal/DisplayAdjustmentsValidator.java
+END
+OtherStateShareAdjustmentsValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/state_equal/!svn/ver/285/trunk/cdoe/src/main/java/com/cdoe/ui/validator/stateequal/OtherStateShareAdjustmentsValidator.java
+END
+StateEqualValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/ui/validator/stateequal/StateEqualValidator.java
+END
+ElectionsDetailValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/state_equal/!svn/ver/295/trunk/cdoe/src/main/java/com/cdoe/ui/validator/stateequal/ElectionsDetailValidator.java
+END

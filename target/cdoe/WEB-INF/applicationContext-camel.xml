@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:camel="http://camel.apache.org/schema/spring"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="
+       http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://camel.apache.org/schema/spring 
+       http://camel.apache.org/schema/spring/camel-spring.xsd
+       http://www.springframework.org/schema/util 
+       http://www.springframework.org/schema/util/spring-util-3.0.xsd
+       http://www.springframework.org/schema/context 
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <util:list id="recipientList1" value-type="java.lang.String">
+        <value>rachelray986@yahoo.com</value>
+        <value>romeo80249@yahoo.com</value>
+        <value>keviniceland@yahoo.com</value>
+    </util:list>    
+    
+    <util:constant id="sampleMessage" static-field=" com.cdoe.biz.model.email.MessageTemplate.sampleMessage"/>
+        
+    <bean id="testMessage" class="com.cdoe.biz.model.email.MessageQueue">
+        <property name="subject" value="This is just a test"/>
+    </bean>
+    
+    <bean id="mailClient" init-method="init" class="com.cdoe.services.impl.MailClient">
+        <property name="destination" ref="testMessage"/>             
+        <property name="recipientLists">
+            <map>
+                <entry key="testMessage" value-ref="recipientList1"/>                    
+            </map>
+        </property>
+        <property name="messageIdentifiers">
+            <map>
+                <entry key="testMessage" value="This is a test message" />                    
+            </map>
+        </property>
+        <!-- property name="mailServerUrl" value="smtps://smtp.gmail.com" /-->
+        <property name="mailServerUrl" value="smtp://dmz-smtp.cde.state.co.us" />
+        <!-- property name="username" value="blacksummer8020291@gmail.com"/-->
+        <!-- property name="password" value="spacejam2000"/ -->
+        <property name="camelContext" ref="theOnlyCamelContext" />
+    </bean>
+    
+    <bean id="uploadService" init-method="init" class="com.cdoe.services.impl.UploadService">
+      <property name="uploadFolder" value="/WEB-INF/upload/marker.txt"/>       
+      <property name="destination" value="ftp://cde\state-equal-dev:34Quad-Follow!@10.1.1.36/2013_Test/?binary=true"/>         
+    </bean>
+   
+    
+              
+    <!--
+        Simple camel route which send every one minute a message on the console.
+    -->
+    <camelContext id="theOnlyCamelContext" xmlns="http://camel.apache.org/schema/spring">
+        
+        <!-- route id="timer-to-console">
+            <from uri="timer://foo?fixedRate=true&amp;period=60s"/>
+            <transform>
+               <simple>Hello Camel Enterprise Integration Application (EAI), how are you?</simple>
+            </transform>
+            <to uri="stream:out"/>
+        </route -->
+        
+        <camel:routeBuilder ref="uploadService"/>
+                				
+    </camelContext>
+
+</beans>

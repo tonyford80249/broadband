@@ -1,0 +1,13 @@
+
+package com.cdoe.biz.stateequal;
+
+import java.util.List;
+
+import com.cdoe.biz.model.VData;
+import com.cdoe.biz.model.equal.MillLevy;
+
+public interface IMillLevyCertDAO {
+	
+	public List<MillLevy> getByDistrictAndYear(final String districtNos, final String fiscalYear);
+
+}

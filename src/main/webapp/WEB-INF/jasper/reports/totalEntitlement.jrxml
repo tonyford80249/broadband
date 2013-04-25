@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="totalEntitlement" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8aa856ad-6f76-4ded-8935-dee187aa2389">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="oddRow">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}.intValue() % 2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#CCCCCC"/>
+		</conditionalStyle>
+	</style>
+	<field name="fiscalYear" class="java.lang.String"/>
+	<field name="districtNumber" class="java.lang.String"/>
+	<field name="districtName" class="java.lang.String"/>
+	<field name="previousStateEqual" class="java.lang.Double"/>
+	<field name="currentStateEqual" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1dd604e4-319b-4ecb-bd14-ac63e14117e0" mode="Opaque" x="0" y="0" width="555" height="47" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<box leftPadding="10"/>
+				<textElement>
+					<font fontName="SansSerif" size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CDE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b2cf878b-4eb8-42cb-9e1d-2ad053d58bdf" x="77" y="8" width="100" height="20" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COLORADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="962e6863-2991-42ef-b1eb-bbfff3187274" x="77" y="20" width="156" height="20" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT of EDUCATION]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="aab44a71-e3f9-4fe2-bad8-61c10a297506" x="421" y="8" width="80" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="7825566b-7e33-458e-a90c-43af5c8653d2" x="501" y="8" width="40" height="20" forecolor="#FFFFFF"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement uuid="ed73540a-fece-4af2-bab7-3b4f3b663cbc" x="259" y="8" width="100" height="20" forecolor="#FFFFFF"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="adba11aa-b59e-4d9f-a429-dca008cb34c2" x="0" y="47" width="555" height="32" forecolor="#203C73"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[DISTRICTS WHOSE STATE AID HAS CHANGED]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="b1a1f279-4ce4-4672-885c-254cd98b0414" x="0" y="0" width="105" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[District Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b0a7bc75-d1a1-4991-9010-4fe6248d0d67" x="105" y="0" width="205" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[District Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f5b6ead7-1261-430b-9bc9-17ab8b6e8c4f" x="310" y="0" width="105" height="20"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Previous State-Equal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2b099378-2475-4098-a0fa-ddf92f43c8ae" x="415" y="0" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current State-Equal]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="ca2b6ac4-db2e-4cf7-b62b-3791ecc405b1" style="oddRow" x="0" y="0" width="105" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{districtNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e9285f3c-ca10-4ccd-883a-3c0ea80fc7d7" style="oddRow" x="105" y="0" width="205" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{districtName}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,##0.00">
+				<reportElement uuid="862d438d-5442-4ba2-b00d-c531fd24c60f" style="oddRow" x="310" y="0" width="105" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{previousStateEqual}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,##0.00">
+				<reportElement uuid="a989018c-1398-4a16-aa7d-68cefb20e2f2" style="oddRow" x="415" y="0" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{currentStateEqual}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

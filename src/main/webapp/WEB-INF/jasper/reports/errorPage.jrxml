@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report11" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="30f05339-2d13-41c3-8a33-940440e067f4">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="districtName" class="java.lang.String"/>
+	<field name="reportName" class="java.lang.String"/>
+	<field name="districtNumber" class="java.lang.String"/>
+	<field name="fiscalYear" class="java.lang.String"/>
+	<field name="fiscalMonth" class="java.lang.String"/>
+	<field name="generalInfo" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement uuid="224f1f09-3a51-4c3d-b403-032ab8f3afc1" x="233" y="0" width="425" height="45"/>
+				<textElement>
+					<font fontName="Calibri" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fiscalMonth} + "     Fy " + $F{fiscalYear} ]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="164" splitType="Stretch">
+			<textField>
+				<reportElement uuid="e3565794-1284-4653-bdbf-c1fc17d3ce15" x="0" y="18" width="802" height="38"/>
+				<textElement>
+					<font fontName="Calibri" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Error generating report " + $F{reportName} + " for " +$F{districtNumber} + " - " + $F{districtName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="773c86b8-f3ed-4f9b-a364-7c1984df8384" x="0" y="76" width="778" height="73" forecolor="#CC3300"/>
+				<textElement>
+					<font fontName="Calibri" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{generalInfo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

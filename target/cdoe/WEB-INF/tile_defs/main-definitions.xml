@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+ <!-- 
+  Copyright ResQSoft, Inc. 2011
+ -->
+
+<!--
+ref: config/main-definitions.xml.et.jsp
+-->
+<tiles-definitions>
+    <definition name="TopLevel_stateEqual" template="/WEB-INF/jsp/MainLayout.jsp">
+        <put-attribute name="page-title" value="State EqualHome Page" />
+        <put-attribute name="page-header" value="/WEB-INF/jsp/Header.jsp" />
+        <put-attribute name="page-menu" value="/WEB-INF/jsp/stateequal/StateEqualMenu.jsp" />
+        <put-attribute name="page-content" value="/WEB-INF/jsp/blank.jsp" />
+        <put-attribute name="page-footer" value="/WEB-INF/jsp/footer.jsp" />
+     </definition>
+     
+     <definition name="TopLevel_transport" template="/WEB-INF/jsp/MainLayout.jsp">
+        <put-attribute name="page-title" value="Transport Home Page" />
+        <put-attribute name="page-header" value="/WEB-INF/jsp/Header.jsp" />
+        <put-attribute name="page-menu" value="/WEB-INF/jsp/transportation/TransportMenu.jsp" />
+        <put-attribute name="page-content" value="/WEB-INF/jsp/blank.jsp" />
+        <put-attribute name="page-footer" value="/WEB-INF/jsp/footer.jsp" />
+     </definition>
+     
+      <definition name="TopLevel_auditor" template="/WEB-INF/jsp/MainLayout.jsp">
+        <put-attribute name="page-title" value="Auditor Home Page" />
+        <put-attribute name="page-header" value="/WEB-INF/jsp/Header.jsp" />
+        <put-attribute name="page-menu" value="/WEB-INF/jsp/audit/AuditorMenu.jsp" />
+        <put-attribute name="page-content" value="/WEB-INF/jsp/blank.jsp" />
+        <put-attribute name="page-footer" value="/WEB-INF/jsp/footer.jsp" />
+     </definition>
+     
+     
+     <!-- definition name="TopLevel_transportationMenu" template="/WEB-INF/jsp/MainLayout.jsp">
+        <put-attribute name="page-title" value="Transportation Home Page" />
+        <put-attribute name="page-header" value="/WEB-INF/jsp/TransportationMenuHeader.jsp" />
+        <put-attribute name="page-menu" value="/WEB-INF/jsp/blank.jsp"/>
+        <put-attribute name="page-content" value="/WEB-INF/jsp/blank.jsp" />
+        <put-attribute name="page-footer" value="/WEB-INF/jsp/footer.jsp" />
+     </definition-->
+     
+      <definition name="TopLevel_moduleMenu" template="/WEB-INF/jsp/MainLayout.jsp">
+        <put-attribute name="page-title" value="Module Home Page" />
+        <put-attribute name="page-header" value="/WEB-INF/jsp/Header.jsp" />
+        <put-attribute name="page-menu" value="/WEB-INF/jsp/blank.jsp"/>
+        <put-attribute name="page-content" value="/WEB-INF/jsp/blank.jsp" />
+        <put-attribute name="page-footer" value="/WEB-INF/jsp/footer.jsp" />
+     </definition>
+     
+     <!-- definition name="TopLevel_main" template="/WEB-INF/jsp/MainLayout.jsp">
+        <put-attribute name="page-title" value="Transport Home Page" />
+        <put-attribute name="page-header" value="/WEB-INF/jsp/Header.jsp" />
+        <put-attribute name="page-menu" value="/WEB-INF/jsp/blank.jsp"/>
+        <put-attribute name="page-content" value="/WEB-INF/jsp/blank.jsp" />
+        <put-attribute name="page-footer" value="/WEB-INF/jsp/footer.jsp" />
+     </definition -->
+    
+     <definition name="TopLevel_login" template="/WEB-INF/jsp/MainLayout.jsp">
+        <put-attribute name="page-title" value="Colorado Department of Education" />
+        <put-attribute name="page-header" value="/WEB-INF/jsp/LoginHeader.jsp" />
+        <put-attribute name="page-menu" value="/WEB-INF/jsp/blank.jsp"/>
+        <put-attribute name="page-content" value="/WEB-INF/jsp/blank.jsp" />
+        <put-attribute name="page-footer" value="/WEB-INF/jsp/LoginFooter.jsp" />
+     </definition>
+     
+    
+     
+      <!-- definition name="TopLevel_auditorMenu" template="/WEB-INF/jsp/MainLayout.jsp">
+        <put-attribute name="page-title" value="Auditor Home Page" />
+        <put-attribute name="page-header" value="/WEB-INF/jsp/AuditorMenuHeader.jsp" />
+        <put-attribute name="page-menu" value="/WEB-INF/jsp/blank.jsp"/>
+        <put-attribute name="page-content" value="/WEB-INF/jsp/blank.jsp" />
+        <put-attribute name="page-footer" value="/WEB-INF/jsp/footer.jsp" />
+     </definition>
+     
+      <definition name="TopLevel_moduleHeader" template="/WEB-INF/jsp/MainLayout.jsp">
+        <put-attribute name="page-title" value="Module Home Page" />
+        <put-attribute name="page-header" value="/WEB-INF/jsp/ModuleHeader.jsp" />
+        <put-attribute name="page-menu" value="/WEB-INF/jsp/blank.jsp"/>
+        <put-attribute name="page-content" value="/WEB-INF/jsp/blank.jsp" />
+        <put-attribute name="page-footer" value="/WEB-INF/jsp/footer.jsp" / 
+     </definition-->
+     
+   	<definition name=".login" extends="TopLevel_stateEqual">
+		<put-attribute name="page-title" value="Please log in" />
+		<put-attribute name="page-content" value="/WEB-INF/jsp/LoginPageContent.jsp" />
+	</definition>
+
+	<definition name=".pagelist" extends="TopLevel_stateEqual">
+		<put-attribute name="page-title" value="Page List" />
+		<put-attribute name="page-content" value="/WEB-INF/jsp/PageListContent.jsp" />
+	</definition>
+</tiles-definitions>

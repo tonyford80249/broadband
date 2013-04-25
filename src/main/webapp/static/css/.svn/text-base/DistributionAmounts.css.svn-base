@@ -1,0 +1,196 @@
+
+#horizontalLine1481HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:3.5em;
+	
+}
+
+#distributionAmountsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:4.0em;
+  top:5.25em;
+	text-align:right;
+	
+}
+
+#firstDistributionAmountStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:169.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#totalFirstPaymentTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:200.0em;
+  top:8.75em;
+	
+}
+
+#reimbursementYearStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:7.0em;
+  top:10.5em;
+	text-align:right;
+	
+}
+
+#fiscalYearTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:27.0em;
+  top:10.5em;
+	
+}
+
+#$1StProrationFactorStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:57.0em;
+  top:10.5em;
+	text-align:right;
+	
+}
+
+#staticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:81.0em;
+  top:10.5em;
+	text-align:right;
+	
+}
+
+#prorateFactor1stPaymentTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:87.0em;
+  top:10.5em;
+	
+}
+
+#$2NdDistributionAmountStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:171.0em;
+  top:12.25em;
+	text-align:right;
+	
+}
+
+#totalSecondPaymentTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:201.0em;
+  top:12.25em;
+	
+}
+
+#$2NdProrationFactorStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:57.0em;
+  top:14.0em;
+	text-align:right;
+	
+}
+
+#staticText_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:81.0em;
+  top:14.0em;
+	text-align:right;
+	
+}
+
+#prorateFactor2ndPaymentTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:87.0em;
+  top:14.0em;
+	
+}
+
+#totalDistributionStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:57.0em;
+  top:15.75em;
+	text-align:right;
+	
+}
+
+#staticText_3Div{
+  position:absolute;
+  white-space:nowrap;
+  left:81.0em;
+  top:15.75em;
+	text-align:right;
+	
+}
+
+#totalDistributionTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:87.0em;
+  top:15.75em;
+	
+}
+
+#enterAllFundingSourcesOfTotalPaymentStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:4.0em;
+  top:21.0em;
+	text-align:right;
+	
+}
+
+#fundingSourcesTextareaDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:4.0em;
+  top:24.5em;
+	
+}
+
+#saveChangesButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:11.0em;
+  top:28.0em;
+  
+}
+
+#run1StPaymentsButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:32.0em;
+  top:28.0em;
+  
+}
+
+#run2NdPaymentsButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:58.0em;
+  top:28.0em;
+  
+}
+
+#horizontalLine1503HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:31.5em;
+	
+}
+

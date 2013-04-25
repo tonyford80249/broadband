@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- Services -->
+	<bean id="baseManager" class="com.cdoe.services.impl.BaseManager">
+		<property name="hibernateDAO" ref="hibernateDAO" />
+	</bean>
+
+
+	<bean id="uploadVariablesManager"
+		class="com.cdoe.services.impl.stateequal.UploadVariablesManager"
+		parent="baseManager">
+		<property name="stateEqualDao" ref="stateEqualDAO" />
+		<property name="fteByGradeDao" ref="fteByGradeDAO" />
+	</bean>
+	<bean id="importAuditsManager" class="com.cdoe.services.impl.stateequal.ImportAuditsManager"
+		parent="baseManager">
+		<property name="orgUnitMasterDAO" ref="districtDetailDAO" />
+		<property name="auditFreeLunchDAO" ref="auditFreeLunchDAO" />
+		<property name="auditFteByGradeDAO" ref="auditFteByGradeDAO" />
+		<property name="audTrackingDAO" ref="audTrackingDAO" />
+		<property name="freeLunchDAO" ref="freeLunchDAO" />
+		<property name="fteByGradeDAO" ref="fteByGradeDAO" />
+                <property name="generatedReportDao" ref="generatedReportDAO"/>
+                <property name="baseURI" value="/dynamic/report/statewide/"/>
+                <property name="reportGrouping" value="commonGrouping"/>                                
+                <property name="exportType" value="xls"/>
+                <property name="reportDefinitionFile" value="\WEB-INF\jasper\reports\importPriorYearAudit.jrxml"/>
+                <property name="reportName" value="importPriorAuditSummaryRpt"/>
+                <property name="stagingDirectoryForUpload" value="/WEB-INF/upload/staging/statewide/marker.txt"/>
+	</bean>
+	<bean id="displayAdjustmentManager"
+		class="com.cdoe.services.impl.stateequal.DisplayAdjustmentManager"
+		parent="baseManager">
+		<property name="stateEqualDAO" ref="stateEqualDAO" />
+		<property name="auditRepaymentAdjustmentDAO" ref="auditRepaymentAdjustmentDAO" />
+		<property name="referenceDataManager" ref="referenceDataManager" />
+	</bean>
+	<bean id="monthlyPaymentsManager"
+		class="com.cdoe.services.impl.stateequal.MonthlyPaymentsManager"
+		parent="baseManager">
+		<property name="monthlyPaymentsDAO" ref="monthlyPaymentsDAO" />
+		<property name="generatedReportDao" ref="generatedReportDAO" />
+		<property name="uploadInputFolder" value="/WEB-INF/upload/marker.txt" />
+	</bean>
+	<bean id="commentsManager" class="com.cdoe.services.impl.stateequal.CommentsManager"
+		parent="baseManager">
+		<property name="commentsDAO" ref="commentsDAO" />
+	</bean>
+	<bean id="reportsManager" class="com.cdoe.services.impl.stateequal.ReportsManager"
+		parent="baseManager">
+		<property name="reportsDAO" ref="reportsDAO" />
+	</bean>
+	<bean id="millLevyCertManager" class="com.cdoe.services.impl.stateequal.MillLevyCertManager"
+		parent="baseManager">
+		<property name="millLevyCertDAO" ref="millLevyDAO" />
+		<property name="stateEqualDAO" ref="stateEqualDAO" />
+	</bean>
+	<bean id="millLevyOverrideWorksheetManager" class="com.cdoe.services.impl.MillLevyOverrideWorksheetManager"
+		parent="baseManager">
+		<property name="millLevyOverrideWorksheetDAO" ref="millLevyOverrideWorksheetDAO" />
+	</bean>
+	<bean id="electionsManager" class="com.cdoe.services.impl.stateequal.ElectionsManager"
+		parent="baseManager">
+		<property name="electionsDAO" ref="electionsDAO" />
+		<property name="referenceDataManager" ref="referenceDataManager" />
+	</bean>
+	<bean id="crosswalkCollectionDataManager" class="com.cdoe.services.impl.stateequal.CrosswalkCollectionDataManager"
+		parent="baseManager">
+		<property name="crosswalkCollectionDataDAO" ref="crosswalkCollectionDataDAO" />
+		<property name="referenceDataManager" ref="referenceDataManager" />
+	</bean>
+	<bean id="importAuditTransDataManager"
+		class="com.cdoe.services.impl.stateequal.ImportAuditTransDataManager"
+		parent="baseManager">
+		<property name="importAuditTransDataDAO" ref="importAuditTransDataDAO" />
+	</bean>
+	<bean id="se360CalculationManager" class="com.cdoe.services.impl.SE360CalculationManager">
+		<property name="stateEqualDAO" ref="stateEqualDAO" />
+		<property name="fteByGradeDAO" ref="fteByGradeDAO" />
+		<property name="millLevyCertDAO" ref="millLevyDAO" />
+		<property name="csiDAO" ref="csiDAO" />
+	</bean>
+
+	<bean id="se360CalcProcessor" class="com.cdoe.rules.calc.SE360CalcProcessor">
+		<property name="se360CalcManager" ref="se360CalculationManager" />
+	</bean>
+	<bean id="calculateEntitlementsManager"
+		class="com.cdoe.services.impl.stateequal.CalculateEntitlementsManager"
+		parent="baseManager">
+		<property name="millLevyDAO" ref="millLevyDAO" />
+		<property name="stateEqualDAO" ref="stateEqualDAO" />
+		<property name="referenceDataManager" ref="referenceDataManager" />
+		<property name="se360CalcProcessor" ref="se360CalcProcessor" />
+	</bean>
+	<bean id="helpInfoManager" class="com.cdoe.services.impl.stateequal.HelpManager" parent="baseManager">
+	</bean>
+	<bean id="mailClient" class="com.cdoe.services.impl.MailClient">
+	</bean>
+	
+
+	<!-- Transportation Services -->
+	<bean id="cde40TransReimbFormManager"
+		class="com.cdoe.services.impl.transportation.Cde40TransReimbFormManager"
+		parent="transportationDataManager">
+		<property name="cde40TransReimbFormDAO" ref="cde40TransReimbFormDAO" />
+		<property name="referenceDataManager" ref="referenceDataManager" />
+	</bean>
+	<bean id="districtPaymentReportManager"
+		class="com.cdoe.services.impl.transportation.DistrictPaymentReportManager"
+		parent="baseManager">
+		<property name="districtPaymentReportDAO" ref="districtPaymentReportDAO" />
+		<property name="referenceDataManager" ref="referenceDataManager" />
+	</bean>
+	<bean id="capitalOutlayManager"
+		class="com.cdoe.services.impl.transportation.CapitalOutlayManager"
+		parent="transportationDataManager">
+		<property name="capitalOutlayDAO" ref="capitalOutlayDAO" />
+	</bean>
+	<bean id="transportationDataManager" class="com.cdoe.services.impl.TransportationDataManager"
+		parent="baseManager">
+		<property name="transportationDAO" ref="transportationDAO" />
+	</bean>
+	<bean id="cde40SummaryManager"
+		class="com.cdoe.services.impl.transportation.Cde40SummaryManager"
+		parent="transportationDataManager">
+		<property name="cde40SummaryDAO" ref="cde40SummaryDAO" />
+	</bean>
+	<bean id="distributionAmountsManager"
+		class="com.cdoe.services.impl.transportation.DistributionAmountsManager"
+		parent="baseManager">
+		<property name="distributionAmountsDAO" ref="distributionAmountsDAO" />
+		<property name="transportationDAO" ref="transportationDAO" />
+	</bean>
+	<bean id="coforsUploadManager" class="com.cdoe.services.impl.CoforsUploadManager"
+		parent="baseManager">
+		<property name="coforsUploadDAO" ref="coforsUploadDAO" />
+	</bean>
+	<bean id="paymentWorkSheetManager"
+		class="com.cdoe.services.impl.transportation.PaymentWorkSheetManager"
+		parent="baseManager">
+		<property name="paymentWorkSheetDAO" ref="paymentWorkSheetDAO" />
+		<property name="districtDetailDAO" ref="districtDetailDAO" />
+	</bean>
+	<bean id="changeAtRiskCountsManager" class="com.cdoe.services.impl.ChangeAtRiskCountsManager"
+		parent="baseManager">
+		<property name="changeAtRiskCountsDAO" ref="changeAtRiskCountsDAO" />
+	</bean>
+	<bean id="auditTrackingManager" class="com.cdoe.services.impl.audit.AuditTrackingManager"
+		parent="baseManager">
+
+	</bean>
+	<bean id="billingUpdateManager" class="com.cdoe.services.impl.audit.BillingUpdateManager"
+		parent="baseManager">
+		<!-- property name="auditBillingDAO" ref="auditBillingDAO"/ -->
+	</bean>
+	<!-- bean id="elpaUpdateManager" class="com.cdoe.services.impl.ELPAUpdateManager" 
+		parent="baseManager"> <property name="auditBillingDAO" ref="auditBillingDAO"/> 
+		</bean -->
+	<bean id="createAuditManager" class="com.cdoe.services.impl.audit.CreateUpdateAuditManager"
+		parent="baseManager">
+		<property name="createAuditDAO" ref="createAuditDAO" />
+	</bean>
+	<bean id="auditSummaryManager" class="com.cdoe.services.impl.audit.AuditSummaryManager"
+		parent="baseManager">
+
+	</bean>
+
+	<bean id="adjustmentStatusManager" class="com.cdoe.services.impl.AdjustmentStatusManager"
+		parent="baseManager">
+		<property name="adjustmentStatusDAO" ref="adjustmentStatusDAO" />
+	</bean>
+	<bean id="uploadStudentsManager" class="com.cdoe.services.impl.audit.UploadStudentsManager"
+		parent="baseManager">
+		<property name="uploadStudentsDAO" ref="uploadStudentsDAO" />
+	</bean>
+	<bean id="validateSASIDsManager" class="com.cdoe.services.impl.audit.ValidateSASIDsManager"
+		parent="baseManager">
+		<property name="validateSASIDsDAO" ref="validateSASIDsDAO" />
+	</bean>
+	<bean id="updateStudentsManager" class="com.cdoe.services.impl.audit.UpdateStudentsManager"
+		parent="baseManager">
+		<property name="updateStudentsDAO" ref="updateStudentsDAO" />
+	</bean>
+	<bean id="referenceDataManager" class="com.cdoe.services.impl.ReferenceDataManager">
+		<property name="districtsDao" ref="districtDetailDAO" />
+		<property name="stateEqualReferenceDao" ref="stateEqualReferenceDAO" />
+		<property name="seMonthlyDao" ref="seMonthlyDao" />  
+	</bean>
+	<bean id="audCDE40TransReimbFormManager"
+		class="com.cdoe.services.impl.audit.AudCDE40TransReimbFormManager"
+		parent="baseManager">
+		<property name="audCDE40TransReimbFormDAO" ref="audCDE40TransReimbFormDAO" />
+	</bean>
+	<bean id="auditRepaymentAdjustmentManager" class="com.cdoe.services.impl.AuditRepaymentAdjustmentManager"
+		parent="baseManager">
+		<property name="hibernateDAO" ref="auditRepaymentAdjustmentDAO" />
+	</bean>
+	<bean id="otherStateShareAdjustmentsManager"
+		class="com.cdoe.services.impl.stateequal.OtherStateShareAdjustmentsManager"
+		parent="baseManager">
+		<property name="stateEqualDAO" ref="stateEqualDAO" />
+	</bean>
+
+	<bean id="sePaymentReportManager" class="com.cdoe.services.impl.PaymentReportManager"
+		parent="baseManager">
+		<property name="generatedReportDao" ref="generatedReportDAO" />
+		<property name="baseURI" value="/dynamic/report/monthlypayment/" />
+		<property name="reportGrouping" value="rptMonthlyPayments" />
+		<property name="monthlyPaymentDAO" ref="monthlyPaymentsDAO" />
+		<property name="exportType" value="xls" />
+		<property name="reportDefinitionFile"
+			value="\WEB-INF\jasper\reports\stateEqualPayment.jrxml" />
+		<property name="reportName" value="monthlyPaymentRpt" />
+		<property name="stagingDirectoryForUpload" value="/WEB-INF/upload/staging/payment/marker.txt" />
+		<!-- property name="stagingDirectoryForUpload" value="/static/reports/payment/marker.txt"/ -->
+	</bean>
+
+	<bean id="sePaymentComparisonReportManager"
+		class="com.cdoe.services.impl.MonthlyPaymentComparisonReportManager"
+		parent="baseManager">
+		<property name="generatedReportDao" ref="generatedReportDAO" />
+		<property name="baseURI" value="/dynamic/report/monthlycomparison/" />
+		<property name="reportGrouping" value="rptMonthlyComparison" />
+		<property name="monthlyPaymentDAO" ref="monthlyPaymentsDAO" />
+		<property name="stateEqualDAO" ref="stateEqualDAO" />
+		<property name="exportType" value="xls" />
+		<property name="reportDefinitionFile"
+			value="\WEB-INF\jasper\reports\monthlyComparison.jrxml" />
+		<property name="reportName" value="monthlyComparisonPaymentRpt" />
+		<property name="stagingDirectoryForUpload"
+			value="/WEB-INF/upload/staging/comparison/marker.txt" />
+		<!--property name="stagingDirectoryForUpload" value="/static/reports/comparison/marker.txt"/ -->
+	</bean>
+
+	<bean id="seYtdPaymentAndWithholdingReportManager"
+		class="com.cdoe.services.impl.YtdPaymenstAndWithholdingsManager"
+		parent="baseManager">
+		<property name="generatedReportDao" ref="generatedReportDAO" />
+		<property name="baseURI" value="/dynamic/report/statewide/" />
+		<property name="reportGrouping" value="commonGrouping" />
+		<property name="monthlyPaymentDAO" ref="monthlyPaymentsDAO" />
+		<property name="stateEqualDAO" ref="stateEqualDAO" />
+		<property name="exportType" value="pdf" />
+		<property name="reportDefinitionFile"
+			value="\WEB-INF\jasper\reports\ytdPaymentNWithholding.jrxml" />
+		<property name="reportName" value="ytdPaymentAndWithholdingRpt" />
+		<property name="stagingDirectoryForUpload" value="/WEB-INF/upload/staging/statewide/marker.txt" />
+		<!-- property name="stagingDirectoryForUpload" value="/static/reports/ytdpayment/marker.txt"/ -->
+	</bean>
+
+	<bean id="viewReportsManager" class="com.cdoe.services.impl.ViewReportsManager"
+		parent="baseManager">
+		<property name="generatedReportDao" ref="generatedReportDAO" />
+		<property name="uploadInputFolder" value="/WEB-INF/upload/marker.txt" />
+	</bean>
+
+
+	<bean id="monthlyComparisonReportTask" scope="prototype"
+		class="com.cdoe.services.concurrent.GenerateSeMonthlyComparisonReport">
+		<property name="monthlyPaymentComparisonReportManager" ref="sePaymentComparisonReportManager" />
+	</bean>
+
+	<bean id="monthlyPaymentReportTask" scope="prototype"
+		class="com.cdoe.services.concurrent.GenerateSeMonthlyPaymentReport">
+		<property name="monthlyPaymentReportManager" ref="sePaymentReportManager" />
+	</bean>
+
+	<bean id="ytdPaymentWithholdingReportTask" scope="prototype"
+		class="com.cdoe.services.concurrent.GenerateYtdPaymentWithholdingsReport">
+		<property name="ytdPaymentAndWithholdingReportManager" ref="seYtdPaymentAndWithholdingReportManager" />
+	</bean>
+
+	<bean id="monthlyPaymentProcessingTask" scope="prototype"
+		class="com.cdoe.services.concurrent.PerformSeMonthlyPaymentProcessing">
+		<property name="seMonthlyPaymentDAO" ref="monthlyPaymentsDAO" />
+		<property name="stateEqualDAO" ref="stateEqualDAO" />
+	</bean>
+
+
+	<bean id="taskExecutionManager" init-method="init" scope="prototype"
+		class="com.cdoe.services.impl.exempt.TaskExecutionManager">
+		<property name="threadPoolSize" value="100" />
+	</bean>
+
+	<bean id="cofrsPaymentReport" class="com.cdoe.services.impl.SeCofrsPaymentReportManager">
+		<property name="generatedReportDao" ref="generatedReportDAO" />
+		<property name="baseURI" value="/dynamic/report/statewide/" />
+		<property name="reportGrouping" value="commonGrouping" />
+		<property name="stateEqualDAO" ref="stateEqualDAO" />
+		<property name="exportType" value="pdf" />
+		<property name="reportDefinitionFile" value="\WEB-INF\jasper\reports\cofrsPayments.jrxml" />
+		<property name="reportName" value="cofrsPaymentRpt" />
+		<property name="stagingDirectoryForUpload" value="/WEB-INF/upload/staging/statewide/marker.txt" />
+	</bean>
+
+	<bean id="cofrsPaymentReportTask" scope="prototype"
+		class="com.cdoe.services.concurrent.GenerateSeCofrsPaymentReport">
+		<property name="seCofrsPaymentReportManager" ref="cofrsPaymentReport" />
+	</bean>
+
+	<bean id="csiPaymentReport"
+		class="com.cdoe.services.impl.stateequal.SeCsiPaymentReportManager">
+		<property name="generatedReportDao" ref="generatedReportDAO" />
+		<property name="baseURI" value="/dynamic/report/statewide/" />
+		<property name="reportGrouping" value="commonGrouping" />
+		<property name="csiDAO" ref="csiDAO" />
+		<property name="exportType" value="pdf" />
+		<property name="reportDefinitionFile" value="\WEB-INF\jasper\reports\csiPayment.jrxml" />
+		<property name="reportName" value="csiPaymentRpt" />
+		<property name="stagingDirectoryForUpload" value="/WEB-INF/upload/staging/statewide/marker.txt" />
+	</bean>
+
+	<bean id="csiPaymentReportTask" scope="prototype"
+		class="com.cdoe.services.concurrent.GenerateSeCsiPaymentReportTask">
+		<property name="csiPaymentReportManager" ref="csiPaymentReport" />
+	</bean>
+        
+        <bean id="auditSummaryReport" class="com.cdoe.services.impl.stateequal.AuditSummaryReportManager">
+                <property name="generatedReportDao" ref="generatedReportDAO" />
+		<property name="auditEqualDAO" ref="auditEqualDao" />
+                <property name="auditFteByGradeDAO" ref="auditFteByGradeDAO" />
+		<property name="baseURI" value="/dynamic/report/statewide/" />
+		<property name="reportGrouping" value="commonGrouping" />		
+		<property name="exportType" value="pdf" />
+		<property name="reportDefinitionFile" value="\WEB-INF\jasper\reports\auditSummary.jrxml" />
+		<property name="reportName" value="auditSummary" />
+		<property name="stagingDirectoryForUpload" value="/WEB-INF/upload/staging/statewide/marker.txt" />
+	</bean>
+        
+         <bean id="millLevySummaryReport" class="com.cdoe.services.impl.stateequal.MillLevySummaryReportManager">
+                <property name="generatedReportDao" ref="generatedReportDAO" />
+		<property name="millLevyDAO" ref="millLevyDAO" />                
+		<property name="baseURI" value="/dynamic/report/statewide/" />
+		<property name="reportGrouping" value="commonGrouping" />		
+		<property name="exportType" value="pdf" />
+		<property name="reportDefinitionFile" value="\WEB-INF\jasper\reports\finalMillLevySummary.jrxml" />
+		<property name="reportName" value="finalMillLevySummary" />
+		<property name="stagingDirectoryForUpload" value="/WEB-INF/upload/staging/statewide/marker.txt" />
+	</bean>
+        
+        
+        <bean id="millLevySummaryReportTask" scope="prototype"
+		class="com.cdoe.services.concurrent.GenerateMillLevySummaryReport">
+		<property name="millLevySummaryReportManager" ref="millLevySummaryReport" />
+	</bean>
+
+
+          <bean id="totalEntitlementReport" class="com.cdoe.services.impl.stateequal.TotalEntitlementReportManager">
+                <property name="generatedReportDao" ref="generatedReportDAO" />
+		<property name="stateEqualDAO" ref="stateEqualDAO" />                
+		<property name="baseURI" value="/dynamic/report/statewide/" />
+		<property name="reportGrouping" value="commonGrouping" />		
+		<property name="exportType" value="pdf" />
+		<property name="reportDefinitionFile" value="\WEB-INF\jasper\reports\totalEntitlement.jrxml" />
+		<property name="reportName" value="totalEntitlement" />
+		<property name="stagingDirectoryForUpload" value="/WEB-INF/upload/staging/statewide/marker.txt" />
+	</bean>
+        
+        <bean id="totalEntitlementReportTask" scope="prototype" class="com.cdoe.services.concurrent.GenerateTotalEntitlementReport">
+		<property name="totalEntitlementReportManager" ref="totalEntitlementReport" />
+	</bean>
+        
+        
+         <bean id="negativePaymentReport" class="com.cdoe.services.impl.stateequal.NegativePaymentReportManager">
+                <property name="generatedReportDao" ref="generatedReportDAO" /> 
+		<property name="stateEqualDAO" ref="stateEqualDAO" />                
+		<property name="baseURI" value="/dynamic/report/statewide/" />
+		<property name="reportGrouping" value="commonGrouping" />		
+		<property name="exportType" value="pdf" />
+		<property name="reportDefinitionFile" value="\WEB-INF\jasper\reports\negativePayment.jrxml" />
+		<property name="reportName" value="negativePayment" />
+		<property name="stagingDirectoryForUpload" value="/WEB-INF/upload/staging/statewide/marker.txt" />
+	</bean>
+        
+        <bean id="postivePaymentReport" class="com.cdoe.services.impl.stateequal.NegativePaymentReportManager">
+                <property name="generatedReportDao" ref="generatedReportDAO" />
+		<property name="stateEqualDAO" ref="stateEqualDAO" />                
+		<property name="baseURI" value="/dynamic/report/statewide/" />
+		<property name="reportGrouping" value="commonGrouping" />		
+		<property name="exportType" value="pdf" />
+		<property name="reportDefinitionFile" value="\WEB-INF\jasper\reports\positivePayments.jrxml" />
+		<property name="reportName" value="stateEqualizationMonthlyPayment" />
+		<property name="stagingDirectoryForUpload" value="/WEB-INF/upload/staging/statewide/marker.txt" />
+	</bean>
+        
+        <bean id="negativePaymentReportTask" scope="prototype" class="com.cdoe.services.concurrent.GenerateNegativePaymentReport">
+		<property name="negativePaymentReportManager" ref="negativePaymentReport" />
+                <property name="positivePaymentReportManager" ref="postivePaymentReport" />
+	</bean>
+        
+        
+         <bean id="electionReport" class="com.cdoe.services.impl.stateequal.ElectionReportManager">
+                <property name="generatedReportDao" ref="generatedReportDAO" /> 
+		<property name="electionsDAO" ref="electionsDAO" />                
+		<property name="baseURI" value="/dynamic/report/statewide/" />
+		<property name="reportGrouping" value="commonGrouping" />		
+		<property name="exportType" value="pdf" />
+		<property name="reportDefinitionFile" value="\WEB-INF\jasper\reports\election.jrxml" />
+		<property name="reportName" value="election" />
+		<property name="stagingDirectoryForUpload" value="/WEB-INF/upload/staging/statewide/marker.txt" />
+	</bean>
+        
+        <bean id="electionReportTask" scope="prototype" class="com.cdoe.services.concurrent.GenerateElectionReport">
+		<property name="electionReportManager" ref="electionReport" />                
+	</bean>
+        
+
+</beans>

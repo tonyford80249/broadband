@@ -1,0 +1,201 @@
+
+#confirmUploadDataButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:52.0em;
+  top:10.5em;
+  
+}
+
+#browseButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:56.0em;
+  top:7.0em;
+  
+}
+
+#displayDataButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:33.0em;
+  top:10.5em;
+  
+}
+
+#districtCodeStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:22.75em;
+	text-align:right;
+	
+}
+
+#districtCodeDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:16.0em;
+  top:22.75em;
+ 	
+}
+
+#dataElementStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:24.5em;
+	text-align:right;
+	
+}
+
+#dataElementDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:16.0em;
+  top:24.5em;
+ 	
+}
+
+#valueStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:26.25em;
+	text-align:right;
+	
+}
+
+#dataElementDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:16.0em;
+  top:26.25em;
+	
+}
+
+#cancelButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:78.0em;
+  top:10.5em;
+  
+}
+
+#horizontalLine766HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:17.5em;
+	
+}
+
+#fiscalYearStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:21.0em;
+	text-align:right;
+	
+}
+
+#enterUpdateSingleVariableStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:15.75em;
+	text-align:right;
+	
+}
+
+#horizontalLine792HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:14.0em;
+	
+}
+
+#fiscalYearDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:16.0em;
+  top:21.0em;
+ 	
+}
+
+#saveVariableButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:29.75em;
+  
+}
+
+#clearButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:20.0em;
+  top:29.75em;
+  
+}
+
+#chooseFileToUploadFileUploadDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:51.0em;
+  top:7.0em;
+	
+}
+
+#chooseFileToUploadStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:29.0em;
+  top:7.0em;
+	text-align:right;
+	
+}
+
+#fiscalYearDropdownList_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:19.0em;
+  top:7.0em;
+ 	
+}
+
+#selectFiscalYearStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:7.0em;
+	text-align:right;
+	
+}
+
+#horizontalLine755HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:3.5em;
+	
+}
+
+#uploadVariablesAdjustmentsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:1.75em;
+	text-align:right;
+	
+}
+
+#horizontalLine797HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:33.25em;
+	
+}
+

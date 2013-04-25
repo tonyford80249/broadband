@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" language="groovy" pageWidth="1684" pageHeight="1190" orientation="Landscape" columnWidth="1644" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d7266ad6-6409-4fb5-a41a-e4f76e6cfcd6">
+    <property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="greenbar" mode="Opaque">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}.intValue() % 2 == 0]]></conditionExpression>
+			<style forecolor="#000000" backcolor="#CBC5B7"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="fiscalYear" class="java.lang.String"/>
+	<field name="fiscalMonth" class="java.lang.String"/>
+	<field name="county" class="java.lang.String"/>
+	<field name="chaterSchool" class="java.lang.String"/>
+	<field name="pupilCount" class="java.lang.Double"/>
+	<field name="kfactor" class="java.lang.Double"/>
+	<field name="perPupilRevenue" class="java.lang.Double"/>
+	<field name="totalFunding" class="java.lang.Double"/>
+	<field name="monthlyEnttlement" class="java.lang.Double"/>
+	<field name="cdeWithholding" class="java.lang.Double"/>
+	<field name="assistanceWithholding" class="java.lang.Double"/>
+	<field name="instituteWithholding" class="java.lang.Double"/>
+	<field name="interceptWithholding" class="java.lang.Double"/>
+	<field name="atRiskAdjustment" class="java.lang.Double"/>
+	<field name="distributionAmount" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1dd604e4-319b-4ecb-bd14-ac63e14117e0" mode="Opaque" x="0" y="0" width="1644" height="47" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<box leftPadding="10"/>
+				<textElement>
+					<font fontName="Calibri" size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CDE]]></text>
+			</staticText>
+			<elementGroup>
+				<elementGroup>
+					<staticText>
+						<reportElement uuid="962e6863-2991-42ef-b1eb-bbfff3187274" x="81" y="13" width="156" height="20" forecolor="#FFFFFF"/>
+						<textElement>
+							<font fontName="Calibri" isBold="true"/>
+						</textElement>
+						<text><![CDATA[DEPARTMENT of EDUCATION]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="b2cf878b-4eb8-42cb-9e1d-2ad053d58bdf" x="81" y="1" width="100" height="20" forecolor="#FFFFFF"/>
+						<textElement>
+							<font fontName="Calibri" isBold="true"/>
+						</textElement>
+						<text><![CDATA[COLORADO]]></text>
+					</staticText>
+				</elementGroup>
+			</elementGroup>
+			<textField>
+				<reportElement uuid="aa833ee6-a59a-4805-aafa-587e61c4d61b" x="1510" y="8" width="80" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="8f4fbb3f-f612-41cd-bcf7-ca192654f522" x="1590" y="8" width="40" height="20" forecolor="#FFFFFF"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="9284409a-0ea8-479c-8157-7441a995df2a" x="816" y="8" width="334" height="25" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="Calibri" size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[CSI School Payment Report]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="35f78d15-8777-4c70-9a55-416f23da793b" mode="Opaque" x="0" y="0" width="189" height="80" backcolor="#95B6D2"/>
+				<box bottomPadding="7">
+					<bottomPen lineWidth="2.0" lineColor="#203C73"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[County]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d68e0ff9-fa13-40f9-8811-2575ced559ba" mode="Opaque" x="189" y="0" width="258" height="80" backcolor="#95B6D2"/>
+				<box bottomPadding="7">
+					<bottomPen lineWidth="2.0" lineColor="#203C73"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Charter School/Institute]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0ec9e992-372e-442f-be2a-0675cebd6247" mode="Opaque" x="447" y="0" width="105" height="80" backcolor="#95B6D2"/>
+				<box leftPadding="6" bottomPadding="7" rightPadding="6">
+					<bottomPen lineWidth="2.0" lineColor="#203C73"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Projected Funded Pupil Count]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="215aad70-fb0d-4c8b-ae8f-15ce70d2f5dc" mode="Opaque" x="552" y="0" width="105" height="80" backcolor="#95B6D2"/>
+				<box leftPadding="6" bottomPadding="7" rightPadding="6">
+					<bottomPen lineWidth="2.0" lineColor="#203C73"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[District PPR for Full Day K Factor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6f4ca1cd-b36e-4d37-a894-288f732ba689" mode="Opaque" x="657" y="0" width="105" height="80" backcolor="#95B6D2"/>
+				<box leftPadding="6" bottomPadding="7" rightPadding="6">
+					<bottomPen lineWidth="2.0" lineColor="#203C73"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Projected Per Pupil Revenue]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d6d63ce9-86d0-4c19-bcaf-412b4d3baf13" mode="Opaque" x="762" y="0" width="105" height="80" backcolor="#95B6D2"/>
+				<box leftPadding="6" bottomPadding="7" rightPadding="6">
+					<bottomPen lineWidth="2.0" lineColor="#203C73"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL FUNDING FROM P"UBLIC SCHOOL FINANCE ACT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="674e69b9-75ce-4e74-a62f-22014c3da106" mode="Opaque" x="867" y="0" width="105" height="80" backcolor="#95B6D2"/>
+				<box bottomPadding="7">
+					<bottomPen lineWidth="2.0" lineColor="#203C73"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monthly Entitlement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ea6fc69b-5aab-4f17-bcc2-92c9ac8fd230" mode="Opaque" x="972" y="0" width="105" height="80" backcolor="#95B6D2"/>
+				<box bottomPadding="7">
+					<bottomPen lineWidth="2.0" lineColor="#203C73"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Withholding for CDE Administrative Overhead @ 1%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="73b4da00-c6c1-4c06-ac85-1d8ec13e79e4" mode="Opaque" x="1077" y="0" width="105" height="80" backcolor="#95B6D2"/>
+				<box bottomPadding="7">
+					<bottomPen lineWidth="2.0" lineColor="#203C73"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Withholding for Assistance Fund @ 1%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dd4bdd1e-0be9-470c-8e9e-f158b02f8840" mode="Opaque" x="1182" y="0" width="105" height="80" backcolor="#95B6D2"/>
+				<box bottomPadding="7">
+					<bottomPen lineWidth="2.0" lineColor="#203C73"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Withholding for Institute Administrative Overhead @ 3%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8ea9afee-75f7-47c2-b1ae-19e2af3529c5" mode="Opaque" x="1287" y="0" width="105" height="80" backcolor="#95B6D2"/>
+				<box bottomPadding="7">
+					<bottomPen lineWidth="2.0" lineColor="#203C73"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Withholding for Treasurer's Intercept Program]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="89635753-de99-4ff0-ac74-58617191d650" mode="Opaque" x="1392" y="0" width="105" height="80" backcolor="#95B6D2"/>
+				<box bottomPadding="7">
+					<bottomPen lineWidth="2.0" lineColor="#203C73"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[At-Risk Adjustment (July - December)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c43717a3-084e-434e-ace4-57ab87de8fb5" mode="Opaque" x="1497" y="0" width="147" height="80" backcolor="#95B6D2"/>
+				<box bottomPadding="7">
+					<bottomPen lineWidth="2.0" lineColor="#203C73"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount to be Distributed to Institute Charter Schools]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="25088b4a-3c22-4403-9e8b-9ff2998cfe47" x="16" y="0" width="100" height="20"/>
+				<textElement>
+					<font size="12" isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fiscalMonth}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement uuid="e7bfddc9-40bc-4be9-9b49-1fa95a94e850" style="greenbar" x="0" y="0" width="189" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{county}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e5fe8174-5845-477c-bb58-4996662628fe" style="greenbar" x="189" y="0" width="258" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chaterSchool}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.0;-###0.0">
+				<reportElement uuid="ad9655ea-cc66-4f84-baf0-da10e8e4a32e" style="greenbar" x="447" y="0" width="105" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pupilCount} != null ? $F{pupilCount} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,000.00" isBlankWhenNull="true">
+				<reportElement uuid="a9a3cd1b-e98e-435d-8477-dad7d2b2721c" style="greenbar" x="552" y="0" width="105" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kfactor}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,000.00">
+				<reportElement uuid="9579cf6d-03db-46b9-a850-da4d36a48649" style="greenbar" x="657" y="0" width="105" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{perPupilRevenue} != null ? $F{perPupilRevenue} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,000.00">
+				<reportElement uuid="04e6946e-aebb-4182-bb8d-9432c114982f" style="greenbar" x="762" y="0" width="105" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalFunding} != null ? $F{totalFunding} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,000.00">
+				<reportElement uuid="df8f9e87-ef37-44a1-ad17-0d00ad7cee53" style="greenbar" x="867" y="0" width="105" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{monthlyEnttlement} != null ? $F{monthlyEnttlement} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,000.00">
+				<reportElement uuid="afe35da4-5d0e-49d8-bcf0-813c541a6558" style="greenbar" x="972" y="0" width="105" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cdeWithholding} != null ? $F{cdeWithholding} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,000.00">
+				<reportElement uuid="6667da06-6f23-40e1-a71b-c4a98dcd8d5b" style="greenbar" x="1077" y="0" width="105" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{assistanceWithholding} != null ? $F{assistanceWithholding} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,000.00">
+				<reportElement uuid="3b8fef68-fa03-44e6-84e7-4a629d0f26fd" style="greenbar" x="1182" y="0" width="105" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{instituteWithholding} != null ? $F{instituteWithholding} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,000.00">
+				<reportElement uuid="e9bc5cd4-b498-4003-a56b-3e40802ca0ec" style="greenbar" x="1287" y="0" width="105" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{interceptWithholding} != null ? $F{interceptWithholding} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,000.00">
+				<reportElement uuid="d478b12e-997d-4719-97c4-30bfa841b97e" style="greenbar" x="1392" y="0" width="105" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{atRiskAdjustment} != null ? $F{atRiskAdjustment} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,000.00">
+				<reportElement uuid="1115e788-e01f-4d3b-99b3-094a4d2deeb0" style="greenbar" x="1497" y="0" width="147" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{distributionAmount} != null ? $F{distributionAmount} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

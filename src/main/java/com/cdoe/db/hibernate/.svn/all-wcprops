@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/state_equal/!svn/ver/45/trunk/cdoe/src/main/java/com/cdoe/db/hibernate
+END
+HibernateDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/state_equal/!svn/ver/45/trunk/cdoe/src/main/java/com/cdoe/db/hibernate/HibernateDAO.java
+END
+IHibernateDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/state_equal/!svn/ver/45/trunk/cdoe/src/main/java/com/cdoe/db/hibernate/IHibernateDAO.java
+END

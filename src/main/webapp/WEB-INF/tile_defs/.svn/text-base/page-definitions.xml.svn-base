@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<!-- Copyright ResQSoft, Inc. 2011 -->
+
+<!-- ref: config/page-definitions.xml.et.jsp -->
+<tiles-definitions>
+
+
+	<definition name=".SSOLogin-index" extends="TopLevel_login">
+		<put-attribute name="page-title" value="SSOLogin" />
+		<put-attribute name="page-content" value="/WEB-INF/jsp/SSOLogin.jsp" />
+	</definition>
+	<definition name=".LandingMenu-index" extends="TopLevel_moduleMenu">
+		<put-attribute name="page-title" value="LandingMenu" />
+		<put-attribute name="page-content" value="/WEB-INF/jsp/LandingMenu.jsp" />
+	</definition>
+	<definition name=".Header-index" extends="TopLevel_stateEqual">
+		<put-attribute name="page-title" value="Header" />
+		<put-attribute name="page-content" value="/WEB-INF/jsp/Header.jsp" />
+	</definition>
+	<!-- Home Pages -->
+	<definition name=".StateEqualHomePage-index" extends="TopLevel_moduleMenu">
+		<put-attribute name="page-title" value="StateEqualHomePage" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/stateequal/StateEqualHomePage.jsp" />
+	</definition>
+	<definition name=".TransportationHomePage-index" extends="TopLevel_moduleMenu">
+		<put-attribute name="page-title" value="TransportationHomePage" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/transportation/TransportationHomePage.jsp" />
+	</definition>
+	<definition name=".AuditorHomePage-index" extends="TopLevel_moduleMenu">
+		<put-attribute name="page-title" value="	" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/audit/AuditorHomePage.jsp" />
+	</definition>
+
+	<definition name=".AltAtRiskFundCalc-index" extends="TopLevel_stateEqual">
+		<put-attribute name="page-title" value="AltAtRiskFunding" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/stateequal/AltAtRiskFunding.jsp" />
+	</definition>
+
+	<definition name=".MaintainCalculationRules-index" extends="TopLevel_stateEqual">
+		<put-attribute name="page-title" value="MaintainCalculationRules" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/stateequal/MaintainCalculationRules.jsp" />
+	</definition>
+	<definition name=".UploadVariables-index" extends="TopLevel_stateEqual">
+		<put-attribute name="page-title" value="UploadVariables" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/stateequal/UploadVariables.jsp" />
+	</definition>
+	<definition name=".ImportAudits-index" extends="TopLevel_stateEqual">
+		<put-attribute name="page-title" value="ImportAudits" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/stateequal/ImportAudits.jsp" />
+	</definition>
+	<definition name=".AddAdjustment-index" extends="TopLevel_stateEqual">
+		<put-attribute name="page-title" value="AddAdjustment" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/stateequal/AddAdjustment.jsp" />
+	</definition>
+	<definition name=".DisplayAdjustment-index" extends="TopLevel_stateEqual">
+		<put-attribute name="page-title" value="DisplayAdjustment" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/stateequal/DisplayAdjustment.jsp" />
+	</definition>
+	<definition name=".Comments-index" extends="TopLevel_stateEqual">
+		<put-attribute name="page-title" value="Comments" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/stateequal/Comments.jsp" />
+	</definition>
+	<definition name=".CalculateEntitlements-index" extends="TopLevel_stateEqual">
+		<put-attribute name="page-title" value="CalculateEntitlements" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/stateequal/CalculateEntitlements.jsp" />
+	</definition>
+	<definition name=".MonthlyPayments-index" extends="TopLevel_stateEqual">
+		<put-attribute name="page-title" value="MonthlyPayments" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/stateequal/MonthlyPayments.jsp" />
+	</definition>
+	<definition name=".Reports-index" extends="TopLevel_stateEqual">
+		<put-attribute name="page-title" value="Report Generation" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/stateequal/Reports.jsp" />
+	</definition>
+	<definition name=".ViewReports-index" extends="TopLevel_stateEqual">
+		<put-attribute name="page-title" value="ViewReports" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/stateequal/ReportViewer.jsp" />
+	</definition>
+        <definition name=".Reports-status" extends="TopLevel_stateEqual">
+		<put-attribute name="page-title" value="Status Page" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/progressMeter.jsp" />
+	</definition>
+	<definition name=".MillLevyCert-index" extends="TopLevel_stateEqual">
+		<put-attribute name="page-title" value="MillLevyCert" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/stateequal/MillLevyCert.jsp" />
+	</definition>
+	<definition name=".MillLevyOverrideWorksheet-index" extends="TopLevel_stateEqual">
+		<put-attribute name="page-title" value="MillLevyOverrideWorksheet" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/stateequal/MillLevyOverrideWorksheet.jsp" />
+	</definition>
+	<definition name=".CSICalculations-index" extends="TopLevel_stateEqual">
+		<put-attribute name="page-title" value="CSICalculations" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/stateequal/CSICalculations.jsp" />
+	</definition>
+	<definition name=".Elections-index" extends="TopLevel_stateEqual">
+		<put-attribute name="page-title" value="Elections" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/stateequal/Elections.jsp" />
+	</definition>
+
+	<definition name=".CrosswalkCollectionData-index" extends="TopLevel_stateEqual">
+		<put-attribute name="page-title" value="CrosswalkCollectionData" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/stateequal/CrosswalkCollectionData.jsp" />
+	</definition>
+
+	<!-- Transportation Screens -->
+
+	<definition name=".Cde40TransReimbForm-index" extends="TopLevel_transport">
+		<put-attribute name="page-title" value="Cde40TransReimbForm" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/transportation/Cde40TransReimbForm.jsp" />
+	</definition>
+	<definition name=".DistrictPaymentReport-index" extends="TopLevel_transport">
+		<put-attribute name="page-title" value="DistrictPaymentReport" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/transportation/DistrictPaymentReport.jsp" />
+	</definition>
+	<definition name=".CapitalOutlay-index" extends="TopLevel_transport">
+		<put-attribute name="page-title" value="CapitalOutlay" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/transportation/CapitalOutlay.jsp" />
+	</definition>
+	<definition name=".Cde40Summary-index" extends="TopLevel_transport">
+		<put-attribute name="page-title" value="Cde40Summary" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/transportation/Cde40Summary.jsp" />
+	</definition>
+	<definition name=".DistributionAmounts-index" extends="TopLevel_transport">
+		<put-attribute name="page-title" value="DistributionAmounts" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/transportation/DistributionAmounts.jsp" />
+	</definition>
+	<definition name=".CoforsUpload-index" extends="TopLevel_transport">
+		<put-attribute name="page-title" value="CoforsUpload" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/transportation/CoforsUpload.jsp" />
+	</definition>
+	<definition name=".PaymentWorkSheet-index" extends="TopLevel_transport">
+		<put-attribute name="page-title" value="PaymentWorkSheet" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/transportation/PaymentWorkSheet.jsp" />
+	</definition>
+
+	<!-- Audit Screens -->
+	<definition name=".OrganizationInformation-index" extends="TopLevel_auditor">
+		<put-attribute name="page-title" value="OrganizationInformation" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/audit/OrganizationInformation.jsp" />
+	</definition>
+	<definition name=".AuditTracking-index" extends="TopLevel_auditor">
+		<put-attribute name="page-title" value="AuditTracking" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/audit/AuditTracking.jsp" />
+	</definition>
+	<definition name=".AuditTrackingAuditor-index" extends="TopLevel_auditor">
+		<put-attribute name="page-title" value="AuditTrackingAuditor" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/audit/AuditTrackingAuditor.jsp" />
+	</definition>
+	<definition name=".AuditHistory-index" extends="TopLevel_auditor">
+		<put-attribute name="page-title" value="AuditHistory" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/audit/AuditHistory.jsp" />
+	</definition>
+	<definition name=".CreateUpdateAudit-index" extends="TopLevel_auditor">
+		<put-attribute name="page-title" value="CreateUpdateAudit" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/audit/CreateUpdateAudit.jsp" />
+	</definition>
+	<definition name=".AuditSummary-index" extends="TopLevel_auditor">
+		<put-attribute name="page-title" value="AuditSummary" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/audit/AuditSummary.jsp" />
+	</definition>
+	<definition name=".AdjustmentStatus-index" extends="TopLevel_auditor">
+		<put-attribute name="page-title" value="AdjustmentStatus" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/audit/AdjustmentStatus.jsp" />
+	</definition>
+
+	<definition name=".UploadStudents-index" extends="TopLevel_auditor">
+		<put-attribute name="page-title" value="UploadStudents" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/audit/UploadStudents.jsp" />
+	</definition>
+
+	<definition name=".ValidateSASIDs-index" extends="TopLevel_auditor">
+		<put-attribute name="page-title" value="ValidateSASIDs" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/audit/ValidateSASIDs.jsp" />
+	</definition>
+
+	<definition name=".CompleteSASIDs-index" extends="TopLevel_auditor">
+		<put-attribute name="page-title" value="CompleteSASIDs" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/audit/CompleteSASIDs.jsp" />
+	</definition>
+
+	<definition name=".UpdateStudents-index" extends="TopLevel_auditor">
+		<put-attribute name="page-title" value="UpdateStudents" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/audit/UpdateStudents.jsp" />
+	</definition>
+
+	<definition name=".AudCDE40TransReimbForm-index" extends="TopLevel_auditor">
+		<put-attribute name="page-title" value="AudCDE40TransReimbForm" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/audit/AudCDE40TransReimbForm.jsp" />
+	</definition>
+
+	<definition name=".ELPAUpdate-index" extends="TopLevel_auditor">
+		<put-attribute name="page-title" value="ELPAUpdate" />
+		<put-attribute name="page-content" value="/WEB-INF/jsp/audit/ELPAUpdate.jsp" />
+	</definition>
+
+
+	<definition name=".BillingUpdate-index" extends="TopLevel_auditor">
+		<put-attribute name="page-title" value="BillingUpdate" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/audit/BillingUpdate.jsp" />
+	</definition>
+
+	<definition name=".AuditReports-index" extends="TopLevel_auditor">
+		<put-attribute name="page-title" value="AuditReports" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/audit/AuditReports.jsp" />
+	</definition>
+
+	<definition name=".AuditDataAdmin-index" extends="TopLevel_auditor">
+		<put-attribute name="page-title" value="AuditDataAdmin" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/jsp/audit/AuditAdminData.jsp" />
+	</definition>
+
+
+</tiles-definitions>

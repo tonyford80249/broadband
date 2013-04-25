@@ -1,0 +1,89 @@
+package com.cdoe.biz.model;
+
+import com.cdoe.ui.form.elements.SeViewableReport;
+
+/**
+ *
+ * @author Tony Ford
+ */
+public class GeneratedReport extends SeViewableReport {
+ private static int reportGuid = 0;   
+ private String absolutePath;
+
+ /**
+  * 
+  * @param id
+  * @param name
+  * @param url 
+  */
+    private GeneratedReport(String id, String name, String url) {
+        super(id, name, url);
+    }
+
+    /**
+     * 
+     * @param absolutePath
+     * @param id
+     * @param name
+     * @param url 
+     */
+    public GeneratedReport(String absolutePath, String id, String name, String url) {
+        super(id, name, url);
+        this.absolutePath = absolutePath;
+    }
+
+    /**
+     * 
+     * @return 
+     */
+    public String getAbsolutePath() {
+        return absolutePath;
+    }
+
+    /**
+     * 
+     * @param absolutePath 
+     */
+    public void setAbsolutePath(String absolutePath) {
+        this.absolutePath = absolutePath;
+    }
+
+    /**
+     * 
+     * @return 
+     */
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 97 * hash + (this.absolutePath != null ? this.absolutePath.hashCode() : 0);
+        return hash;
+    }
+
+    /**
+     * 
+     * @param obj
+     * @return 
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final GeneratedReport other = (GeneratedReport) obj;
+        if ((this.absolutePath == null) ? (other.absolutePath != null) : !this.absolutePath.equals(other.absolutePath)) {
+            return false;
+        }
+        return true;
+    }
+ 
+    /**
+     * 
+     * @return 
+     */
+   public synchronized static Integer nextGuid() {
+     return ++reportGuid;  
+   }
+}

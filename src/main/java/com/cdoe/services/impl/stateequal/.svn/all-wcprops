@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/impl/stateequal
+END
+DisplayAdjustmentManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/state_equal/!svn/ver/285/trunk/cdoe/src/main/java/com/cdoe/services/impl/stateequal/DisplayAdjustmentManager.java
+END
+ReportManagerBase.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/state_equal/!svn/ver/237/trunk/cdoe/src/main/java/com/cdoe/services/impl/stateequal/ReportManagerBase.java
+END
+MillLevySummaryReportManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/impl/stateequal/MillLevySummaryReportManager.java
+END
+MonthlyPaymentsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/impl/stateequal/MonthlyPaymentsManager.java
+END
+MillLevyCertManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/impl/stateequal/MillLevyCertManager.java
+END
+UploadVariablesManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/state_equal/!svn/ver/182/trunk/cdoe/src/main/java/com/cdoe/services/impl/stateequal/UploadVariablesManager.java
+END
+CrosswalkCollectionDataManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/state_equal/!svn/ver/297/trunk/cdoe/src/main/java/com/cdoe/services/impl/stateequal/CrosswalkCollectionDataManager.java
+END
+AuditSummaryReportManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/impl/stateequal/AuditSummaryReportManager.java
+END
+CSICalculationsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/impl/stateequal/CSICalculationsManager.java
+END
+ImportAuditsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/impl/stateequal/ImportAuditsManager.java
+END
+CommentsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/state_equal/!svn/ver/224/trunk/cdoe/src/main/java/com/cdoe/services/impl/stateequal/CommentsManager.java
+END
+ElectionsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/state_equal/!svn/ver/290/trunk/cdoe/src/main/java/com/cdoe/services/impl/stateequal/ElectionsManager.java
+END
+OtherStateShareAdjustmentsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/impl/stateequal/OtherStateShareAdjustmentsManager.java
+END
+TotalEntitlementReportManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/impl/stateequal/TotalEntitlementReportManager.java
+END
+HelpManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/state_equal/!svn/ver/289/trunk/cdoe/src/main/java/com/cdoe/services/impl/stateequal/HelpManager.java
+END
+CalculateEntitlementsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/services/impl/stateequal/CalculateEntitlementsManager.java
+END
+NegativePaymentReportManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/impl/stateequal/NegativePaymentReportManager.java
+END
+ReportsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/impl/stateequal/ReportsManager.java
+END
+SeCsiPaymentReportManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/state_equal/!svn/ver/207/trunk/cdoe/src/main/java/com/cdoe/services/impl/stateequal/SeCsiPaymentReportManager.java
+END
+ImportAuditTransDataManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/impl/stateequal/ImportAuditTransDataManager.java
+END

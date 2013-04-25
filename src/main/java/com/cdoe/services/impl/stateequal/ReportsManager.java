@@ -1,0 +1,121 @@
+package com.cdoe.services.impl.stateequal;
+
+
+
+import com.cdoe.services.impl.BaseManager;
+import com.cdoe.services.stateequal.IReportsManager;
+import com.cdoe.biz.model.*;
+import com.cdoe.biz.stateequal.IReportsDAO;
+import com.cdoe.ui.form.ReportDetailForm;
+import com.cdoe.ui.form.ReportForm;
+import com.cdoe.ui.form.VDataForm;
+import com.cdoe.util.DateUtil;
+import java.util.List;
+import org.apache.log4j.Logger;
+
+
+public class ReportsManager extends BaseManager implements IReportsManager {
+
+    private static final Logger logger = Logger.getLogger(ReportsManager.class);
+    private IReportsDAO reportsDAO;    
+    //private static final String[] allMonths = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+    //private static final String[] availableYears = {"2013","2012", "2011", "2010", "2009", "2008", "2007"};
+
+    /**
+     *
+     * @param form
+     */
+    public void saveOrUpdate(VDataForm form) {
+        long id = form.getId();
+        VData obj = findById(VData.class, id);
+        if (obj == null) {
+            obj = new VData();
+        }
+        obj.setVPage(form.getVPage());
+        obj.setVTextstring(form.getVTextstring());
+        obj.setVDate(form.getVDate());
+        obj.setVNumber(form.getVNumber());
+        saveOrUpdate(obj);
+    }
+
+    /**
+     *
+     * @return
+     */
+    public ReportForm setupForm() {
+
+        //360  -- Complete Formula By District
+        //Funding Summary -- Funding Summary by District
+        //Monthly Payments -- Monthly Payments by District
+        //CSI Payments -- CSI Payments by School
+        //Monthly Comparisons -- Monthly Data Elements Comparisons
+        //YTD Payments Withholding -- Year To Date Payments Withholding
+        //Mill Levy -- State Wide Summary
+        //Election  -- Elections
+        //Total Entitlements -- Total Entitlements
+        //Negative Payments -- Negative Payments
+        //COFRS Payments -- COFRS Payments
+
+
+
+
+
+        ReportForm form = new ReportForm();
+
+        form.getAvailableReports().add(new ReportDetailForm("360", "Complete Formula By District", true, ReportForm.RPT360));
+        form.getAvailableReports().add(new ReportDetailForm("Funding Summary", "Funding Summary by District", true, ReportForm.RPTFundSummary));
+        form.getAvailableReports().add(new ReportDetailForm("Monthly Payments", "Monthly Payments by District", true, ReportForm.RPTMonthlyPayment));
+        form.getAvailableReports().add(new ReportDetailForm("CSI Payments", "CSI Payments by School", false, ReportForm.RPTCsiPayment));
+        form.getAvailableReports().add(new ReportDetailForm("Monthly Comparisons", "Monthly Data Elements Comparisons", true, ReportForm.RPTMonthlyComparison));
+        form.getAvailableReports().add(new ReportDetailForm("YTD Payments Withholding", "Year To Date Payments Withholding", false, ReportForm.RPTYtdWithholdings));
+        form.getAvailableReports().add(new ReportDetailForm("Mill Levy", "State Wide Summary", false, ReportForm.RPTMillLevy));
+        form.getAvailableReports().add(new ReportDetailForm("Election", "Elections", false, ReportForm.RPTElections));
+        form.getAvailableReports().add(new ReportDetailForm("Total Entitlements", " Total Entitlements", false, ReportForm.RPTTotalEntitlement));
+        form.getAvailableReports().add(new ReportDetailForm("Negative Payments", "Negative Payments", false, ReportForm.RPTNegativePayments));
+        form.getAvailableReports().add(new ReportDetailForm("COFRS Payments", "COFRS Payments", false, ReportForm.RPTCofrPayments));
+        //form.getAvailableReports().add(new ReportDetailForm("Audit Upload Summary", "Summary of Audit Adjustments", true, ReportForm.RPTAuditUploadSummary));
+
+        List<String> allMonths = DateUtil.getFullMonthList(false);                                  
+                 
+        List<String> availableYears = DateUtil.getLongFiscalYears(-10);
+        
+        for (String month : allMonths) {
+            form.getAvailableMonths().add(month);
+        }
+
+        for (String year : availableYears) {
+            form.getAvailableYears().put(year, DateUtil.getFiscalYearFormattedShort(year));
+        }
+
+        return form;
+    }
+
+    /**
+     *
+     * @param id
+     * @return
+     */
+    public ReportForm setupForm(long id) {
+        VData obj = findById(VData.class, id);
+
+        VDataForm form = new VDataForm();
+        form.setId(obj.getId());
+        form.setVPage(obj.getVPage());
+        form.setVTextstring(obj.getVTextstring());
+        form.setVDate(obj.getVDate());
+        form.setVNumber(obj.getVNumber());
+
+        return null;
+    }
+
+    /**
+     *
+     * @param reportsDAO
+     */
+    public void setReportsDAO(IReportsDAO reportsDAO) {
+        this.reportsDAO = reportsDAO;
+    }
+
+      
+    
+}

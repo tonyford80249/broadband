@@ -1,0 +1,12 @@
+package com.cdoe.biz;
+
+import com.cdoe.biz.model.StateEqual;
+import com.cdoe.db.hibernate.IHibernateDAO;
+
+public interface IStateEqualDAO extends IHibernateDAO {
+	
+	public StateEqual findLatest(String districtCode, String fiscalYear);
+
+	public StateEqual findLatest(String districtCode);
+
+}

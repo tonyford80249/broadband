@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  
+  
+  <parent>
+    <groupId>us.co.state.cde</groupId>
+    <artifactId>cde-parent</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  
+  <name>steq-deploy</name>
+  <groupId>us.co.state.cde</groupId>
+  <artifactId>steq-deploy</artifactId>
+  <version>2.1.0</version>
+  <packaging>pom</packaging>
+
+   <properties>
+     <ear.source>/build/Applications/steq/steq.ear</ear.source>
+     <weblogic.server>pluto</weblogic.server>
+     <weblogic.server.port>8010</weblogic.server.port>
+     <weblogic.adminurl>t3://${weblogic.server}.cde.state.co.us:${weblogic.server.port}</weblogic.adminurl>    
+     <weblogic.configfile>/Oracle/WeblogicServers/${weblogic.server}${weblogic.server.port}/wls.config</weblogic.configfile>
+     <weblogic.keyfile>/Oracle/WeblogicServers/${weblogic.server}${weblogic.server.port}/wls.key</weblogic.keyfile>
+     <weblogic.targets>orion_man_1,taurus_man_1</weblogic.targets>
+     <!-- <weblogic.targets>venus_man_1,venus_man_2</weblogic.targets>  -->
+     <weblogic.app.name>steq-test_qa</weblogic.app.name>
+  </properties>
+  
+  <build> 
+    <plugins> 
+      <plugin> 
+        <groupId>com.oracle.weblogic</groupId> 
+          <artifactId>weblogic-maven-plugin</artifactId> 
+          <version>10.3.6.0</version> 
+          <configuration> 
+              <adminurl>${weblogic.adminurl}</adminurl>
+              <userConfigFile>${weblogic.configfile}</userConfigFile>
+              <userKeyFile>${weblogic.keyfile}</userKeyFile>
+              <source>${ear.source}</source>
+              <name>${weblogic.app.name}</name>
+              <targets>${weblogic.targets}</targets>
+              <upload>true</upload> 
+              <verbose>true</verbose> 
+          </configuration>
+    </plugin> 
+  </plugins>
+  </build>
+
+</project>

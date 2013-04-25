@@ -1,0 +1,15 @@
+package com.cdoe.biz.stateequal;
+
+import java.util.List;
+
+import com.cdoe.biz.impl.stateequal.FreeLunchDAO;
+import com.cdoe.biz.model.equal.FreeLunch;
+import com.cdoe.db.hibernate.IHibernateDAO;
+
+public interface IFreeLunchDAO extends IHibernateDAO {
+	
+	public FreeLunch findByUniqueKey(String districtNumber, String fiscalYear, String gradeLevel);
+	
+	public List<FreeLunchDAO> getByDistrictYear(String districtNumber, String fiscalYear);
+
+}

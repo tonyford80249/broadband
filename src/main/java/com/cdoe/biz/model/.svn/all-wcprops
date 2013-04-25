@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/biz/model
+END
+VData.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/cdoe/biz/model/VData.java
+END
+Payee.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/state_equal/!svn/ver/48/trunk/cdoe/src/main/java/com/cdoe/biz/model/Payee.java
+END
+FiscalMonth.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/state_equal/!svn/ver/75/trunk/cdoe/src/main/java/com/cdoe/biz/model/FiscalMonth.java
+END
+PaymentWorkSheet.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/state_equal/!svn/ver/44/trunk/cdoe/src/main/java/com/cdoe/biz/model/PaymentWorkSheet.java
+END
+OrganizationUnitMaster.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/state_equal/!svn/ver/246/trunk/cdoe/src/main/java/com/cdoe/biz/model/OrganizationUnitMaster.java
+END
+District.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/cdoe/biz/model/District.java
+END
+Variable.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/state_equal/!svn/ver/70/trunk/cdoe/src/main/java/com/cdoe/biz/model/Variable.java
+END
+StateEqualReference.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/state_equal/!svn/ver/232/trunk/cdoe/src/main/java/com/cdoe/biz/model/StateEqualReference.java
+END
+CountyInfoPK.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/state_equal/!svn/ver/246/trunk/cdoe/src/main/java/com/cdoe/biz/model/CountyInfoPK.java
+END
+PaymentWorkSheetCalculation.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/cdoe/biz/model/PaymentWorkSheetCalculation.java
+END
+AuditRepaymentAdjustment.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/state_equal/!svn/ver/70/trunk/cdoe/src/main/java/com/cdoe/biz/model/AuditRepaymentAdjustment.java
+END
+GeneratedReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/state_equal/!svn/ver/237/trunk/cdoe/src/main/java/com/cdoe/biz/model/GeneratedReport.java
+END
+PaymentWorkBook.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/state_equal/!svn/ver/44/trunk/cdoe/src/main/java/com/cdoe/biz/model/PaymentWorkBook.java
+END
+ISeViewableReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/state_equal/!svn/ver/237/trunk/cdoe/src/main/java/com/cdoe/biz/model/ISeViewableReport.java
+END
+CountyInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/state_equal/!svn/ver/246/trunk/cdoe/src/main/java/com/cdoe/biz/model/CountyInfo.java
+END
+MillLevy.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/state_equal/!svn/ver/70/trunk/cdoe/src/main/java/com/cdoe/biz/model/MillLevy.java
+END

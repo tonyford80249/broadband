@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/rules/calc/data
+END
+OnlineFundingFormulaData.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/state_equal/!svn/ver/200/trunk/cdoe/src/main/java/com/cdoe/rules/calc/data/OnlineFundingFormulaData.java
+END
+TotalProgramFundingData.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/state_equal/!svn/ver/170/trunk/cdoe/src/main/java/com/cdoe/rules/calc/data/TotalProgramFundingData.java
+END
+MinmFormulaData.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/state_equal/!svn/ver/200/trunk/cdoe/src/main/java/com/cdoe/rules/calc/data/MinmFormulaData.java
+END
+ProgramFundingCharterData.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/state_equal/!svn/ver/170/trunk/cdoe/src/main/java/com/cdoe/rules/calc/data/ProgramFundingCharterData.java
+END
+SE250FteByGradeData.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/state_equal/!svn/ver/232/trunk/cdoe/src/main/java/com/cdoe/rules/calc/data/SE250FteByGradeData.java
+END
+MillLevyData.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/state_equal/!svn/ver/194/trunk/cdoe/src/main/java/com/cdoe/rules/calc/data/MillLevyData.java
+END
+FundedCountData.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/state_equal/!svn/ver/200/trunk/cdoe/src/main/java/com/cdoe/rules/calc/data/FundedCountData.java
+END
+GrandTotalData.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/state_equal/!svn/ver/119/trunk/cdoe/src/main/java/com/cdoe/rules/calc/data/GrandTotalData.java
+END
+RulesResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/rules/calc/data/RulesResponse.java
+END
+GrandTotalProgramFundingData.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/state_equal/!svn/ver/194/trunk/cdoe/src/main/java/com/cdoe/rules/calc/data/GrandTotalProgramFundingData.java
+END
+PupilFundingData.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/state_equal/!svn/ver/200/trunk/cdoe/src/main/java/com/cdoe/rules/calc/data/PupilFundingData.java
+END
+TotalFormulaFundingData.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/state_equal/!svn/ver/194/trunk/cdoe/src/main/java/com/cdoe/rules/calc/data/TotalFormulaFundingData.java
+END

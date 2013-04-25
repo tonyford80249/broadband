@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report13" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="101751ac-51d9-4dfc-92fa-3f5905ba032a">
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="format">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{isBold}]]></conditionExpression>
+			<style fontSize="12" isBold="true"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{isIndented}]]></conditionExpression>
+			<style>
+				<paragraph leftIndent="24"/>
+			</style>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="districtName" class="java.lang.String"/>
+	<field name="districtNumber" class="java.lang.String"/>
+	<field name="county" class="java.lang.String"/>
+	<field name="taxYear" class="java.lang.String"/>
+	<field name="approverName" class="java.lang.String"/>
+	<field name="approverPhone" class="java.lang.String"/>
+	<field name="isBold" class="java.lang.Boolean"/>
+	<field name="isIndented" class="java.lang.Boolean"/>
+	<field name="title" class="java.lang.String"/>
+	<field name="column1Value" class="java.lang.String"/>
+	<field name="column2Value" class="java.lang.String"/>
+	<field name="column3Value" class="java.lang.String"/>
+	<field name="column1AsOfDate" class="java.util.Date"/>
+	<field name="column3AsOfDate" class="java.util.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="119" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1dd604e4-319b-4ecb-bd14-ac63e14117e0" mode="Opaque" x="0" y="0" width="555" height="47" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<box leftPadding="10"/>
+				<textElement>
+					<font fontName="SansSerif" size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CDE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="56f180e1-d2de-49bc-92ed-9cf3d05b570e" x="28" y="80" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[District Number]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="0852ee3b-6661-40e7-8568-d2dac477c072" x="28" y="60" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{districtNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0bd8e9cc-4efe-4cac-95dd-ba9c932755f6" x="157" y="80" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[District Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="e363b7ff-dabf-4730-81cf-8ca5d1556ebe" x="157" y="60" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{districtName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="9f1fcfb9-bd9d-40d0-9847-f50217a6ae83" x="295" y="80" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[County]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="c4b6392b-f510-457a-be93-9c3262ec0119" x="295" y="60" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{county}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="63632428-9c0c-4cb3-a072-b76c595f6331" x="434" y="80" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[Tax Year]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="a4433fc2-4830-4643-a972-bd42aa74a6c5" x="434" y="60" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{taxYear}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="b2cf878b-4eb8-42cb-9e1d-2ad053d58bdf" x="81" y="7" width="85" height="20" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COLORADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="962e6863-2991-42ef-b1eb-bbfff3187274" x="81" y="19" width="151" height="20" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT of EDUCATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9284409a-0ea8-479c-8157-7441a995df2a" x="272" y="7" width="121" height="25" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="SansSerif" size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Mill Levy Cert]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="47dfbce3-33cf-4ab6-b8dd-e59709dbc54c" x="424" y="7" width="80" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="535b75dd-4889-4ced-b023-cb45c54820c7" x="504" y="7" width="40" height="20" forecolor="#FFFFFF"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="84" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="13f033c4-5460-4287-ba8d-bd4f420612cc" x="0" y="0" width="255" height="84"/>
+				<box bottomPadding="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mill Levy Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="32b6ba49-ad1d-4712-a0b0-98a42c3738e7" x="255" y="0" width="100" height="81"/>
+				<box bottomPadding="12"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Colorado Department of Education (CDE) Mill Levy Calculated as of
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="00506273-e2f6-4024-9447-5734f4f7b405" x="355" y="0" width="100" height="61"/>
+				<box bottomPadding="12"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Voter Approved Dollar Amounts]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f3071233-7a2f-43d4-86de-3f41b82b1dd0" x="455" y="0" width="100" height="61"/>
+				<box bottomPadding="12"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[School District Final Mill Levy Certified as of ]]></text>
+			</staticText>
+			<textField pattern="MM/dd/yyyy">
+				<reportElement uuid="d062f1f9-33c7-4de3-a846-4ca67c886c53" x="272" y="54" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{column1AsOfDate}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MM/dd/yyyy">
+				<reportElement uuid="81e4a5c3-0799-402a-9d35-21e55a04dae3" x="476" y="31" width="79" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{column3AsOfDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="73810eae-f167-4b8f-9585-18d3973cb301" style="format" x="0" y="0" width="255" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a8c3bc50-b5c8-4ab2-aef3-96e9d2587131" x="255" y="0" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{column1Value}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8d427ae5-42b4-4d9a-bcc9-b201bc3323e1" x="355" y="0" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{column2Value}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4d1a9f93-c344-4475-b48c-a84b1aa0108d" x="455" y="0" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{column3Value}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="75" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="d1ea4a9b-a701-44b4-8c0a-7ccc555f1d8f" x="22" y="31" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[Form completed by]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="e7f8fa6c-9a81-4d9b-8dac-8ec54907672c" x="22" y="11" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{approverName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1a9f2b26-c2dd-4309-9dff-ecf26bad2986" x="155" y="31" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[Phone Number]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="3dab5039-7965-40dd-a215-42eb1697d1f7" x="155" y="11" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{approverPhone}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="6c23b2c2-28b1-4c23-accf-663734aadc24" x="99" y="11" width="356" height="20"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Return to CDE, Public School Finance Unit by December 20, 2011]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

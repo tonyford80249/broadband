@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/biz/impl/stateequal
+END
+MonthlyPaymentsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/biz/impl/stateequal/MonthlyPaymentsDAO.java
+END
+FreeLunchDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/state_equal/!svn/ver/261/trunk/cdoe/src/main/java/com/cdoe/biz/impl/stateequal/FreeLunchDAO.java
+END
+FteByGradeDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/biz/impl/stateequal/FteByGradeDAO.java
+END
+UploadVariablesDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/biz/impl/stateequal/UploadVariablesDAO.java
+END
+CrosswalkCollectionDataDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/state_equal/!svn/ver/285/trunk/cdoe/src/main/java/com/cdoe/biz/impl/stateequal/CrosswalkCollectionDataDAO.java
+END
+CSICalculationsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/state_equal/!svn/ver/303/trunk/cdoe/src/main/java/com/cdoe/biz/impl/stateequal/CSICalculationsDAO.java
+END
+SeMonthlyDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/state_equal/!svn/ver/295/trunk/cdoe/src/main/java/com/cdoe/biz/impl/stateequal/SeMonthlyDao.java
+END
+ImportAuditsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/biz/impl/stateequal/ImportAuditsDAO.java
+END
+CommentsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/biz/impl/stateequal/CommentsDAO.java
+END
+ElectionsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/state_equal/!svn/ver/247/trunk/cdoe/src/main/java/com/cdoe/biz/impl/stateequal/ElectionsDAO.java
+END
+MillLevyOverrideWorksheetDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/state_equal/!svn/ver/232/trunk/cdoe/src/main/java/com/cdoe/biz/impl/stateequal/MillLevyOverrideWorksheetDAO.java
+END
+MillLevyDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/biz/impl/stateequal/MillLevyDAO.java
+END
+ReportsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/biz/impl/stateequal/ReportsDAO.java
+END
+ImportAuditTransDataDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/biz/impl/stateequal/ImportAuditTransDataDAO.java
+END
+DisplayAdjustmentDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/biz/impl/stateequal/DisplayAdjustmentDAO.java
+END
+StateEqualDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/biz/impl/stateequal/StateEqualDAO.java
+END

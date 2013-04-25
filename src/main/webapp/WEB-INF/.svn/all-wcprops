@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/webapp/WEB-INF
+END
+applicationContext-tx.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/state_equal/!svn/ver/271/trunk/cdoe/src/main/webapp/WEB-INF/applicationContext-tx.xml
+END
+applicationContext-tiles.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/webapp/WEB-INF/applicationContext-tiles.xml
+END
+applicationContext-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/webapp/WEB-INF/applicationContext-service.xml
+END
+applicationContext-camel.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/state_equal/!svn/ver/287/trunk/cdoe/src/main/webapp/WEB-INF/applicationContext-camel.xml
+END
+applicationContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/state_equal/!svn/ver/188/trunk/cdoe/src/main/webapp/WEB-INF/applicationContext.xml
+END
+dispatcher-servlet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/webapp/WEB-INF/dispatcher-servlet.xml
+END
+applicationContext-dao.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/webapp/WEB-INF/applicationContext-dao.xml
+END
+weblogic.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/state_equal/!svn/ver/46/trunk/cdoe/src/main/webapp/WEB-INF/weblogic.xml
+END
+applicationContext-validator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/state_equal/!svn/ver/232/trunk/cdoe/src/main/webapp/WEB-INF/applicationContext-validator.xml
+END
+applicationContext-hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/state_equal/!svn/ver/246/trunk/cdoe/src/main/webapp/WEB-INF/applicationContext-hbm.xml
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/webapp/WEB-INF/web.xml
+END
+applicationContext-data.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/state_equal/!svn/ver/152/trunk/cdoe/src/main/webapp/WEB-INF/applicationContext-data.xml
+END

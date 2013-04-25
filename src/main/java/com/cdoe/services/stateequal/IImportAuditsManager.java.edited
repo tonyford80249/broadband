@@ -1,0 +1,22 @@
+
+package com.cdoe.services;
+
+<<<<<<< .mine
+import com.cdoe.biz.model.audit.AuditEqual;
+import com.cdoe.ui.form.audit.AuditEqualForm;
+=======
+import com.cdoe.ui.form.ImportAuditsForm;
+import com.cdoe.ui.form.ResetAuditsForm;
+>>>>>>> .r109
+
+public interface IImportAuditsManager extends IBaseManager {
+
+	public void importAudits(ImportAuditsForm importAuditsForm);
+	
+	public void resetAudit(Integer auditId, String organizationCode);
+	
+	public ImportAuditsForm setupImportAuditsForm();
+	
+	public ResetAuditsForm setupResetAuditsForm();
+	
+}

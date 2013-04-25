@@ -1,0 +1,416 @@
+/* USER MESSAGES
+ToDo: Fix naming
+see MainLayout.jsp:
+  - FieldMessage class (see fieldmessage tag in JSP)
+      Informational message to the user, such as those displayed upon successful save or update operation.
+  - ErrorMessage (see actionmessage tag in JSP)
+      Field validation errors
+  - ActionMessage (see actionerror tag in JSP)
+      All errors except for field validtion errors
+*/
+.errrorMessage, ul.errorMessage { /*actionerror*/
+	color: red;
+}
+
+.fieldMessage, ul.fieldMessage  li span { /* fieldmessage */
+	color: 	#505050  !important;
+}
+
+.actionMessage, ul.actionMessage {  /* actionmessage */
+	COLOR: navy;
+}
+
+.errorMessage, .fieldMessage, .actionMessage, ul.actionMessage li span, ul.errorMessage  li span, ul.fieldMessage  li span {
+	FONT-WEIGHT: bold;
+	background: #FFFACD;
+	text-align: left;
+	list-style-type: none;
+	padding: 0px 0px 0px 0px;
+	margin: 6px 3px 3px 3px;
+  white-space: normal;
+
+}
+
+/*END USER MESSAGES */
+
+.grid{
+   padding: 1px 5px !important;
+   font-size: .85em !important;
+   text-align:left;
+}
+.subjectHeader{
+  font-size:1.1em;
+  color: navy;
+}
+
+.userHeader{
+  padding:0px;
+  font-size:.90em;
+  color: navy;
+}
+
+body {
+  font-family:Arial;
+  font-size:12px;
+  color:black;
+}
+
+#privacyAct{
+	color: red;
+	text-align: center;
+}
+#BodyTag {
+	margin: 0px 6px 2px 6px !important;
+}
+
+#topmenu {
+	width: 100%;
+}
+
+.TopLevelTable {
+	width: 970px;
+	max-width: 970px;
+}
+
+.MenuBar {
+  background-color: #EDEDED;
+	color:black;
+	font-weight: bold;
+	text-align:left;
+	margin-left:5px;
+	margin-right:5px;
+	-moz-box-shadow: 5px 5px 2px #888, 5px 5px 15px rgba(0,0,0,0.4);
+}
+
+.ContentTable {
+  background-color: #EDEDED;
+	color:black;
+	font-weight: bold;
+	text-align:left;
+	margin-left:5px;
+	margin-right:5px;
+	margin-top:0;
+	-moz-box-shadow: 5px 5px 2px #888, 5px 5px 15px rgba(0,0,0,0.4);
+}
+
+.yui-skin-sam .yui-navset .TabContainerEnabled {
+	background-color: #F0F0F0 !important;
+
+}
+
+.MainContentCell {
+	background-color: white;
+	width: 100%;
+}
+
+.MainContentDiv {
+	padding: 10px 10px 20px 10px;
+}
+
+.HelpLink {
+	VERTICAL-ALIGN: top;
+	FONT-SIZE: 70%;
+}
+
+fieldset {
+	padding: 1em;
+	margin: 0;
+	text-align: left;
+	border: 1px solid gray;
+}
+
+legend {
+	font-style: italic;
+	padding: 1px 5px 1px 5px;
+}
+
+.title {
+  border:3px;
+	FONT-WEIGHT: bold;
+	color:rgb(132,132,132);
+  text-align: center !important;
+	font-size:1.25em;
+}
+
+h1,h2,h3,h4 {
+	color: white;
+	background-color: blue;
+	padding: 5px 5px 5px 5px;
+}
+
+h4 {
+	padding: 5px 0 5px 0;
+}
+
+a.hidden_lnk {
+	color: black;
+	text-decoration: none;
+}
+
+a.hidden_lnk:hover {
+	text-decoration: none;
+}
+
+.SmallButton {
+	FONT-SIZE: .75em !important;
+  width:7em;
+  height: 3.25em;
+  line-height:3.3em;
+  vertical-align:middle;
+  white-space: normal; /*causes button label text to wrap*/
+}
+
+.SmallText {
+	VERTICAL-ALIGN: top;
+	FONT-SIZE: 75%;
+}
+
+.BoldText {
+	FONT-WEIGHT: bold;
+}
+
+.GrayText {
+	color: gray;
+}
+
+.requiredControl {
+
+}
+
+div.vspacer {
+	height: 15px;
+}
+
+.welcome {
+	color: navy;
+	font-weight: bold;
+	font-size: 175%;
+	text-align: center;
+	margin-top: 200px;
+	margin-bottom: 200px;
+}
+
+#footer{
+  position:relative;
+	color: red;
+	width:100%;
+	text-align: center;
+	bottom:1em;
+	text-align:left;
+}
+
+.sec_notice {
+	width: 500px;
+	padding: 10px 0 20px 0;
+	font-weight: bold;
+}
+
+.SectionTitle, .TabTitle {
+	font-weight: bold;
+	padding-top: 10px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.delete-icon {
+	cursor: pointer;
+	background: transparent url(../images/del_icon.jpg) no-repeat center
+		center;
+	width: 16px;
+	height: 16px;
+}
+
+.download-icon {
+	cursor: pointer;
+	background: transparent url(../images/download_icon.jpg) no-repeat center
+		center;
+	width: 16px;
+	height: 16px;
+}
+
+.assignmentList {
+	width: 250px;
+}
+
+.assignmentBtn {
+	width: 100px;
+	margin: 1px 2px 1px 2px;
+}
+
+.SubsectionTitle {
+	text-transform: uppercase;
+	padding-top: 10px;
+}
+
+.AjaxIndicatorMsg {
+	color: red;
+	font-size: 75%;
+}
+
+.fullwidth {
+	width: 100% !important;
+}
+
+.popupCalendar {
+	display: none;
+	position: absolute !important;
+	left: 300px;
+	top: 100px;
+	z-index: 2
+}
+
+input.ro_true,textarea.ro_true {
+	background-color: #FFFFFF;
+	border-width: 0px;
+}
+
+select.ro_true {
+	background-color: #FFFFFF;
+}
+
+.important_msg {
+	color: red;
+	font-weight: bold;
+}
+
+a,a.TabLink {
+	cursor: pointer;
+	color: teal;
+}
+
+a:hover,a.TabLink:hover {
+	color: #00A0A0;
+}
+
+a.TabLinkDisabled {
+	text-decoration: none !important;
+	color: gray !important;
+	cursor: default !important;
+}
+
+a.TabLinkDisabled:hover {
+	color: gray !important;
+}
+
+.TabListDisabled {
+	display: none !important;
+}
+
+.TabBodyEnabled {
+	left: 0px !important;
+	position: relative !important;
+	visibility: visible !important;
+}
+
+.TabContainerEnabled {
+	background-color: #F0F0F0 !important;
+	border-style: hidden !important;
+
+}
+
+.TabTitle {
+	display: none;
+	font-size: 100%;
+	padding: 10px 0 10px 0;
+}
+
+.TabTitleEnabled {
+	display: block !important;
+}
+
+
+textarea {
+	width: 100%;
+	height: 65px;
+	overflow: auto;
+}
+
+label, td {
+	white-space: nowrap;
+}
+
+input.short {
+	width: 75px;
+}
+
+input.medium {
+	width: 320px;
+}
+
+input.long {
+	width: 500px;
+}
+
+.picker_icon {
+	border-width: 0px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.date_picker_container {
+	display: none;
+	position: absolute !important;
+	left: 300px;
+	top: 100px;
+	z-index: 2
+}
+
+.toolTip {
+	font-size: 70%;
+	font-weight: normal;
+	color: teal;
+	text-decoration: underline;
+	text-transform: none;
+}
+
+
+table.yellow_panel {
+	background-color: yellow;
+	color:black;
+	text-transform: uppercase;
+	margin: 10px 10px 10px 10px;
+	-moz-box-shadow: 0px 0px 0px #888, 0px 0px 0px rgba(0,0,0,0.4);
+}
+
+.dynamic_text {
+	background-color: black;
+	color: white;
+}
+
+select, input, button, textarea {
+	font-weight: normal;
+}
+
+#tabsColumn {
+	background-color: #eee;
+	vertical-align:top;
+	text-align:left;
+	left:0;
+	width:90px;
+	margin-top:0;
+  text-align: left;
+}
+
+#rightColumn
+{
+	margin-left:90px;
+	margin-top:0;
+
+	}
+
+#tabContent {
+	vertical-align:top;
+	text-align:left;
+
+	}
+
+#mainDiv
+{
+	min-height:430px;
+}
+
+#mainOutterDiv {
+    font-family:Arial;
+    font-size: 12px;
+    color:black;
+}
+

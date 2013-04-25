@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/ui/validator/transportation
+END
+Cde40SummaryValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/ui/validator/transportation/Cde40SummaryValidator.java
+END
+Cde40TransFormValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/ui/validator/transportation/Cde40TransFormValidator.java
+END
+TransportationValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/ui/validator/transportation/TransportationValidator.java
+END
+ProrateValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/ui/validator/transportation/ProrateValidator.java
+END
+CapitalOutlayValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/ui/validator/transportation/CapitalOutlayValidator.java
+END
+DistrictValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/ui/validator/transportation/DistrictValidator.java
+END

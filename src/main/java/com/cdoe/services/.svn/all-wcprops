@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services
+END
+ISSOLoginManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/ISSOLoginManager.java
+END
+ISeCofrsPaymentReportManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/ISeCofrsPaymentReportManager.java
+END
+IChangeAtRiskCountsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/IChangeAtRiskCountsManager.java
+END
+ICoforsUploadManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/ICoforsUploadManager.java
+END
+IGenerateSeCsiPaymentReportTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/state_equal/!svn/ver/204/trunk/cdoe/src/main/java/com/cdoe/services/IGenerateSeCsiPaymentReportTask.java
+END
+IGenerateTotalEntitlementReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/IGenerateTotalEntitlementReport.java
+END
+IUploadService.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/state_equal/!svn/ver/280/trunk/cdoe/src/main/java/com/cdoe/services/IUploadService.java
+END
+IMillLevyCertManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/state_equal/!svn/ver/66/trunk/cdoe/src/main/java/com/cdoe/services/IMillLevyCertManager.java
+END
+IGenerateNegativePaymentReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/IGenerateNegativePaymentReport.java
+END
+ISE360CalculationManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/services/ISE360CalculationManager.java
+END
+IAdjustmentStatusManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/IAdjustmentStatusManager.java
+END
+IMailClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/state_equal/!svn/ver/287/trunk/cdoe/src/main/java/com/cdoe/services/IMailClient.java
+END
+IGenerateMillLevySummaryReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/services/IGenerateMillLevySummaryReport.java
+END
+IReferenceDataManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/state_equal/!svn/ver/305/trunk/cdoe/src/main/java/com/cdoe/services/IReferenceDataManager.java
+END
+IAuditRepaymentAdjustmentManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/IAuditRepaymentAdjustmentManager.java
+END

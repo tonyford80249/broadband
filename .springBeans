@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[2.9.2.201205070117-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[true]]></enableImports>
+	<configs>
+		<config>src/main/webapp/WEB-INF/applicationContext-dao.xml</config>
+		<config>src/main/webapp/WEB-INF/applicationContext-data.xml</config>
+		<config>src/main/webapp/WEB-INF/applicationContext-hbm.xml</config>
+		<config>src/main/webapp/WEB-INF/applicationContext-camel.xml</config>
+		<config>src/main/webapp/WEB-INF/applicationContext-service.xml</config>
+		<config>src/main/webapp/WEB-INF/applicationContext-tiles.xml</config>
+		<config>src/main/webapp/WEB-INF/applicationContext-tx.xml</config>
+		<config>src/main/webapp/WEB-INF/applicationContext-validator.xml</config>
+		<config>src/main/webapp/WEB-INF/applicationContext.xml</config>
+		<config>src/main/webapp/WEB-INF/dispatcher-servlet.xml</config>
+	</configs>
+	<configSets>
+		<configSet>
+			<name><![CDATA[Spring]]></name>
+			<allowBeanDefinitionOverriding>true</allowBeanDefinitionOverriding>
+			<incomplete>false</incomplete>
+			<configs>
+				<config>src/main/webapp/WEB-INF/applicationContext.xml</config>
+				<config>src/main/webapp/WEB-INF/applicationContext-dao.xml</config>
+				<config>src/main/webapp/WEB-INF/applicationContext-data.xml</config>
+				<config>src/main/webapp/WEB-INF/applicationContext-hbm.xml</config>
+				<config>src/main/webapp/WEB-INF/applicationContext-camel.xml</config>
+				<config>src/main/webapp/WEB-INF/applicationContext-service.xml</config>
+				<config>src/main/webapp/WEB-INF/applicationContext-tiles.xml</config>
+				<config>src/main/webapp/WEB-INF/applicationContext-tx.xml</config>
+				<config>src/main/webapp/WEB-INF/applicationContext-validator.xml</config>
+				<config>src/main/webapp/WEB-INF/dispatcher-servlet.xml</config>
+			</configs>
+			<profiles>
+			</profiles>
+		</configSet>
+	</configSets>
+</beansProjectDescription>

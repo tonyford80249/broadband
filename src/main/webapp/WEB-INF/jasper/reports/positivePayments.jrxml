@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="positivePayments" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="92db233e-bab3-48b3-90f2-38b63ae4a1ea">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="oddRow">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}.intValue() % 2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#CCCCCC"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="county" class="java.lang.String"/>
+	<field name="fiscalYear" class="java.lang.String"/>
+	<field name="districtNumber" class="java.lang.String"/>
+	<field name="districtName" class="java.lang.String"/>
+	<field name="monthlyEntitlement" class="java.lang.Double"/>
+	<field name="currentEntitlement" class="java.lang.Double"/>
+	<field name="previousEntitlement" class="java.lang.Double"/>
+	<variable name="groupCount" class="java.lang.Integer" resetType="Group" resetGroup="MajorGrouping" calculation="Count">
+		<variableExpression><![CDATA[$F{county}]]></variableExpression>
+	</variable>
+	<group name="MajorGrouping">
+		<groupExpression><![CDATA[$F{county}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1dd604e4-319b-4ecb-bd14-ac63e14117e0" mode="Opaque" x="0" y="0" width="555" height="47" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<box leftPadding="10"/>
+				<textElement>
+					<font fontName="SansSerif" size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CDE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="962e6863-2991-42ef-b1eb-bbfff3187274" x="77" y="20" width="156" height="20" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT of EDUCATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b2cf878b-4eb8-42cb-9e1d-2ad053d58bdf" x="77" y="8" width="100" height="20" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COLORADO]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="dc36e227-a422-4c8c-b187-77bb627a40e0" x="421" y="8" width="80" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="70564017-d723-45c2-ae6b-dbd3e0c90e32" x="501" y="8" width="40" height="20" forecolor="#FFFFFF"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement uuid="69644e7d-fed3-4781-aba3-432ec02992e0" x="272" y="8" width="100" height="20" forecolor="#FFFFFF"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d27507cf-6cfe-4530-b3a8-e2797c987c91" x="0" y="47" width="555" height="25" forecolor="#203C73"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[STATE EQUALIZATION MONTHLY PAYMENTS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="4c1bd28a-247d-4a65-b5cd-7fc98b9ff714" x="0" y="0" width="181" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[County Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ebfc376c-8b22-4583-a096-f76ad12befa4" x="186" y="0" width="181" height="20"/>
+				<textElement textAlignment="Left">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[District Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="24b708f6-6ec2-4082-9bf7-754defa5cc22" x="372" y="0" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monthly Entitlement]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="ba4ab595-b736-4c83-ae4d-0a502e205cf9" x="0" y="0" width="181" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{monthlyEntitlement} > 1.0 && $V{groupCount} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{county} != null ? $F{county} : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7c97b9c8-9f05-4fc7-95b8-9cd064084f6e" x="186" y="0" width="181" height="20">
+					<printWhenExpression><![CDATA[$F{monthlyEntitlement} > 1.0]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{districtName}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,##0.00">
+				<reportElement uuid="ec09112f-acb4-4025-9abd-9177266061ad" x="372" y="0" width="100" height="20">
+					<printWhenExpression><![CDATA[$F{monthlyEntitlement} > 1.0]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{monthlyEntitlement}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

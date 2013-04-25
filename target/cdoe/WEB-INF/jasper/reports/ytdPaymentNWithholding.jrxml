@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="1190" pageHeight="842" orientation="Landscape" columnWidth="1150" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4f3b1713-2756-4a2e-8a2c-232e5ca67ca5">
+    <property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="rowStyle">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}.intValue() % 2 == 0]]></conditionExpression>
+			<style mode="Opaque" forecolor="#000000" backcolor="#CCCCCC"/>
+		</conditionalStyle>
+	</style>
+	<style name="totalStyle" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}.intValue() % 2 == 0]]></conditionExpression>
+			<style mode="Opaque" forecolor="#000000" backcolor="#D2D8DE" fill="Solid"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="districtName" class="java.lang.String"/>
+	<field name="districtNumber" class="java.lang.String"/>
+	<field name="fiscalYear" class="java.lang.String"/>
+	<field name="month" class="java.lang.String"/>
+	<field name="funding" class="java.lang.Double"/>
+	<field name="swap" class="java.lang.Double"/>
+	<field name="debt" class="java.lang.Double"/>
+	<field name="audit" class="java.lang.Double"/>
+	<field name="csi" class="java.lang.Double"/>
+	<field name="other" class="java.lang.Double"/>
+	<field name="netPayment" class="java.lang.Double"/>
+	<field name="priorPayment" class="java.lang.Double"/>
+	<field name="variance" class="java.lang.Double"/>
+	<field name="projected" class="java.lang.Double"/>
+	<field name="paid" class="java.lang.Double"/>
+	<field name="remaining" class="java.lang.Double"/>
+	<field name="currentMonth" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="98" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="aecef649-d04a-49cf-8f60-0d014d659129" mode="Opaque" x="0" y="70" width="1150" height="28" backcolor="#95B6D2"/>
+				<box leftPadding="14"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[YTD Payments and Withholdings Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="afbf1b04-21e9-4508-83ed-977112cefa78" mode="Opaque" x="0" y="0" width="1150" height="70" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<box topPadding="22" leftPadding="24"/>
+				<textElement>
+					<font fontName="SansSerif" size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CDE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a53013a6-74be-426c-a691-e487a201808e" x="110" y="30" width="100" height="20" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COLORADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="821d32ea-4871-4ec0-b338-d02daf7fee71" x="110" y="45" width="279" height="20" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT of EDUCATION]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="7a456ad9-1cc4-49df-8b1b-45ae429bdcf5" x="1014" y="13" width="80" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="598a4885-a17c-4127-ae66-fe98bc852ec2" x="1094" y="13" width="40" height="20" forecolor="#FFFFFF"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="448a859e-d1a1-4977-9043-6d823b841ef3" x="475" y="13" width="212" height="52" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" PUBLIC SCHOOL FINANCE ACT OF 1994 STATE SHARE OF TOTAL PROGRAM  "  +  $F{fiscalYear} + " " + $F{currentMonth}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="72f4b241-7809-4739-b051-4f53ec580049" mode="Opaque" x="0" y="0" width="284" height="65" forecolor="#000000" backcolor="#95B6D2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[District]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bdc6f31b-380a-421a-a7b4-09bab94c8ab3" mode="Opaque" x="284" y="0" width="105" height="65" forecolor="#000000" backcolor="#95B6D2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current Month Funding]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ad76c323-a4e6-4b17-afed-b5a4f1d2b3aa" mode="Opaque" x="389" y="0" width="105" height="65" forecolor="#000000" backcolor="#95B6D2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current Month Adjustments]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c4c05728-8e94-4aee-b4ff-55ce899bb32c" mode="Opaque" x="494" y="0" width="105" height="65" forecolor="#000000" backcolor="#95B6D2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Net Month Payment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1b869d19-47da-4aed-b341-4d7b21941221" mode="Opaque" x="599" y="0" width="105" height="65" forecolor="#000000" backcolor="#95B6D2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prior Month's Payment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b4ac79ab-06a4-4770-84ad-3cb2fe6255ae" mode="Opaque" x="704" y="0" width="100" height="65" forecolor="#000000" backcolor="#95B6D2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Variance]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="a15a7e02-5e97-484e-8c37-f96e1c1a3cda" mode="Opaque" x="809" y="4" width="105" height="20" forecolor="#FFFFFF" backcolor="#197A9B"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{fiscalYear}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="9855fa39-d155-4b5a-9d5b-73413cf26216" mode="Opaque" x="914" y="24" width="121" height="41" forecolor="#FFFFFF" backcolor="#197A9B"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Year-to-Date State Share Paid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="89576ddc-4e8f-45f5-8dcc-42f4a5d10dcf" mode="Opaque" x="1035" y="24" width="115" height="41" forecolor="#FFFFFF" backcolor="#197A9B"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Remaining State Share to be Paid]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="7e5023bf-9aed-4bb2-a0af-118c6203c08a" mode="Opaque" x="914" y="4" width="121" height="20" forecolor="#FFFFFF" backcolor="#197A9B"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{fiscalYear}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="923260e6-0a7b-4db1-a0fc-249f4e80a136" mode="Opaque" x="1035" y="4" width="115" height="20" forecolor="#FFFFFF" backcolor="#197A9B"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{fiscalYear}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e7247c86-d4f1-4613-87ea-d98bbe4ff56c" mode="Opaque" x="809" y="24" width="105" height="41" forecolor="#FFFFFF" backcolor="#197A9B"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Year-to-Date Projected State Share]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="cb1a4e86-b2fb-44fd-af2b-b4d5a1fcba35" style="rowStyle" x="0" y="0" width="284" height="20"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{districtName}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,##0.00">
+				<reportElement uuid="e3a33f32-711c-4db7-bc05-0be527ca7d08" style="rowStyle" x="284" y="0" width="105" height="20"/>
+				<box leftPadding="10"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{funding} != null ? $F{funding} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,##0.00">
+				<reportElement uuid="b6e2d277-ee3a-490a-b4a2-46f1ecb3ada1" style="rowStyle" x="389" y="0" width="105" height="20"/>
+				<box leftPadding="10"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new Double(($F{swap}!= null ? $F{swap} : new Double(0.0)) + ($F{debt} != null ? $F{debt} : new Double(0.0)) + ($F{audit} != null ? $F{audit} : new Double(0.0)) + ($F{csi} != null? $F{csi} : new Double(0.0)) + ($F{other} != null ?  $F{other} : new Double(0.0)))]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,##0.00">
+				<reportElement uuid="7773e0f8-268a-4e5e-b664-bf68e1fe27a5" style="rowStyle" x="494" y="0" width="105" height="20"/>
+				<box leftPadding="10"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{netPayment} != null ? $F{netPayment} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,##0.00">
+				<reportElement uuid="8004757d-92ce-48fc-9b82-76ec2f477bdc" style="rowStyle" x="599" y="0" width="105" height="20"/>
+				<box leftPadding="10"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{priorPayment} != null ? $F{priorPayment} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,##0.00">
+				<reportElement uuid="c45694b5-fe7f-4cac-9fc6-5021c6e4a243" style="rowStyle" x="704" y="0" width="100" height="20"/>
+				<box leftPadding="10"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{variance} != null ? $F{variance} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,##0.00">
+				<reportElement uuid="9c6d9cfd-2a3d-44bc-8235-ddd7223309af" style="totalStyle" x="809" y="0" width="100" height="20"/>
+				<box leftPadding="10"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projected} != null ? $F{projected} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,##0.00">
+				<reportElement uuid="00a46957-61ba-45f6-a0fb-9cd31cd2f0ab" style="totalStyle" x="909" y="0" width="126" height="20"/>
+				<box leftPadding="10"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{paid} != null ? $F{paid} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,###,##0.00">
+				<reportElement uuid="f2c3b6b1-f134-406b-85dc-9cca90e29a3e" style="totalStyle" x="1035" y="0" width="115" height="20"/>
+				<box leftPadding="10"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{remaining} != null ? $F{remaining} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

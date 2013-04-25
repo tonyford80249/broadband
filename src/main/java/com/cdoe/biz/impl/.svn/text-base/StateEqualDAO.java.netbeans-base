@@ -1,0 +1,97 @@
+/**
+ * 
+ */
+package com.cdoe.biz.impl;
+
+import java.lang.reflect.InvocationTargetException;
+import java.util.Date;
+import java.util.List;
+
+import org.apache.commons.beanutils.BeanUtils;
+import org.apache.commons.beanutils.BeanUtilsBean;
+import org.apache.log4j.Logger;
+import org.hibernate.Query;
+import org.hibernate.Session;
+
+import com.cdoe.biz.IStateEqualDAO;
+import com.cdoe.biz.model.StateEqual;
+import com.cdoe.db.hibernate.HibernateDAO;
+import com.cdoe.util.NullAwareBeanUtilsBean;
+
+/**
+ * @author dyn-8
+ *
+ */
+public class StateEqualDAO extends HibernateDAO implements IStateEqualDAO {
+	
+	private final Logger logger = Logger.getLogger(StateEqualDAO.class);
+
+	@SuppressWarnings("rawtypes")
+	@Override
+	public StateEqual findLatest(String districtCode, String fiscalYear) {
+		Session session = getCurrentSession();
+		Query query = session
+				.createQuery("from StateEqual se where se.districtNumber = :districtNumber and se.fiscalYear = :fiscalYear and" +
+						" se.dateCreated = (select max(se2.dateCreated) from StateEqual se2 where se2.districtNumber = :districtNumber" +
+						" and se2.fiscalYear = :fiscalYear)");
+		query.setString("districtNumber", districtCode);
+		query.setString("fiscalYear", fiscalYear);
+		List results = query.list();
+		if (results != null && results.size() > 0)
+			return (StateEqual) results.get(0);
+		else
+			return null;
+	}
+
+	@SuppressWarnings("rawtypes")
+	@Override
+	public StateEqual findLatest(String districtCode) {
+		Session session = getCurrentSession();
+		Query query = session
+				.createQuery("from StateEqual se where se.districtNumber = :districtNumber and" +
+						" se.dateCreated = (select max(se2.dateCreated) from StateEqual se2 where se2.districtNumber = :districtNumber)");
+		query.setString("districtNumber", districtCode);
+		List results = query.list();
+		if (results != null && results.size() > 0)
+			return (StateEqual) results.get(0);
+		else
+			return null;
+	}                        
+        
+       
+
+	@Override
+	public void saveOrUpdate(Object object) {           
+		StateEqual stateEqual = (StateEqual) object;
+		StateEqual latest = null;
+                
+                if (stateEqual.getId() != null) {
+                 latest = this.findByPk(StateEqual.class, stateEqual.getId());//findLatest(stateEqual.getDistrictNumber());   
+                }
+                
+		try {
+			StateEqual clone = null;
+			// If we didn't find a row, create a new one
+			if (latest == null)
+				clone = new StateEqual();
+			else
+				clone = (StateEqual) BeanUtils.cloneBean(latest);
+			BeanUtilsBean notNullCloner = new NullAwareBeanUtilsBean();
+			Session session = getCurrentSession();
+                        
+                        if (latest != null) {
+			 session.evict(latest);
+                        }
+                                
+			notNullCloner.copyProperties(clone, stateEqual);
+			clone.setId(null);
+			clone.setVersion(null);
+			clone.setDateCreated(new Date());                        
+			super.save(clone);
+		} catch (Exception e) {
+			logger.error("Error cloning StateEqual", e);
+			throw new RuntimeException("Error cloning StateEqual", e);
+		}
+	}
+	
+}

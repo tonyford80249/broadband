@@ -1,0 +1,97 @@
+package com.cdoe.services.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+
+import com.cdoe.biz.model.equal.Csi;
+import com.cdoe.biz.model.equal.FteByGrade;
+import com.cdoe.biz.model.equal.MillLevy;
+import com.cdoe.biz.model.equal.StateEqual;
+import com.cdoe.biz.stateequal.ICSICalculationsDAO;
+import com.cdoe.biz.stateequal.IFteByGradeDAO;
+import com.cdoe.biz.stateequal.IMillLevyCertDAO;
+import com.cdoe.biz.stateequal.IStateEqualDAO;
+import com.cdoe.services.ISE360CalculationManager;
+import com.cdoe.util.DateUtil;
+
+public class SE360CalculationManager extends BaseManager implements
+		ISE360CalculationManager {
+
+	private static final Logger logger = Logger.getLogger(SE360CalculationManager.class);
+	
+	private  IFteByGradeDAO fteByGradeDAO;
+	private  ICSICalculationsDAO csiDAO;
+	private  IMillLevyCertDAO millLevyCertDAO;
+	
+	public void setStateEqualDAO(IStateEqualDAO stateEqualDAO) {
+		this.stateEqualDAO = stateEqualDAO;
+	}
+
+
+	private IStateEqualDAO stateEqualDAO; 
+	
+	public void setFteByGradeDAO( IFteByGradeDAO fteByGradeDAO) {
+		this.fteByGradeDAO = fteByGradeDAO;
+	}
+	
+	public void setCsiDAO( ICSICalculationsDAO csiDAO) {
+		this.csiDAO = csiDAO;
+	}
+	
+	public void setMillLevyCertDAO(IMillLevyCertDAO millLevyCertDAO) {
+		this.millLevyCertDAO = millLevyCertDAO;
+	}
+	
+
+	
+
+	
+	public List<StateEqual> getStateEqualByDistrictAndYears(String districtCode,
+			String startFiscalYear, int nosOfYears) {
+
+		List<StateEqual> stateEqualList = new ArrayList<StateEqual>();
+		stateEqualList.add(stateEqualDAO.findLatest(districtCode, startFiscalYear));
+		for (int j = 1; j < nosOfYears; j++) {
+			String fiscalYear = DateUtil.getPrevFiscalYear(startFiscalYear);
+			stateEqualList.add(stateEqualDAO.findLatest(districtCode, fiscalYear));
+			
+		}
+		return stateEqualList;
+	}
+
+	
+	public List<FteByGrade> getFteByGradeByDistrictAndYears(String districtCode,
+			String startFiscalYear, int nosOfYears) {
+		List<FteByGrade> fteByGrade = new ArrayList<FteByGrade>();
+		fteByGrade.addAll(fteByGradeDAO.getByDistrictYear(districtCode, startFiscalYear));
+		for (int j = 1; j < nosOfYears; j++) {
+			String fiscalYear = DateUtil.getPrevFiscalYear(startFiscalYear);
+			fteByGrade.addAll(fteByGradeDAO.getByDistrictYear(districtCode, fiscalYear));
+			
+		}
+		return fteByGrade;
+		
+	}
+	
+	public MillLevy getMillLevyByDistrictAndYear(String districtCode,	String fiscalYear) {
+		MillLevy millLevy = null;
+                
+		  millLevy = millLevyCertDAO.findByDistrict(districtCode, fiscalYear);
+		
+		return millLevy;
+		
+	}
+	
+	public Csi getCsiByDistrictAndYear(String districtCode,	String fiscalYear) {
+		Csi csi  = null;
+		List<Csi> csiList = csiDAO.getByDistrictAndYear(districtCode, fiscalYear);
+		if ( csiList != null &&  csiList.size() > 0)
+			csi = csiList.get(0);
+		return csi;
+		
+	}
+	
+
+}

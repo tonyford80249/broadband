@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="election" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cfc01c4e-8368-4466-94b9-2393ac94ced8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="county" class="java.lang.String"/>
+	<field name="fiscalYear" class="java.lang.String"/>
+	<field name="districtNumber" class="java.lang.String"/>
+	<field name="districtName" class="java.lang.String"/>
+	<field name="votesFor" class="java.lang.Integer"/>
+	<field name="votesAgainst" class="java.lang.Integer"/>
+	<field name="dollarAmount" class="java.lang.Double"/>
+	<field name="ballotLangauge" class="java.lang.String"/>
+	<variable name="totalVoteFor" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{votesFor}]]></variableExpression>
+	</variable>
+	<variable name="totalVoteAgainst" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{votesAgainst}]]></variableExpression>
+	</variable>
+	<variable name="totalDollarAmountApproved" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{votesFor} > $F{votesAgainst} ? $F{dollarAmount} : new Double(0.0)]]></variableExpression>
+	</variable>
+	<variable name="totalDollarAmountFailed" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{votesFor} <$F{votesAgainst} ?$F{dollarAmount} : new Double(0.0)]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="40b0d418-43e8-408d-9e22-efbf9aae2b28" x="306" y="13" width="190" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OVERRIDE ELECTIONS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="271e5f1a-91c2-42be-abd6-b29c25fa7730" x="0" y="0" width="70" height="47"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[COUNTY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="885d86ec-cb17-45ff-ba23-669ebaa14747" x="70" y="0" width="143" height="47"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DISTRICT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ac9a6a0f-9d75-4d9d-9a85-54f33cb402c3" x="213" y="0" width="56" height="47"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[VOTE FOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="90ba6e02-5d61-49b1-80b4-b593bc2ecdf6" x="325" y="0" width="80" height="47"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOLLAR AMOUNT APPROVED]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d78f0479-77c7-4400-aecb-7f88810e6e79" x="269" y="0" width="56" height="47"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[VOTE AGAINST]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="39160ea9-696f-46a1-bcfe-7815571dee4d" x="405" y="0" width="80" height="47"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOLLAR AMOUNT FAILED]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="818aee69-d157-4548-a1bb-fc49ec73e471" x="485" y="0" width="242" height="47"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BALLOUT QUESTION]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="c109483e-fd7c-4bcd-adfb-95a49ce42921" x="0" y="0" width="70" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{ballotLangauge} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{county}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fc7811ff-6750-496b-a591-949b1cf4d6a4" x="70" y="0" width="143" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{ballotLangauge} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{districtName}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###,##0" isBlankWhenNull="true">
+				<reportElement uuid="333cd7fe-6fff-477f-891f-c57ad57a865e" x="213" y="0" width="56" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{ballotLangauge} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{votesFor}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###,##0" isBlankWhenNull="true">
+				<reportElement uuid="90f39560-02a0-4749-ace5-d6e4aa3f644b" x="269" y="0" width="56" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{ballotLangauge} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{votesAgainst}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,##0.00">
+				<reportElement uuid="e63b7f9d-4b1c-4c11-a80d-43517f179c05" x="325" y="0" width="80" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{ballotLangauge} != null && $F{votesAgainst} != null &&  $F{votesFor} != null && $F{votesFor} > $F{votesAgainst}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{dollarAmount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,##0.00">
+				<reportElement uuid="28a7ed57-1d44-4b9c-94d4-00bac4eddb12" x="405" y="0" width="80" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{ballotLangauge} != null && $F{votesAgainst} != null &&  $F{votesFor} != null && $F{votesFor} < $F{votesAgainst}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{dollarAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5828f984-95f4-4744-97d1-026e6e76fcd3" x="485" y="0" width="242" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{ballotLangauge} != null]]></printWhenExpression>
+				</reportElement>
+				<box leftPadding="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{ballotLangauge}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="d6c6ac66-85e5-4fb7-b12e-3e168a900051" x="34" y="18" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[TOTALS :]]></text>
+			</staticText>
+			<textField pattern="###,##0">
+				<reportElement uuid="86343f8d-e7b0-4d81-99b3-6a85d23d9088" x="211" y="18" width="56" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalVoteFor}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###,##0">
+				<reportElement uuid="cdec0814-ea6f-4118-9455-476922e3b85a" x="267" y="18" width="56" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalVoteAgainst}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,##0.00">
+				<reportElement uuid="4eae4743-2cba-451d-82c0-231f75dca0fa" x="325" y="18" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalDollarAmountApproved}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,##0.00">
+				<reportElement uuid="66eb60d9-fffe-498f-ab91-977a67275b72" x="405" y="18" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalDollarAmountFailed}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="c6cea7f7-2a22-4e7b-8ad2-6ea214077194" x="0" y="0" width="727" height="1"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

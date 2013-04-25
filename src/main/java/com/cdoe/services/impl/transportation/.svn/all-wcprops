@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/state_equal/!svn/ver/310/trunk/cdoe/src/main/java/com/cdoe/services/impl/transportation
+END
+DistributionAmountsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/state_equal/!svn/ver/310/trunk/cdoe/src/main/java/com/cdoe/services/impl/transportation/DistributionAmountsManager.java
+END
+PaymentWorkSheetManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/state_equal/!svn/ver/200/trunk/cdoe/src/main/java/com/cdoe/services/impl/transportation/PaymentWorkSheetManager.java
+END
+Cde40TransReimbFormManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/state_equal/!svn/ver/244/trunk/cdoe/src/main/java/com/cdoe/services/impl/transportation/Cde40TransReimbFormManager.java
+END
+CapitalOutlayManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/state_equal/!svn/ver/244/trunk/cdoe/src/main/java/com/cdoe/services/impl/transportation/CapitalOutlayManager.java
+END
+Cde40SummaryManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/state_equal/!svn/ver/244/trunk/cdoe/src/main/java/com/cdoe/services/impl/transportation/Cde40SummaryManager.java
+END
+DistrictPaymentReportManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/services/impl/transportation/DistrictPaymentReportManager.java
+END

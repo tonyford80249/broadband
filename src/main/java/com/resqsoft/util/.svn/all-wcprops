@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/resqsoft/util
+END
+ResponseUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/resqsoft/util/ResponseUtils.java
+END
+StringUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/resqsoft/util/StringUtils.java
+END
+ApplicationInitialization.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/resqsoft/util/ApplicationInitialization.java
+END
+BuildInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/resqsoft/util/BuildInfo.java
+END
+MessageUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/resqsoft/util/MessageUtils.java
+END
+FileUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/resqsoft/util/FileUtils.java
+END
+AppContextUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/resqsoft/util/AppContextUtils.java
+END
+DateUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/resqsoft/util/DateUtils.java
+END
+SystemUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/resqsoft/util/SystemUtils.java
+END
+RequestUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/resqsoft/util/RequestUtils.java
+END

@@ -1,0 +1,34 @@
+
+#stateEqualSystemsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:23.0em;
+  top:17.5em;
+	text-align:right;
+	
+}
+
+#stateEqualLinkDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:40.0em;
+  top:21.0em;
+	
+}
+
+#transportationLinkDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:27.0em;
+  top:22.75em;
+	
+}
+
+#auditLinkDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:27.0em;
+  top:24.5em;
+	
+}
+

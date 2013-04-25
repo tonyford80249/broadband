@@ -1,0 +1,134 @@
+
+#collectionTypeDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:16.0em;
+  top:10.5em;
+ 	
+}
+
+#cancelButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:11.0em;
+  top:14.0em;
+  
+}
+
+#districtsMissingFromCrosswalkDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:33.0em;
+  top:28.0em;
+ 	
+}
+
+#fiscalYearDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:16.0em;
+  top:8.75em;
+ 	
+}
+
+#horizontalLine683HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:1.75em;
+	
+}
+
+#crosswalkCollectionDataStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#horizontalLine685HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:5.25em;
+	
+}
+
+#fiscalYearStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#collectionTypeStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:10.5em;
+	text-align:right;
+	
+}
+
+#submitButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:14.0em;
+  
+}
+
+#horizontalLine692HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:17.5em;
+	
+}
+
+#resultsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:19.25em;
+	text-align:right;
+	
+}
+
+#horizontalLine694HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:21.0em;
+	
+}
+
+#viewProposedImportButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:24.5em;
+  
+}
+
+#districtsMissingFromCrosswalkStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:28.0em;
+	text-align:right;
+	
+}
+
+#horizontalLine698HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:31.5em;
+	
+}
+

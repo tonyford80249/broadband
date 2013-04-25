@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report5" language="groovy" pageWidth="1008" pageHeight="612" orientation="Landscape" columnWidth="1008" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="b3e3bad3-f39a-467c-b098-8313b0fd499c">
+	<property name="net.sf.jasperreports.export.xls.detect.cell.type" value="true"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="267"/>
+	<property name="ireport.y" value="0"/>
+	<style name="myStyle" forecolor="#000000" backcolor="#FFFFFF" isBlankWhenNull="false" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}.intValue() % 2 == 0]]></conditionExpression>
+			<style mode="Opaque" forecolor="#000000" backcolor="#CCCCCC" isBlankWhenNull="false" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="fiscalYear" class="java.lang.String">
+		<defaultValueExpression><![CDATA[20112012]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select t.DISTRICT_NUMBER,t.FISCAL_YEAR,t.FIRST_PAYMENT,t.SECOND_PAYMENT,t.DISTRICT_DISTRIBUTION,o.organization_name,pr.PRORATE_FACTOR_1ST_PAYMENT,pr.PRORATE_FACTOR_2ND_PAYMENT,pr.TOTAL_FIRST_PAYMENT,pr.TOTAL_SECOND_PAYMENT,pr.TOTAL_DISTRIBUTION from transportation t, organization_unit_master o, prorate pr where t.DISTRICT_NUMBER = o.organization_code and t.FISCAL_YEAR = $P{fiscalYear} and pr.FISCAL_YEAR = $P{fiscalYear} order by t.DISTRICT_NUMBER]]>
+	</queryString>
+	<field name="DISTRICT_NUMBER" class="java.lang.String"/>
+	<field name="FISCAL_YEAR" class="java.lang.String"/>
+	<field name="FIRST_PAYMENT" class="java.math.BigDecimal"/>
+	<field name="SECOND_PAYMENT" class="java.math.BigDecimal"/>
+	<field name="DISTRICT_DISTRIBUTION" class="java.math.BigDecimal"/>
+	<field name="ORGANIZATION_NAME" class="java.lang.String"/>
+	<field name="PRORATE_FACTOR_1ST_PAYMENT" class="java.math.BigDecimal"/>
+	<field name="PRORATE_FACTOR_2ND_PAYMENT" class="java.math.BigDecimal"/>
+	<field name="TOTAL_FIRST_PAYMENT" class="java.math.BigDecimal"/>
+	<field name="TOTAL_SECOND_PAYMENT" class="java.math.BigDecimal"/>
+	<field name="TOTAL_DISTRIBUTION" class="java.math.BigDecimal"/>
+	<variable name="defaultValue" class="java.lang.Double">
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="182" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="85fe3e50-af08-44e5-ac1d-b39387e9e7c8" x="2" y="108" width="131" height="36"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reimbursement Year]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="28a37d59-92a0-47d1-b8a2-06e9d40d8a93" mode="Transparent" x="133" y="108" width="229" height="36" backcolor="#EFE7D5"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.25" lineColor="#CCCCCC"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FISCAL_YEAR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="f72f6cf9-22cb-4147-8f14-7336874035fe" x="362" y="108" width="135" height="36"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1st Proration]]></text>
+			</staticText>
+			<textField pattern="#,##0.0000">
+				<reportElement uuid="25238f40-d8f4-4dad-acbb-bcaff1b02d35" mode="Transparent" x="497" y="108" width="135" height="36" backcolor="#EFE7D5"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.25" lineColor="#CCCCCC"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PRORATE_FACTOR_1ST_PAYMENT} != null ? $F{PRORATE_FACTOR_1ST_PAYMENT} : new BigDecimal(0.0)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="2bc3f227-fb9d-4d2a-a289-0c2691efee93" x="632" y="108" width="135" height="36"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2nd Proration]]></text>
+			</staticText>
+			<textField pattern="#,##0.0000">
+				<reportElement uuid="1dd58ab0-faa7-4dfe-afa3-18179215235e" mode="Transparent" x="767" y="108" width="135" height="36" backcolor="#EFE7D5"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.25" lineColor="#CCCCCC"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PRORATE_FACTOR_2ND_PAYMENT} != null ? $F{PRORATE_FACTOR_2ND_PAYMENT} : new BigDecimal(0.0)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="48ec7303-5a02-4adf-8124-819cb275382a" x="2" y="50" width="131" height="36"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1st Distribution]]></text>
+			</staticText>
+			<textField pattern="$ #,##0.00">
+				<reportElement uuid="f3f47ae9-bb86-4f11-b549-4446e5b62505" mode="Transparent" x="133" y="50" width="229" height="36" backcolor="#EFE7D5"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.25" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TOTAL_FIRST_PAYMENT} != null ? $F{TOTAL_FIRST_PAYMENT} : new BigDecimal(0.0)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="a8eb5b29-542d-4781-a00d-30dc934aa102" x="362" y="50" width="135" height="36"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2nd Distribution]]></text>
+			</staticText>
+			<textField pattern="$ #,##0.00">
+				<reportElement uuid="cf826e14-4466-4ccf-9d24-beceaf09902f" mode="Transparent" x="497" y="50" width="135" height="36" backcolor="#EFE7D5"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.25" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TOTAL_SECOND_PAYMENT} != null ? $F{TOTAL_SECOND_PAYMENT} : new BigDecimal(0.0)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="cd13b5f9-51be-4040-8b47-3cf6629785cc" x="632" y="50" width="135" height="36"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Distribution]]></text>
+			</staticText>
+			<textField pattern="$ #,##0.00">
+				<reportElement uuid="466d259c-b794-4ea0-850e-2a7a58cbdb87" mode="Transparent" x="767" y="50" width="135" height="36" backcolor="#EFE7D5"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.25" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TOTAL_DISTRIBUTION} != null ? $F{TOTAL_DISTRIBUTION} : new BigDecimal(0.0)]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="c1f3f7f0-9427-4129-a3e8-d54d704c1fcb" mode="Opaque" x="0" y="0" width="131" height="20" forecolor="#000000" backcolor="#95B6D2"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[District Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="17658e96-d125-442f-9fd0-fb50d0272af9" mode="Opaque" x="131" y="0" width="231" height="20" forecolor="#000000" backcolor="#95B6D2"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[District Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="69d8a8e9-57f4-422c-9192-3e72c3aec915" mode="Opaque" x="362" y="0" width="135" height="20" forecolor="#000000" backcolor="#95B6D2"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1st Payment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7dd6c140-412e-49a0-9443-70cc024b5d14" mode="Opaque" x="497" y="0" width="135" height="20" forecolor="#000000" backcolor="#95B6D2"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2nd Payment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c4992692-130e-4b00-ac9f-d3618b338a5d" mode="Opaque" x="632" y="0" width="135" height="20" forecolor="#000000" backcolor="#95B6D2"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Distribution]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5d8ca829-ba0a-45ae-b5e8-b074ec29eb5c" mode="Opaque" x="767" y="0" width="135" height="20" backcolor="#95B6D2"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="37034c33-7885-4352-a249-eab8bda73ae3" style="myStyle" mode="Opaque" x="0" y="0" width="131" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DISTRICT_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3d6dff26-e1f2-4d12-94d1-7c47b64bf8ec" style="myStyle" mode="Opaque" x="131" y="0" width="231" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ORGANIZATION_NAME}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="f5cfbb8d-0162-4bdb-9ee6-dac9124ff4cb" style="myStyle" mode="Opaque" x="497" y="0" width="135" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{SECOND_PAYMENT} != null ? $F{SECOND_PAYMENT} : new BigDecimal(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="6218a6bc-5a46-4b64-8b9a-6c100dd95c84" style="myStyle" mode="Opaque" x="632" y="0" width="135" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{DISTRICT_DISTRIBUTION} != null ? $F{DISTRICT_DISTRIBUTION} :  new BigDecimal(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="61ddf647-8b7d-4d14-b764-f0195d84b0b0" style="myStyle" mode="Opaque" x="362" y="0" width="135" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{FIRST_PAYMENT} != null ? $F{FIRST_PAYMENT} : new BigDecimal(0.0)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="6823bed1-a20d-49fe-966e-8189613eab21" style="myStyle" x="767" y="0" width="135" height="20"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

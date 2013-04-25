@@ -1,0 +1,21 @@
+package com.cdoe.biz.impl.audit;
+
+import java.util.List;
+
+import org.hibernate.Query;
+
+import com.cdoe.biz.audit.IAuditFteByGrade;
+import com.cdoe.biz.model.audit.AuditFteByGrade;
+import com.cdoe.db.hibernate.HibernateDAO;
+
+public class AuditFteByGradeDAO extends HibernateDAO implements	IAuditFteByGrade {
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<AuditFteByGrade> findByAuditId(Integer auditID) {
+		Query query = getCurrentSession().createQuery("from AuditFteByGrade fte where fte.auditID = :auditID");
+		query.setInteger("auditID", auditID);
+		return query.list();
+	}
+
+}

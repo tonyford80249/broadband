@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- Transaction -->
+	<aop:config>
+		<aop:pointcut id="rqPointcut" expression="execution(* com.cdoe.services..*.*(..)) and not execution(* com.cdoe.services.exempt..*.*(..))" />
+		<aop:advisor advice-ref="rqAdvice" pointcut-ref="rqPointcut"/>
+	</aop:config>
+	<tx:advice id="rqAdvice" transaction-manager="defaultTransactionManger">
+		<tx:attributes>
+			<tx:method 
+				name="*"
+				read-only="true" />         
+                        <tx:method 
+				name="generate*"
+				isolation="DEFAULT"
+				propagation="REQUIRED"
+				timeout="10000"/>                   
+                        <tx:method 
+				name="upload*"
+				isolation="DEFAULT"
+				propagation="REQUIRED"
+				timeout="10000"/>
+			<tx:method 
+				name="update*"
+				isolation="DEFAULT"
+				propagation="REQUIRED"
+				timeout="10000"/>
+			<tx:method 
+				name="add*"
+				isolation="DEFAULT"
+				propagation="REQUIRED"
+				timeout="1000"/>
+			<tx:method 
+				name="create*"
+				isolation="DEFAULT"
+				propagation="REQUIRED"
+				timeout="1000"/>                       
+			<tx:method 
+				name="save*"
+				isolation="DEFAULT"
+				propagation="REQUIRED"
+				timeout="1000"/>
+			<tx:method 
+				name="run*"
+				isolation="DEFAULT"
+				propagation="REQUIRED"
+				timeout="1000"/>                        
+                        <tx:method 
+				name="call*"
+				isolation="DEFAULT"
+				propagation="REQUIRED"
+				timeout="9000"/>  
+			<tx:method 
+				name="execute*"
+				isolation="DEFAULT"
+				propagation="REQUIRED"
+				timeout="1000"/>
+			<tx:method 
+				name="delete*"
+				isolation="DEFAULT"
+				propagation="REQUIRED"
+				timeout="1000"/>
+			<tx:method 
+				name="reject*"
+				isolation="DEFAULT"
+				propagation="REQUIRED"
+				timeout="1000"/>
+		</tx:attributes>
+	</tx:advice>
+	
+</beans>

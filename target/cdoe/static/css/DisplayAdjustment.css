@@ -1,0 +1,298 @@
+
+#statusDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:34.0em;
+  top:24.5em;
+	
+}
+
+#districtNameDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:16.0em;
+  top:24.5em;
+	
+}
+
+#districtNumberDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:7.0em;
+  top:24.5em;
+	
+}
+
+#horizontalLine182HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:1.75em;
+	
+}
+
+#viewAuditRepaymentAdjustmentStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#horizontalLine184HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:5.25em;
+	
+}
+
+#districtCodeStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#fiscalMonthStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:10.5em;
+	text-align:right;
+	
+}
+
+#clearButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:11.0em;
+  top:15.75em;
+  
+}
+
+#dropdownList841DropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:14.0em;
+  top:12.25em;
+ 	
+}
+
+#fiscalYearDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:41.0em;
+  top:10.5em;
+ 	
+}
+
+#typeStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:12.25em;
+	text-align:right;
+	
+}
+
+#searchButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:15.75em;
+  
+}
+
+#fiscalYearStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:29.0em;
+  top:10.5em;
+	text-align:right;
+	
+}
+
+#stateEqualGridDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:21.0em;
+  
+}
+
+#adjStateAssessDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:24.5em;
+	
+}
+
+#fiscalMonthDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:14.0em;
+  top:10.5em;
+ 	
+}
+
+#editButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:28.0em;
+  
+}
+
+#horizontalLine212HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:31.5em;
+	
+}
+
+#viewAdjustmentsByTypeStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:33.25em;
+	text-align:right;
+	
+}
+
+#horizontalLine214HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:35.0em;
+	
+}
+
+#fiscalYearStaticText_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:38.5em;
+	text-align:right;
+	
+}
+
+#districtCodeDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:14.0em;
+  top:8.75em;
+ 	
+}
+
+#districtCodeStaticText_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:40.25em;
+	text-align:right;
+	
+}
+
+#adjustmentTypeStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:42.0em;
+	text-align:right;
+	
+}
+
+#horizontalLine221HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:45.5em;
+	
+}
+
+#adjustmentTypeDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:16.0em;
+  top:42.0em;
+ 	
+}
+
+#districtCodeDropdownList_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:16.0em;
+  top:40.25em;
+ 	
+}
+
+#dropdownList854DropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:16.0em;
+  top:38.5em;
+ 	
+}
+
+#typeDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:42.0em;
+  top:24.5em;
+	
+}
+
+#reasonDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:48.0em;
+  top:24.5em;
+	
+}
+
+#frequencyDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:56.0em;
+  top:24.5em;
+	
+}
+
+#begMonthFyDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:67.0em;
+  top:24.5em;
+	
+}
+
+#endMonthFyDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:81.0em;
+  top:24.5em;
+	
+}
+
+#ipcDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:95.0em;
+  top:24.5em;
+	
+}
+
+#amountDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:101.0em;
+  top:24.5em;
+	
+}
+

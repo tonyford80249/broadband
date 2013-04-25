@@ -1,0 +1,659 @@
+
+#indicateTheNumberOfElectionsForStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:24.0em;
+  top:43.75em;
+	text-align:right;
+	
+}
+
+#electionHeldStatusCheckboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:17.0em;
+  top:43.75em;
+  
+}
+
+#electionHeldStatusCheckbox_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:7.0em;
+  top:43.75em;
+  
+}
+
+#$5SpecialBuildingAndTechnologyElectionPursuantToSection224010215CrsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:4.0em;
+  top:42.0em;
+	text-align:right;
+	
+}
+
+#againstTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:75.0em;
+  top:38.5em;
+	
+}
+
+#againstStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:67.0em;
+  top:38.5em;
+	text-align:right;
+	
+}
+
+#forTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:62.0em;
+  top:38.5em;
+	
+}
+
+#indicateTheNumberOfElectionsForStaticText_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:24.0em;
+  top:38.5em;
+	text-align:right;
+	
+}
+
+#electionHeldStatusCheckbox_3Div{
+  position:absolute;
+  white-space:nowrap;
+  left:17.0em;
+  top:38.5em;
+  
+}
+
+#electionHeldStatusCheckbox_4Div{
+  position:absolute;
+  white-space:nowrap;
+  left:7.0em;
+  top:38.5em;
+  
+}
+
+#$4BondElectionPursuantToSection2242102CrsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:4.0em;
+  top:36.75em;
+	text-align:right;
+	
+}
+
+#againstTextbox_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:75.0em;
+  top:33.25em;
+	
+}
+
+#againstStaticText_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:67.0em;
+  top:33.25em;
+	text-align:right;
+	
+}
+
+#forTextbox_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:62.0em;
+  top:33.25em;
+	
+}
+
+#indicateTheNumberOfElectionsForStaticText_3Div{
+  position:absolute;
+  white-space:nowrap;
+  left:24.0em;
+  top:33.25em;
+	text-align:right;
+	
+}
+
+#electionHeldStatusCheckbox_5Div{
+  position:absolute;
+  white-space:nowrap;
+  left:17.0em;
+  top:33.25em;
+  
+}
+
+#electionHeldStatusCheckbox_6Div{
+  position:absolute;
+  white-space:nowrap;
+  left:7.0em;
+  top:33.25em;
+  
+}
+
+#$3TransportationElectionPursuantToSection224010217CrsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:4.0em;
+  top:31.5em;
+	text-align:right;
+	
+}
+
+#againstTextbox_3Div{
+  position:absolute;
+  white-space:nowrap;
+  left:75.0em;
+  top:28.0em;
+	
+}
+
+#forTextbox_3Div{
+  position:absolute;
+  white-space:nowrap;
+  left:62.0em;
+  top:28.0em;
+	
+}
+
+#againstStaticText_3Div{
+  position:absolute;
+  white-space:nowrap;
+  left:67.0em;
+  top:28.0em;
+	text-align:right;
+	
+}
+
+#indicateTheNumberOfElectionsForStaticText_4Div{
+  position:absolute;
+  white-space:nowrap;
+  left:24.0em;
+  top:28.0em;
+	text-align:right;
+	
+}
+
+#electionHeldStatusCheckbox_7Div{
+  position:absolute;
+  white-space:nowrap;
+  left:17.0em;
+  top:28.0em;
+  
+}
+
+#electionHeldStatusCheckbox_8Div{
+  position:absolute;
+  white-space:nowrap;
+  left:7.0em;
+  top:28.0em;
+  
+}
+
+#$2FullDayKindergartenOverrideElectionPursuantToSection22541085CrsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:4.0em;
+  top:26.25em;
+	text-align:right;
+	
+}
+
+#againstTextbox_4Div{
+  position:absolute;
+  white-space:nowrap;
+  left:75.0em;
+  top:22.75em;
+	
+}
+
+#againstStaticText_4Div{
+  position:absolute;
+  white-space:nowrap;
+  left:67.0em;
+  top:22.75em;
+	text-align:right;
+	
+}
+
+#forTextbox_4Div{
+  position:absolute;
+  white-space:nowrap;
+  left:62.0em;
+  top:22.75em;
+	
+}
+
+#indicateTheNumberOfElectionsForStaticText_5Div{
+  position:absolute;
+  white-space:nowrap;
+  left:24.0em;
+  top:22.75em;
+	text-align:right;
+	
+}
+
+#electionHeldStatusCheckbox_9Div{
+  position:absolute;
+  white-space:nowrap;
+  left:17.0em;
+  top:22.75em;
+  
+}
+
+#electionHeldStatusCheckbox_10Div{
+  position:absolute;
+  white-space:nowrap;
+  left:7.0em;
+  top:22.75em;
+  
+}
+
+#$1OverrideElectionPursuantToSection2254108CrsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:4.0em;
+  top:21.0em;
+	text-align:right;
+	
+}
+
+#electionStatusCheckboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:4.0em;
+  top:17.5em;
+  
+}
+
+#districtCodeNameDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:19.0em;
+  top:8.75em;
+ 	
+}
+
+#horizontalLine549HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:1.75em;
+	
+}
+
+#reportOfCurrentYearElectionResultsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#horizontalLine551HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:5.25em;
+	
+}
+
+#districtCodeNameStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#horizontalLine554HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:10.5em;
+	
+}
+
+#pleaseIndicateWhetherOrNotTheBoardOfEducationOfTheAboveDistrictHeldOneOrMoreOfTheFollowingElectionsInNovember2011StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:14.0em;
+	text-align:right;
+	
+}
+
+#ifNoElectionWasHeldPleaseMarkThisBoxAndReturnToCdeOtherwiseCompleteTheFormStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:8.0em;
+  top:17.5em;
+	text-align:right;
+	
+}
+
+#saveButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:77.0em;
+  
+}
+
+#horizontalLine644HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:80.5em;
+	
+}
+
+#forTextbox_5Div{
+  position:absolute;
+  white-space:nowrap;
+  left:62.0em;
+  top:43.75em;
+	
+}
+
+#againstStaticText_5Div{
+  position:absolute;
+  white-space:nowrap;
+  left:67.0em;
+  top:43.75em;
+	text-align:right;
+	
+}
+
+#againstTextbox_5Div{
+  position:absolute;
+  white-space:nowrap;
+  left:75.0em;
+  top:43.75em;
+	
+}
+
+#$6ElectionDeBrucingRegardingFiscalYearSpendingLimitsPursuantToArticleXSection20OfTheStateConstitutionTheTaxPayersBillOfRightsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:4.0em;
+  top:47.25em;
+	text-align:right;
+	
+}
+
+#electionHeldStatusCheckbox_11Div{
+  position:absolute;
+  white-space:nowrap;
+  left:7.0em;
+  top:49.0em;
+  
+}
+
+#electionHeldStatusCheckbox_12Div{
+  position:absolute;
+  white-space:nowrap;
+  left:17.0em;
+  top:49.0em;
+  
+}
+
+#indicateTheNumberOfElectionsForStaticText_6Div{
+  position:absolute;
+  white-space:nowrap;
+  left:24.0em;
+  top:49.0em;
+	text-align:right;
+	
+}
+
+#forTextbox_6Div{
+  position:absolute;
+  white-space:nowrap;
+  left:62.0em;
+  top:49.0em;
+	
+}
+
+#againstStaticText_6Div{
+  position:absolute;
+  white-space:nowrap;
+  left:67.0em;
+  top:49.0em;
+	text-align:right;
+	
+}
+
+#againstTextbox_6Div{
+  position:absolute;
+  white-space:nowrap;
+  left:75.0em;
+  top:49.0em;
+	
+}
+
+#$7CapitalImprovemntsLoanRepaymentsGrowthDistrictsElectionPursuantToSection2240110CrsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:4.0em;
+  top:52.5em;
+	text-align:right;
+	
+}
+
+#electionHeldStatusCheckbox_13Div{
+  position:absolute;
+  white-space:nowrap;
+  left:7.0em;
+  top:54.25em;
+  
+}
+
+#electionHeldStatusCheckbox_14Div{
+  position:absolute;
+  white-space:nowrap;
+  left:17.0em;
+  top:54.25em;
+  
+}
+
+#indicateTheNumberOfElectionsForStaticText_7Div{
+  position:absolute;
+  white-space:nowrap;
+  left:24.0em;
+  top:54.25em;
+	text-align:right;
+	
+}
+
+#forTextbox_7Div{
+  position:absolute;
+  white-space:nowrap;
+  left:62.0em;
+  top:54.25em;
+	
+}
+
+#againstStaticText_7Div{
+  position:absolute;
+  white-space:nowrap;
+  left:67.0em;
+  top:54.25em;
+	text-align:right;
+	
+}
+
+#againstTextbox_7Div{
+  position:absolute;
+  white-space:nowrap;
+  left:75.0em;
+  top:54.25em;
+	
+}
+
+#$8CharterSchoolSpecialCapitalConstructionSpecialMillLevyElectionPursuantToSection22305405CrsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:4.0em;
+  top:57.75em;
+	text-align:right;
+	
+}
+
+#pleaseReportEachElectionQuestionSeparatelyAndProvideCopyOfEachSampleBallotStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:6.0em;
+  top:59.5em;
+	text-align:right;
+	
+}
+
+#electionHeldStatusCheckbox_15Div{
+  position:absolute;
+  white-space:nowrap;
+  left:7.0em;
+  top:61.25em;
+  
+}
+
+#electionHeldStatusCheckbox_16Div{
+  position:absolute;
+  white-space:nowrap;
+  left:17.0em;
+  top:61.25em;
+  
+}
+
+#indicateTheNumberOfElectionsForStaticText_8Div{
+  position:absolute;
+  white-space:nowrap;
+  left:24.0em;
+  top:61.25em;
+	text-align:right;
+	
+}
+
+#forTextbox_8Div{
+  position:absolute;
+  white-space:nowrap;
+  left:62.0em;
+  top:61.25em;
+	
+}
+
+#againstStaticText_8Div{
+  position:absolute;
+  white-space:nowrap;
+  left:67.0em;
+  top:61.25em;
+	text-align:right;
+	
+}
+
+#againstTextbox_8Div{
+  position:absolute;
+  white-space:nowrap;
+  left:75.0em;
+  top:61.25em;
+	
+}
+
+#$9OtherElectionDisctrictConsolidationDeconsolidationDistrictReorganizationEtcStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:4.0em;
+  top:64.75em;
+	text-align:right;
+	
+}
+
+#electionHeldStatusCheckbox_17Div{
+  position:absolute;
+  white-space:nowrap;
+  left:7.0em;
+  top:66.5em;
+  
+}
+
+#electionHeldStatusCheckbox_18Div{
+  position:absolute;
+  white-space:nowrap;
+  left:17.0em;
+  top:66.5em;
+  
+}
+
+#indicateTheNumberOfElectionsForStaticText_9Div{
+  position:absolute;
+  white-space:nowrap;
+  left:24.0em;
+  top:66.5em;
+	text-align:right;
+	
+}
+
+#forTextbox_9Div{
+  position:absolute;
+  white-space:nowrap;
+  left:62.0em;
+  top:66.5em;
+	
+}
+
+#againstStaticText_9Div{
+  position:absolute;
+  white-space:nowrap;
+  left:67.0em;
+  top:66.5em;
+	text-align:right;
+	
+}
+
+#againstTextbox_9Div{
+  position:absolute;
+  white-space:nowrap;
+  left:75.0em;
+  top:66.5em;
+	
+}
+
+#typeOfOtherElectionStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:4.0em;
+  top:70.0em;
+	text-align:right;
+	
+}
+
+#electionTypeTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:29.0em;
+  top:70.0em;
+	
+}
+
+#ifAnyElectionWasHeldAttachAnOfficialSampleBallotInWhichIsStatedTheQuestionSSubmittedToTheElectorsOrACopyOfTheOfficialBallotQuestionLanguageAsCertifiedToTheCountyClerkForACoordinatedElectionStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:4.0em;
+  top:73.5em;
+	text-align:right;
+	
+}
+

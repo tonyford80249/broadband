@@ -1,0 +1,65 @@
+
+/*
+ * Copyright ResQSoft, Inc. 2011
+ */
+package com.cdoe.ui;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.cdoe.services.IImportAuditsManager;
+<<<<<<< .mine
+import com.cdoe.biz.model.audit.AuditEqual;
+import com.cdoe.ui.form.audit.AuditEqualForm;
+import com.cdoe.util.DateUtil;
+import com.cdoe.util.UserInfo;
+=======
+import com.cdoe.ui.form.ImportAuditsForm;
+import com.cdoe.ui.form.ResetAuditsForm;
+>>>>>>> .r109
+
+@Controller
+@RequestMapping("/secure/ImportAudits")
+public class ImportAuditsController {
+
+	private static final Logger logger = Logger.getLogger(ImportAuditsController.class);
+	
+	@Autowired
+	private IImportAuditsManager importAuditsManager;
+	
+	@RequestMapping(method = RequestMethod.GET)
+    public String index(Model model, HttpSession session) {
+    	ImportAuditsForm importAuditsForm = importAuditsManager.setupImportAuditsForm();
+    	model.addAttribute("importAuditsForm", importAuditsForm);
+    	ResetAuditsForm resetAuditsForm = importAuditsManager.setupResetAuditsForm();
+    	model.addAttribute("resetAuditsForm", resetAuditsForm);
+		return ".ImportAudits-index";
+    }
+    
+	@RequestMapping(value = "/upload", method = RequestMethod.POST)
+    public String upload(Model model, @ModelAttribute ImportAuditsForm importAuditsForm, HttpServletRequest request) {
+ 		importAuditsManager.importAudits(importAuditsForm);
+    	ResetAuditsForm resetAuditsForm = importAuditsManager.setupResetAuditsForm();
+    	model.addAttribute("resetAuditsForm", resetAuditsForm);
+		model.addAttribute("saved", true);
+		return ".ImportAudits-index";
+    }
+
+	@RequestMapping(value = "/reset", method = RequestMethod.POST)
+    public String reset(Model model, @ModelAttribute ResetAuditsForm resetAuditsForm, HttpServletRequest request) {
+ 		importAuditsManager.resetAudit(resetAuditsForm.getResetAuditId(), resetAuditsForm.getResetOrganizationCode());
+    	ImportAuditsForm importAuditsForm = importAuditsManager.setupImportAuditsForm();
+    	model.addAttribute("importAuditsForm", importAuditsForm);
+		model.addAttribute("saved", true);
+		return ".ImportAudits-index";
+    }
+
+}

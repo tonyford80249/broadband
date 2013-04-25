@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/resqsoft/exception
+END
+RecordNotFoundException.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/resqsoft/exception/RecordNotFoundException.java
+END
+InvalidParameterException.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/resqsoft/exception/InvalidParameterException.java
+END
+BaseRuntimeException.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/resqsoft/exception/BaseRuntimeException.java
+END
+PageNotFoundException.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/resqsoft/exception/PageNotFoundException.java
+END

@@ -1,0 +1,154 @@
+ package com.cdoe.services.impl.transportation;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import org.apache.log4j.Logger;
+
+import com.cdoe.biz.model.transportation.Transportation;
+import com.cdoe.biz.transportation.ICde40SummaryDAO;
+import com.cdoe.services.IReferenceDataManager;
+import com.cdoe.services.impl.TransportationDataManager;
+import com.cdoe.services.transportation.ICde40SummaryManager;
+import com.cdoe.ui.form.grid.TransportationGrid;
+import com.cdoe.ui.form.transportation.TransportationForm;
+import com.cdoe.util.DateUtil;
+import com.cdoe.util.UserInfo;
+
+public class Cde40SummaryManager extends TransportationDataManager implements
+		ICde40SummaryManager {
+
+	private static final Logger logger = Logger.getLogger(Cde40SummaryManager.class);
+
+	private ICde40SummaryDAO cde40SummaryDAO;
+	
+	/*
+	 * (non-Javadoc)
+	 * @see com.cdoe.services.impl.TransportationDataManager#saveOrUpdate(com.cdoe.ui.form.TransportationForm)
+	 * Update the data for the selected districts
+	 */
+	public void saveOrUpdate(TransportationForm form) {
+
+		List<TransportationGrid> transGridList = form.getTransportationGridList();
+		for (TransportationGrid transGrid : transGridList) {
+			if (transGrid.getSelect() != null && "true".equalsIgnoreCase(transGrid.getSelect())) {
+					updateFormData(form, transGrid);
+					super.saveOrUpdate(form);
+
+				
+			}
+		}
+
+	}
+	
+	private void updateFormData(TransportationForm form, TransportationGrid transGrid) {
+		form.setDistrictNumber(transGrid.getDistrictNumber());
+		form.setId(transGrid.getId());
+		form.setOperTran(transGrid.getOperTran());
+		form.setPupilTran(transGrid.getPupilTran());
+		form.setCapOutTran(transGrid.getCapOutTran());
+		form.setMigMiles(transGrid.getMigMiles());
+		form.setRegDMiles(transGrid.getRegDMiles());
+		form.setSchoolDays(transGrid.getSchoolDays());
+		form.setBoardTran(transGrid.getBoardTran());
+		form.setReimTranLy(transGrid.getReimTranLy());
+		form.setAdvPay(transGrid.getAdvPay());
+		form.setActMiles(transGrid.getActMiles());
+		form.setTotalMiles(transGrid.getTotalMiles());
+	}
+
+	public void rejectDistrictForms(TransportationForm form) {
+
+		List<TransportationGrid> transGridList = form.getTransportationGridList();
+		for (TransportationGrid transGrid : transGridList) {
+			if (transGrid.getSelect() != null && "true".equalsIgnoreCase(transGrid.getSelect())) {
+				long id = transGrid.getId();
+				logger.debug("Updating data for DistrictNumber " + transGrid.getDistrictNumber() + " ID " + id);
+				Transportation obj = findById(Transportation.class, id);
+				if (obj == null) {
+					form.setMessage("CDE 40 Transportation data not available for the district "
+							+ transGrid.getDistrictNumber() + " for rejection");
+					form.setErrors("Invalid");
+					return;
+				} else {
+					logger.debug("Updating the error status to Rejected for the district " + transGrid.getDistrictNumber() + " for year " + form.getFiscalYear());
+					if (form.getFiscalYear() == null || "".equals(form.getFiscalYear()))
+						form.setFiscalYear(DateUtil.getPrevFiscalYear());
+					updateErrorStatus(transGrid.getDistrictNumber(), form.getFiscalYear(), "Rejected");
+					saveOrUpdate(obj);
+				}
+			}
+		}
+
+	}
+
+
+	public TransportationForm setupForm(String fiscalYear, UserInfo userInfo) {
+		TransportationForm form = new TransportationForm();
+                form.setFiscalYear(fiscalYear);                
+		Map<String, String> districtMap = userInfo.getDistrictMap();
+		List<Transportation> transportationList = cde40SummaryDAO.getTransportationByFiscalYear(fiscalYear);
+		setGridData(form, transportationList, userInfo, districtMap);
+		return form;
+	}
+
+	protected TransportationForm setGridData(TransportationForm form,
+			List<Transportation> transportationList, UserInfo userInfo,
+			Map<String, String> districtMap) {
+
+		List<TransportationGrid> transGridList = form.getTransportationGridList();
+		Set<String> districtKeys = districtMap.keySet();
+		for (String districtCode : districtKeys) {
+			TransportationGrid transGrid = new TransportationGrid();
+			transGrid.setDistrictNumber(districtCode);
+			transGrid.setDistrictName(districtMap.get(districtCode));
+            boolean districtFound = false;
+			for (Transportation transportation : transportationList) {
+
+				if (transportation.getDistrictNumber().equalsIgnoreCase(districtCode)) {
+						districtFound = true;
+						transGrid.setId(transportation.getId());
+						transGrid.setNetCurrentOperExpend(transportation.getNetCurrentOperExpend());
+						transGrid.setOperTran(transportation.getOperTran());
+						transGrid.setMigMiles(transportation.getMigMiles());
+						transGrid.setRegDMiles(transportation.getRegDMiles());
+						transGrid.setSchoolDays(transportation.getSchoolDays());
+						transGrid.setBoardTran(transportation.getBoardTran());
+						transGrid.setPupilTran(transportation.getPupilTran());
+						transGrid.setActMiles(transportation.getActMiles());
+						transGrid.setTotalMiles(transportation.getTotalMiles());
+						transGrid.setFeesCollected(transportation.getFeesCollected());
+						transGrid.setCapOutTran(transportation.getCapOutTran());
+						transGrid.setReimTranLy(transportation.getReimTranLy());
+						transGrid.setAdvPay(transportation.getAdvPay());
+					    break;
+				}
+			}
+			if (!districtFound) {
+				transGrid.setNetCurrentOperExpend(0.0);
+				transGrid.setOperTran(0.0);
+				transGrid.setMigMiles(0.0);
+				transGrid.setRegDMiles(0.0);
+				transGrid.setSchoolDays(0l);
+				transGrid.setBoardTran(0l);
+				transGrid.setPupilTran(0l);
+				transGrid.setActMiles(0.0);
+				transGrid.setTotalMiles(0.0);
+				transGrid.setFeesCollected(0.0);
+				transGrid.setCapOutTran(0.0);
+				transGrid.setReimTranLy(0.0);
+				transGrid.setAdvPay(0.0);
+				
+			}
+			transGridList.add(transGrid);
+		}
+
+		return form;
+	}
+
+	public void setCde40SummaryDAO(ICde40SummaryDAO cde40SummaryDAO) {
+		this.cde40SummaryDAO = cde40SummaryDAO;
+	}
+
+}

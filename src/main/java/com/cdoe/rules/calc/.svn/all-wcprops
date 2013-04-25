@@ -1,0 +1,185 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/rules/calc
+END
+SETaborFormulaFundingProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SETaborFormulaFundingProcessor.java
+END
+SESizeFactorProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/state_equal/!svn/ver/285/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SESizeFactorProcessor.java
+END
+SETotaProgramFundingProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SETotaProgramFundingProcessor.java
+END
+SEPersonalCostFactorProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SEPersonalCostFactorProcessor.java
+END
+SizeFactorData.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/state_equal/!svn/ver/194/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SizeFactorData.java
+END
+SEAltAtRiskCalcProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/state_equal/!svn/ver/285/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SEAltAtRiskCalcProcessor.java
+END
+RulesResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/state_equal/!svn/ver/285/trunk/cdoe/src/main/java/com/cdoe/rules/calc/RulesResponse.java
+END
+EntitlementsProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/rules/calc/EntitlementsProcessor.java
+END
+TaborAndBeyondFormulaData.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/state_equal/!svn/ver/170/trunk/cdoe/src/main/java/com/cdoe/rules/calc/TaborAndBeyondFormulaData.java
+END
+SEBeyondTaborFundingProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SEBeyondTaborFundingProcessor.java
+END
+SETotalFormulaFundingProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/state_equal/!svn/ver/285/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SETotalFormulaFundingProcessor.java
+END
+Util.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/state_equal/!svn/ver/118/trunk/cdoe/src/main/java/com/cdoe/rules/calc/Util.java
+END
+SEVariableProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/state_equal/!svn/ver/297/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SEVariableProcessor.java
+END
+SE360CalcData.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SE360CalcData.java
+END
+SEOnlineFormulaFundingProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SEOnlineFormulaFundingProcessor.java
+END
+SEGrandTotaProgramFundingProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SEGrandTotaProgramFundingProcessor.java
+END
+TotalPropTaxMillLevyProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/rules/calc/TotalPropTaxMillLevyProcessor.java
+END
+SEFundedPupilCountProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SEFundedPupilCountProcessor.java
+END
+SEProgFundingForChrtrInstProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SEProgFundingForChrtrInstProcessor.java
+END
+JulyToNovEntitlementProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/rules/calc/JulyToNovEntitlementProcessor.java
+END
+EntitlementData.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/rules/calc/EntitlementData.java
+END
+SE360CalcProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/state_equal/!svn/ver/285/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SE360CalcProcessor.java
+END
+SE360VariablesData.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/state_equal/!svn/ver/153/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SE360VariablesData.java
+END
+SEMillLevyProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SEMillLevyProcessor.java
+END
+SECategoricBOMillLevyProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SECategoricBOMillLevyProcessor.java
+END
+AltAtRiskData.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/state_equal/!svn/ver/153/trunk/cdoe/src/main/java/com/cdoe/rules/calc/AltAtRiskData.java
+END
+SESizeFactorSmoothingProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SESizeFactorSmoothingProcessor.java
+END
+SEMinmFormulaFundingProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/state_equal/!svn/ver/285/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SEMinmFormulaFundingProcessor.java
+END
+SE250FteByGradeProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/state_equal/!svn/ver/285/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SE250FteByGradeProcessor.java
+END
+SEPupilFundingProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/rules/calc/SEPupilFundingProcessor.java
+END

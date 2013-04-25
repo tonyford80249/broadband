@@ -1,0 +1,109 @@
+
+#fiscalYearStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:6.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#caculationPeriodDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:18.0em;
+  top:12.25em;
+ 	
+}
+
+#confirmButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:18.0em;
+  top:15.75em;
+  
+}
+
+#cancelButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:32.0em;
+  top:15.75em;
+  
+}
+
+#horizontalLine233HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:1.75em;
+	
+}
+
+#calculateDistrictEntitlementsMonthlyMidYearEndOfYearStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#horizontalLine235HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:5.25em;
+	
+}
+
+#caculationPeriodStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:12.25em;
+	text-align:right;
+	
+}
+
+#viewReportButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:15.75em;
+  
+}
+
+#horizontalLine245HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:19.25em;
+	
+}
+
+#monthStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:12.0em;
+  top:10.5em;
+	text-align:right;
+	
+}
+
+#monthDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:18.0em;
+  top:10.5em;
+ 	
+}
+
+#fiscalYearDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:18.0em;
+  top:8.75em;
+ 	
+}
+

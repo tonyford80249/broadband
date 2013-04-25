@@ -1,0 +1,172 @@
+package com.cdoe.ui;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.json.MappingJacksonJsonView;
+
+import com.cdoe.biz.IStateEqualDAO;
+import com.cdoe.biz.model.StateEqual;
+import com.cdoe.biz.model.jasper.Message;
+import com.cdoe.biz.model.jasper.MessageDatasource;
+import com.cdoe.ui.form.BaseForm;
+import com.cdoe.ui.view.AltAtRiskCalcView;
+import com.cdoe.util.DateUtil;
+import com.cdoe.util.UserInfo;
+
+/**
+ *
+ * @author Tony Ford
+ */
+@Controller
+@RequestMapping("/secure/AltAtRiskFunding")
+public class AltAtRiskFundingController {
+
+    private static final Logger LOGGER = Logger.getLogger(AltAtRiskFundingController.class);
+    
+    @Autowired
+    private MappingJacksonJsonView standardJsonView;        
+    
+    @Autowired
+    private AltAtRiskCalcView altAtRiskFundCalcView;
+
+    @Autowired
+    private IStateEqualDAO stateEqualDao;
+
+    public AltAtRiskFundingController() {
+    }
+    
+     @RequestMapping(method = RequestMethod.GET)
+    public String index(Model model, HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        String districtNos = (String) session.getAttribute("districtNos");
+        String districtName = (String) session.getAttribute("districtName");
+        String fiscalYear = DateUtil.getCurrentFiscalYear();//(String) session.getAttribute("fiscalYear");
+        UserInfo userInfo = (UserInfo) session.getAttribute("USER_INFO");
+        userInfo.getDistrictMap();
+        
+          Object[] districtCodes = null;
+          String districtCode = null;
+          
+          if (userInfo.isAdminUser()) {
+			districtCodes = userInfo.getAllDistrictCodes().toArray();
+
+			districtCode = userInfo.getAllDistrictCodes().get(0);
+		} else {
+			districtCode = userInfo.getUsersDistricts().get(0);
+		}
+
+        BaseForm form = new BaseForm(districtNos, districtName, fiscalYear);
+        form.setDistrictNumber(districtCode);
+        form.setDistrictName(userInfo.getDistrictMap().get(districtCode));
+        
+         model.addAttribute("stateEqualPaymentForm", form);
+         
+         if (districtCodes != null) {
+          model.addAttribute("districtNumbers", districtCodes);
+         }
+        return ".AltAtRiskFundCalc-index";
+    }
+    
+
+     @RequestMapping(value = "/json", method = RequestMethod.GET)
+    public ModelAndView retrieve(@RequestParam String districtNumber, @RequestParam String fiscalYear, HttpServletRequest request) {
+        try {
+            Map<String, Object> parameterMap = new HashMap<String, Object>();
+
+            HttpSession session = request.getSession();
+
+            UserInfo userInfo = (UserInfo) session.getAttribute("USER_INFO");
+
+            String districtName = userInfo.getDistrictMap().get(districtNumber);
+
+                        
+            BaseForm form = new BaseForm(districtNumber, districtName, fiscalYear);
+
+            parameterMap.put("stateEqualPaymentForm", form);
+
+            return new ModelAndView(standardJsonView, parameterMap);
+        } catch (Throwable t) {
+            LOGGER.error("Exception occurred during retrieve.", t);
+        } finally {
+            LOGGER.info("generating json response ");
+        }
+
+        return null;
+    }
+     
+    @RequestMapping(value = "/report/altatriskcalc.xls", method = RequestMethod.POST)
+    public ModelAndView download1(@RequestParam String districtNumber, @RequestParam String fiscalYear, HttpServletRequest request) {
+        final String reportName = "atRiskFunding";
+        final String format = "Xls";
+        
+        HttpSession session = request.getSession();        
+        UserInfo userInfo = (UserInfo) session.getAttribute("USER_INFO");
+        userInfo.getDistrictMap();
+
+                
+        String districtName = userInfo.getDistrictMap().get(districtNumber);
+
+        
+        Object[] districtCodes = userInfo.getAllDistrictCodes().toArray();
+
+        try {
+            Map<String, Object> parameterMap = new HashMap<String, Object>(); 
+            
+            StateEqual se = stateEqualDao.findLatest(districtNumber, fiscalYear);
+            
+            if (se == null) {
+                parameterMap.put("districtNumbers", districtCodes);
+                parameterMap.put("stateEqualPaymentForm",  new BaseForm(districtNumber, districtName, fiscalYear));
+                parameterMap.put("errorMessage", "Missing payment record");
+               
+                //String reportName, String districtName, String districtNumber, String fiscalYear, String fiscalMonth, String generalInfo
+                return displayErrorMessage(new Message("monthlyPaymentComparison",districtName,districtNumber,fiscalYear,"","Missing StateEqual record."));
+                        
+             //return new ModelAndView(".AltAtRiskFundCalc-index", parameterMap);   
+            } 
+            
+            parameterMap.put("stateEqualData", se);
+            parameterMap.put("districtName", districtName);
+            
+            //String reportId = reportName + "Report" + format + "View";
+            return new ModelAndView(altAtRiskFundCalcView, parameterMap);
+        } catch (Throwable t) {
+            LOGGER.error("Exception occurred during retrieve.", t);
+        } finally {
+            LOGGER.info("generating json response ");
+        }
+
+        return null;
+    }
+    
+    /**
+     * 
+     * @param errorMessage
+     * @return 
+     */
+    private ModelAndView displayErrorMessage(Message errorMessage) {
+      final String reportName = "error";
+      final String format = "Pdf";  
+      
+      Map<String, Object> parameterMap = new HashMap<String, Object>();
+                        
+      parameterMap.put("customJRDatasource", new MessageDatasource(errorMessage));
+
+      String selectedReportId = reportName + "Report" + format + "View";
+
+      return new ModelAndView(selectedReportId, parameterMap);  
+    }
+}

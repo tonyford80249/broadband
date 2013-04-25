@@ -1,0 +1,550 @@
+
+#forRegularStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:76.0em;
+  top:7.0em;
+	text-align:right;
+	
+}
+
+#netCurrentStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:48.0em;
+  top:7.0em;
+	text-align:right;
+	
+}
+
+#travelledStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:61.0em;
+  top:7.0em;
+	text-align:right;
+	
+}
+
+#mentStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:163.0em;
+  top:5.25em;
+	text-align:right;
+	
+}
+
+#mentStaticText_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:149.0em;
+  top:5.25em;
+	text-align:right;
+	
+}
+
+#collectedStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:131.0em;
+  top:5.25em;
+	text-align:right;
+	
+}
+
+#actualStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:121.0em;
+  top:5.25em;
+	text-align:right;
+	
+}
+
+#milesStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:110.0em;
+  top:5.25em;
+	text-align:right;
+	
+}
+
+#toBeStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:98.0em;
+  top:5.25em;
+	text-align:right;
+	
+}
+
+#wasPaidForStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:83.0em;
+  top:5.25em;
+	text-align:right;
+	
+}
+
+#downloadThisReportToExcelButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:124.0em;
+  top:19.25em;
+  
+}
+
+#rejectDistrictButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:100.0em;
+  top:19.25em;
+  
+}
+
+#daysStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:74.0em;
+  top:5.25em;
+	text-align:right;
+	
+}
+
+#scheduledStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:60.0em;
+  top:5.25em;
+	text-align:right;
+	
+}
+
+#mileageStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:45.0em;
+  top:5.25em;
+	text-align:right;
+	
+}
+
+#reimburseStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:163.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#reimburseStaticText_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:149.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#feesStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:131.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#actualStaticText_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:110.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#actMilesTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:109.0em;
+  top:14.0em;
+	
+}
+
+#pupilTranTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:98.0em;
+  top:14.0em;
+	
+}
+
+#scheduledStaticText_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:98.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#boardTranTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:82.0em;
+  top:14.0em;
+	
+}
+
+#schoolDaysTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:73.0em;
+  top:14.0em;
+	
+}
+
+#regDMilesTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:60.0em;
+  top:14.0em;
+	
+}
+
+#migMilesTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:44.0em;
+  top:14.0em;
+	
+}
+
+#boardStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:88.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#andStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:83.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#mileageStaticText_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:60.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#advanceStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:163.0em;
+  top:1.75em;
+	text-align:right;
+	
+}
+
+#calculatedStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:149.0em;
+  top:1.75em;
+	text-align:right;
+	
+}
+
+#pupilsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:98.0em;
+  top:1.75em;
+	text-align:right;
+	
+}
+
+#daysRoomStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:83.0em;
+  top:1.75em;
+	text-align:right;
+	
+}
+
+#cde40SummaryStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:0.0em;
+	text-align:right;
+	
+}
+
+#pupilsInLieuStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:82.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#saveChangesButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:80.0em;
+  top:19.25em;
+  
+}
+
+#advPayTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:160.0em;
+  top:14.0em;
+	
+}
+
+#reimTranLyTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:149.0em;
+  top:14.0em;
+	
+}
+
+#capOutTranTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:140.0em;
+  top:14.0em;
+	
+}
+
+#feesCollectedTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:130.0em;
+  top:14.0em;
+	
+}
+
+#totalMilesTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:120.0em;
+  top:14.0em;
+	
+}
+
+#netCurrentOperExpendTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:31.0em;
+  top:14.0em;
+	
+}
+
+#lastUpdateDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:18.0em;
+  top:14.0em;
+	
+}
+
+#nameAndNumberDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:14.0em;
+	
+}
+
+#schoolStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:90.0em;
+  top:7.0em;
+	text-align:right;
+	
+}
+
+#transportedStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:99.0em;
+  top:7.0em;
+	text-align:right;
+	
+}
+
+#travelledStaticText_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:114.0em;
+  top:7.0em;
+	text-align:right;
+	
+}
+
+#travelledStaticText_3Div{
+  position:absolute;
+  white-space:nowrap;
+  left:126.0em;
+  top:7.0em;
+	text-align:right;
+	
+}
+
+#milesStaticText_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:137.0em;
+  top:7.0em;
+	text-align:right;
+	
+}
+
+#fromStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:146.0em;
+  top:7.0em;
+	text-align:right;
+	
+}
+
+#entitlementStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:179.0em;
+  top:7.0em;
+	text-align:right;
+	
+}
+
+#entitleStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:193.0em;
+  top:7.0em;
+	text-align:right;
+	
+}
+
+#peratingStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:33.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#transportingStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:45.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#pupilStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:60.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#wasInStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:73.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#atPublicStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:98.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#forStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:109.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#forAnyStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:120.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#indiviStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:130.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#capitalPreviousStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:140.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#mentCurrStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:163.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#transportationGridDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:10.5em;
+  
+}
+

@@ -1,0 +1,12 @@
+
+package com.cdoe.biz.stateequal;
+
+import java.util.List;
+
+import com.cdoe.biz.model.District;
+import com.cdoe.biz.model.equal.Csi;
+
+public interface ICSICalculationsDAO {
+	public List<Csi> getByDistrictAndYear(final String districtNos, final String fiscalYear);
+
+}

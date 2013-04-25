@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/biz/impl/audit
+END
+AudTrackingDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/state_equal/!svn/ver/113/trunk/cdoe/src/main/java/com/cdoe/biz/impl/audit/AudTrackingDAO.java
+END
+UpdateStudentsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/state_equal/!svn/ver/113/trunk/cdoe/src/main/java/com/cdoe/biz/impl/audit/UpdateStudentsDAO.java
+END
+UploadStudentsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/state_equal/!svn/ver/113/trunk/cdoe/src/main/java/com/cdoe/biz/impl/audit/UploadStudentsDAO.java
+END
+AuditEqualDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/biz/impl/audit/AuditEqualDAO.java
+END
+ValidateSASIDsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/state_equal/!svn/ver/113/trunk/cdoe/src/main/java/com/cdoe/biz/impl/audit/ValidateSASIDsDAO.java
+END
+AuditFreeLunchDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/state_equal/!svn/ver/113/trunk/cdoe/src/main/java/com/cdoe/biz/impl/audit/AuditFreeLunchDAO.java
+END
+AuditFteByGradeDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/biz/impl/audit/AuditFteByGradeDAO.java
+END
+AuditBillingDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/state_equal/!svn/ver/113/trunk/cdoe/src/main/java/com/cdoe/biz/impl/audit/AuditBillingDAO.java
+END
+AuditElpaDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/state_equal/!svn/ver/142/trunk/cdoe/src/main/java/com/cdoe/biz/impl/audit/AuditElpaDAO.java
+END
+AuditRepaymentAdjustmentDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/state_equal/!svn/ver/281/trunk/cdoe/src/main/java/com/cdoe/biz/impl/audit/AuditRepaymentAdjustmentDAO.java
+END

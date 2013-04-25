@@ -1,0 +1,54 @@
+div.gridText {
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    vertical-align: middle;
+    text-align: left;
+    white-space: nowrap;
+}
+
+div.gridHeaderText {
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.technical {
+    background-color: #C0C0C0;
+}
+
+.draggable {
+    cursor: e-resize;
+    height: 100%;
+    width: 2px;
+    font-size: 7pt;
+}
+.Left .gridHeaderText{
+    text-align:left !important;
+}
+.Right .gridHeaderText{
+    text-align:right !important;
+}
+.Center .gridHeaderText{
+    text-align:center !important;
+}
+.Justify .gridHeaderText{
+    text-align:justify !important;
+}
+
+.Left .gridText{
+    text-align:left !important;
+}
+.Right .gridText{
+    text-align:right !important;
+}
+.Center .gridText{
+    text-align:center !important;
+}
+.Justify .gridText{
+    text-align:justify !important;
+}
+

@@ -1,0 +1,202 @@
+package com.cdoe.services.impl;
+
+import com.cdoe.biz.model.GeneratedReport;
+import com.cdoe.services.stateequal.IMonthlyPaymentComparisonReportManager;
+import com.cdoe.services.stateequal.IPaymentReportManager;
+import com.cdoe.services.stateequal.IViewReportsManager;
+import com.cdoe.services.stateequal.IYtdPaymenstAndWithholdingsManager;
+import com.cdoe.ui.form.ReportForm;
+import com.cdoe.ui.form.SeViewReportsForm;
+import com.cdoe.ui.form.elements.SeViewableReport;
+import com.cdoe.util.DateUtil;
+import java.io.File;
+import java.util.List;
+import org.apache.log4j.Logger;
+
+/**
+ *
+ * @author Tony Ford
+ */
+public class ViewReportsManager extends BaseManager implements IViewReportsManager {
+
+    private static final Logger LOGGER = Logger.getLogger(ViewReportsManager.class);
+    private IMonthlyPaymentComparisonReportManager monthlyComparisonReportingService;
+    private IYtdPaymenstAndWithholdingsManager ytdPaymentWithholdingService;
+    private IPaymentReportManager monthlyPaymentService;
+
+    /**
+     * 
+     */
+    public ViewReportsManager() {
+    }
+
+    /**
+     * 
+     * @return 
+     */
+    @Override
+    public SeViewReportsForm setupForm() {
+        SeViewReportsForm form = new SeViewReportsForm();
+
+        List<String> allMonths = DateUtil.getFullMonthList(false);
+
+        List<String> availableYears = DateUtil.getLongFiscalYears(-10);
+
+        for (String month : allMonths) {
+            form.getAvailableMonths().add(month);
+        }
+
+        for (String year : availableYears) {
+            form.getAvailableYears().put(year, DateUtil.getFiscalYearFormattedShort(year));
+        }
+
+        form.setReportTypes(ReportForm.getReportTypes());    
+
+        return form;
+    }
+
+    /**
+     *
+     * @param fiscalYear
+     * @param fiscalMonth
+     * @return
+     */
+    @Override
+    public SeViewReportsForm setupForm(String fiscalYear, String fiscalMonth, String reportType) {
+        SeViewReportsForm form = setupForm();
+
+        form.setReportType(reportType);
+        form.setMonth(fiscalMonth);
+        form.setYear(fiscalYear);
+
+        try {
+            String targetDirectory = null;
+            String uri = null;
+
+            if (ReportForm.RPT360.equals(reportType)) {
+            } else if (ReportForm.RPTCofrPayments.equals(reportType)) {
+            } else if (ReportForm.RPTCsiPayment.equals(reportType)) {
+            } else if (ReportForm.RPTElections.equals(reportType)) {
+            } else if (ReportForm.RPTFundSummary.equals(reportType)) {
+            } else if (ReportForm.RPTMillLevy.equals(reportType)) {
+            } else if (ReportForm.RPTMonthlyComparison.equals(reportType)) {
+                targetDirectory = monthlyComparisonReportingService.getDirectory(fiscalYear, fiscalMonth);
+                uri = "/dynamic/report/monthlycomparison/" + fiscalYear + "/" + fiscalMonth.toUpperCase() + "/";
+            } else if (ReportForm.RPTMonthlyPayment.equals(reportType)) {
+                targetDirectory = monthlyPaymentService.getDirectory(fiscalYear, fiscalMonth);
+                uri =  "/dynamic/report/monthlypayment/" + fiscalYear + "/" + fiscalMonth.toUpperCase() + "/";
+            } else if (ReportForm.RPTNegativePayments.equals(reportType)) {
+            } else if (ReportForm.RPTTotalEntitlement.equals(reportType)) {
+            } else if (ReportForm.RPTYtdWithholdings.equals(reportType)) {
+                targetDirectory = ytdPaymentWithholdingService.getDirectory(fiscalYear, fiscalMonth);
+                uri = "/dynamic/report/ytdpayments/" + fiscalYear + "/" + fiscalMonth.toUpperCase() + "/";
+            }
+             else if (ReportForm.RPTStateWideReports.equals(reportType)) {
+                targetDirectory = ytdPaymentWithholdingService.getDirectory(fiscalYear, fiscalMonth);
+                uri = "/dynamic/report/statewide/" + fiscalYear + "/" + fiscalMonth.toUpperCase() + "/";
+            }
+             
+            File reportsDirectory = new File(targetDirectory);
+
+            File[] generatedReports = reportsDirectory.listFiles();
+              
+            int sequence = 0;
+            for (File report : generatedReports) {
+
+                GeneratedReport viewableReport = ReportCacheManager.getInstance().getReport(report.getAbsolutePath());
+
+                if (viewableReport != null) {
+                    form.getGeneratedReports().add(viewableReport);
+                } else {
+                    String fullname = report.getName();
+
+                    //String[] yearMonthInfo = extractYearAndMonth(report.getAbsolutePath());
+                    
+                    viewableReport = new GeneratedReport(report.getAbsolutePath(), GeneratedReport.nextGuid().toString(), fullname, uri + fullname);
+
+                    viewableReport.setSequence(sequence++);
+                                        
+                    form.getGeneratedReports().add(viewableReport);
+
+                    ReportCacheManager.getInstance().getAvailableReports().add(viewableReport);
+                }
+            }
+
+
+        } catch (Exception e) {
+         LOGGER.error("error viewing generated reports", e);   
+        }
+
+        return form;
+    }
+
+    /**
+     * 
+     * @param absolutePath
+     * @return 
+     */
+    public String[] extractYearAndMonth(String absolutePath) {
+     String[] results = new String[2];
+     
+     String[] tokens = absolutePath.split(File.separator);
+     
+     int size = tokens.length - 1;
+     
+     for (int x = 1; x >= 0; --x) {
+      results[x]= tokens[--size];   
+     }
+     
+     return results;
+    }
+    
+    /**
+     * 
+     * @param reportGuids 
+     */
+    @Override
+    public void delete(List<String> reportGuids) {
+        
+    }
+    
+    /**
+     * 
+     * @param reportGuids 
+     */
+    @Override
+    public void print(List<String> reportGuids) {
+        
+    }
+    
+    /**
+     * 
+     * @param reportGuids 
+     */
+    @Override
+    public void upload(List<String> reportGuids) {
+        
+    }
+    
+    /**
+     * 
+     * @param monthlyComparisonReportingService 
+     */
+    public void setMonthlyComparisonReportingService(IMonthlyPaymentComparisonReportManager monthlyComparisonReportingService) {
+        this.monthlyComparisonReportingService = monthlyComparisonReportingService;
+    }
+
+    /**
+     * 
+     * @param ytdPaymentWithholdingService 
+     */
+    public void setYtdPaymentWithholdingService(IYtdPaymenstAndWithholdingsManager ytdPaymentWithholdingService) {
+        this.ytdPaymentWithholdingService =  ytdPaymentWithholdingService;
+    }
+
+    /**
+     * 
+     * @param monthlyPaymentService 
+     */
+    public void setMonthlyPaymentService(IPaymentReportManager monthlyPaymentService) {
+        this.monthlyPaymentService =  monthlyPaymentService;
+    }
+}

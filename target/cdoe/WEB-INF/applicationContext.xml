@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+       
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:db-access.properties</value>
+				<value>classpath:hibernate.properties</value>
+				<value>classpath:system.properties</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>messages</value>
+				<value>system</value>
+				<value>application-resources</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userIdInterceptor" class="com.cdoe.util.UserIdInterceptor" />
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="com.cdoe.biz.model"/>
+		<!--property name="annotatedClasses" ref="annotatedClasses"/--> 
+		<property name="entityInterceptor" ref="userIdInterceptor"/>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<!--prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop-->
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.connection.release_mode">${hibernate.release_mode}</prop>
+				<prop key="hibernate.cache.use_second_level_cache">false</prop>
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+                <prop key="hibernate.default_schema">state_equal_owner</prop>
+			</props>
+		</property>
+	</bean>
+	<!--
+	<bean id="defaultTransactionManger" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+        -->
+        <bean id="defaultTransactionManger" class="org.springframework.transaction.jta.WebLogicJtaTransactionManager">
+            <property name="transactionManagerName" value="javax.transaction.TransactionManager"/>
+        </bean>
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+		<property name="defaultLocale" value="en" />
+	</bean>
+	<bean id="LocaleChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+		<property name="paramName" value="lang" />
+	</bean>
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="${max.upload.size}"/>
+	</bean>
+	
+	
+        <!-- bean id="pdfViewResolver" class="org.springframework.web.servlet.view.jasperreports.JasperReportsViewResolver">
+           <property name="viewNames">
+        </bean -->
+        
+        <bean id="standardJsonView" class="org.springframework.web.servlet.view.json.MappingJacksonJsonView">
+        </bean>
+        
+	<bean id="samplePdfView" name="samplePdfView" class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView">
+	   <property name="url" value="/WEB-INF/jasper/reports/sample.jrxml"/>	
+            <!---property name="jdbcDataSource">
+                <ref bean="dataSource"/>
+            </property -->
+	</bean>
+    
+        <!-- The ResourceBundleViewResolver&#58; -->
+        <bean id="viewResolver" class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+           <property name="basename"><value>reports</value></property>                      
+        </bean>               
+        
+        <bean id="excelDocument2" class="com.cdoe.ui.view.AltAtRiskCalcView">
+            
+        </bean>
+
+       <bean id="xceldocument" scope="prototype" class="com.cdoe.ui.view.GenericExcelView" />
+     
+       <bean id="pdfdocument" scope="prototype" class="com.cdoe.ui.view.GenericlPdfView" />
+
+</beans>

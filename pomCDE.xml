@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  
+  
+  <parent>
+    <groupId>us.co.state.cde</groupId>
+    <artifactId>cde-parent</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  
+   <name>steq</name>
+  <groupId>us.co.state.cde</groupId>
+  <artifactId>steq</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
+
+   <properties>
+      <!-- source / compile props -->
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <java.source.version>1.6</java.source.version>
+      <java.target.version>1.6</java.target.version>
+  </properties>
+
+  <modules>
+        <module>./</module>
+        <module>ApplicationEAR</module>
+  </modules>
+
+</project>

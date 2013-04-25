@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<bean id="annotatedClasses" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<value>com.cdoe.biz.model.AuditFpc</value>
+				<value>com.cdoe.biz.model.equal.FundedCount</value>
+				<value>com.cdoe.biz.model.audit.AuditEqual</value>
+				<value>com.cdoe.biz.model.transportation.Prorate</value>
+				<value>com.cdoe.biz.model.audit.AuditHour</value>
+				<value>com.cdoe.biz.model.transportation.Transportation</value>
+				<value>com.cdoe.biz.model.audit.AuditFteByGrade</value>
+				<value>com.cdoe.biz.model.equal.CommentInfo</value>
+				<value>com.cdoe.biz.model.equal.Csi</value>
+				<value>com.cdoe.biz.model.OrganizationUnitMaster</value>
+                                <value>com.cdoe.biz.model.CountyInfo</value>
+				<value>com.cdoe.biz.model.transportation.CapitalOutlay</value>
+				<value>com.cdoe.biz.model.audit.AuditTracking</value>
+				<value>com.cdoe.biz.model.audit.AuditTran</value>
+				<value>com.cdoe.biz.model.AudFpcLun</value>
+				<value>com.cdoe.biz.model.audit.AuditFreeLunch</value>
+				<value>com.cdoe.biz.model.audit.AuditProgram</value>
+				<value>com.cdoe.biz.model.audit.AuditProgramException</value>
+				<value>com.cdoe.biz.model.audit.AuditSasidException</value>
+				<value>com.cdoe.biz.model.equal.Election</value>
+				<value>com.cdoe.biz.model.equal.FteByGrade</value>
+				<value>com.cdoe.biz.model.equal.MillLevy</value>
+				<value>com.cdoe.biz.model.equal.SeMonthly</value>
+				<value>com.cdoe.biz.model.equal.StateEqual</value>
+				<value>com.cdoe.biz.model.equal.FreeLunch</value>
+				<value>com.cdoe.biz.model.equal.AuditRepaymentAdjustment</value>
+				<value>com.cdoe.biz.model.StateEqualReference</value>
+			</list>
+		</constructor-arg>
+	</bean>
+
+</beans>

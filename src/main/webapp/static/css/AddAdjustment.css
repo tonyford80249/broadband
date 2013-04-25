@@ -1,0 +1,346 @@
+
+#clearButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:48.0em;
+  top:42.0em;
+  
+}
+
+#viewAdjustmentButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:24.0em;
+  top:42.0em;
+  
+}
+
+#adjustmentNotesIEReasonTextareaDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:40.0em;
+  top:35.0em;
+	
+}
+
+#adjustmentNotesIEReasonStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:40.0em;
+  top:33.25em;
+	text-align:right;
+	
+}
+
+#clearButton_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:48.0em;
+  top:21.0em;
+  
+}
+
+#viewAdjustmentButton_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:24.0em;
+  top:21.0em;
+  
+}
+
+#endingFiscalMonthDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:61.0em;
+  top:12.25em;
+ 	
+}
+
+#endingFiscalMonthStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:40.0em;
+  top:12.25em;
+	text-align:right;
+	
+}
+
+#endingFiscalYearDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:61.0em;
+  top:10.5em;
+ 	
+}
+
+#aEnterUpdateAuditRepaymentAdjustmentStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:1.75em;
+	text-align:right;
+	
+}
+
+#horizontalLine142HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:3.5em;
+	
+}
+
+#allowsDistrictToPayBackAuditFindingByCdeWithholdingAnAdjustmentAmountFromTheirStateShareStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:5.25em;
+	text-align:right;
+	
+}
+
+#districtCodeNameStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:3.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#districtCodeNameDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:25.0em;
+  top:8.75em;
+ 	
+}
+
+#beginningFiscalYearStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:2.0em;
+  top:10.5em;
+	text-align:right;
+	
+}
+
+#beginningFiscalYearDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:25.0em;
+  top:10.5em;
+ 	
+}
+
+#beginningFiscalMonthStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:1.0em;
+  top:12.25em;
+	text-align:right;
+	
+}
+
+#beginningFiscalMonthDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:25.0em;
+  top:12.25em;
+ 	
+}
+
+#frequencyStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:14.0em;
+  top:14.0em;
+	text-align:right;
+	
+}
+
+#frequencyDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:25.0em;
+  top:14.0em;
+ 	
+}
+
+#typeStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:19.0em;
+  top:15.75em;
+	text-align:right;
+	
+}
+
+#typeDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:25.0em;
+  top:15.75em;
+	
+}
+
+#amountStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:17.0em;
+  top:17.5em;
+	text-align:right;
+	
+}
+
+#amountTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:25.0em;
+  top:17.5em;
+	
+}
+
+#saveAdjustmentButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:21.0em;
+  
+}
+
+#horizontalLine163HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:24.5em;
+	
+}
+
+#bEnterUpdateOtherStateShareAdjustmentsNonCdeAuditFindingsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:26.25em;
+	text-align:right;
+	
+}
+
+#horizontalLine165HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:28.0em;
+	
+}
+
+#districtCodeNameStaticText_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:3.0em;
+  top:31.5em;
+	text-align:right;
+	
+}
+
+#districtCodeNameDropdownList_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:25.0em;
+  top:31.5em;
+ 	
+}
+
+#fiscalYearStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:12.0em;
+  top:33.25em;
+	text-align:right;
+	
+}
+
+#fiscalYearDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:25.0em;
+  top:33.25em;
+ 	
+}
+
+#monthStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:18.0em;
+  top:35.0em;
+	text-align:right;
+	
+}
+
+#monthDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:25.0em;
+  top:35.0em;
+ 	
+}
+
+#typeStaticText_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:19.0em;
+  top:36.75em;
+	text-align:right;
+	
+}
+
+#typeDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:25.0em;
+  top:36.75em;
+ 	
+}
+
+#amountStaticText_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:17.0em;
+  top:38.5em;
+	text-align:right;
+	
+}
+
+#amountTextbox_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:25.0em;
+  top:38.5em;
+	
+}
+
+#saveAdjustmentButton_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:42.0em;
+  
+}
+
+#horizontalLine181HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:45.5em;
+	
+}
+
+#endingFiscalYearStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:41.0em;
+  top:10.5em;
+	text-align:right;
+	
+}
+

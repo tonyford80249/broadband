@@ -1,0 +1,1429 @@
+#
+# Copyright ResQSoft, Inc. 2011
+#
+
+# ref: misc/applicationresources.properties.et.jsp
+# Localization
+format.date = {0,date,MM/dd/yyyy}
+
+# STRUTS VALIDATION MESSAGES:
+errors.required={0} is required.
+errors.minlength={0} can not be less than {1} characters.
+errors.maxlength={0} can not be greater than {1} characters.
+errors.invalid={0} is invalid.
+errors.byte={0} must be numeric.
+errors.short={0} must be numeric.
+errors.integer={0} must be numeric.
+errors.long={0} must be numeric.
+errors.float={0} must be numeric.
+errors.double={0} must be numeric.
+errors.date={0} is not a valid date. Date format is MM/dd/yyyy.
+errors.range={0} is not in the range {1} through {2}.
+errors.creditcard={0} is not a valid credit card number.
+errors.email={0} is not a valid e-mail address.
+errors.phone={0} is not a valid phone number. The acceptable format is xxx-xxx-xxxx.
+
+# Misc
+general.dropdownDefValue=...
+
+
+CDOE.index.title=CDOE
+CDOE.application.version=1.0
+
+# AddAdjustment
+AddAdjustment.Button.clearButton.ConfirmationMessage=
+AddAdjustment.Button.clearButton.ConfirmationPrompt=
+AddAdjustment.Button.clearButton=Clear
+AddAdjustment.Button.clearButton_2.ConfirmationMessage=
+AddAdjustment.Button.clearButton_2.ConfirmationPrompt=
+AddAdjustment.Button.clearButton_2=Clear
+AddAdjustment.Button.saveAdjustmentButton.ConfirmationMessage=
+AddAdjustment.Button.saveAdjustmentButton.ConfirmationPrompt=
+AddAdjustment.Button.saveAdjustmentButton=Save Adjustment
+AddAdjustment.Button.saveAdjustmentButton_2.ConfirmationMessage=
+AddAdjustment.Button.saveAdjustmentButton_2.ConfirmationPrompt=
+AddAdjustment.Button.saveAdjustmentButton_2=Save Adjustment
+AddAdjustment.Button.viewAdjustmentButton.ConfirmationMessage=
+AddAdjustment.Button.viewAdjustmentButton.ConfirmationPrompt=
+AddAdjustment.Button.viewAdjustmentButton=View Adjustment
+AddAdjustment.Button.viewAdjustmentButton_2.ConfirmationMessage=
+AddAdjustment.Button.viewAdjustmentButton_2.ConfirmationPrompt=
+AddAdjustment.Button.viewAdjustmentButton_2=View Adjustment
+AddAdjustment.DropdownList.beginningFiscalMonthDropdownList=Beginning fiscal month
+AddAdjustment.DropdownList.beginningFiscalYearDropdownList=Beginning fiscal year
+AddAdjustment.DropdownList.districtCodeNameDropdownList=District code
+AddAdjustment.DropdownList.districtCodeNameDropdownList_2=District code
+AddAdjustment.DropdownList.endingFiscalMonthDropdownList=Ending fiscal month
+AddAdjustment.DropdownList.endingFiscalYearDropdownList=Ending fiscal year
+AddAdjustment.DropdownList.fiscalYearDropdownList=Fiscal year
+AddAdjustment.DropdownList.frequencyDropdownList=Frequency
+AddAdjustment.DropdownList.monthDropdownList=Month
+AddAdjustment.DropdownList.typeDropdownList=Type
+AddAdjustment.StaticText.adjustmentNotesIEReasonStaticText=Adjustment Notes (i.e Reason)
+AddAdjustment.StaticText.aEnterUpdateAuditRepaymentAdjustmentStaticText=A. Enter/Update Audit Repayment Adjustment
+AddAdjustment.StaticText.allowsDistrictToPayBackAuditFindingByCdeWithholdingAnAdjustmentAmountFromTheirStateShareStaticText=Allows District to pay back audit finding by CDE withholding an adjustment amount from their state share
+AddAdjustment.StaticText.amountStaticText=Amount:
+AddAdjustment.StaticText.amountStaticText_2=Amount:
+AddAdjustment.StaticText.beginningFiscalMonthStaticText=Beginning Fiscal Month:
+AddAdjustment.StaticText.beginningFiscalYearStaticText=Beginning Fiscal Year:
+AddAdjustment.StaticText.bEnterUpdateOtherStateShareAdjustmentsNonCdeAuditFindingsStaticText=B. Enter/Update other State Share Adjustments (Non CDE Audit Findings)
+AddAdjustment.StaticText.districtCodeNameStaticText=District Code:
+AddAdjustment.StaticText.districtCodeNameStaticText_2=District Code:
+AddAdjustment.StaticText.endingFiscalMonthStaticText=Ending Fiscal Month:
+AddAdjustment.StaticText.endingFiscalYearStaticText=Ending Fiscal Year:
+AddAdjustment.StaticText.fiscalYearStaticText=Fiscal Year:
+AddAdjustment.StaticText.frequencyStaticText=Frequency:
+AddAdjustment.StaticText.monthStaticText=Month:
+AddAdjustment.StaticText.typeStaticText=Type:
+AddAdjustment.StaticText.typeStaticText_2=Type:
+AddAdjustment.Textarea.adjustmentNotesIEReasonTextarea=Adjustment notes (i.e. reason)
+AddAdjustment.Textbox.amountTextbox=Amount
+AddAdjustment.Textbox.amountTextbox_2=Amount
+
+# AddAdjustmentForm
+AddAdjustmentForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+AddAdjustmentForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+AddAdjustmentForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+AddAdjustmentForm.Error.Duplicate=Duplicate records cannot be created.
+AddAdjustmentForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+AddAdjustmentForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+AddAdjustmentForm.Error.NoRecordSelected=No record selected.
+AddAdjustmentForm.Error.RecordNotFound=Record not found.
+AddAdjustmentForm.PageTitle=Add Adjustment
+
+# AdvanceAndEntitlementReport
+AdvanceAndEntitlementReport.Button.downloadToExcelButton.ConfirmationMessage=
+AdvanceAndEntitlementReport.Button.downloadToExcelButton.ConfirmationPrompt=
+AdvanceAndEntitlementReport.Button.downloadToExcelButton=Download to Excel
+AdvanceAndEntitlementReport.StaticText.advanceReimbursementStaticText=Advance Reimbursement
+AdvanceAndEntitlementReport.StaticText.andNameStaticText=and Name
+AdvanceAndEntitlementReport.StaticText.calculateReimbursementStaticText=Calculate Reimbursement
+AdvanceAndEntitlementReport.StaticText.districCodeStaticText=Distric Code
+AdvanceAndEntitlementReport.StaticText.entitlementStaticText=Entitlement
+AdvanceAndEntitlementReport.StaticText.entitlementStaticText_2=Entitlement
+AdvanceAndEntitlementReport.StaticText.priorYearAdvancementAndEntitlementReportStaticText=Prior Year Advancement And Entitlement Report
+AdvanceAndEntitlementReport.StaticText.reimbursementYearStaticText=Reimbursement Year:
+AdvanceAndEntitlementReport.StaticText.staticText=---------------------
+AdvanceAndEntitlementReport.StaticText.staticText_2=-------
+AdvanceAndEntitlementReport.StaticText.staticText_3=--------
+AdvanceAndEntitlementReport.Textbox.reimbursementYearTextbox=Reimbursement year
+
+# AdvanceAndEntitlementReportForm
+AdvanceAndEntitlementReportForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+AdvanceAndEntitlementReportForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+AdvanceAndEntitlementReportForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+AdvanceAndEntitlementReportForm.Error.Duplicate=Duplicate records cannot be created.
+AdvanceAndEntitlementReportForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+AdvanceAndEntitlementReportForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+AdvanceAndEntitlementReportForm.Error.NoRecordSelected=No record selected.
+AdvanceAndEntitlementReportForm.Error.RecordNotFound=Record not found.
+AdvanceAndEntitlementReportForm.PageTitle=Advance and Entitlement Report
+
+# AudSumUpdate
+AudSumUpdate.Button.printAuditSummaryButton.ConfirmationMessage=
+AudSumUpdate.Button.printAuditSummaryButton.ConfirmationPrompt=
+AudSumUpdate.Button.printAuditSummaryButton=Print Audit Summary
+AudSumUpdate.DropdownList.auditorDropdownList=Auditor
+AudSumUpdate.DropdownList.districtNumberDropdownList=District number
+AudSumUpdate.DropdownList.typeDropdownList=Type
+AudSumUpdate.StaticText.atRiskStaticText=At Risk:
+AudSumUpdate.StaticText.auditClosedAppealDeadlineStaticText=Audit Closed appeal Deadline:
+AudSumUpdate.StaticText.auditIdStaticText=Audit ID:
+AudSumUpdate.StaticText.auditorCommentsStaticText=Auditor Comments:
+AudSumUpdate.StaticText.auditorStaticText=Auditor:
+AudSumUpdate.StaticText.auditSummaryUpdateStaticText=Audit Summary Update
+AudSumUpdate.StaticText.billingStaticText=Billing:
+AudSumUpdate.StaticText.dateAuditAssignedStaticText=Date Audit Assigned:
+AudSumUpdate.StaticText.dateAuditCreatedStaticText=Date Audit Created:
+AudSumUpdate.StaticText.dateDistrictContactedStaticText=Date District Contacted:
+AudSumUpdate.StaticText.dateDraftReportCompletedStaticText=Date Draft Report Completed:
+AudSumUpdate.StaticText.dateDraftReportFinalizedStaticText=Date Draft Report Finalized:
+AudSumUpdate.StaticText.dateDraftReportIssuedStaticText=Date Draft Report Issued:
+AudSumUpdate.StaticText.dateDraftReportTurnedInForReviewStaticText=Date Draft Report Turned in for Review:
+AudSumUpdate.StaticText.dateFieldWorkCompletedStaticText=Date Field Work Completed:
+AudSumUpdate.StaticText.dateFieldWorkStartedStaticText=Date Field Work Started:
+AudSumUpdate.StaticText.districtNameStaticText=District Name:
+AudSumUpdate.StaticText.districtNumberStaticText=District Number:
+AudSumUpdate.StaticText.elpaStaticText=ELPA:
+AudSumUpdate.StaticText.hoursSpentStaticText=Hours Spent
+AudSumUpdate.StaticText.personCompletingReviewStaticText=Person Completing Review:
+AudSumUpdate.StaticText.pupilCountStaticText=Pupil Count:
+AudSumUpdate.StaticText.stateEqualStaticText=State Equal:
+AudSumUpdate.StaticText.supervisorCommentsStaticText=Supervisor Comments:
+AudSumUpdate.StaticText.timesheetStaticText=Timesheet
+AudSumUpdate.StaticText.totalAuditLiabilityStaticText=Total Audit Liability:
+AudSumUpdate.StaticText.transportationStaticText=Transportation:
+AudSumUpdate.StaticText.typeStaticText=Type:
+AudSumUpdate.Textarea.auditorCommentsTextarea=Auditor comments
+AudSumUpdate.Textarea.supervisorCommentsTextarea=Supervisor comments
+AudSumUpdate.Textbox.atRiskTextbox=At risk
+AudSumUpdate.Textbox.auditClosedAppealDeadlineTextbox=Audit closed appeal deadline
+AudSumUpdate.Textbox.auditIdTextbox=Audit iD
+AudSumUpdate.Textbox.billingTextbox=Billing
+AudSumUpdate.Textbox.dateAuditAssignedTextbox=Date audit assigned
+AudSumUpdate.Textbox.dateAuditCreatedTextbox=Date audit created
+AudSumUpdate.Textbox.dateDistrictContactedTextbox=Date district contacted
+AudSumUpdate.Textbox.dateDraftReportCompletedTextbox=Date draft report completed
+AudSumUpdate.Textbox.dateDraftReportFinalizedTextbox=Date draft report finalized
+AudSumUpdate.Textbox.dateDraftReportIssuedTextbox=Date draft report issued
+AudSumUpdate.Textbox.dateDraftReportTurnedInForReviewTextbox=Date draft report turned in for review
+AudSumUpdate.Textbox.dateFieldWorkCompletedTextbox=Date field work completed
+AudSumUpdate.Textbox.dateFieldWorkStartedTextbox=Date field work started
+AudSumUpdate.Textbox.districtNameTextbox=District name
+AudSumUpdate.Textbox.elpaTextbox=ELPA
+AudSumUpdate.Textbox.personCompletingReviewTextbox=Person completing review
+AudSumUpdate.Textbox.pupilCountTextbox=Pupil count
+AudSumUpdate.Textbox.stateEqualTextbox=State equal
+AudSumUpdate.Textbox.totalAuditLiabilityTextbox=Total audit liability
+AudSumUpdate.Textbox.transportationTextbox=Transportation
+
+# AudSumUpdateForm
+AudSumUpdateForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+AudSumUpdateForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+AudSumUpdateForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+AudSumUpdateForm.Error.Duplicate=Duplicate records cannot be created.
+AudSumUpdateForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+AudSumUpdateForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+AudSumUpdateForm.Error.NoRecordSelected=No record selected.
+AudSumUpdateForm.Error.RecordNotFound=Record not found.
+AudSumUpdateForm.PageTitle=Audit Summary Update
+
+# AudTracking
+AudTracking.Button.printAuditTrackingInExcelFormatButton.ConfirmationMessage=
+AudTracking.Button.printAuditTrackingInExcelFormatButton.ConfirmationPrompt=
+AudTracking.Button.printAuditTrackingInExcelFormatButton=Print Audit Tracking in Excel format
+AudTracking.Button.printAuditTrackingInPdfFormatButton.ConfirmationMessage=
+AudTracking.Button.printAuditTrackingInPdfFormatButton.ConfirmationPrompt=
+AudTracking.Button.printAuditTrackingInPdfFormatButton=Print Audit Tracking in PDF format
+AudTracking.DropdownList.auditorDropdownList=Auditor
+AudTracking.DropdownList.districtNumberDropdownList=District name
+AudTracking.DropdownList.districtNumberDropdownList_2=District number
+AudTracking.DropdownList.statusDropdownList=Status
+AudTracking.StaticText.auditorStaticText=Auditor:
+AudTracking.StaticText.auditTrackingAllDistrictsStaticText=Audit Tracking: All Districts
+AudTracking.StaticText.districtNameStaticText=District Name:
+AudTracking.StaticText.districtNumberStaticText=District Number:
+AudTracking.StaticText.searchCriteriaStaticText=Search Criteria
+AudTracking.StaticText.statusStaticText=Status:
+
+# AudTrackingForm
+AudTrackingForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+AudTrackingForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+AudTrackingForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+AudTrackingForm.Error.Duplicate=Duplicate records cannot be created.
+AudTrackingForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+AudTrackingForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+AudTrackingForm.Error.NoRecordSelected=No record selected.
+AudTrackingForm.Error.RecordNotFound=Record not found.
+AudTrackingForm.PageTitle=AuditTracking
+
+
+# CalculateEntitlements
+CalculateEntitlements.Button.cancelButton.ConfirmationMessage=
+CalculateEntitlements.Button.cancelButton.ConfirmationPrompt=
+CalculateEntitlements.Button.cancelButton=Cancel
+CalculateEntitlements.Button.confirmButton.ConfirmationMessage=
+CalculateEntitlements.Button.confirmButton.ConfirmationPrompt=
+CalculateEntitlements.Button.confirmButton=Confirm
+CalculateEntitlements.Button.viewReportButton.ConfirmationMessage=
+CalculateEntitlements.Button.viewReportButton.ConfirmationPrompt=
+CalculateEntitlements.Button.viewReportButton=View Report
+CalculateEntitlements.DropdownList.caculationPeriodDropdownList=Caculation period
+CalculateEntitlements.DropdownList.fiscalYearDropdownList=Fiscal year
+CalculateEntitlements.DropdownList.monthDropdownList=Month
+CalculateEntitlements.StaticText.caculationPeriodStaticText=Caculation Period:
+CalculateEntitlements.StaticText.calculateDistrictEntitlementsMonthlyMidYearEndOfYearStaticText=Calculate District Entitlements - Monthly, Mid-Year, End-of-Year
+CalculateEntitlements.StaticText.fiscalYearStaticText=Fiscal Year:
+CalculateEntitlements.StaticText.monthStaticText=Month:
+
+# CalculateEntitlementsForm
+CalculateEntitlementsForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+CalculateEntitlementsForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+CalculateEntitlementsForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+CalculateEntitlementsForm.Error.Duplicate=Duplicate records cannot be created.
+CalculateEntitlementsForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+CalculateEntitlementsForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+CalculateEntitlementsForm.Error.NoRecordSelected=No record selected.
+CalculateEntitlementsForm.Error.RecordNotFound=Record not found.
+CalculateEntitlementsForm.PageTitle=Calculate Entitlements
+
+# CapitalOutlay
+CapitalOutlay.DynamicText.contractorMilesY9DynamicText=Miles
+CapitalOutlay.DynamicText.fiscalYearDynamicText=Year
+CapitalOutlay.DynamicText.totalPurchasePriceY9DynamicText=Vehicles
+CapitalOutlay.StaticText.$10YearStaticText=10 Year
+CapitalOutlay.StaticText.amountOfStaticText=Amount of
+CapitalOutlay.StaticText.amountToBeStaticText=Amount to be
+CapitalOutlay.StaticText.bUSaveElectronicsSignatureStaticText=BUSave/Electronics Signature
+CapitalOutlay.StaticText.capitalOutlayReimbursementYearStaticText=Capital Outlay Reimbursement Year:
+CapitalOutlay.StaticText.capitalOutlayTotalFundingStaticText=Capital Outlay Total Funding:
+CapitalOutlay.StaticText.capitalStaticText=Capital
+CapitalOutlay.StaticText.contractorStaticText=contractor
+CapitalOutlay.StaticText.depreciatedStaticText=Depreciated
+CapitalOutlay.StaticText.depreciationForStaticText=depreciation for
+CapitalOutlay.StaticText.depreciationStaticText=Depreciation
+CapitalOutlay.StaticText.emailAddressStaticText=Email address:
+CapitalOutlay.StaticText.nameOfPersonPreparingTheReportStaticText=Name of person preparing the report:
+CapitalOutlay.StaticText.ofStaticText=% of
+CapitalOutlay.StaticText.outlayStaticText=Outlay
+CapitalOutlay.StaticText.phoneStaticText=Phone
+CapitalOutlay.StaticText.previouslyStaticText=Previously
+CapitalOutlay.StaticText.priceForAllStaticText=price for all
+CapitalOutlay.StaticText.remaningStaticText=Remaning
+CapitalOutlay.StaticText.schoolDistrictNameAndNumberStaticText=School District Name and Number
+CapitalOutlay.StaticText.staticText=:
+CapitalOutlay.StaticText.staticText_2=:
+CapitalOutlay.StaticText.totalPurchaseStaticText=Total purchase
+CapitalOutlay.Textbox.capitalOutlayTotalFundingTextbox=Capital outlay total funding
+CapitalOutlay.Textbox.depreciationCycleY9Textbox=Cycle
+CapitalOutlay.Textbox.depreciationPyY9Textbox=Previous year
+CapitalOutlay.Textbox.districtNumberTextbox=
+CapitalOutlay.Textbox.emailAddressTextbox=Email address
+CapitalOutlay.Textbox.fiscalYearTextbox=Capital outlay reimbursement year
+CapitalOutlay.Textbox.nameOfPersonPreparingTheReportTextbox=Name of person preparing the report
+CapitalOutlay.Textbox.outlayExclusionY9Textbox=Exclusion
+CapitalOutlay.Textbox.prevDepreciatedAmtY9Textbox=Amount
+CapitalOutlay.Textbox.remainingAmtY9Textbox=Depreciated
+
+# CapitalOutlayForm
+CapitalOutlayForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+CapitalOutlayForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+CapitalOutlayForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+CapitalOutlayForm.Error.Duplicate=Duplicate records cannot be created.
+CapitalOutlayForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+CapitalOutlayForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+CapitalOutlayForm.Error.NoRecordSelected=No record selected.
+CapitalOutlayForm.Error.RecordNotFound=Record not found.
+CapitalOutlayForm.PageTitle=Capital_Outlay
+
+# Cde40Summary
+Cde40Summary.Button.downloadThisReportToExcelButton.ConfirmationMessage=
+Cde40Summary.Button.downloadThisReportToExcelButton.ConfirmationPrompt=
+Cde40Summary.Button.downloadThisReportToExcelButton=Download this Report to Excel
+Cde40Summary.Button.rejectDistrictButton.ConfirmationMessage=
+Cde40Summary.Button.rejectDistrictButton.ConfirmationPrompt=
+Cde40Summary.Button.rejectDistrictButton=Reject District
+Cde40Summary.Button.saveChangesButton.ConfirmationMessage=
+Cde40Summary.Button.saveChangesButton.ConfirmationPrompt=
+Cde40Summary.Button.saveChangesButton=Save Changes
+Cde40Summary.StaticText.actualStaticText=Actual
+Cde40Summary.StaticText.actualStaticText_2=Actual
+Cde40Summary.StaticText.advanceStaticText=Advance
+Cde40Summary.StaticText.andStaticText=and
+Cde40Summary.StaticText.atPublicStaticText=at public
+Cde40Summary.StaticText.boardStaticText=Board
+Cde40Summary.StaticText.calculatedStaticText=Calculated
+Cde40Summary.StaticText.capitalPreviousStaticText=Capital (Previous
+Cde40Summary.StaticText.cde40SummaryStaticText=CDE-40 Summary
+Cde40Summary.StaticText.collectedStaticText=Collected
+Cde40Summary.StaticText.daysRoomStaticText=Days Room
+Cde40Summary.StaticText.daysStaticText=Days
+Cde40Summary.StaticText.entitlementStaticText=Entitlement
+Cde40Summary.StaticText.entitleStaticText=Entitle-
+Cde40Summary.StaticText.feesStaticText=Fees
+Cde40Summary.StaticText.forAnyStaticText=for any
+Cde40Summary.StaticText.forRegularStaticText=for Regular
+Cde40Summary.StaticText.forStaticText=for
+Cde40Summary.StaticText.fromStaticText=from
+Cde40Summary.StaticText.indiviStaticText=Indivi-
+Cde40Summary.StaticText.mentCurrStaticText=ment (Curr
+Cde40Summary.StaticText.mentStaticText=ment
+Cde40Summary.StaticText.mentStaticText_2=ment
+Cde40Summary.StaticText.mileageStaticText=Mileage
+Cde40Summary.StaticText.mileageStaticText_2=Mileage
+Cde40Summary.StaticText.milesStaticText=Miles
+Cde40Summary.StaticText.milesStaticText_2=Miles
+Cde40Summary.StaticText.netCurrentStaticText=Net Current
+Cde40Summary.StaticText.peratingStaticText=perating
+Cde40Summary.StaticText.pupilsInLieuStaticText=Pupils in lieu
+Cde40Summary.StaticText.pupilsStaticText=Pupils
+Cde40Summary.StaticText.pupilStaticText=Pupil
+Cde40Summary.StaticText.reimburseStaticText=Reimburse
+Cde40Summary.StaticText.reimburseStaticText_2=Reimburse-
+Cde40Summary.StaticText.scheduledStaticText=Scheduled
+Cde40Summary.StaticText.scheduledStaticText_2=Scheduled
+Cde40Summary.StaticText.schoolStaticText=School
+Cde40Summary.StaticText.toBeStaticText=to be
+Cde40Summary.StaticText.transportedStaticText=transported
+Cde40Summary.StaticText.transportingStaticText=Transporting
+Cde40Summary.StaticText.travelledStaticText=Travelled
+Cde40Summary.StaticText.travelledStaticText_2=Travelled
+Cde40Summary.StaticText.travelledStaticText_3=Travelled
+Cde40Summary.StaticText.wasInStaticText=was in
+Cde40Summary.StaticText.wasPaidForStaticText=was Paid for
+Cde40Summary.Textbox.actMilesTextbox=Trips
+Cde40Summary.Textbox.advPayTextbox=-ent period)
+Cde40Summary.Textbox.boardTranTextbox=Of transport
+Cde40Summary.Textbox.capOutTranTextbox=Outlay
+Cde40Summary.Textbox.feesCollectedTextbox=Duals
+Cde40Summary.Textbox.migMilesTextbox=Migrant pupils
+Cde40Summary.Textbox.netCurrentOperExpendTextbox=Expenditure
+Cde40Summary.Textbox.pupilTranTextbox=Expense
+Cde40Summary.Textbox.regDMilesTextbox=Transport
+Cde40Summary.Textbox.reimTranLyTextbox=Year)
+Cde40Summary.Textbox.schoolDaysTextbox=Session
+Cde40Summary.Textbox.totalMilesTextbox=Purpose
+
+# Cde40SummaryForm
+Cde40SummaryForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+Cde40SummaryForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+Cde40SummaryForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+Cde40SummaryForm.Error.Duplicate=Duplicate records cannot be created.
+Cde40SummaryForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+Cde40SummaryForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+Cde40SummaryForm.Error.NoRecordSelected=No record selected.
+Cde40SummaryForm.Error.RecordNotFound=Record not found.
+Cde40SummaryForm.PageTitle=CDE40-Summary
+
+# Cde40TransReimbForm
+Cde40TransReimbForm.Button.saveElectronicsSignatureButton.ConfirmationMessage=
+Cde40TransReimbForm.Button.saveElectronicsSignatureButton.ConfirmationPrompt=
+Cde40TransReimbForm.Button.saveElectronicsSignatureButton=Save/Electronics Signature
+Cde40TransReimbForm.StaticText.$1aTotalCurrentOperatingExpendituresForPupilTransportationStaticText=1. Total current operating expenditures for pupil transportation
+Cde40TransReimbForm.StaticText.$2MileageTraveledForTransportingMigrantEducationPupilsStaticText=2. Mileage traveled for transporting migrant education pupils
+Cde40TransReimbForm.StaticText.$3MileageScheduledForRegularPupilTransportationOnTheMileageCountDateStaticText=3. Mileage scheduled for regular pupil transportation on the mileage count date
+Cde40TransReimbForm.StaticText.$4DaysSchoolWasInSessionAndPupilsWereTransportedInTheSchoolTermStaticText=4. Days school was in session and pupils were transported in the school term
+Cde40TransReimbForm.StaticText.$5NumberOfDaysForWhichRoomAndBoardWasPaidForPupilsInLieuOfTransportationStaticText=5. Number of days for which room and board was paid for pupils in lieu of transportation
+Cde40TransReimbForm.StaticText.$6NumberOfPupilsScheduledToBeTransportedToAndFromPublicSchoolAtPublicStaticText=6. Number of pupils scheduled to be transported to and from public school at public
+Cde40TransReimbForm.StaticText.$7TotalActualMilesTraveledForActivityTripsFieldTripsAthleticTripsEtcDuringEntitlementPeriodStaticText=7. Total actual miles traveled for activity trips, field trips, athletic trips, etc. during entitlement period
+Cde40TransReimbForm.StaticText.$8TotalActualMilesTraveledForAnyPurposeByPupilTransportationVehiclesDuringEntitlementPeriodStaticText=8. Total actual miles traveled for any purpose by pupil transportation vehicles during entitlement period.
+Cde40TransReimbForm.StaticText.$9FeesCollectedFromIndividualsForTransportingStudentsStaticText=9. Fees collected from individuals for transporting students
+Cde40TransReimbForm.StaticText.additionalInformationStaticText=Additional Information
+Cde40TransReimbForm.StaticText.bOtherTransportationRevenueStaticText= b. Other Transportation Revenue
+Cde40TransReimbForm.StaticText.cNetCurrentOperatingExpendituresLine1aMinusLine1bStaticText= c. Net Current Operating Expenditures (line 1a. minus line 1b.)
+Cde40TransReimbForm.StaticText.emailAddressStaticText=Email address:
+Cde40TransReimbForm.StaticText.expenseOnTheMileageCountDateStaticText=expense on the mileage count date
+Cde40TransReimbForm.StaticText.nameOfPersonPreparingTheReportStaticText=Name of the person preparing the report:
+Cde40TransReimbForm.StaticText.phoneStaticText=Phone
+Cde40TransReimbForm.StaticText.reimbursementClaimsForEntitlementPeriodStaticText=Reimbursement Claims for Entitlement Period
+Cde40TransReimbForm.StaticText.reimbursementInformationStaticText=Reimbursement Information
+Cde40TransReimbForm.StaticText.schoolDistrictNameAndNumberStaticText=School District Name and Number
+Cde40TransReimbForm.StaticText.staticText=:
+Cde40TransReimbForm.StaticText.staticText_2=:
+Cde40TransReimbForm.Textbox.$6NumberOfPupilsScheduledToBeTransportedToAndFromPublicSchoolAtPublicTextbox=6. number of pupils scheduled to be transported to and from public school at public
+Cde40TransReimbForm.Textbox.boardTranTextbox=5. number of days for which room and board was paid for pupils in lieu of transportation
+Cde40TransReimbForm.Textbox.DaysSchoolWasInSession=DaysSchoolWasInSession
+Cde40TransReimbForm.Textbox.DistrictCodeAndName=DistrictCodeAndName
+Cde40TransReimbForm.Textbox.emailPreparerCde40Textbox=Email address
+Cde40TransReimbForm.Textbox.MigMilesOfTransportation=MigMilesOfTransportation
+Cde40TransReimbForm.Textbox.namePreparerCde40Textbox=Name of person preparing the report
+Cde40TransReimbForm.Textbox.NetCurrentOperatingExpenditure_=NetCurrentOperatingExpenditure 
+Cde40TransReimbForm.Textbox.NosOfPupilSchedules=NosOfPupilSchedules
+Cde40TransReimbForm.Textbox.OtherTransportationRevenue=OtherTransportationRevenue
+Cde40TransReimbForm.Textbox.Phone_Nos=Phone nos
+Cde40TransReimbForm.Textbox.regDMilesTextbox=3. mileage scheduled for regular pupil transportation on the mileage count date
+Cde40TransReimbForm.Textbox.TotalActualMilesTraveledForAnyPurpose=TotalActualMilesTraveledForAnyPurpose
+Cde40TransReimbForm.Textbox.TotalActualMilesTravelled=TotalActualMilesTravelled
+Cde40TransReimbForm.Textbox.TotalCurrentOperatingExp=TotalCurrentOperatingExp
+
+# Cde40TransReimbFormForm
+Cde40TransReimbFormForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+Cde40TransReimbFormForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+Cde40TransReimbFormForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+Cde40TransReimbFormForm.Error.Duplicate=Duplicate records cannot be created.
+Cde40TransReimbFormForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+Cde40TransReimbFormForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+Cde40TransReimbFormForm.Error.NoRecordSelected=No record selected.
+Cde40TransReimbFormForm.Error.RecordNotFound=Record not found.
+Cde40TransReimbFormForm.PageTitle=CDE40_Trans_Reimb_Form
+
+# ChangeAtRiskCounts
+ChangeAtRiskCounts.Button.cancelButton.ConfirmationMessage=
+ChangeAtRiskCounts.Button.cancelButton.ConfirmationPrompt=
+ChangeAtRiskCounts.Button.cancelButton=Cancel
+ChangeAtRiskCounts.Button.printThisSheetToExcelButton.ConfirmationMessage=
+ChangeAtRiskCounts.Button.printThisSheetToExcelButton.ConfirmationPrompt=
+ChangeAtRiskCounts.Button.printThisSheetToExcelButton=Print this sheet to Excel
+ChangeAtRiskCounts.Button.recalculateButton.ConfirmationMessage=
+ChangeAtRiskCounts.Button.recalculateButton.ConfirmationPrompt=
+ChangeAtRiskCounts.Button.recalculateButton=Recalculate
+ChangeAtRiskCounts.Button.saveChangesButton.ConfirmationMessage=
+ChangeAtRiskCounts.Button.saveChangesButton.ConfirmationPrompt=
+ChangeAtRiskCounts.Button.saveChangesButton=Save Changes
+ChangeAtRiskCounts.DropdownList.districtCodeDropdownList=District code
+ChangeAtRiskCounts.DropdownList.fiscalYearDropdownList=Fiscal year
+ChangeAtRiskCounts.StaticText.changeAtRiskCountsStaticText=Change At Risk Counts
+ChangeAtRiskCounts.StaticText.districtCodeStaticText=District Code
+ChangeAtRiskCounts.StaticText.districtNameStaticText=District Name
+ChangeAtRiskCounts.StaticText.fiscalYearStaticText=Fiscal Year
+ChangeAtRiskCounts.Textbox.adjustTextbox=Adjust
+ChangeAtRiskCounts.Textbox.auditTextbox=Audit
+ChangeAtRiskCounts.Textbox.districtNumberTextbox=District name
+
+# ChangeAtRiskCountsForm
+ChangeAtRiskCountsForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+ChangeAtRiskCountsForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+ChangeAtRiskCountsForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+ChangeAtRiskCountsForm.Error.Duplicate=Duplicate records cannot be created.
+ChangeAtRiskCountsForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+ChangeAtRiskCountsForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+ChangeAtRiskCountsForm.Error.NoRecordSelected=No record selected.
+ChangeAtRiskCountsForm.Error.RecordNotFound=Record not found.
+ChangeAtRiskCountsForm.PageTitle=Change_At_Risk_Counts.
+
+# ChangeBilling
+ChangeBilling.Button.deleteButton.ConfirmationMessage=
+ChangeBilling.Button.deleteButton.ConfirmationPrompt=
+ChangeBilling.Button.deleteButton=Delete
+ChangeBilling.Button.saveButton.ConfirmationMessage=
+ChangeBilling.Button.saveButton.ConfirmationPrompt=
+ChangeBilling.Button.saveButton=Save
+ChangeBilling.DynamicText.districtNumberDynamicText=District
+ChangeBilling.DynamicText.fiscalYearDynamicText=Fiscal year
+ChangeBilling.StaticText.auditIdStaticText=Audit ID:
+ChangeBilling.StaticText.auditorStaticText=Auditor:
+ChangeBilling.StaticText.changeBillingStaticText=Change Billing
+ChangeBilling.StaticText.districtNameStaticText=District Name:
+ChangeBilling.StaticText.districtNumberStaticText=District Number:
+ChangeBilling.StaticText.typeStaticText=Type:
+ChangeBilling.Textbox.auditIdTextbox=Audit iD
+ChangeBilling.Textbox.auditorTextbox=Auditor
+ChangeBilling.Textbox.auditTextbox=Audit
+ChangeBilling.Textbox.districtNameTextbox=District name
+ChangeBilling.Textbox.districtNumberTextbox=District number
+
+# ChangeBillingForm
+ChangeBillingForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+ChangeBillingForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+ChangeBillingForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+ChangeBillingForm.Error.Duplicate=Duplicate records cannot be created.
+ChangeBillingForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+ChangeBillingForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+ChangeBillingForm.Error.NoRecordSelected=No record selected.
+ChangeBillingForm.Error.RecordNotFound=Record not found.
+ChangeBillingForm.PageTitle=ChangeBilling
+
+# ChangeELPA
+ChangeELPA.Button.deleteButton.ConfirmationMessage=
+ChangeELPA.Button.deleteButton.ConfirmationPrompt=
+ChangeELPA.Button.deleteButton=Delete
+ChangeELPA.Button.saveButton.ConfirmationMessage=
+ChangeELPA.Button.saveButton.ConfirmationPrompt=
+ChangeELPA.Button.saveButton=Save
+ChangeELPA.StaticText.auditIdStaticText=Audit ID:
+ChangeELPA.StaticText.auditorStaticText=Auditor:
+ChangeELPA.StaticText.changeElpaStaticText=Change ELPA
+ChangeELPA.StaticText.districtNameStaticText=District Name:
+ChangeELPA.StaticText.districtNumberStaticText=District Number:
+ChangeELPA.StaticText.typeStaticText=Type:
+ChangeELPA.Textbox.auditIdTextbox=Audit iD
+ChangeELPA.Textbox.auditorTextbox=Auditor
+ChangeELPA.Textbox.auditTextbox=Audit
+ChangeELPA.Textbox.districtNameTextbox=District name
+ChangeELPA.Textbox.districtNumberTextbox=District number
+
+# ChangeELPAForm
+ChangeELPAForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+ChangeELPAForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+ChangeELPAForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+ChangeELPAForm.Error.Duplicate=Duplicate records cannot be created.
+ChangeELPAForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+ChangeELPAForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+ChangeELPAForm.Error.NoRecordSelected=No record selected.
+ChangeELPAForm.Error.RecordNotFound=Record not found.
+ChangeELPAForm.PageTitle=ChangeELPA
+
+
+# CoforsUpload
+CoforsUpload.Button.confirmSendToCofrsButton.ConfirmationMessage=
+CoforsUpload.Button.confirmSendToCofrsButton.ConfirmationPrompt=
+CoforsUpload.Button.confirmSendToCofrsButton=Confirm Send To COFRS
+CoforsUpload.Button.downloadToExcelButton.ConfirmationMessage=
+CoforsUpload.Button.downloadToExcelButton.ConfirmationPrompt=
+CoforsUpload.Button.downloadToExcelButton=Download to Excel
+CoforsUpload.DropdownList.monthDropdownList=Month
+CoforsUpload.DynamicText.districtNumberDynamicText=Distric code
+CoforsUpload.DynamicText.firstPaymentDynamicText=Total amount
+CoforsUpload.DynamicText.organizationNameDynamicText=District name
+CoforsUpload.StaticText.batchNumberStaticText=Batch Number
+CoforsUpload.StaticText.coforsUploadStaticText=COFORS Upload:
+CoforsUpload.StaticText.dateToBePaidStaticText=Date to be Paid
+CoforsUpload.StaticText.fiscalYearStaticText=Fiscal Year
+CoforsUpload.StaticText.monthStaticText=Month
+CoforsUpload.StaticText.totalAmountToBePaidStaticText=Total Amount to be paid
+CoforsUpload.Textbox.batchNumberTextbox=Batch number
+CoforsUpload.Textbox.dateToBePaidTextbox=Date to be paid
+CoforsUpload.Textbox.fiscalYearTextbox=Fiscal year
+CoforsUpload.Textbox.totalAmountToBePaidTextbox=Total amount to be paid
+
+# CoforsUploadForm
+CoforsUploadForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+CoforsUploadForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+CoforsUploadForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+CoforsUploadForm.Error.Duplicate=Duplicate records cannot be created.
+CoforsUploadForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+CoforsUploadForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+CoforsUploadForm.Error.NoRecordSelected=No record selected.
+CoforsUploadForm.Error.RecordNotFound=Record not found.
+CoforsUploadForm.PageTitle=CoforsUpload
+
+# Comments
+Comments.Button.cancelButton.ConfirmationMessage=
+Comments.Button.cancelButton.ConfirmationMessage=
+Comments.Button.cancelButton.ConfirmationPrompt=
+Comments.Button.cancelButton.ConfirmationPrompt=
+Comments.Button.cancelButton=Cancel
+Comments.Button.cancelButton=Cancel
+Comments.Button.saveCommentButton.ConfirmationMessage=
+Comments.Button.saveCommentButton.ConfirmationPrompt=
+Comments.Button.saveCommentButton=Save Comment
+Comments.DropdownList.fiscalMonthDropdownList=Fiscal month
+Comments.DropdownList.fiscalYearDropdownList=Fiscal year
+Comments.DropdownList.reimbursementYearDropdownList=Reimbursement year
+Comments.DropdownList.schoolDistrictNumberAndNameDropdownList=School district number and name
+Comments.StaticText.cdeCommentsStaticText=CDE Comments
+Comments.StaticText.enterReviewCommentsStaticText=Enter/Review Comments
+Comments.StaticText.fiscalMonthStaticText=Fiscal Month:
+Comments.StaticText.fiscalYearStaticText=Fiscal Year:
+Comments.StaticText.reimbursementYearStaticText=Reimbursement Year:
+Comments.StaticText.reviewCommentsStaticText=Enter/Review Comments
+Comments.StaticText.schoolDistrictNumberAndNameStaticText=School District Number and Name:
+Comments.Textarea.comments=Comments
+
+# CommentsForm
+CommentsForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+CommentsForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+CommentsForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+CommentsForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+CommentsForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+CommentsForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+CommentsForm.Error.Duplicate=Duplicate records cannot be created.
+CommentsForm.Error.Duplicate=Duplicate records cannot be created.
+CommentsForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+CommentsForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+CommentsForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+CommentsForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+CommentsForm.Error.NoRecordSelected=No record selected.
+CommentsForm.Error.NoRecordSelected=No record selected.
+CommentsForm.Error.RecordNotFound=Record not found.
+CommentsForm.Error.RecordNotFound=Record not found.
+CommentsForm.PageTitle=Comments
+CommentsForm.PageTitle=Transportation Comments
+
+# CreateAudit
+CreateAudit.Button.Button.ConfirmationMessage=
+CreateAudit.Button.Button.ConfirmationPrompt=
+CreateAudit.Button.Button=null
+CreateAudit.DropdownList.auditorDropdownList=Auditor
+CreateAudit.DropdownList.districtNumberDropdownList=District number
+CreateAudit.DropdownList.typeDropdownList=Type
+CreateAudit.StaticText.$1YearStaticText=1 Year
+CreateAudit.StaticText.$1YearStaticText_2=1 Year
+CreateAudit.StaticText.$1YearStaticText_3=1 Year
+CreateAudit.StaticText.$1YearStaticText_4=1 Year
+CreateAudit.StaticText.$2YearStaticText=2 Year
+CreateAudit.StaticText.$2YearStaticText_2=2 Year
+CreateAudit.StaticText.$2YearStaticText_3=2 Year
+CreateAudit.StaticText.$2YearStaticText_4=2 Year
+CreateAudit.StaticText.$3YearStaticText=3 Year
+CreateAudit.StaticText.$3YearStaticText_2=3 Year
+CreateAudit.StaticText.$3YearStaticText_3=3 Year
+CreateAudit.StaticText.$3YearStaticText_4=3 Year
+CreateAudit.StaticText.$4YearStaticText=4 Year
+CreateAudit.StaticText.$4YearStaticText_2=4 Year
+CreateAudit.StaticText.$4YearStaticText_3=4 Year
+CreateAudit.StaticText.$4YearStaticText_4=4 Year
+CreateAudit.StaticText.$5YearStaticText=5 Year
+CreateAudit.StaticText.$5YearStaticText_2=5 Year
+CreateAudit.StaticText.$5YearStaticText_3=5 Year
+CreateAudit.StaticText.$5YearStaticText_4=5 Year
+CreateAudit.StaticText.auditIdStaticText=Audit ID:
+CreateAudit.StaticText.auditorStaticText=Auditor
+CreateAudit.StaticText.billingStaticText=Billing
+CreateAudit.StaticText.createAuditStaticText=Create Audit
+CreateAudit.StaticText.createAuditStaticText_2=Create Audit
+CreateAudit.StaticText.dateAssignedStaticText=Date Assigned:
+CreateAudit.StaticText.districtNameStaticText=District Name:
+CreateAudit.StaticText.districtNumberStaticText=District Number:
+CreateAudit.StaticText.elpaStaticText=ELPA
+CreateAudit.StaticText.naStaticText=NA
+CreateAudit.StaticText.naStaticText_2=NA
+CreateAudit.StaticText.naStaticText_3=NA
+CreateAudit.StaticText.naStaticText_4=NA
+CreateAudit.StaticText.selectedRangeForFiscalYearsForEachProgramAuditedStaticText=Selected Range For Fiscal Years for each Program Audited
+CreateAudit.StaticText.stateEqualStaticText=State Equal
+CreateAudit.StaticText.supervisorCommentsStaticText=Supervisor Comments
+CreateAudit.StaticText.transportationStaticText=Transportation
+CreateAudit.StaticText.typeStaticText=Type
+CreateAudit.StaticText.year12StaticText=Year12
+CreateAudit.StaticText.year1StaticText=Year1
+CreateAudit.StaticText.year21StaticText=Year21
+CreateAudit.StaticText.year22StaticText=Year22
+CreateAudit.StaticText.year2StaticText=Year2
+CreateAudit.StaticText.year31StaticText=Year31
+CreateAudit.StaticText.year32StaticText=Year32
+CreateAudit.StaticText.year33StaticText=Year33
+CreateAudit.StaticText.year3StaticText=Year3
+CreateAudit.Textarea.supervisorCommentsTextarea=Supervisor comments
+CreateAudit.Textbox.auditIdTextbox=Audit iD
+CreateAudit.Textbox.dateAssignedTextbox=Date assigned
+CreateAudit.Textbox.districtNameTextbox=District name
+
+# CreateAuditForm
+CreateAuditForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+CreateAuditForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+CreateAuditForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+CreateAuditForm.Error.Duplicate=Duplicate records cannot be created.
+CreateAuditForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+CreateAuditForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+CreateAuditForm.Error.NoRecordSelected=No record selected.
+CreateAuditForm.Error.RecordNotFound=Record not found.
+CreateAuditForm.PageTitle=CreateAudit
+
+
+# CrosswalkCollectionData
+CrosswalkCollectionData.Button.cancelButton.ConfirmationMessage=
+CrosswalkCollectionData.Button.cancelButton.ConfirmationPrompt=
+CrosswalkCollectionData.Button.cancelButton=Cancel
+CrosswalkCollectionData.Button.submitButton.ConfirmationMessage=
+CrosswalkCollectionData.Button.submitButton.ConfirmationPrompt=
+CrosswalkCollectionData.Button.submitButton=Submit
+CrosswalkCollectionData.Button.viewProposedImportButton.ConfirmationMessage=
+CrosswalkCollectionData.Button.viewProposedImportButton.ConfirmationPrompt=
+CrosswalkCollectionData.Button.viewProposedImportButton=View Proposed Import
+CrosswalkCollectionData.DropdownList.collectionTypeDropdownList=Collection type
+CrosswalkCollectionData.DropdownList.districtsMissingFromCrosswalkDropdownList=Districts missing from crosswalk
+CrosswalkCollectionData.DropdownList.fiscalYear=FiscalYear
+CrosswalkCollectionData.StaticText.collectionTypeStaticText=Collection Type:
+CrosswalkCollectionData.StaticText.crosswalkCollectionDataStaticText=Crosswalk Collection Data
+CrosswalkCollectionData.StaticText.districtsMissingFromCrosswalkStaticText=Districts Missing From Crosswalk:
+CrosswalkCollectionData.StaticText.fiscalYearStaticText=Fiscal Year:
+CrosswalkCollectionData.StaticText.resultsStaticText=Results
+
+# CrosswalkCollectionDataForm
+CrosswalkCollectionDataForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+CrosswalkCollectionDataForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+CrosswalkCollectionDataForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+CrosswalkCollectionDataForm.Error.Duplicate=Duplicate records cannot be created.
+CrosswalkCollectionDataForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+CrosswalkCollectionDataForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+CrosswalkCollectionDataForm.Error.NoRecordSelected=No record selected.
+CrosswalkCollectionDataForm.Error.RecordNotFound=Record not found.
+CrosswalkCollectionDataForm.PageTitle=Crosswalk Collection Data
+
+# CSICalculations
+CSICalculations.Button.calculateButton.ConfirmationMessage=
+CSICalculations.Button.calculateButton.ConfirmationPrompt=
+CSICalculations.Button.calculateButton=Calculate
+CSICalculations.Button.printButton.ConfirmationMessage=
+CSICalculations.Button.printButton.ConfirmationPrompt=
+CSICalculations.Button.printButton=Print
+CSICalculations.Button.saveButton.ConfirmationMessage=
+CSICalculations.Button.saveButton.ConfirmationPrompt=
+CSICalculations.Button.saveButton=Save
+CSICalculations.DropdownList.districtCodeNameDropdownList=District code/Name
+CSICalculations.StaticText.$10AdjustedAtRiskPerPupilFundingStaticText=10. Adjusted At-Risk Per-Pupil Funding
+CSICalculations.StaticText.$11TotalProgramFundingStaticText=11. Total Program Funding
+CSICalculations.StaticText.$12NegativeFactorTotalPerPupilStaticText=12. Negative Factor Total/Per Pupil
+CSICalculations.StaticText.$13RevisedTotalProgramFundingStaticText=13. Revised Total Program Funding
+CSICalculations.StaticText.$14DistrictPerPupilRevenueStaticText=14. District Per Pupil Revenue
+CSICalculations.StaticText.$15AdjustedCharterPerPupilRevenueStaticText=15. Adjusted Charter Per-Pupil Revenue
+CSICalculations.StaticText.$16AdjustedDistrictPerPupilRevenueStaticText=16. Adjusted District Per-Pupil Revenue
+CSICalculations.StaticText.$17CharterTotalProgramAdjustedStaticText=17. Charter Total Program (Adjusted)
+CSICalculations.StaticText.$18CharterTotalProgramUnadjustedStaticText=18. Charter Total Program (Unadjusted)
+CSICalculations.StaticText.$19AtRiskFundingToFromCharterStaticText=19. At-Risk Funding To (from) Charter
+CSICalculations.StaticText.$1FundedPupilCountStaticText=1. Funded Pupil Count
+CSICalculations.StaticText.$20TotalProgramStaticText=20. Total Program
+CSICalculations.StaticText.$2LessCharterSchoolCountStaticText=2. Less Charter School Count
+CSICalculations.StaticText.$3DistrictAdjustedPupilCountStaticText=3. District Adjusted Pupil Count
+CSICalculations.StaticText.$4TotalFormulaPerPupilFundingStaticText=4. Total Formula Per Pupil Funding
+CSICalculations.StaticText.$5AtRiskPupilCountStaticText=5. At-Risk Pupil Count
+CSICalculations.StaticText.$6TotalAtRiskFundingStaticText=6. Total At-Risk Funding
+CSICalculations.StaticText.$7DistrictPerPupilAtRiskFundingStaticText=7. District Per-Pupil At-Risk Funding
+CSICalculations.StaticText.$8K12MembershipStaticText=8. K-12 Membership
+CSICalculations.StaticText.$9PercentageOfPupilsEligibleStaticText=9. Percentage of Pupils Eligible for Free Lunch (At-Risk Pupil Count Divided by K-12 Membership)
+CSICalculations.StaticText.calculationElementsStaticText=Calculation Elements
+CSICalculations.StaticText.charterSchoolStaticText=Charter School
+CSICalculations.StaticText.csiCalculationsStaticText=Alternate At-Risk Calculations
+CSICalculations.StaticText.districtCodeNameStaticText=District Code/Name
+CSICalculations.StaticText.districtStaticText=District
+CSICalculations.StaticText.dividedByK12MembershipStaticText=Divided by K-12 Membership)
+CSICalculations.StaticText.forFreeLunchAtRiskPupilCountStaticText=for Free Lunch (At-Risk Pupil Count
+CSICalculations.StaticText.school1StaticText=School #1
+CSICalculations.StaticText.totalsStaticText=Totals
+CSICalculations.Textbox.$10AdjustedAtRiskPerPupilFundingTextbox=10. adjusted at-Risk per-Pupil funding
+CSICalculations.Textbox.$15AdjustedCharterPerPupilRevenueTextbox=15. adjusted charter per-Pupil revenue
+CSICalculations.Textbox.$16AdjustedDistrictPerPupilRevenueTextbox=16. adjusted district per-Pupil revenue
+CSICalculations.Textbox.$18CharterTotalProgramUnadjustedTextbox=18. charter total program (Unadjusted)
+CSICalculations.Textbox.$19AtRiskFundingToFromCharterTextbox=19. at-Risk funding to (from) charter
+CSICalculations.Textbox.$7DistrictPerPupilAtRiskFundingTextbox=7. district per-Pupil at-Risk funding
+
+# CSICalculationsForm
+CSICalculationsForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+CSICalculationsForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+CSICalculationsForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+CSICalculationsForm.Error.Duplicate=Duplicate records cannot be created.
+CSICalculationsForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+CSICalculationsForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+CSICalculationsForm.Error.NoRecordSelected=No record selected.
+CSICalculationsForm.Error.RecordNotFound=Record not found.
+CSICalculationsForm.PageTitle=CSI Calculations
+
+# DisplayAdjustment
+DisplayAdjustment.Button.clearButton.ConfirmationMessage=
+DisplayAdjustment.Button.clearButton.ConfirmationPrompt=
+DisplayAdjustment.Button.clearButton=Clear
+DisplayAdjustment.Button.editButton.ConfirmationMessage=
+DisplayAdjustment.Button.editButton.ConfirmationPrompt=
+DisplayAdjustment.Button.editButton=Edit
+DisplayAdjustment.Button.searchButton.ConfirmationMessage=
+DisplayAdjustment.Button.searchButton.ConfirmationPrompt=
+DisplayAdjustment.Button.searchButton=Search
+DisplayAdjustment.DropdownList.adjustmentTypeDropdownList=Adjustment type
+DisplayAdjustment.DropdownList.districtCodeDropdownList=District code
+DisplayAdjustment.DropdownList.districtCodeDropdownList_2=District code
+DisplayAdjustment.DropdownList.fiscalMonthDropdownList=Fiscal month
+DisplayAdjustment.DropdownList.fiscalYearDropdownList=Fiscal year
+DisplayAdjustment.DynamicText.adjStateAssessDynamicText=Adj #
+DisplayAdjustment.DynamicText.districtNumberDynamicText=Dist cd
+DisplayAdjustment.StaticText.adjustmentTypeStaticText=Adjustment Type:
+DisplayAdjustment.StaticText.districtCodeStaticText=District Code:
+DisplayAdjustment.StaticText.districtCodeStaticText_2=District Code:
+DisplayAdjustment.StaticText.fiscalMonthStaticText=Fiscal Month:
+DisplayAdjustment.StaticText.fiscalYearStaticText=Fiscal Year:
+DisplayAdjustment.StaticText.fiscalYearStaticText_2=Fiscal Year:
+DisplayAdjustment.StaticText.typeStaticText=Type:
+DisplayAdjustment.StaticText.viewAdjustmentsByTypeStaticText=View Adjustments By Type
+DisplayAdjustment.StaticText.viewAuditRepaymentAdjustmentStaticText=View Audit Repayment Adjustment
+
+# DisplayAdjustmentForm
+DisplayAdjustmentForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+DisplayAdjustmentForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+DisplayAdjustmentForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+DisplayAdjustmentForm.Error.Duplicate=Duplicate records cannot be created.
+DisplayAdjustmentForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+DisplayAdjustmentForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+DisplayAdjustmentForm.Error.NoRecordSelected=No record selected.
+DisplayAdjustmentForm.Error.RecordNotFound=Record not found.
+DisplayAdjustmentForm.PageTitle=Display Adjustment
+
+# DistributionAmounts
+DistributionAmounts.Button.run1StPaymentsButton.ConfirmationMessage=
+DistributionAmounts.Button.run1StPaymentsButton.ConfirmationPrompt=
+DistributionAmounts.Button.run1StPaymentsButton=Run First Payments
+DistributionAmounts.Button.run2NdPaymentsButton.ConfirmationMessage=
+DistributionAmounts.Button.run2NdPaymentsButton.ConfirmationPrompt=
+DistributionAmounts.Button.run2NdPaymentsButton=Run Second Payments
+DistributionAmounts.Button.saveChangesButton.ConfirmationMessage=
+DistributionAmounts.Button.saveChangesButton.ConfirmationPrompt=
+DistributionAmounts.Button.saveChangesButton=Save Changes
+DistributionAmounts.StaticText.$1StProrationFactorStaticText=First Proration Factor:
+DistributionAmounts.StaticText.$2NdDistributionAmountStaticText=Second Distribution Amount:
+DistributionAmounts.StaticText.$2NdProrationFactorStaticText=Second Proration Factor:
+DistributionAmounts.StaticText.distributionAmountsStaticText=Distribution Amounts
+DistributionAmounts.StaticText.enterAllFundingSourcesOfTotalPaymentStaticText=Enter All Funding Sources of Total Payment
+DistributionAmounts.StaticText.firstDistributionAmountStaticText=First Distribution Amount:
+DistributionAmounts.StaticText.reimbursementYearStaticText=Reimbursement Year:
+DistributionAmounts.StaticText.staticText=:
+DistributionAmounts.StaticText.staticText_2=:
+DistributionAmounts.StaticText.staticText_3=:
+DistributionAmounts.StaticText.totalDistributionStaticText=Total Distribution:
+DistributionAmounts.Textarea.fundingSourcesTextarea=FUNDING_SOURCES
+DistributionAmounts.Textbox.fiscalYearTextbox=Reimbursement Year
+DistributionAmounts.Textbox.prorateFactor1stPaymentTextbox=PRORATE_FACTOR_1ST_PAYMENT
+DistributionAmounts.Textbox.prorateFactor2ndPaymentTextbox=PRORATE_FACTOR_2ND_PAYMENT
+DistributionAmounts.Textbox.totalDistributionTextbox=TOTAL_DISTRIBUTION
+DistributionAmounts.Textbox.totalFirstPaymentTextbox=TOTAL_FIRST_PAYMENT
+DistributionAmounts.Textbox.totalSecondPaymentTextbox=TOTAL_SECOND_PAYMENT
+
+# DistributionAmountsForm
+DistributionAmountsForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+DistributionAmountsForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+DistributionAmountsForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+DistributionAmountsForm.Error.Duplicate=Duplicate records cannot be created.
+DistributionAmountsForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+DistributionAmountsForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+DistributionAmountsForm.Error.NoRecordSelected=No record selected.
+DistributionAmountsForm.Error.RecordNotFound=Record not found.
+DistributionAmountsForm.PageTitle=Distribution Amounts
+
+# DistrictPaymentReport
+DistrictPaymentReport.Button.downloadToExcelButton.ConfirmationMessage=
+DistrictPaymentReport.Button.downloadToExcelButton.ConfirmationPrompt=
+DistrictPaymentReport.Button.downloadToExcelButton=Download to Excel
+DistrictPaymentReport.DynamicText.districtDistributionDynamicText=Total
+DistrictPaymentReport.DynamicText.districtNumberDynamicText=District number
+DistrictPaymentReport.DynamicText.firstPaymentDynamicText=1'st payment
+DistrictPaymentReport.DynamicText.organizationNameDynamicText=District name
+DistrictPaymentReport.DynamicText.secondPaymentDynamicText=2'nd payment
+DistrictPaymentReport.StaticText.$1StDistributionStaticText=1'st Distribution:
+DistrictPaymentReport.StaticText.$1StProrationStaticText=1'st Proration:
+DistrictPaymentReport.StaticText.$2NdDistributionStaticText=2'nd Distribution:
+DistrictPaymentReport.StaticText.$2NdProrationStaticText=2'nd Proration:
+DistrictPaymentReport.StaticText.districtPaymentReportForReimbursementYearStaticText=District Payment Report for Reimbursement Year:
+DistrictPaymentReport.StaticText.noteAuditsShouldNotShowOnceUploadedStaticText=Note: Audits should not show once uploaded
+DistrictPaymentReport.StaticText.totalDistributionStaticText=Total Distribution:
+DistrictPaymentReport.Textbox.fiscalYearTextbox=District payment report for reimbursement year
+DistrictPaymentReport.Textbox.prorateFactor1stPaymentTextbox=1'st proration
+DistrictPaymentReport.Textbox.prorateFactor2ndPaymentTextbox=2'nd proration
+DistrictPaymentReport.Textbox.totalDistributionTextbox=Total distribution
+DistrictPaymentReport.Textbox.totalFirstPaymentTextbox=1'st distribution
+DistrictPaymentReport.Textbox.totalSecondPaymentTextbox=2'nd distribution
+
+# DistrictPaymentReportForm
+DistrictPaymentReportForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+DistrictPaymentReportForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+DistrictPaymentReportForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+DistrictPaymentReportForm.Error.Duplicate=Duplicate records cannot be created.
+DistrictPaymentReportForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+DistrictPaymentReportForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+DistrictPaymentReportForm.Error.NoRecordSelected=No record selected.
+DistrictPaymentReportForm.Error.RecordNotFound=Record not found.
+DistrictPaymentReportForm.PageTitle=DistrictPaymentReport
+
+# Elections
+Elections.Button.saveButton.ConfirmationMessage=
+Elections.Button.saveButton.ConfirmationPrompt=
+Elections.Button.saveButton=Save
+Elections.Checkbox.electionHeldStatusCheckbox=No
+Elections.Checkbox.electionHeldStatusCheckbox_10=Yes
+Elections.Checkbox.electionHeldStatusCheckbox_11=Yes
+Elections.Checkbox.electionHeldStatusCheckbox_12=No
+Elections.Checkbox.electionHeldStatusCheckbox_13=Yes
+Elections.Checkbox.electionHeldStatusCheckbox_14=No
+Elections.Checkbox.electionHeldStatusCheckbox_15=Yes
+Elections.Checkbox.electionHeldStatusCheckbox_16=No
+Elections.Checkbox.electionHeldStatusCheckbox_17=Yes
+Elections.Checkbox.electionHeldStatusCheckbox_18=No
+Elections.Checkbox.electionHeldStatusCheckbox_2=Yes
+Elections.Checkbox.electionHeldStatusCheckbox_3=No
+Elections.Checkbox.electionHeldStatusCheckbox_4=Yes
+Elections.Checkbox.electionHeldStatusCheckbox_5=No
+Elections.Checkbox.electionHeldStatusCheckbox_6=Yes
+Elections.Checkbox.electionHeldStatusCheckbox_7=No
+Elections.Checkbox.electionHeldStatusCheckbox_8=Yes
+Elections.Checkbox.electionHeldStatusCheckbox_9=No
+Elections.Checkbox.electionStatusCheckbox=ELECTION_STATUS
+Elections.DropdownList.districtCodeNameDropdownList=District code/Name
+Elections.StaticText.$1OverrideElectionPursuantToSection2254108CrsStaticText=1. Override election, pursuant to Section 22-54-108, CRS.
+Elections.StaticText.$2FullDayKindergartenOverrideElectionPursuantToSection22541085CrsStaticText=2. Full-day Kindergarten Override election, pursuant to Section 22-54-108.5, CRS.
+Elections.StaticText.$3TransportationElectionPursuantToSection224010217CrsStaticText=3. Transportation election, pursuant to Section 22-40-102(1.7), CRS.
+Elections.StaticText.$4BondElectionPursuantToSection2242102CrsStaticText=4. Bond election, pursuant to Section 22-42-102, CRS.
+Elections.StaticText.$5SpecialBuildingAndTechnologyElectionPursuantToSection224010215CrsStaticText=5. Special Building and Technology election, pursuant to Section 22-40-102(1.5), CRS.
+Elections.StaticText.$6ElectionDeBrucingRegardingFiscalYearSpendingLimitsPursuantToArticleXSection20OfTheStateConstitutionTheTaxPayersBillOfRightsStaticText=6. Election ("de-Brucing") regarding fiscal year spending limits pursuant to Article X Section 20 of the State Constitution (The Tax-Payers Bill of Rights)
+Elections.StaticText.$7CapitalImprovemntsLoanRepaymentsGrowthDistrictsElectionPursuantToSection2240110CrsStaticText=7. Capital Improvemnts Loan Repayments (growth districts) election, pursuant to Section 22-40-110, CRS.
+Elections.StaticText.$8CharterSchoolSpecialCapitalConstructionSpecialMillLevyElectionPursuantToSection22305405CrsStaticText=8. Charter School Special Capital ConstructionSpecial Mill Levy election, pursuant to Section 22-30.5-405, CRS.
+Elections.StaticText.$9OtherElectionDisctrictConsolidationDeconsolidationDistrictReorganizationEtcStaticText=9. Other election (disctrict consolidation/deconsolidation, district reorganization etc.)
+Elections.StaticText.againstStaticText=Against:
+Elections.StaticText.againstStaticText_2=Against:
+Elections.StaticText.againstStaticText_3=Against:
+Elections.StaticText.againstStaticText_4=Against:
+Elections.StaticText.againstStaticText_5=Against:
+Elections.StaticText.againstStaticText_6=Against:
+Elections.StaticText.againstStaticText_7=Against:
+Elections.StaticText.againstStaticText_8=Against:
+Elections.StaticText.againstStaticText_9=Against:
+Elections.StaticText.districtCodeNameStaticText=District Code/Name
+Elections.StaticText.ifAnyElectionWasHeldAttachAnOfficialSampleBallotInWhichIsStatedTheQuestionSSubmittedToTheElectorsOrACopyOfTheOfficialBallotQuestionLanguageAsCertifiedToTheCountyClerkForACoordinatedElectionStaticText=If any election was held, attach an official sample ballot in which is stated the question(s) submitted to the electors or a copy of the official ballot question language as certified to the county clerk for a coordinated election.
+Elections.StaticText.ifNoElectionWasHeldPleaseMarkThisBoxAndReturnToCdeOtherwiseCompleteTheFormStaticText=If no election was held, please mark this box and return to CDE. Otherwise complete the form.
+Elections.StaticText.indicateTheNumberOfElectionsForStaticText=Indicate the Number of Elections. For:
+Elections.StaticText.indicateTheNumberOfElectionsForStaticText_2=Indicate the Number of Elections. For:
+Elections.StaticText.indicateTheNumberOfElectionsForStaticText_3=Indicate the Number of Elections. For:
+Elections.StaticText.indicateTheNumberOfElectionsForStaticText_4=Indicate the Number of Elections. For:
+Elections.StaticText.indicateTheNumberOfElectionsForStaticText_5=Indicate the Number of Elections. For:
+Elections.StaticText.indicateTheNumberOfElectionsForStaticText_6=Indicate the Number of Elections. For:
+Elections.StaticText.indicateTheNumberOfElectionsForStaticText_7=Indicate the Number of Elections. For:
+Elections.StaticText.indicateTheNumberOfElectionsForStaticText_8=Indicate the Number of Elections. For:
+Elections.StaticText.indicateTheNumberOfElectionsForStaticText_9=Indicate the Number of Elections. For:
+Elections.StaticText.pleaseIndicateWhetherOrNotTheBoardOfEducationOfTheAboveDistrictHeldOneOrMoreOfTheFollowingElectionsInNovember2011StaticText=Please indicate whether or not the Board of Education of the above district held one or more of the following elections in November 2011:
+Elections.StaticText.pleaseReportEachElectionQuestionSeparatelyAndProvideCopyOfEachSampleBallotStaticText=(Please report each election question separately and provide copy of each sample ballot.)
+Elections.StaticText.reportOfCurrentYearElectionResultsStaticText=Report of Current Year Election Results
+Elections.StaticText.typeOfOtherElectionStaticText=Type of other 'election':
+Elections.Textbox.againstTextbox=Against
+Elections.Textbox.againstTextbox_2=Against
+Elections.Textbox.againstTextbox_3=Against
+Elections.Textbox.againstTextbox_4=Against
+Elections.Textbox.againstTextbox_5=Against
+Elections.Textbox.againstTextbox_6=Against
+Elections.Textbox.againstTextbox_7=Against
+Elections.Textbox.againstTextbox_8=Against
+Elections.Textbox.againstTextbox_9=Against
+Elections.Textbox.electionTypeTextbox=Type of other 'election'
+Elections.Textbox.forTextbox=Indicate the number of elections. for
+Elections.Textbox.forTextbox_2=Indicate the number of elections. for
+Elections.Textbox.forTextbox_3=Indicate the number of elections. for
+Elections.Textbox.forTextbox_4=Indicate the number of elections. for
+Elections.Textbox.forTextbox_5=Indicate the number of elections. for
+Elections.Textbox.forTextbox_6=Indicate the number of elections. for
+Elections.Textbox.forTextbox_7=Indicate the number of elections. for
+Elections.Textbox.forTextbox_8=Indicate the number of elections. for
+Elections.Textbox.forTextbox_9=Indicate the number of elections. for
+
+# ElectionsForm
+ElectionsForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+ElectionsForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+ElectionsForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+ElectionsForm.Error.Duplicate=Duplicate records cannot be created.
+ElectionsForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+ElectionsForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+ElectionsForm.Error.NoRecordSelected=No record selected.
+ElectionsForm.Error.RecordNotFound=Record not found.
+ElectionsForm.PageTitle=Elections
+
+# Header
+Header.DynamicText.vDateDynamicText=Date
+Header.DynamicText.vUsernameDynamicText=User name
+Header.StaticText.dateStaticText=Date:
+Header.StaticText.homeGoToMainMenuStaticText=Home (go to Main menu)
+Header.StaticText.imageHereStaticText=<image here>
+Header.StaticText.stateEqualSystemStaticText=State Equal System
+Header.StaticText.userNameStaticText=User Name:
+
+# HeaderForm
+HeaderForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+HeaderForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+HeaderForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+HeaderForm.Error.Duplicate=Duplicate records cannot be created.
+HeaderForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+HeaderForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+HeaderForm.Error.NoRecordSelected=No record selected.
+HeaderForm.Error.RecordNotFound=Record not found.
+HeaderForm.PageTitle=Header Include
+
+# HomePage
+HomePage.DropdownList.nextPaymentProcessingDropdownList=Next payment processing
+HomePage.StaticText.administrationStaticText=Administration
+HomePage.StaticText.districtOptionsStaticText=District Options
+HomePage.StaticText.lastPaymentProcessedStaticText=Last Payment Processed:
+HomePage.StaticText.maintenanceTasksStaticText=Maintenance Tasks
+HomePage.StaticText.nextPaymentProcessingStaticText=Next Payment Processing:
+HomePage.StaticText.processingTasksStaticText=Processing Tasks
+HomePage.StaticText.stateEqualOptionsStaticText=State Equal Options
+HomePage.StaticText.stateEqualProcessingHelpStaticText=State Equal Processing Help
+HomePage.StaticText.stateShareProcessingStaticText=State Share Processing
+HomePage.Textbox.lastPaymentProcessedTextbox=Last payment processed
+
+# HomePageForm
+HomePageForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+HomePageForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+HomePageForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+HomePageForm.Error.Duplicate=Duplicate records cannot be created.
+HomePageForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+HomePageForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+HomePageForm.Error.NoRecordSelected=No record selected.
+HomePageForm.Error.RecordNotFound=Record not found.
+HomePageForm.PageTitle=Home Page
+
+# ImportAudits
+ImportAudits.Button.resetButton.ConfirmationMessage=
+ImportAudits.Button.resetButton.ConfirmationPrompt=
+ImportAudits.Button.resetButton=Reset
+ImportAudits.Button.uploadButton.ConfirmationMessage=
+ImportAudits.Button.uploadButton.ConfirmationPrompt=
+ImportAudits.Button.uploadButton=Upload
+ImportAudits.Checkbox.checkbox881Checkbox=Select
+ImportAudits.Checkbox.selectAllCB=SelectAllCB
+ImportAudits.DropdownList.districtNumberDropdownList=District code
+ImportAudits.DropdownList.fiscalYearDropdownList=Fiscal year
+ImportAudits.DynamicText.dateChangedDynamicText=Date
+ImportAudits.DynamicText.districtNumberDynamicText=Distric code
+ImportAudits.DynamicText.organizationCodeDynamicText=District name
+ImportAudits.StaticText.auditsStaticText=Audits
+ImportAudits.StaticText.districtCodeStaticText=District Code:
+ImportAudits.StaticText.fiscalYearStaticText=Fiscal Year:
+ImportAudits.StaticText.importPriorYearAuditedPupilAndLunchCountsStaticText=Import Prior Year Audited Pupil and Lunch Counts:
+ImportAudits.StaticText.noteAuditsShouldNotShowOnceUploadedStaticText=Note: Audits should not show once uploaded
+ImportAudits.StaticText.reopenAuditsStaticText=Reopen Audits
+
+# ImportAuditsForm
+ImportAuditsForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+ImportAuditsForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+ImportAuditsForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+ImportAuditsForm.Error.Duplicate=Duplicate records cannot be created.
+ImportAuditsForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+ImportAuditsForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+ImportAuditsForm.Error.NoRecordSelected=No record selected.
+ImportAuditsForm.Error.RecordNotFound=Record not found.
+ImportAuditsForm.PageTitle=Import Audits
+
+# ImportAuditTransData
+ImportAuditTransData.Button.downloadToExcelButton.ConfirmationMessage=
+ImportAuditTransData.Button.downloadToExcelButton.ConfirmationPrompt=
+ImportAuditTransData.Button.downloadToExcelButton=Download to Excel
+ImportAuditTransData.Button.uploadTransportationAuditDataButton.ConfirmationMessage=
+ImportAuditTransData.Button.uploadTransportationAuditDataButton.ConfirmationPrompt=
+ImportAuditTransData.Button.uploadTransportationAuditDataButton=Upload Transportation Audit Data
+ImportAuditTransData.DynamicText.dateChangedDynamicText=Audit completion date
+ImportAuditTransData.DynamicText.districtNumberDynamicText=Distric code
+ImportAuditTransData.DynamicText.organizationNameDynamicText=District name
+ImportAuditTransData.StaticText.importAuditedTransportationDataStaticText=Import Audited Transportation Data:
+ImportAuditTransData.StaticText.noteAuditsShouldNotShowOnceUploadedStaticText=Note: Audits should not show once uploaded
+
+# ImportAuditTransDataForm
+ImportAuditTransDataForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+ImportAuditTransDataForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+ImportAuditTransDataForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+ImportAuditTransDataForm.Error.Duplicate=Duplicate records cannot be created.
+ImportAuditTransDataForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+ImportAuditTransDataForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+ImportAuditTransDataForm.Error.NoRecordSelected=No record selected.
+ImportAuditTransDataForm.Error.RecordNotFound=Record not found.
+ImportAuditTransDataForm.PageTitle=ImportAuditTransData
+
+# LandingMenu
+LandingMenu.StaticText.stateEqualSystemsStaticText=State Equal Systems
+
+# LandingMenuForm
+LandingMenuForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+LandingMenuForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+LandingMenuForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+LandingMenuForm.Error.Duplicate=Duplicate records cannot be created.
+LandingMenuForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+LandingMenuForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+LandingMenuForm.Error.NoRecordSelected=No record selected.
+LandingMenuForm.Error.RecordNotFound=Record not found.
+LandingMenuForm.PageTitle=State Equal Applications
+
+# MaintainCalculationRules
+MaintainCalculationRules.StaticText.districtOptionsStaticText=District Options
+MaintainCalculationRules.StaticText.mainCalculationRulesStaticText=Main Calculation Rules:
+MaintainCalculationRules.StaticText.stateEqualOptionsStaticText=State Equal Options
+
+# MaintainCalculationRulesForm
+MaintainCalculationRulesForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+MaintainCalculationRulesForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+MaintainCalculationRulesForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+MaintainCalculationRulesForm.Error.Duplicate=Duplicate records cannot be created.
+MaintainCalculationRulesForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+MaintainCalculationRulesForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+MaintainCalculationRulesForm.Error.NoRecordSelected=No record selected.
+MaintainCalculationRulesForm.Error.RecordNotFound=Record not found.
+MaintainCalculationRulesForm.PageTitle=Maintain Calculation Rules
+
+# MillLevyCert
+MillLevyCert.Button.approveAsFinalButton.ConfirmationMessage=
+MillLevyCert.Button.approveAsFinalButton.ConfirmationPrompt=
+MillLevyCert.Button.approveAsFinalButton=Approve as Final
+MillLevyCert.Button.calculateButton.ConfirmationMessage=
+MillLevyCert.Button.calculateButton.ConfirmationPrompt=
+MillLevyCert.Button.calculateButton=Calculate
+MillLevyCert.Button.printButton.ConfirmationMessage=
+MillLevyCert.Button.printButton.ConfirmationPrompt=
+MillLevyCert.Button.printButton=Print
+MillLevyCert.Button.saveButton.ConfirmationMessage=
+MillLevyCert.Button.saveButton.ConfirmationPrompt=
+MillLevyCert.Button.saveButton=Save
+MillLevyCert.DropdownList.districtCodeDropdownList=District code
+MillLevyCert.DropdownList.propertyTaxDropdownList=Property tax year
+MillLevyCert.StaticText.$10OtherStaticText=10. Other
+MillLevyCert.StaticText.$11TotalStaticText=11. Total
+MillLevyCert.StaticText.$1TotalProgramStaticText=1. Total Program
+MillLevyCert.StaticText.$2CategoricalBuyoutStaticText=2. Categorical Buyout
+MillLevyCert.StaticText.$3OverridesStaticText=3. Overrides:
+MillLevyCert.StaticText.$4AbatementStaticText=4. Abatement
+MillLevyCert.StaticText.$5TotalGeneralFundStaticText=5. Total General Fund
+MillLevyCert.StaticText.$6BondRedemptionFundStaticText=6. Bond Redemption Fund
+MillLevyCert.StaticText.$7TransportationFundStaticText=7. Transportation Fund
+MillLevyCert.StaticText.$8SpecialBuildingAndTechnologyFundStaticText=8. Special Building and Technology Fund
+MillLevyCert.StaticText.$9FullDayKindergartenFundStaticText=9. Full Day Kindergarten Fund
+MillLevyCert.StaticText.abatementsStaticText=Abatements
+MillLevyCert.StaticText.assessedValuationStaticText=Assessed Valuation
+MillLevyCert.StaticText.aVoterApprovedStaticText=a) Voter Approved
+MillLevyCert.StaticText.bHoldHarmlessStaticText=b) Hold Harmless
+MillLevyCert.StaticText.byDistrictStaticText=By District
+MillLevyCert.StaticText.cdePreliminaryMillLevyStaticText=CDE Preliminary Mill Levy
+MillLevyCert.StaticText.cExcessHoldHarmlessStaticText=c) Excess Hold Harmless
+MillLevyCert.StaticText.countyStaticText=County
+MillLevyCert.StaticText.districtCodeStaticText=District Code
+MillLevyCert.StaticText.districtMillLevyStaticText=District Mill Levy
+MillLevyCert.StaticText.finalMillCertifiedStaticText=Final Mill Certified
+MillLevyCert.StaticText.fullFundingMillLevyStaticText=Full Funding Mill Levy
+MillLevyCert.StaticText.fundingReceivedFromStateStaticText=Funding Received from State
+MillLevyCert.StaticText.grossAssessedValuationStaticText=Gross Assessed Valuation
+MillLevyCert.StaticText.informationForCertificationToCountyTreasurerStaticText=Information for Certification to County Treasurer:
+MillLevyCert.StaticText.millLevyCategoryStaticText=Mill Levy Category
+MillLevyCert.StaticText.millLevyCertiicationStaticText=Mill Levy Certiication
+MillLevyCert.StaticText.nameStaticText=Name
+MillLevyCert.StaticText.netAssessedValuationStaticText=Net Assessed Valuation
+MillLevyCert.StaticText.phoneStaticText=Phone
+MillLevyCert.StaticText.propertyTaxYearStaticText=Property Tax Year
+MillLevyCert.StaticText.taxIncrementFinancingStaticText=Tax Increment Financing
+MillLevyCert.StaticText.totalAcrossAllCountiesStaticText=(Total Across All Counties)
+MillLevyCert.Textbox.$8SpecialBuildingAndTechnologyFundTextbox=8. special building and technology fund
+MillLevyCert.Textbox.vTextstringTextbox=County
+MillLevyCert.Textbox.vTextstringTextbox_2=Phone
+MillLevyCert.Textbox.vTextstringTextbox_3=Name
+
+# MillLevyCertForm
+MillLevyCertForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+MillLevyCertForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+MillLevyCertForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+MillLevyCertForm.Error.Duplicate=Duplicate records cannot be created.
+MillLevyCertForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+MillLevyCertForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+MillLevyCertForm.Error.NoRecordSelected=No record selected.
+MillLevyCertForm.Error.RecordNotFound=Record not found.
+MillLevyCertForm.PageTitle=Mill Levy Certification
+
+# MillLevyOverrideWorksheet
+MillLevyOverrideWorksheet.Button.calculateButton.ConfirmationMessage=
+MillLevyOverrideWorksheet.Button.calculateButton.ConfirmationPrompt=
+MillLevyOverrideWorksheet.Button.calculateButton=Calculate
+MillLevyOverrideWorksheet.Button.printButton.ConfirmationMessage=
+MillLevyOverrideWorksheet.Button.printButton.ConfirmationPrompt=
+MillLevyOverrideWorksheet.Button.printButton=Print
+MillLevyOverrideWorksheet.Button.saveButton.ConfirmationMessage=
+MillLevyOverrideWorksheet.Button.saveButton.ConfirmationPrompt=
+MillLevyOverrideWorksheet.Button.saveButton=Save
+MillLevyOverrideWorksheet.DropdownList.districtCodeNameDropdownList=District code
+MillLevyOverrideWorksheet.DropdownList.propertyTaxYearDropdownList=Property tax year
+MillLevyOverrideWorksheet.StaticText.$25TotalProgramStaticText=25% Total Program:
+MillLevyOverrideWorksheet.StaticText.allowableOverrideStaticText=Allowable Override
+MillLevyOverrideWorksheet.StaticText.allowableOverrideStaticText_2=Allowable Override:
+MillLevyOverrideWorksheet.StaticText.amountStaticText=Amount
+MillLevyOverrideWorksheet.StaticText.districtCodeNameStaticText=District Code
+MillLevyOverrideWorksheet.StaticText.greaterOf25OfTotalProgramOr200000StaticText=Greater of 25% of Total Program or $200,000
+MillLevyOverrideWorksheet.StaticText.minimumOverrideAllowedStaticText=Minimum Override Allowed:
+MillLevyOverrideWorksheet.StaticText.plusCostOfLivingAdjustmentStaticText=Plus Cost of Living Adjustment:
+MillLevyOverrideWorksheet.StaticText.projectedTotalProgramFormulaFundingStaticText=Projected Total Program - Formula Funding:
+MillLevyOverrideWorksheet.StaticText.propertyTaxYearStaticText=Property Tax Year
+MillLevyOverrideWorksheet.StaticText.remainingBalanceAt25LimitStaticText=Remaining Balance at 25% Limit:
+MillLevyOverrideWorksheet.StaticText.reportStaticText=Override Limit Calculation
+MillLevyOverrideWorksheet.StaticText.totalAllowableOverrideStaticText=Total Allowable Override:
+MillLevyOverrideWorksheet.StaticText.totalExisitngOverridePropertyTaxRevenuesStaticText=Total Exisitng Override Property Tax Revenues:
+MillLevyOverrideWorksheet.Textbox.colAdjustTextbox=COL_ADJUST
+MillLevyOverrideWorksheet.Textbox.propertyTaxTextbox=PROPERTY_TAX
+MillLevyOverrideWorksheet.Textbox.totProgTextbox=TOT_PROG
+MillLevyOverrideWorksheet.Textbox.vNumberTextbox=V_NUMBER
+MillLevyOverrideWorksheet.Textbox.vNumberTextbox_2=V_NUMBER
+MillLevyOverrideWorksheet.Textbox.vNumberTextbox_3=Greater of 25% of total program or $200,000
+MillLevyOverrideWorksheet.Textbox.vNumberTextbox_4=V_NUMBER
+MillLevyOverrideWorksheet.Textbox.vNumberTextbox_5=V_NUMBER
+
+# MillLevyOverrideWorksheetForm
+MillLevyOverrideWorksheetForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+MillLevyOverrideWorksheetForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+MillLevyOverrideWorksheetForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+MillLevyOverrideWorksheetForm.Error.Duplicate=Duplicate records cannot be created.
+MillLevyOverrideWorksheetForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+MillLevyOverrideWorksheetForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+MillLevyOverrideWorksheetForm.Error.NoRecordSelected=No record selected.
+MillLevyOverrideWorksheetForm.Error.RecordNotFound=Record not found.
+MillLevyOverrideWorksheetForm.PageTitle=Mill Levy Override Worksheet
+
+# MonthlyPayments
+MonthlyPayments.Button.allButton.ConfirmationMessage=
+MonthlyPayments.Button.allButton.ConfirmationPrompt=
+MonthlyPayments.Button.allButton=All->
+MonthlyPayments.Button.allButton_2.ConfirmationMessage=
+MonthlyPayments.Button.allButton_2.ConfirmationPrompt=
+MonthlyPayments.Button.allButton_2=<-All
+MonthlyPayments.Button.button.ConfirmationMessage=
+MonthlyPayments.Button.button.ConfirmationPrompt=
+MonthlyPayments.Button.button=->
+MonthlyPayments.Button.button_2.ConfirmationMessage=
+MonthlyPayments.Button.button_2.ConfirmationPrompt=
+MonthlyPayments.Button.button_2=<-
+MonthlyPayments.Button.calculateAndViewPaymentReportButton.ConfirmationMessage=
+MonthlyPayments.Button.calculateAndViewPaymentReportButton.ConfirmationPrompt=
+MonthlyPayments.Button.calculateAndViewPaymentReportButton=Calculate and View Payment Report
+MonthlyPayments.Button.confirmSendToCofrsButton.ConfirmationMessage=
+MonthlyPayments.Button.confirmSendToCofrsButton.ConfirmationPrompt=
+MonthlyPayments.Button.confirmSendToCofrsButton=Confirm Send to COFRS
+MonthlyPayments.DropdownList.fiscalYearDropdownList=Fiscal year
+MonthlyPayments.DropdownList.monthDropdownList=Month
+MonthlyPayments.StaticText.fiscalYearStaticText=Fiscal Year:
+MonthlyPayments.StaticText.monthStaticText=Month:
+MonthlyPayments.StaticText.processMonthlyPaymentsStaticText=Process Monthly Payments
+MonthlyPayments.StaticText.selectDistrictsToBePaidStaticText=Select Districts to be Paid
+
+# MonthlyPaymentsForm
+MonthlyPaymentsForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+MonthlyPaymentsForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+MonthlyPaymentsForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+MonthlyPaymentsForm.Error.Duplicate=Duplicate records cannot be created.
+MonthlyPaymentsForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+MonthlyPaymentsForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+MonthlyPaymentsForm.Error.NoRecordSelected=No record selected.
+MonthlyPaymentsForm.Error.RecordNotFound=Record not found.
+MonthlyPaymentsForm.PageTitle=Monthly Payments
+
+# PaymentWorkSheet
+PaymentWorkSheet.StaticText.$10ExcessCostsLine3MinusLine9StaticText=10. Excess costs (Line 3 minus Line 9)
+PaymentWorkSheet.StaticText.$11ExcessCostsEntitlementLine10Times3387StaticText=11. Excess costs entitlement (Line 10 times .3387)
+PaymentWorkSheet.StaticText.$12MileageEntitlementPlusExcessCostEntitlementLine9PlusLine11StaticText=12. Mileage entitlement plus excess cost entitlement (Line 9 plus Line 11)
+PaymentWorkSheet.StaticText.$13MaximumReimbursementEntitlementLine3Times90StaticText=13. Maximum reimbursement entitlement (Line 3 times .90)
+PaymentWorkSheet.StaticText.$14CalculatedReimbursementEntitlementFor20102011LessOfLines12Or13StaticText=14. Calculated reimbursement entitlement for 2010-2011 (Less of Lines 12 or 13)
+PaymentWorkSheet.StaticText.$15CalculatedReimbursementEntitlementFor20092010SeeAttachedListStaticText=15. Calculated reimbursement entitlement for 2009-2010 (see attached list)
+PaymentWorkSheet.StaticText.$16ReimbursementEntitlementFor20102011NotIncludingFinancialAidForBoardGreatOfLines14And15StaticText=16. Reimbursement entitlement for 2010-2011 not including financial aid for board (Great of Lines 14 and 15)
+PaymentWorkSheet.StaticText.$17FinancialAidForProvidingBoardNumberOfDaysBoardWasPaidForPupilsInLieuOfTransportationTimes1StaticText=17. Financial aid for providing board (number of days board was paid for pupils in lieu of transportation  times $1)
+PaymentWorkSheet.StaticText.$18ReimbursementEntitlementFor20102011Line16PlusLine17StaticText=18. Reimbursement entitlement for 2010-2011 (Line 16 plus Line 17)
+PaymentWorkSheet.StaticText.$19AdvanceReimbursementEntitlementFor20102011StaticText=19. Advance reimbursement entitlement for 2010-2011
+PaymentWorkSheet.StaticText.$1TotalCurrentOperatingExpendituresForPupilTransportationLine1cFromCde40StaticText=1. Total current operating expenditures for pupil transportation (Line 1C from CDE-40)
+PaymentWorkSheet.StaticText.$20FinalReimbursementEntitlementFor20102011Line18MinusLine19StaticText=20. Final reimbursement entitlement for 2010-2011 (Line 18 minus Line 19)
+PaymentWorkSheet.StaticText.$21FinalReimbursementEntitlementProratedLine20Times51718479StaticText=21. Final reimbursement entitlement prorated (Line 20 times .51718479)
+PaymentWorkSheet.StaticText.$22AdvanceReimbursementEntitlementFor20112012Line18Times2StaticText=22. Advance reimbursement entitlement for 2011-2012 (Line 18 times .2)
+PaymentWorkSheet.StaticText.$23AdditionalReimbursementForCourtDesegregationOrderStaticText=23. Additional reimbursement for court desegregation order
+PaymentWorkSheet.StaticText.$24TotalPaymentFor20102011Line21PlusLine22PlusLine23StaticText=24. Total payment for 2010-2011 (Line 21 plus Line 22 plus Line 23)
+PaymentWorkSheet.StaticText.$25TotalActualMilesTraveledForActivityTripsFieldTripsAthleticTripsEtcFor20102011StaticText=25. Total actual miles traveled for activity trips, field trips, athletic trips, etc. for 2010-2011
+PaymentWorkSheet.StaticText.$26TotalActualMilesTraveledForAnyPurposeIn20102011ExcludingTransportationSupportVehiclesStaticText=26. Total actual miles traveled for any purpose in 2010-2011 (excluding transportation support vehicles)
+PaymentWorkSheet.StaticText.$2CapitalOutlayExclusionForPupilTransportationForIndependentContractorsAsCalculatedByCdeStaticText=2. Capital outlay exclusion for pupil transportation for independent contractors as calculated by CDE
+PaymentWorkSheet.StaticText.$3NetCurrentOperatingExpendituresLine1MinusLine2StaticText=3. Net Current operating expenditures (Line 1 minus Line 2)
+PaymentWorkSheet.StaticText.$4MileageTraveledForTransportingMigrantEducationPupilsLine2Cde40StaticText=4. Mileage traveled for transporting migrant education pupils (Line 2 CDE-40)
+PaymentWorkSheet.StaticText.$5MileageTraveledForRegularPupilTransportationOnTheMileageCountDateLine3Cde40NearestToOctober1StaticText=5. Mileage traveled for regular pupil transportation on the mileage count date (Line 3 CDE-40  Nearest to October 1)
+PaymentWorkSheet.StaticText.$6DaysOfSchoolHeldWhenPupilsWereTransportedIn20102011FiscalYearSchoolTermLine4Cde40StaticText=6. Days of school held when pupils were transported in 2010-2011 fiscal year school term (Line 4 CDE-40)
+PaymentWorkSheet.StaticText.$7RegularEducationPupilTransportationMileageStaticText=7. Regular education pupil transportation mileage
+PaymentWorkSheet.StaticText.$8TransportationReimbursableMileageLine4PlusLine7StaticText=8. Transportation reimbursable mileage (Line 4 plus Line 7)
+PaymentWorkSheet.StaticText.$9MileageEntitlementLine8Times3787StaticText=9. Mileage entitlement (Line 8 times .3787)
+PaymentWorkSheet.StaticText.fiscalYearStaticText=Fiscal Year
+PaymentWorkSheet.StaticText.numberOfPupilsStaticText=Number of Pupils
+PaymentWorkSheet.StaticText.paymentWorksheetStaticText=Payment Worksheet
+PaymentWorkSheet.StaticText.schoolDistrictNameAndNumberStaticText=School District Name and Number
+PaymentWorkSheet.Textbox.actMilesTextbox=ACT_MILES
+PaymentWorkSheet.Textbox.advPayLyTextbox=ADV_PAY_LY
+PaymentWorkSheet.Textbox.advPayTextbox=ADV_PAY
+PaymentWorkSheet.Textbox.boardTranTextbox=BOARD_TRAN
+PaymentWorkSheet.Textbox.capOutTranTextbox=CAP_OUT_TRAN
+PaymentWorkSheet.Textbox.desegReimTextbox=DESEG_REIM
+PaymentWorkSheet.Textbox.districtDistributionTextbox=DISTRICT_DISTRIBUTION
+PaymentWorkSheet.Textbox.exCostsTextbox=EX_COSTS
+PaymentWorkSheet.Textbox.exReimTextbox=EX_REIM
+PaymentWorkSheet.Textbox.finalReimEntitlementTextbox=FINAL_REIM_ENTITLEMENT
+PaymentWorkSheet.Textbox.finalReimProratedTextbox=FINAL_REIM_PRORATED
+PaymentWorkSheet.Textbox.fiscalYearTextbox=FISCAL_YEAR
+PaymentWorkSheet.Textbox.maxReimEntitlementTextbox=MAX_REIM_ENTITLEMENT
+PaymentWorkSheet.Textbox.mileageEntitlementTextbox=MILEAGE_ENTITLEMENT
+PaymentWorkSheet.Textbox.mileageEntitlementTextbox_2=MILEAGE_ENTITLEMENT
+PaymentWorkSheet.Textbox.netCurrentOperExpendTextbox=NET_CURRENT_OPER_EXPEND
+PaymentWorkSheet.Textbox.operTranTextbox=OPER_TRAN
+PaymentWorkSheet.Textbox.pupilTranTextbox=PUPIL_TRAN
+PaymentWorkSheet.Textbox.regDaysTextbox=REG_DAYS
+PaymentWorkSheet.Textbox.regDMilesTextbox=REG_D_MILES
+PaymentWorkSheet.Textbox.regDMilesTextbox_2=REG_D_MILES
+PaymentWorkSheet.Textbox.reimTranLyTextbox=REIM_TRAN_LY
+PaymentWorkSheet.Textbox.reimTranLyTextbox_2=REIM_TRAN_LY
+PaymentWorkSheet.Textbox.reimTranTextbox=REIM_TRAN
+PaymentWorkSheet.Textbox.totalMilesTextbox=TOTAL_MILES
+PaymentWorkSheet.Textbox.totalReimEntitlementTextbox=TOTAL_REIM_ENTITLEMENT
+PaymentWorkSheet.Textbox.totalReimMileageTextbox=TOTAL_REIM_MILEAGE
+
+# PaymentWorkSheetForm
+PaymentWorkSheetForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+PaymentWorkSheetForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+PaymentWorkSheetForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+PaymentWorkSheetForm.Error.Duplicate=Duplicate records cannot be created.
+PaymentWorkSheetForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+PaymentWorkSheetForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+PaymentWorkSheetForm.Error.NoRecordSelected=No record selected.
+PaymentWorkSheetForm.Error.RecordNotFound=Record not found.
+PaymentWorkSheetForm.PageTitle=Payment_Worksheet
+
+# Reports
+Reports.Button.cancelButton.ConfirmationMessage=
+Reports.Button.cancelButton.ConfirmationPrompt=
+Reports.Button.cancelButton=Cancel
+Reports.Button.generateAndViewReportSButton.ConfirmationMessage=
+Reports.Button.generateAndViewReportSButton.ConfirmationPrompt=
+Reports.Button.generateAndViewReportSButton=Generate and View Report(s)
+Reports.Button.postReportSToWebButton.ConfirmationMessage=
+Reports.Button.postReportSToWebButton.ConfirmationPrompt=
+Reports.Button.postReportSToWebButton=Post Report(s) to Web
+Reports.Button.printReportSButton.ConfirmationMessage=
+Reports.Button.printReportSButton.ConfirmationPrompt=
+Reports.Button.printReportSButton=Print Report(s)
+Reports.Button.saveReportSButton.ConfirmationMessage=
+Reports.Button.saveReportSButton.ConfirmationPrompt=
+Reports.Button.saveReportSButton=Save Report(s)
+Reports.Checkbox.checkbox267Checkbox=Generate all monthly reports
+Reports.Checkbox.checkbox931Checkbox=Select
+Reports.DropdownList.districtCodeDropdownList=District code
+Reports.DropdownList.fiscalYearDropdownList=Fiscal year
+Reports.DropdownList.forProcessingDateDropdownList=For processing date
+Reports.DynamicText.vTextstringDynamicText=Description
+Reports.DynamicText.vTextstringDynamicText_2=Report name
+Reports.StaticText.forProcessingDateStaticText=For Processing Date:
+Reports.StaticText.reportsStaticText=Reports
+
+# ReportsForm
+ReportsForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+ReportsForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+ReportsForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+ReportsForm.Error.Duplicate=Duplicate records cannot be created.
+ReportsForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+ReportsForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+ReportsForm.Error.NoRecordSelected=No record selected.
+ReportsForm.Error.RecordNotFound=Record not found.
+ReportsForm.PageTitle=Reports
+
+# SSOLogin
+SSOLogin.Button.loginButton.ConfirmationMessage=
+SSOLogin.Button.loginButton.ConfirmationPrompt=
+SSOLogin.Button.loginButton=Login
+SSOLogin.PasswordBox.vTextstringPasswordBox=Password
+SSOLogin.StaticText.anyQuestionsOrCommentsOnTheOrganizationOrOperationOfThisSiteStaticText=Any questions or comments on the organization or operation of this site?
+SSOLogin.StaticText.coloradoDepartmentOfEducationSingleSignOnStaticText=Colorado Department of Education Single Sign On
+SSOLogin.StaticText.copyright19992008ColoradoDepartmentOfEducationAllRightsReservedStaticText=Copyright 1999-2008 Colorado Department of Education. All rights reserved.
+SSOLogin.StaticText.inappropriateUseMaySubjectViolatorsToCriminalCivilAndOrAdministrativeActionAllUseSubjectToMonitoringStaticText=Inappropriate use may subject violators to criminal, civil, and/or administrative action. All use subject to monitoring.
+SSOLogin.StaticText.passwordStaticText=Password:
+SSOLogin.StaticText.theColoradoDepartmentOfEducationStaticText=Colorado Department of Education
+SSOLogin.StaticText.unauthorizedAccessOrUseOfThisComputerSystemMaySubjectViolatorsToCriminalCivilAndOrAdministrativeActionStaticText=Unauthorized access or use of this computer system may subject violators to criminal, civil, and/or administrative action.
+SSOLogin.StaticText.userNameStaticText=User Name:
+SSOLogin.StaticText.warningThisComputerSystemMayBeAccessedOnlyByAuthorizedPersonnelAndUsedOnlyForOfficialStateBusinessStaticText=WARNING: This computer system may be accessed only by authorized personnel and used only for official state business.
+SSOLogin.Textbox.vUsernameTextbox=User name
+
+# SSOLoginForm
+SSOLoginForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+SSOLoginForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+SSOLoginForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+SSOLoginForm.Error.Duplicate=Duplicate records cannot be created.
+SSOLoginForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+SSOLoginForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+SSOLoginForm.Error.NoRecordSelected=No record selected.
+SSOLoginForm.Error.RecordNotFound=Record not found.
+SSOLoginForm.PageTitle=Login
+
+# TransMenuForm
+TransMenuForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+TransMenuForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+TransMenuForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+TransMenuForm.Error.Duplicate=Duplicate records cannot be created.
+TransMenuForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+TransMenuForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+TransMenuForm.Error.NoRecordSelected=No record selected.
+TransMenuForm.Error.RecordNotFound=Record not found.
+TransMenuForm.PageTitle=Transport Menu
+
+# UploadVariables
+UploadVariables.Button.browseButton.ConfirmationMessage=
+UploadVariables.Button.browseButton.ConfirmationPrompt=
+UploadVariables.Button.browseButton=Browse
+UploadVariables.Button.cancelButton.ConfirmationMessage=
+UploadVariables.Button.cancelButton.ConfirmationPrompt=
+UploadVariables.Button.cancelButton=Cancel
+UploadVariables.Button.clearButton.ConfirmationMessage=
+UploadVariables.Button.clearButton.ConfirmationPrompt=
+UploadVariables.Button.clearButton=Clear
+UploadVariables.Button.confirmUploadDataButton.ConfirmationMessage=
+UploadVariables.Button.confirmUploadDataButton.ConfirmationPrompt=
+UploadVariables.Button.confirmUploadDataButton=Confirm Upload Data
+UploadVariables.Button.displayDataButton.ConfirmationMessage=
+UploadVariables.Button.displayDataButton.ConfirmationPrompt=
+UploadVariables.Button.displayDataButton=Display Data
+UploadVariables.Button.saveVariableButton.ConfirmationMessage=
+UploadVariables.Button.saveVariableButton.ConfirmationPrompt=
+UploadVariables.Button.saveVariableButton=Save Variable
+UploadVariables.DropdownList.dataElement=DataElement
+UploadVariables.DropdownList.districtCodeDropdownList=District code
+UploadVariables.DropdownList.fiscalYear=FiscalYear
+UploadVariables.DropdownList.fiscalYearDropdownList_2=Select fiscal year
+UploadVariables.FileUpload.chooseFileToUploadFileUpload=Choose file to upload
+UploadVariables.StaticText.chooseFileToUploadStaticText=Choose File to Upload
+UploadVariables.StaticText.dataElementStaticText=Data Element
+UploadVariables.StaticText.districtCodeStaticText=District Code
+UploadVariables.StaticText.enterUpdateSingleVariableStaticText=Enter/Update Single Variable
+UploadVariables.StaticText.fiscalYearStaticText=Fiscal Year
+UploadVariables.StaticText.selectFiscalYearStaticText=Select Fiscal Year
+UploadVariables.StaticText.uploadVariablesAdjustmentsStaticText=Upload Variables/Adjustments:
+UploadVariables.StaticText.valueStaticText=Value
+UploadVariables.Textbox.dataElement=DataElement
+
+# UploadVariablesForm
+UploadVariablesForm.Error.ConcurrentModification=The record has just been modified by another user. Please review and re-apply your changes as appropriate.
+UploadVariablesForm.Error.DataIntegrity=The record could not be saved due to a data integrity violation.
+UploadVariablesForm.Error.Deadlock=The operation has failed due to a conflict with another process. Please try again.
+UploadVariablesForm.Error.Duplicate=Duplicate records cannot be created.
+UploadVariablesForm.Error.NoCurrentRecord=The requested operation can not be peformed because no record is currently selected.
+UploadVariablesForm.Error.NoMatchingRecordFound=No record matching your filter criteria was found.
+UploadVariablesForm.Error.NoRecordSelected=No record selected.
+UploadVariablesForm.Error.RecordNotFound=Record not found.
+UploadVariablesForm.PageTitle=Upload Variables

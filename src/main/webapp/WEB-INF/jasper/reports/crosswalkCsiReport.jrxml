@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="crosswalkCsiReport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b2152f03-41cd-49a0-822b-a9d747bbe64d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Fiscal_Year" class="java.lang.String">
+		<defaultValueExpression><![CDATA[20122013]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select *
+  from crosswalk_csi
+ where fiscal_year = '20122013']]>
+	</queryString>
+	<field name="FISCAL_YEAR" class="java.lang.String"/>
+	<field name="DISTRICT_NUMBER" class="java.lang.String"/>
+	<field name="SCHOOL_CODE" class="java.lang.String"/>
+	<field name="GRADE_LEVEL" class="java.lang.String"/>
+	<field name="MEMBER" class="java.math.BigDecimal"/>
+	<field name="CDE_MEMBER" class="java.math.BigDecimal"/>
+	<field name="PARTTIME_H" class="java.math.BigDecimal"/>
+	<field name="PARTTIME_F" class="java.math.BigDecimal"/>
+	<field name="FTE_NOT_ELIG" class="java.math.BigDecimal"/>
+	<field name="FTE_ELIG" class="java.math.BigDecimal"/>
+	<field name="FUNDED_COUNT" class="java.math.BigDecimal"/>
+	<field name="LUNCH_F" class="java.math.BigDecimal"/>
+	<field name="ASCENT_TOT" class="java.math.BigDecimal"/>
+	<field name="UPDATE_TIMESTAMP" class="java.sql.Timestamp"/>
+	<field name="USER_ID" class="java.lang.String"/>
+	<field name="ID" class="java.math.BigDecimal"/>
+	<field name="VERSION" class="java.math.BigDecimal"/>
+	<field name="CSI_ONLINE_CNT" class="java.math.BigDecimal"/>
+	<field name="CSI_ASCENT_CNT" class="java.math.BigDecimal"/>
+	<field name="CSI_FL_1_8_CNT" class="java.math.BigDecimal"/>
+	<field name="CSI_FL_K_12_CNT" class="java.math.BigDecimal"/>
+	<field name="CSI_K_12_FTE_CNT" class="java.math.BigDecimal"/>
+	<field name="PER_PUPIL_REVENUE" class="java.math.BigDecimal"/>
+	<field name="CSI_KIND_FTE_CNT" class="java.math.BigDecimal"/>
+	<field name="CSI_SUPPLEMENTAL_K" class="java.math.BigDecimal"/>
+	<field name="CSI_CPP_CNT" class="java.math.BigDecimal"/>
+	<field name="CSI_MEM_1_8_CNT" class="java.math.BigDecimal"/>
+	<field name="CSI_MEM_K_12_CNT" class="java.math.BigDecimal"/>
+	<field name="FUNDING_DISTRICT" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="c2b136c1-b21b-46b2-b9e1-835c0d2c64f8" x="0" y="42" width="49" height="20"/>
+				<textElement/>
+				<text><![CDATA[DISTRICT_NUMBER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9ab0fe58-a582-4d38-afcf-24be151ae380" x="49" y="42" width="40" height="20"/>
+				<textElement/>
+				<text><![CDATA[GRADE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d49f3fe-6a87-4b96-ab0e-ea93ad8339d3" x="90" y="43" width="59" height="19"/>
+				<textElement/>
+				<text><![CDATA[SCHOOL_CODE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0f73b740-a0b0-4ab6-bf82-fac53ecb18d0" x="149" y="43" width="49" height="19"/>
+				<textElement/>
+				<text><![CDATA[ASCENT_TOT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c770f100-14ff-4d7a-b428-96415cf285b6" x="198" y="42" width="53" height="20"/>
+				<textElement/>
+				<text><![CDATA[CSI_CPP_CNT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5d02d068-a9da-459b-ac10-031a37d24a0b" x="251" y="43" width="51" height="19"/>
+				<textElement/>
+				<text><![CDATA[CSI_FL_1_8_CNT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3edb7d02-a5e3-4ceb-b51e-a766a57f68c5" x="302" y="43" width="38" height="19"/>
+				<textElement/>
+				<text><![CDATA[CSI_FL_K_12_CNT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8391ca07-c604-4a33-9e63-fdd9493d782c" x="397" y="42" width="50" height="20"/>
+				<textElement/>
+				<text><![CDATA[CSI_KIND_FTE_CNT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="45c2d0e4-8575-44b9-9e33-827609b15ac6" x="340" y="42" width="57" height="20"/>
+				<textElement/>
+				<text><![CDATA[CSI_MEM_1_8_CNT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="54274261-72a0-4554-aadb-8e7d9039a9e1" x="447" y="43" width="60" height="19"/>
+				<textElement/>
+				<text><![CDATA[CSI_SUPPLEMENTAL_K]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c9735773-0f99-4685-bdc5-053fbc3047cc" x="507" y="43" width="38" height="19"/>
+				<textElement/>
+				<text><![CDATA[FUNDED_COUNT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement uuid="cec3376b-1dc1-4804-acd0-df2f39824893" x="0" y="1" width="49" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DISTRICT_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fef67358-3459-4aa5-b7df-1637e740ab06" x="49" y="0" width="40" height="22"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{GRADE_LEVEL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5d0b01cf-3ce8-47eb-8ee4-03856ce2cdfe" x="89" y="0" width="60" height="21"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SCHOOL_CODE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c3a79f5f-3de1-41df-a25b-a9d555a5348c" x="149" y="0" width="49" height="21"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{ASCENT_TOT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="17d8d49f-39e2-487c-9a75-13cf4fc1576c" x="198" y="0" width="53" height="21"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CSI_CPP_CNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d1a19d57-1e3c-4a0e-a427-212459ad8f88" x="251" y="2" width="51" height="19"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CSI_FL_1_8_CNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="169fd75e-e9f6-4e8e-8524-1166b7ef84ef" x="302" y="0" width="38" height="21"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CSI_FL_K_12_CNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8b320408-329f-493c-aa04-e37d47043266" x="397" y="0" width="50" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CSI_KIND_FTE_CNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c0d7fbc3-57b3-4e36-8a7d-e644173de6fe" x="340" y="2" width="57" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CSI_MEM_1_8_CNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9a8408c5-5329-41d9-bc45-9ce88f23db69" x="447" y="0" width="60" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{PER_PUPIL_REVENUE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b5f69272-148e-4d29-8e02-1371b077e62d" x="507" y="1" width="38" height="19"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{FUNDED_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

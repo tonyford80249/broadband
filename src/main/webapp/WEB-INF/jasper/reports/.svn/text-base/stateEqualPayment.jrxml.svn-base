@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="stateEqualPayment" language="groovy" pageWidth="1800" pageHeight="864" orientation="Landscape" columnWidth="1760" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="aa7c2032-e713-43f6-b22e-ac3ebdb57ffa">
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="423"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.callouts" value="##Thu Oct 25 07:46:09 PDT 2012"/>
+	<style name="rowStyle" isDefault="true">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}.intValue() % 2 == 0]]></conditionExpression>
+			<style mode="Opaque" forecolor="#000000" backcolor="#CCCCCC"/>
+		</conditionalStyle>
+	</style>
+	<style name="totalStyle">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}.intValue() % 2 == 0]]></conditionExpression>
+			<style mode="Opaque" forecolor="#000000" backcolor="#D2D8DE"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="dataset1" uuid="8b2023e1-6443-4f9c-aaf0-70a96e5ab20d"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="month" class="java.lang.String"/>
+	<field name="funding" class="java.lang.Double"/>
+	<field name="swap" class="java.lang.Double"/>
+	<field name="debt" class="java.lang.Double"/>
+	<field name="audit" class="java.lang.Double"/>
+	<field name="csi" class="java.lang.Double"/>
+	<field name="other" class="java.lang.Double"/>
+	<field name="netPayment" class="java.lang.Double"/>
+	<field name="priorPayment" class="java.lang.Double"/>
+	<field name="variance" class="java.lang.Double"/>
+	<field name="projected" class="java.lang.Double"/>
+	<field name="paid" class="java.lang.Double"/>
+	<field name="remaining" class="java.lang.Double"/>
+	<field name="fiscalYear" class="java.lang.String"/>
+	<field name="currentMonth" class="java.lang.String"/>
+	<field name="districtName" class="java.lang.String"/>
+	<field name="districtNumber" class="java.lang.String"/>
+	<field name="currentDate" class="java.util.Date"/>
+	<variable name="totalFunding" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{funding}]]></variableExpression>
+	</variable>
+	<variable name="totalSwap" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{swap}]]></variableExpression>
+	</variable>
+	<variable name="totalCharterDebt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{debt}]]></variableExpression>
+	</variable>
+	<variable name="totalAudit" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{audit}]]></variableExpression>
+	</variable>
+	<variable name="totalCSI" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{csi}]]></variableExpression>
+	</variable>
+	<variable name="totalOther" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{other}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="111" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="9284409a-0ea8-479c-8157-7441a995df2a" mode="Opaque" x="0" y="64" width="1760" height="47" forecolor="#203C73" backcolor="#D2D8DE"/>
+				<textElement>
+					<font fontName="Calibri" size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[State Equal Monthly Payment Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1dd604e4-319b-4ecb-bd14-ac63e14117e0" mode="Opaque" x="0" y="0" width="1760" height="64" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<box topPadding="13" leftPadding="10"/>
+				<textElement>
+					<font fontName="SansSerif" size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CDE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="153b2636-c66b-423a-902b-e30405d7f064" mode="Transparent" x="30" y="91" width="56" height="20" forecolor="#003976"/>
+				<textElement/>
+				<text><![CDATA[DISTRICT:]]></text>
+			</staticText>
+			<elementGroup>
+				<textField>
+					<reportElement uuid="2ca6085b-a11a-4ed3-9fb7-e8f4ad24f891" mode="Transparent" x="825" y="39" width="115" height="20" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fiscalYear} + " " + $F{currentMonth}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="49091487-e4b6-4f05-b551-2377fbd65d0b" mode="Transparent" x="783" y="3" width="214" height="44" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[PUBLIC SCHOOL FINANCE ACT OF 1994 STATE SHARE OF TOTAL PROGRAM]]></text>
+				</staticText>
+			</elementGroup>
+			<textField>
+				<reportElement uuid="cb0d1bb8-1411-47f8-b31f-242cb03e9d4d" mode="Transparent" x="1615" y="11" width="80" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="50e5da4f-4719-4cf8-aa93-649b46e92296" mode="Transparent" x="1695" y="11" width="40" height="20" forecolor="#FFFFFF"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8c894dc6-cb14-4e7d-b779-266e561c3cb5" isPrintRepeatedValues="false" mode="Transparent" x="86" y="91" width="100" height="20" forecolor="#003976"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{districtName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="b2cf878b-4eb8-42cb-9e1d-2ad053d58bdf" mode="Opaque" x="74" y="19" width="100" height="20" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COLORADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="962e6863-2991-42ef-b1eb-bbfff3187274" mode="Opaque" x="74" y="31" width="156" height="20" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT of EDUCATION]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="bd9b8f13-2f69-4141-9bdc-4e865b080189" mode="Opaque" x="0" y="0" width="130" height="40" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Month]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0d41e3ba-8b16-4993-8dc0-79f4d8b007bf" mode="Opaque" x="130" y="0" width="130" height="40" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current Month Funding]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f7c7295f-ca46-45c8-bd7b-fb503057a371" mode="Opaque" x="260" y="0" width="130" height="40" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current Month Swap]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="771c5ce5-134a-4c83-8e65-2d46d49a59cc" mode="Opaque" x="390" y="0" width="130" height="40" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current Month Charter Debt]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4379d025-59e7-477c-b82f-122ec54a1bc1" mode="Opaque" x="520" y="0" width="130" height="40" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current Month Audit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bcb6ef27-9b47-4595-ae0d-6f96f01c52ec" mode="Opaque" x="650" y="0" width="130" height="40" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current Month CSI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8029de6a-0d2b-455d-a26d-92b11942cd89" mode="Opaque" x="780" y="0" width="130" height="40" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current Month Other]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3f5bd418-6e1e-423f-822d-4f07c16a0043" mode="Opaque" x="910" y="0" width="130" height="40" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Net Month Payment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="25e7c9ff-6c56-4c1f-b5a6-b7527fa69916" mode="Opaque" x="1040" y="0" width="130" height="40" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prior Month's Payment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2e18fa71-4d85-4d6a-b385-1125aa3fdf82" mode="Opaque" x="1170" y="0" width="130" height="40" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Variance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="eedf3fa6-7232-411c-a85d-ad08fed2bc55" mode="Opaque" x="1300" y="0" width="132" height="40" forecolor="#000000" backcolor="#95B6D2"/>
+				<box>
+					<topPen lineWidth="0.0" lineColor="#1F9D00"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Projected State Share]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e37124b1-a83d-43c2-bcd4-a625fda772b2" mode="Opaque" x="1432" y="0" width="130" height="40" forecolor="#000000" backcolor="#95B6D2"/>
+				<box>
+					<topPen lineWidth="0.0" lineColor="#1F9D00"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Year-to-Date State Paid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9499ce9f-9bee-48ad-81d5-34d2c67de3f7" mode="Opaque" x="1562" y="0" width="198" height="40" forecolor="#000000" backcolor="#95B6D2"/>
+				<box>
+					<topPen lineWidth="0.0" lineColor="#1F9D00"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Remaining State Share to be Paid]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Immediate">
+			<textField>
+				<reportElement uuid="17b5e828-5809-4e94-a89b-d4786d84aba0" style="rowStyle" x="0" y="0" width="130" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{month}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="c286d157-e416-41a4-a214-78f8d7e2ffe2" style="rowStyle" x="130" y="0" width="130" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{funding} != null ? $F{funding} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="34e93d54-83b0-41c2-a965-6c6117545fde" style="rowStyle" x="260" y="0" width="130" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{swap} != null ? $F{swap} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="b3510832-bf55-4487-84b1-ea3df8ae2955" style="rowStyle" x="390" y="0" width="130" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{debt} != null ? $F{debt} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="2f4fef6d-bd34-4959-aeb8-af96927732f6" style="rowStyle" x="520" y="0" width="130" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{audit} != null ? $F{audit} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="fc97b084-5df0-4bba-b3cf-93b71f4f3813" style="rowStyle" x="650" y="0" width="130" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{csi} != null ? $F{csi} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="e22a94f7-b481-4841-883e-d84786a741e5" style="rowStyle" x="780" y="0" width="130" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{other} != null ? $F{other} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="101a8cee-4fb6-492d-abb3-fedcf43b20a1" style="rowStyle" x="1170" y="0" width="130" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{variance}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="01708714-be59-4806-b1a1-a32150d5814f" style="rowStyle" x="910" y="0" width="130" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{netPayment}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="51ad02da-bdb6-41fa-8c4a-e5ab9359c208" style="rowStyle" x="1040" y="0" width="130" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{priorPayment} != null ? $F{priorPayment} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="0f7042cb-654c-4f3c-b560-28c887a3cb0c" style="totalStyle" x="1300" y="0" width="132" height="20"/>
+				<box>
+					<leftPen lineWidth="0.0" lineColor="#1F9D00"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{projected}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="d3df30d3-9dea-433e-ba46-218d03dc63f1" style="totalStyle" x="1432" y="0" width="130" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{paid}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="01bd3ffb-1d7d-4d6a-abc4-6779c9b6f4be" style="totalStyle" x="1562" y="0" width="198" height="20"/>
+				<box>
+					<rightPen lineWidth="0.0" lineColor="#1F9D00"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{remaining}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch">
+			<elementGroup/>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="303" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="d7c3d242-a76d-4e41-8134-1ec9723c5700" x="25" y="174" width="703" height="20"/>
+				<textElement/>
+				<text><![CDATA[Audit: Amount district authorized to be withheld for audit adjustment.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0ef3ae67-4122-4e4b-85e5-033eb148f000" x="0" y="111" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[N/A]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="05644920-5092-4100-9992-2abd3e98b0e1" x="25" y="254" width="703" height="20"/>
+				<textElement/>
+				<text><![CDATA[2011-12 Total, Year-to-Date, and Remaining columns = Prior to adjustments]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3892ade9-6b51-4c61-90f7-0c12233f225d" x="25" y="214" width="703" height="20"/>
+				<textElement/>
+				<text><![CDATA[Dcember Changes: Student Count, assessed valuation, annual audits.]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="00c4a5d8-f856-49c1-8d03-ac11c619ad7a" x="0" y="97" width="728" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="be62fa85-9d93-4f8c-89a8-8b1197b2c8ca" x="25" y="234" width="703" height="20"/>
+				<textElement/>
+				<text><![CDATA[January/February Changes: Specific ownership tax revenue, mill levies and final assessed valuations.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6fe729d-e9aa-4a4c-b8a1-bd0426e0f283" x="0" y="154" width="100" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOTES:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6b6a63f3-25f3-412a-acc7-3c1e03cff827" x="0" y="61" width="567" height="20"/>
+				<textElement/>
+				<text><![CDATA[* For explanation of Month to Month Variance -- see notes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4ce795b9-ed8e-49d4-8749-10116888a3a9" x="25" y="194" width="703" height="20"/>
+				<textElement/>
+				<text><![CDATA[Net Payment: Should equal amount of deposit this month to your bank acount; If incorrrect, call Mary Lynn Christel at  (303) 866-6518.]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="8eab2a5e-95fe-4b2d-856f-92b42ad740bf" x="0" y="142" width="728" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="60a4ead8-f6fc-4250-90fc-791f8eb2cfc9" x="25" y="274" width="703" height="20"/>
+				<textElement/>
+				<text><![CDATA[June Changes: Annual audits and rescissions (if applicable)]]></text>
+			</staticText>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="05225324-c123-4346-ade0-fb7d7664ea0f" mode="Opaque" x="130" y="0" width="130" height="20" forecolor="#003876" backcolor="#ABC178"/>
+				<box>
+					<topPen lineWidth="2.0" lineColor="#003876"/>
+				</box>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalFunding} != null ? $V{totalFunding} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="1fb51f4f-7f3f-407f-ab7a-90f8187b53fb" mode="Opaque" x="260" y="0" width="130" height="20" forecolor="#003876" backcolor="#ABC178"/>
+				<box>
+					<topPen lineWidth="2.0" lineColor="#003876"/>
+				</box>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalSwap} != null ? $V{totalSwap} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0510a648-34c0-45a0-b52d-ba4ba568c537" mode="Opaque" x="0" y="0" width="130" height="20" forecolor="#003876" backcolor="#ABC178"/>
+				<box>
+					<topPen lineWidth="2.0" lineColor="#003876"/>
+				</box>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTALS :]]></text>
+			</staticText>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="682769e6-d3c6-453b-b9db-6a3bf73fd0d6" mode="Opaque" x="650" y="0" width="130" height="20" forecolor="#003876" backcolor="#ABC178"/>
+				<box>
+					<topPen lineWidth="2.0" lineColor="#003876"/>
+				</box>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalCSI} != null ? $V{totalCSI} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="555c8bcc-12c7-4962-a956-5e0697bb2831" mode="Opaque" x="780" y="0" width="130" height="20" forecolor="#003876" backcolor="#ABC178"/>
+				<box>
+					<topPen lineWidth="2.0" lineColor="#003876"/>
+				</box>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalOther} != null ? $V{totalOther} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="77db3559-9025-40e9-aa01-3dd774b125c0" mode="Opaque" x="390" y="0" width="130" height="20" forecolor="#003876" backcolor="#ABC178"/>
+				<box>
+					<topPen lineWidth="2.0" lineColor="#003876"/>
+				</box>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalCharterDebt} != null ? $V{totalCharterDebt} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ ###,###,##0.00">
+				<reportElement uuid="58f55c8d-df15-4cb3-9364-b5b106bb8d72" mode="Opaque" x="520" y="0" width="130" height="20" forecolor="#003876" backcolor="#ABC178"/>
+				<box>
+					<topPen lineWidth="2.0" lineColor="#003876"/>
+				</box>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalAudit} != null ? $V{totalAudit} : new Double(0.0)]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

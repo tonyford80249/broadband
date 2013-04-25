@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- DAOs -->
+	<bean id="hibernateDAO" class="com.cdoe.db.hibernate.HibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="uploadVariablesDAO" class="com.cdoe.biz.impl.stateequal.UploadVariablesDAO" parent="hibernateDAO"/>
+	<bean id="importAuditsDAO" class="com.cdoe.biz.impl.stateequal.ImportAuditsDAO" parent="hibernateDAO"/>
+	<bean id="displayAdjustmentDAO" class="com.cdoe.biz.impl.stateequal.DisplayAdjustmentDAO" parent="hibernateDAO"/>
+	<bean id="commentsDAO" class="com.cdoe.biz.impl.stateequal.CommentsDAO" parent="hibernateDAO"/>
+	<bean id="reportsDAO" class="com.cdoe.biz.impl.stateequal.ReportsDAO" parent="hibernateDAO"/>
+	<bean id="millLevyDAO" class="com.cdoe.biz.impl.stateequal.MillLevyDAO" parent="hibernateDAO"/>
+	<bean id="millLevyOverrideWorksheetDAO" class="com.cdoe.biz.impl.stateequal.MillLevyOverrideWorksheetDAO" parent="hibernateDAO"/>
+	<bean id="electionsDAO" class="com.cdoe.biz.impl.stateequal.ElectionsDAO" parent="hibernateDAO"/>
+	<bean id="crosswalkCollectionDataDAO" class="com.cdoe.biz.impl.stateequal.CrosswalkCollectionDataDAO" parent="hibernateDAO"/>
+	<bean id="importAuditTransDataDAO" class="com.cdoe.biz.impl.stateequal.ImportAuditTransDataDAO" parent="hibernateDAO"/>
+	<bean id="cde40TransReimbFormDAO" class="com.cdoe.biz.impl.transportation.Cde40TransReimbFormDAO" parent="hibernateDAO"/>
+	<bean id="districtPaymentReportDAO" class="com.cdoe.biz.impl.transportation.DistrictPaymentReportDAO" parent="hibernateDAO"/>
+	<bean id="capitalOutlayDAO" class="com.cdoe.biz.impl.transportation.CapitalOutlayDAO" parent="hibernateDAO"/>
+	<bean id="cde40SummaryDAO" class="com.cdoe.biz.impl.transportation.Cde40SummaryDAO" parent="hibernateDAO"/>
+	<bean id="distributionAmountsDAO" class="com.cdoe.biz.impl.transportation.DistributionAmountsDAO" parent="hibernateDAO"/>
+	<bean id="coforsUploadDAO" class="com.cdoe.biz.impl.CoforsUploadDAO" parent="hibernateDAO"/>
+	<bean id="paymentWorkSheetDAO" class="com.cdoe.biz.impl.transportation.PaymentWorkSheetDAO" parent="hibernateDAO"/>
+	<bean id="districtDetailDAO" class="com.cdoe.biz.impl.OrganizationUnitMasterDAO" parent="hibernateDAO"/>
+	<bean id="transportationDAO" class="com.cdoe.biz.impl.transportation.TransportationDAO" parent="hibernateDAO"/>
+	<bean id="changeAtRiskCountsDAO" class="com.cdoe.biz.impl.ChangeAtRiskCountsDAO" parent="hibernateDAO"/>
+	<bean id="audTrackingDAO" class="com.cdoe.biz.impl.audit.AudTrackingDAO" parent="hibernateDAO"/>
+	<bean id="changeBillingDAO" class="com.cdoe.biz.impl.audit.AuditBillingDAO" parent="hibernateDAO"/>
+	<bean id="createAuditDAO" class="com.cdoe.biz.impl.CreateAuditDAO" parent="hibernateDAO"/>
+	<bean id="adjustmentStatusDAO" class="com.cdoe.biz.impl.AdjustmentStatusDAO" parent="hibernateDAO"/>
+	<bean id="uploadStudentsDAO" class="com.cdoe.biz.impl.audit.UploadStudentsDAO" parent="hibernateDAO"/>
+	<bean id="validateSASIDsDAO" class="com.cdoe.biz.impl.audit.ValidateSASIDsDAO" parent="hibernateDAO"/>
+	<bean id="updateStudentsDAO" class="com.cdoe.biz.impl.audit.UpdateStudentsDAO" parent="hibernateDAO"/>
+	<bean id="stateEqualReferenceDAO" class="com.cdoe.biz.impl.StateEqualReferenceDAO" parent="hibernateDAO"/>
+	<bean id="audCDE40TransReimbFormDAO" class="com.cdoe.biz.impl.AudCDE40TransReimbFormDAO" parent="hibernateDAO"/>
+	<bean id="auditRepaymentAdjustmentDAO" class="com.cdoe.biz.impl.audit.AuditRepaymentAdjustmentDAO" parent="hibernateDAO"/>
+        <bean id="stateEqualDAO" class="com.cdoe.biz.impl.stateequal.StateEqualDAO" parent="hibernateDAO"> 
+            <property name="datasource" ref="dataSource"/>                
+        </bean>
+        <bean id="monthlyPaymentsDAO" class="com.cdoe.biz.impl.stateequal.MonthlyPaymentsDAO" parent="hibernateDAO" />
+        <bean id="fteByGradeDAO" class="com.cdoe.biz.impl.stateequal.FteByGradeDAO" parent="hibernateDAO" />
+        <bean id="auditFreeLunchDAO" class="com.cdoe.biz.impl.audit.AuditFreeLunchDAO" parent="hibernateDAO" />
+        <bean id="auditFteByGradeDAO" class="com.cdoe.biz.impl.audit.AuditFteByGradeDAO" parent="hibernateDAO" />
+        <bean id="freeLunchDAO" class="com.cdoe.biz.impl.stateequal.FreeLunchDAO" parent="hibernateDAO" />
+        <bean id="csiDAO" class="com.cdoe.biz.impl.stateequal.CSICalculationsDAO" parent="hibernateDAO" />
+        <bean id="generatedReportDAO" class="com.cdoe.biz.impl.GeneratedReportDao" parent="hibernateDAO" />
+        <bean id="seMonthlyDao" class="com.cdoe.biz.impl.stateequal.SeMonthlyDao"  parent="hibernateDAO" />
+        <bean id="auditEqualDao" class="com.cdoe.biz.impl.audit.AuditEqualDAO"  parent="hibernateDAO" />
+                                   
+</beans>

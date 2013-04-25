@@ -1,0 +1,392 @@
+package com.cdoe.services.impl.stateequal;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+
+import com.cdoe.biz.IOrganizationUnitMasterDAO;
+import com.cdoe.biz.audit.IAudTrackingDAO;
+import com.cdoe.biz.audit.IAuditFreeLunchDAO;
+import com.cdoe.biz.audit.IAuditFteByGrade;
+import com.cdoe.biz.impl.OrganizationUnitMasterDAO;
+import com.cdoe.biz.impl.audit.AudTrackingDAO;
+import com.cdoe.biz.model.audit.AuditFreeLunch;
+import com.cdoe.biz.model.audit.AuditFteByGrade;
+import com.cdoe.biz.model.audit.AuditTracking;
+import com.cdoe.biz.model.equal.FreeLunch;
+import com.cdoe.biz.model.equal.FteByGrade;
+import com.cdoe.biz.model.jasper.ImportPriorYearAudit;
+import com.cdoe.biz.model.jasper.ImportPriorYearAuditCollection;
+import com.cdoe.biz.model.jasper.ImportPriorYearAuditDatasource;
+import com.cdoe.biz.stateequal.IFreeLunchDAO;
+import com.cdoe.biz.stateequal.IFteByGradeDAO;
+import com.cdoe.services.impl.BaseManager;
+import com.cdoe.services.stateequal.IImportAuditsManager;
+import com.cdoe.ui.form.grid.ImportAuditsGrid;
+import com.cdoe.ui.form.stateequal.ImportAuditsForm;
+import com.cdoe.ui.form.stateequal.ResetAuditsForm;
+import com.cdoe.util.FilenameConstructor;
+import com.cdoe.util.NullAwareBeanUtilsBean;
+import java.io.File;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.Map;
+import org.apache.commons.beanutils.BeanUtilsBean;
+
+public class ImportAuditsManager extends ReportManagerBase implements
+        IImportAuditsManager {
+    public class SimpleFilenameConstructor implements FilenameConstructor {
+        private Date timestamp;
+
+        public SimpleFilenameConstructor() {
+         this.timestamp = new Date();    
+        }
+        
+        @Override
+        public String construct(String defaultDirectory, String defaultFileName, String defaultExtention) {
+           String str = new SimpleDateFormat("mm_DD_yyyy").format(timestamp);
+            
+           return defaultDirectory + defaultFileName + "_" + str  + "." + defaultExtention;
+        }
+
+        @Override
+        public File construct(String defaultPath) {
+           return new File(defaultPath);
+        }
+        
+    }
+
+    private static final Logger logger = Logger
+            .getLogger(ImportAuditsManager.class);
+    private IAudTrackingDAO audTrackingDAO;
+    private IOrganizationUnitMasterDAO orgUnitMasterDAO;
+    private IAuditFreeLunchDAO auditFreeLunchDAO;
+    private IAuditFteByGrade auditFteByGradeDAO;
+    private IFreeLunchDAO freeLunchDAO;
+    private IFteByGradeDAO fteByGradeDAO;
+    private BeanUtilsBean clonerUtil = new NullAwareBeanUtilsBean();
+
+    @Override
+    public void uploadAudits(ImportAuditsForm importAuditsForm) {
+        for (ImportAuditsGrid grid : importAuditsForm.getImportAuditsGrid()) {
+            List<AuditFreeLunch> freeLunchAudits = auditFreeLunchDAO
+                    .findByAuditId(grid.getAuditId());
+            for (AuditFreeLunch auditFreeLunch : freeLunchAudits) {
+                //FreeLunch freeLunch = freeLunchDAO.findByUniqueKey(
+                //        auditFreeLunch.getDistrictNumber(),
+                //        auditFreeLunch.getFiscalYear(),
+                //        auditFreeLunch.getGradeLevel());
+                //if (freeLunch != null) {
+                //    freeLunch.setChangeType("AA");
+                //    freeLunch.setDateChanged(new Date());
+                //    freeLunch.setAuditID(grid.getAuditId());
+                //    freeLunch.setLunchF(auditFreeLunch.getLunchF());
+                //    freeLunchDAO.saveOrUpdate(freeLunch);
+                //} else {
+                try {
+                    FreeLunch newInstance = new FreeLunch();
+
+                    clonerUtil.copyProperties(newInstance, auditFreeLunch);
+
+                    newInstance.setId(null);
+                    newInstance.setVersion(null);
+                    newInstance.setUpdateTimestamp(null);
+
+                    freeLunchDAO.saveOrUpdate(newInstance);
+                } catch (Exception e) {
+                    logger.error("Error occurred while persisting FreeLunch new instnace", e);
+                }
+                //}
+            }
+            List<AuditFteByGrade> fteByGradeAudits = auditFteByGradeDAO
+                    .findByAuditId(grid.getAuditId());
+            for (AuditFteByGrade auditFteByGrade : fteByGradeAudits) {
+                //FteByGrade fteByGrade = fteByGradeDAO.findByUniqueKey(
+                //        auditFteByGrade.getDistrictNumber(),
+                //        auditFteByGrade.getFiscalYear(),
+                //        auditFteByGrade.getGradeLevel());
+                //if (fteByGrade != null) {
+                //    fteByGrade.setChangeType("AA");
+                //    fteByGrade.setDateChanged(new Date());
+                //    fteByGrade.setAuditID(grid.getAuditId());
+                //    fteByGrade.setCdeMember(auditFteByGrade.getCdeMember());
+                //    fteByGrade.setFteElig(auditFteByGrade.getFteElig());
+                //    fteByGrade.setFteNotElig(auditFteByGrade.getFteNotElig());
+                //    fteByGrade.setFundedCount(auditFteByGrade.getFundedCount());
+                //    fteByGrade.setMember(auditFteByGrade.getMember());
+                //    fteByGrade.setOutOfDist(auditFteByGrade.getOutOfDist());
+                //    fteByGrade.setParttimeF(auditFteByGrade.getParttimeF());
+                //    fteByGrade.setParttimeH(auditFteByGrade.getParttimeH());
+
+                //    fteByGradeDAO.saveOrUpdate(fteByGrade);
+                //} else {
+                try {
+                    FteByGrade newInstance = new FteByGrade();
+
+                    auditFteByGrade.setDateChanged(null);
+
+                    clonerUtil.copyProperties(newInstance, auditFteByGrade);
+
+                    newInstance.setId(null);
+                    newInstance.setVersion(null);
+                    newInstance.setUpdateTimestamp(null);
+
+                    fteByGradeDAO.saveOrUpdate(newInstance);
+                } catch (Exception e) {
+                    logger.error("Error occurred while persisting FteByGrade new instnace", e);
+                }
+                //}
+            }
+            AuditTracking audit = audTrackingDAO.findByUniqueKey(
+                    grid.getAuditId(), grid.getOrganizationCode());
+            audit.setDataMigrated(new Date());
+            audTrackingDAO.saveOrUpdate(audit);
+        }
+    }
+
+    @Override
+    public void rejectAudit(Integer auditId, String organizationCode) {
+
+        AuditTracking audit = audTrackingDAO.findByUniqueKey(auditId, organizationCode);
+        if (audit != null && audit.getDataMigrated() != null) {
+            List<AuditFreeLunch> freeLunchAudits = auditFreeLunchDAO
+                    .findByAuditId(auditId);
+
+            for (AuditFreeLunch auditFreeLunch : freeLunchAudits) {
+                freeLunchDAO.activatePreviousInstnace(auditFreeLunch.getDistrictNumber(), auditFreeLunch.getFiscalYear(), auditFreeLunch.getGradeLevel());
+            }
+
+            List<AuditFteByGrade> fteByGradeAudits = auditFteByGradeDAO
+                    .findByAuditId(auditId);
+
+            for (AuditFteByGrade auditFteByGrade : fteByGradeAudits) {
+                fteByGradeDAO.activatePreviousInstnace(auditFteByGrade.getDistrictNumber(), auditFteByGrade.getFiscalYear(), auditFteByGrade.getGradeLevel());
+            }
+
+            audit.setDataMigrated(null);
+            audit.setAuditCompleted(null);
+            audTrackingDAO.saveOrUpdate(audit);
+        }
+    }
+
+    @Override
+    public ImportAuditsForm setupImportAuditsForm() {
+        ImportAuditsForm form = new ImportAuditsForm();
+        List<AuditTracking> completedAudits = audTrackingDAO
+                .findAllCompletedAudits();
+        List<ImportAuditsGrid> importAuditsGridList = new ArrayList<ImportAuditsGrid>();
+        for (AuditTracking completedAudit : completedAudits) {
+            ImportAuditsGrid importAuditsGrid = new ImportAuditsGrid();
+            importAuditsGrid.setAuditId(completedAudit.getAuditID());
+            importAuditsGrid.setCompletedDate(completedAudit
+                    .getAuditCompleted());
+            importAuditsGrid.setOrganizationCode(completedAudit
+                    .getOrganizationCode());
+            importAuditsGrid.setOrganizationName(orgUnitMasterDAO
+                    .lookUpOrganization(completedAudit.getOrganizationCode())
+                    .getOrganizationName());
+            importAuditsGridList.add(importAuditsGrid);
+        }
+        form.setImportAuditsGrid(importAuditsGridList);
+        return form;
+    }
+
+    @Override
+    public ResetAuditsForm setupResetAuditsForm() {
+        return new ResetAuditsForm();
+    }
+    
+    /**
+     * 
+     * @param form
+     * @return 
+     */
+    public List<Integer> extractAuditIds(ImportAuditsForm form) {
+        List<Integer> results = new ArrayList<Integer>();
+        
+        for (ImportAuditsGrid  audit : form.getImportAuditsGrid()) {
+         results.add(audit.getAuditId());    
+        }
+      
+      
+      return results;
+    }
+    
+    
+    /**
+     * 
+     * @param form
+     * @return 
+     */
+    public ImportPriorYearAuditDatasource createDatasource(ImportAuditsForm form) {
+     ImportPriorYearAuditCollection collection = new ImportPriorYearAuditCollection();
+     
+        for (ImportAuditsGrid element : form.getImportAuditsGrid()) {
+        // collection.getAudits().add(new ImportPriorYearAudit(element.getAuditId().toString(),element.getOrganizationCode(),element.getOrganizationName(),element.getCompletedDate(), new Date()));   
+        }
+     
+     return new ImportPriorYearAuditDatasource(collection);   
+    }
+    
+    
+    /**
+     * 
+     * @return 
+     */
+    public SimpleFilenameConstructor createSimpleFilenameConstructor() {
+     return new SimpleFilenameConstructor();    
+    }
+
+    @Override
+    public void saveGeneratedData(Map<String, String> districts) {
+
+
+        int auditId = 10000;
+
+        Calendar auditCreatedDate = new GregorianCalendar(2012, 01, 1);
+
+        Calendar auditCompleteDate = new GregorianCalendar(2012, 03, 03);
+
+        System.out.println("create date : " + auditCreatedDate.getTime());
+
+        System.out.println("complete date : " + auditCompleteDate.getTime());
+
+        int count = 0;
+        int skipCount = 0;
+        for (String districtNumber : districts.keySet()) {
+
+            if (skipCount < 10) {
+                ++skipCount;
+
+                continue;
+            }
+
+            if (count > 40) {
+                break;
+            }
+
+            //auditCreatedDate.add(Calendar.DAY_OF_MONTH, 7);
+            //auditCompleteDate.add(Calendar.DAY_OF_MONTH, 10);
+
+            System.out.println("year : " + auditCreatedDate.get(Calendar.YEAR));
+            System.out.println("month : " + auditCreatedDate.get(Calendar.MONTH));
+            System.out.println("day : " + auditCreatedDate.get(Calendar.DAY_OF_MONTH));
+
+            Calendar interimDates = new GregorianCalendar(auditCreatedDate.get(Calendar.YEAR), auditCreatedDate.get(Calendar.MONTH), auditCreatedDate.get(Calendar.DAY_OF_MONTH));
+
+            System.out.println("interim date : " + interimDates.getTime());
+
+            AuditTracking audit = new AuditTracking();
+
+            interimDates.add(Calendar.DAY_OF_MONTH, 1);
+
+            audit.setAuditID(++auditId);
+            audit.setAtRiskHours(1200.0);
+            audit.setAuditCreated(auditCreatedDate.getTime());
+            interimDates.add(Calendar.DAY_OF_MONTH, 1);
+            audit.setOrganizationEngaged(interimDates.getTime());
+            interimDates.add(Calendar.DAY_OF_MONTH, 1);
+            audit.setDocumentsReceived(interimDates.getTime());
+            interimDates.add(Calendar.DAY_OF_MONTH, 1);
+            audit.setFieldWorkStarted(interimDates.getTime());
+            interimDates.add(Calendar.DAY_OF_MONTH, 1);
+            audit.setDraftReportIssued(interimDates.getTime());
+            interimDates.add(Calendar.DAY_OF_MONTH, 1);
+            audit.setDraftReportCompleted(interimDates.getTime());
+            interimDates.add(Calendar.DAY_OF_MONTH, 1);
+            audit.setFieldWorkCompleted(interimDates.getTime());
+            interimDates.add(Calendar.DAY_OF_MONTH, 1);
+            audit.setStatusDate(interimDates.getTime());
+            interimDates.add(Calendar.DAY_OF_MONTH, 1);
+            audit.setReportFinalized(interimDates.getTime());
+            audit.setAuditCompleted(auditCompleteDate.getTime());
+            audit.setAuditStatus("complete");
+            audit.setAuditType("transporation");
+            audit.setAuditorComments("You must pay");
+            audit.setBillingHours(3234.5);
+            audit.setElpaHours(2500.4);
+            audit.setLeadAuditor("Sanwaun Pedrue");
+            audit.setOrganizationCode(districtNumber);
+            audit.setProgress("slow");
+            audit.setPupilCountHours(345.9);
+            audit.setSupervisorComments("Hi priority");
+            audit.setSupportAuditor("Jack Nichols");
+            audit.setTotalAuditLiability(23000.8);
+            audit.setTransportationHours(1000.5);
+            audit.setUpdateTimestamp(new Date());
+
+
+
+
+            AuditFreeLunch freeLunchAudit = new AuditFreeLunch();
+
+            freeLunchAudit.setAuditID(auditId);
+            freeLunchAudit.setChangeType("OP");
+            freeLunchAudit.setDateChange("24-DEC-12");
+            freeLunchAudit.setDistrictNumber(districtNumber);
+            freeLunchAudit.setFiscalYear("20122013");
+            freeLunchAudit.setGradeLevel("grade1");
+            freeLunchAudit.setLunchF(130.40);
+            freeLunchAudit.setUpdateTimestamp(new Date());
+            //freeLunchAudit.setMonthNos("5");
+
+
+            AuditFteByGrade fteByGrade = new AuditFteByGrade();
+
+            fteByGrade.setAuditID(auditId);
+            fteByGrade.setAscent(3300.00);
+            fteByGrade.setCdeMember(2200.00);
+            fteByGrade.setChangeType("HQ");
+            fteByGrade.setDateChanged("10-DEC-12");
+            fteByGrade.setDistrictNumber(districtNumber);
+            fteByGrade.setFiscalYear("20122013");
+            fteByGrade.setFteElig(333.50);
+            fteByGrade.setFteNotElig(856.50);
+            fteByGrade.setFundedCount(2000.0);
+            fteByGrade.setGradeLevel("grade1");
+            fteByGrade.setMember(1000.0);
+            fteByGrade.setOnlineTot(23456.0);
+            fteByGrade.setOutOfDist(45786.00);
+            fteByGrade.setParttimeF(28546.00);
+            fteByGrade.setParttimeH(30546.00);
+            fteByGrade.setUpdateTimestamp(new Date());
+
+            audTrackingDAO.save(audit);
+
+            auditFreeLunchDAO.save(freeLunchAudit);
+
+            auditFteByGradeDAO.save(fteByGrade);
+
+            ++count;
+        }
+
+    }
+
+    public void setAudTrackingDAO(IAudTrackingDAO audTrackingDAO) {
+        this.audTrackingDAO = audTrackingDAO;
+    }
+
+    public void setOrgUnitMasterDAO(OrganizationUnitMasterDAO orgUnitMasterDAO) {
+        this.orgUnitMasterDAO = orgUnitMasterDAO;
+    }
+
+    public void setAuditFreeLunchDAO(IAuditFreeLunchDAO auditFreeLunchDAO) {
+        this.auditFreeLunchDAO = auditFreeLunchDAO;
+    }
+
+    public void setAuditFteByGradeDAO(IAuditFteByGrade auditFteByGradeDAO) {
+        this.auditFteByGradeDAO = auditFteByGradeDAO;
+    }
+
+    public void setFreeLunchDAO(IFreeLunchDAO freeLunchDAO) {
+        this.freeLunchDAO = freeLunchDAO;
+    }
+
+    public void setFteByGradeDAO(IFteByGradeDAO fteByGradeDAO) {
+        this.fteByGradeDAO = fteByGradeDAO;
+    }
+}

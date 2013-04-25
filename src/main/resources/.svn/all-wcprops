@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/resources
+END
+system.properties
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/resources/system.properties
+END
+message.properties
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/resources/message.properties
+END
+db-access.properties
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/resources/db-access.properties
+END
+application-resources.properties
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/state_equal/!svn/ver/46/trunk/cdoe/src/main/resources/application-resources.properties
+END
+reports.properties
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/resources/reports.properties
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/state_equal/!svn/ver/307/trunk/cdoe/src/main/resources/log4j.properties
+END
+hibernate.properties
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/state_equal/!svn/ver/151/trunk/cdoe/src/main/resources/hibernate.properties
+END

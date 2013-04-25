@@ -1,0 +1,70 @@
+
+#imageHereStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:0.0em;
+	text-align:right;
+	
+}
+
+#horizontalLine7HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:5.25em;
+	
+}
+
+#stateEqualSystemStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:39.0em;
+  top:0.0em;
+	text-align:right;
+	
+}
+
+#homeGoToMainMenuStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:66.0em;
+  top:0.0em;
+	text-align:right;
+	
+}
+
+#dateStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:66.0em;
+  top:1.75em;
+	text-align:right;
+	
+}
+
+#vDateDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:72.0em;
+  top:1.75em;
+	
+}
+
+#userNameStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:66.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#vUsernameDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:77.0em;
+  top:3.5em;
+	
+}
+

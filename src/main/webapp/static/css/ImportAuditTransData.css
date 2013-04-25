@@ -1,0 +1,67 @@
+
+#uploadTransportationAuditDataButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:14.0em;
+  
+}
+
+#importAuditedTransportationDataStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#transportationGridDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:7.0em;
+  
+}
+
+#districtNumberDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:10.5em;
+	
+}
+
+#organizationNameDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:14.0em;
+  top:10.5em;
+	
+}
+
+#dateChangedDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:29.0em;
+  top:10.5em;
+	
+}
+
+#downloadToExcelButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:39.0em;
+  top:14.0em;
+  
+}
+
+#noteAuditsShouldNotShowOnceUploadedStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:4.0em;
+  top:17.5em;
+	text-align:right;
+	
+}
+

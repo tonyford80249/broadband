@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report3" language="groovy" pageWidth="595" pageHeight="1009" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b3b17a32-92ba-4630-a390-415f2825fe16">
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="nobar" isBlankWhenNull="false" fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{formatCode} == 3]]></conditionExpression>
+			<style mode="Opaque" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{formatCode} == 4]]></conditionExpression>
+			<style mode="Transparent" isBlankWhenNull="false" fontName="SansSerif" fontSize="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<style name="style1"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="firstFiscalYear" class="java.lang.String"/>
+	<field name="firstFiscalMonth" class="java.lang.String"/>
+	<field name="secondFiscalYear" class="java.lang.String"/>
+	<field name="secondFiscalMonth" class="java.lang.String"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="value1" class="java.lang.String"/>
+	<field name="value2" class="java.lang.String"/>
+	<field name="county" class="java.lang.String"/>
+	<field name="districtName" class="java.lang.String"/>
+	<field name="districtNumber" class="java.lang.String"/>
+	<field name="formatCode" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="ed3f5aeb-52ca-433f-8290-6c6d4f613520" mode="Opaque" x="0" y="0" width="555" height="47" forecolor="#FFFFFF" backcolor="#203C73"/>
+				<box topPadding="4"/>
+				<textElement>
+					<font fontName="SansSerif" size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CDE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8ac39996-0062-44f4-a4c8-c39c68da1766" x="62" y="8" width="100" height="20" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COLORADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e95ea588-059d-4233-a038-58a56dc981c5" x="62" y="23" width="168" height="20" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT of EDUCATION]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="781f4f70-ea94-41ed-a0be-8f970b89cc0e" x="433" y="3" width="80" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="658c08b4-981f-4dc0-b561-7e69a6626aeb" x="513" y="3" width="40" height="20" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="c24c84bf-a041-41c4-b275-47e62863ec21" mode="Opaque" x="0" y="0" width="555" height="37" backcolor="#95B6D2"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Comparison of Monthly Payments]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="8317831f-eec1-4bdf-9aab-59cf990c74d8" mode="Opaque" x="291" y="37" width="132" height="25" backcolor="#EFE7D5"/>
+				<box>
+					<bottomPen lineWidth="0.0" lineColor="#203C73"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{firstFiscalMonth} + " " + $F{firstFiscalYear}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a2a25527-4e0b-48ed-9d3a-b8288c67f3ee" x="423" y="37" width="132" height="20" backcolor="#ABC178"/>
+				<box>
+					<bottomPen lineWidth="0.0" lineColor="#203C73"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{secondFiscalMonth} + " " + $F{secondFiscalYear}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1a32b61c-fe37-4930-b288-a8f28eaa28dc" x="161" y="10" width="69" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.5" lineColor="#203C73"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[County:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="d110ae12-cdec-48da-91a1-b3a12ca8d368" x="230" y="10" width="101" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.25" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{county}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="86593e57-6d09-4216-9091-b50d70c613a1" x="344" y="10" width="59" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.5" lineColor="#203C73"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[District:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="5b156e37-6d77-449d-adac-d5c702a91dfc" x="413" y="10" width="113" height="20"/>
+				<box bottomPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.25" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{districtName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement uuid="c993b56b-d460-4e69-b31b-1f673914d22a" style="nobar" x="0" y="0" width="291" height="20"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9a55e1af-90c2-410d-b1da-f994584ad043" mode="Opaque" x="291" y="0" width="132" height="21" backcolor="#EFE7D5"/>
+				<box rightPadding="12"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{value1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="15557937-90de-4c18-888f-596207143621" x="423" y="0" width="132" height="20"/>
+				<box rightPadding="12"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{value2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="132" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="3a309f94-21d5-41dd-b220-e22cf58694b2" x="16" y="23" width="100" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOTES:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5b6b64e6-90af-4411-82bf-dbcca29fb987" x="16" y="43" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[December Changes:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4f882626-70d9-49ea-99a2-0a2c7115e5bf" x="116" y="43" width="423" height="20"/>
+				<textElement/>
+				<text><![CDATA[Student count, assessed valuation, annual audits.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="577eebd4-60cc-4083-b087-a3b2bd85852f" x="16" y="63" width="132" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[January/February Changes:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4acef9a6-753b-4921-94ae-9559dbc4c02f" x="148" y="63" width="391" height="20"/>
+				<textElement/>
+				<text><![CDATA[Specific ownership tax revenues, mill levies and final assessed valuations]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8dcea236-b4e3-4cc4-87e1-dbd05c05fd4e" x="16" y="83" width="71" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[June Changes:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="630a9cf4-94aa-4dba-86d1-d93577b0cf4a" x="87" y="83" width="452" height="20"/>
+				<textElement/>
+				<text><![CDATA[Deuplicatie count audits, annual audits and recissions (if applicable)]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="61e72465-97c6-4555-9bff-d74bbe1e9878" x="16" y="10" width="523" height="1"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

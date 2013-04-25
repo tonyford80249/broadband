@@ -1,0 +1,93 @@
+
+#horizontalLine1360HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:3.5em;
+	
+}
+
+#reviewCommentsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:1.0em;
+  top:5.25em;
+	text-align:right;
+	
+}
+
+#horizontalLine1362HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:7.0em;
+	
+}
+
+#schoolDistrictNumberAndNameStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:5.0em;
+  top:10.5em;
+	text-align:right;
+	
+}
+
+#schoolDistrictNumberAndNameDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:37.0em;
+  top:10.5em;
+ 	
+}
+
+#reimbursementYearStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:45.0em;
+  top:10.5em;
+	text-align:right;
+	
+}
+
+#reimbursementYearDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:64.0em;
+  top:10.5em;
+ 	
+}
+
+#horizontalLine1367HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:12.25em;
+	
+}
+
+#cdeCommentsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:3.0em;
+  top:14.0em;
+	text-align:right;
+	
+}
+
+#textarea1369TextareaDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:19.0em;
+  top:14.0em;
+	
+}
+
+#cancelButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:27.0em;
+  top:17.5em;
+  
+}
+

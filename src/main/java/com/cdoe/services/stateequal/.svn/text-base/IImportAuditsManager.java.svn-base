@@ -1,0 +1,34 @@
+
+package com.cdoe.services.stateequal;
+
+import com.cdoe.biz.model.jasper.ImportPriorYearAuditDatasource;
+import com.cdoe.services.impl.stateequal.ImportAuditsManager;
+import com.cdoe.services.transportation.IBaseManager;
+import com.cdoe.ui.form.stateequal.ImportAuditsForm;
+import com.cdoe.ui.form.stateequal.ResetAuditsForm;
+import com.cdoe.util.FilenameConstructor;
+import java.util.List;
+import java.util.Map;
+import net.sf.jasperreports.engine.JRDataSource;
+
+public interface IImportAuditsManager extends IBaseManager {
+
+	public void uploadAudits(ImportAuditsForm importAuditsForm);
+	
+	public void rejectAudit(Integer auditId, String organizationCode);
+	
+	public ImportAuditsForm setupImportAuditsForm();
+	
+	public ResetAuditsForm setupResetAuditsForm();
+        
+        public void saveGeneratedData(Map<String,String> districts);
+        
+        public ImportPriorYearAuditDatasource createDatasource(ImportAuditsForm form);
+        
+        public ImportAuditsManager.SimpleFilenameConstructor createSimpleFilenameConstructor();
+        
+        public void generateReport(JRDataSource datasource, FilenameConstructor constructor) throws Exception;
+        
+        public List<Integer> extractAuditIds(ImportAuditsForm form);
+	
+}

@@ -1,0 +1,242 @@
+@CHARSET "UTF-8";
+
+body {
+	font: small/1.6em Verdana, Helvetica, Arial, sans-serif;
+	background-color: #e0d6d6;
+}
+
+h1 {
+	font-size: 160%;
+	text-align: center;
+	margin-bottom: 40px;
+	background-image: url(../images/studentbackground.jpg);
+}
+
+h2 {
+	font-size: 130%;
+}
+
+h3 {
+	font-size: 110%;
+	text-align: left;
+	background-color: #7C97BB;
+	color: #ffffff;
+	width: 100%;
+}
+
+rowHeader {
+	font-size: 110%;
+	font-weight: bold;
+	text-align: left;
+	background-color: #C3C3C3;
+	width: 100%;
+}
+
+evenRow {
+	font-size: 100%;
+	text-align: left;
+	background-color: #7C97BB;
+	width: 100%;
+}
+
+
+blockquote {
+	background-color: #ffffff;
+	background-image: url(../images/blockquotebackground.gif);
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	margin-left: 20px;
+	padding: 10px;
+	border-style: solid;
+	border-width: thin;
+	border-color: #aaaaaa;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	font-style: italic;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 1.3em;
+}
+
+a:link {
+	font-weight: bold;
+	font-size: 1.0em;
+	color: #007e7e;
+}
+
+#mainContent {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	background-image: url(../images/studentbackground.jpg);
+	background-color: #f7f7f7;
+	border-style: solid;
+	border-color:  #336699;
+	border-bottom-color: #336699;
+	width: 100%;
+	/*width:auto*/
+}
+
+#menuContent {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1px;
+	background-image: url(../images/studentbackground.jpg);
+	background-color: #f7f7f7;
+	border-style: solid;
+	border-bottom-width: thin;
+	border-color:  #336699;
+	width: 102%;
+}
+
+#header {
+	font-size: 300%;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-align: center;
+	width: 100%;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url(../images/studentbackground.jpg);
+	border-left-style: solid;
+	border-right-style: solid;
+	border-top-style: solid;
+	border-color:  #336699;
+}
+
+#footer {
+	font-size: 85%;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-align: center;
+	width: 100%;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url(../images/studentbackground.jpg);
+	border-left-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-color:  #336699;
+}
+
+#container {
+	position: absolute;
+	z-index: 1001;
+}
+
+a.mainNav {
+	color: White;
+	font-weight: bold;
+	font-size: 12px;
+	height: 30px;
+	padding: 0px 0px;
+	line-height: 40px;
+	line-color: Black;
+	float: left;
+	background-color: #336699;
+}
+
+a.mainNav:hover {
+	background-color: #336699;
+	color: #AAAAAA;
+}
+
+a.selectedRollover {
+	color: White;
+	font-weight: bold;
+	font-size: 12px;
+	height: 40px;
+	padding: 0px 10px;
+	line-height: 40px;
+	line-color: Black;
+	float: left;
+	background-color: #336699;
+}
+
+.rolloverMenu {
+	float: left;
+	padding: 2px 2px 1px 2px;
+	position: absolute;
+	z-index: 1000;
+	background-color: #336699;
+}
+
+.rolloverMenu#mainMenu {
+}
+
+.rolloverMenu a {
+	color: White;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.validationError {
+	color: red;
+	font-style: italic;
+}
+
+#nav, #nav ul {
+	z-index: 999;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-size: 14px;
+	background-color: #0BBEF3;
+	color: White;
+	font-weight: bold;
+}
+
+#nav a {
+	display: block;
+	width: 18em;
+	background-color: #336699;
+	color: White;
+	font-weight: bold;
+}
+
+#nav li {
+	float: left;
+	width: 23em;
+	background-color: #336699;
+	color: White;
+	border-width: thin;
+}
+
+#nav li ul {
+	position: absolute;
+	width: 20em;
+	left: -999em;
+	background-color: #336699;
+	color: White;
+	font-size: 12px;
+	border-style: solid;
+	border-color: White;
+	border-width: thin;
+	
+}
+
+#nav li:hover ul {
+	left: auto;
+	background-color: #336699;
+	color: White;
+	font-size: 12px;
+	border-style: solid;
+	border-color: White;
+	border-width: thin;
+}
+
+
+#nav li:hover ul, #nav li.sfhover ul {
+	left: auto;
+}
+
+.sumaScrollableArea
+{
+height: 220px;
+padding: 10px;
+border-style: solid;
+border-width: 1;
+overflow: auto;
+
+}

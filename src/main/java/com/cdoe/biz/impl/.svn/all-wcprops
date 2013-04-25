@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/biz/impl
+END
+MillLevyCertDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/state_equal/!svn/ver/66/trunk/cdoe/src/main/java/com/cdoe/biz/impl/MillLevyCertDAO.java
+END
+SSOLoginDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/state_equal/!svn/ver/66/trunk/cdoe/src/main/java/com/cdoe/biz/impl/SSOLoginDAO.java
+END
+ChangeAtRiskCountsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/state_equal/!svn/ver/113/trunk/cdoe/src/main/java/com/cdoe/biz/impl/ChangeAtRiskCountsDAO.java
+END
+CoforsUploadDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/state_equal/!svn/ver/113/trunk/cdoe/src/main/java/com/cdoe/biz/impl/CoforsUploadDAO.java
+END
+OrganizationUnitMasterDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/state_equal/!svn/ver/307/trunk/cdoe/src/main/java/com/cdoe/biz/impl/OrganizationUnitMasterDAO.java
+END
+AdjustmentStatusDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/cdoe/biz/impl/AdjustmentStatusDAO.java
+END
+AudCDE40TransReimbFormDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/state_equal/!svn/ver/113/trunk/cdoe/src/main/java/com/cdoe/biz/impl/AudCDE40TransReimbFormDAO.java
+END
+AuditSummaryDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/state_equal/!svn/ver/113/trunk/cdoe/src/main/java/com/cdoe/biz/impl/AuditSummaryDAO.java
+END
+StateEqualReferenceDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/state_equal/!svn/ver/232/trunk/cdoe/src/main/java/com/cdoe/biz/impl/StateEqualReferenceDAO.java
+END
+DistrictsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/biz/impl/DistrictsDAO.java
+END
+DistrictDetailDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/state_equal/!svn/ver/4/trunk/cdoe/src/main/java/com/cdoe/biz/impl/DistrictDetailDAO.java
+END
+CreateAuditDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/state_equal/!svn/ver/113/trunk/cdoe/src/main/java/com/cdoe/biz/impl/CreateAuditDAO.java
+END
+GeneratedReportDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/state_equal/!svn/ver/237/trunk/cdoe/src/main/java/com/cdoe/biz/impl/GeneratedReportDao.java
+END

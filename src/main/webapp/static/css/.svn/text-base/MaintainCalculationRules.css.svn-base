@@ -1,0 +1,100 @@
+
+#horizontalLine78HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:1.75em;
+	
+}
+
+#stateEqualOptionsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#districtOptionsStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:35.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#horizontalLine81HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:5.25em;
+	
+}
+
+#mainCalculationRulesStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:7.0em;
+	text-align:right;
+	
+}
+
+#horizontalLine83HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:8.75em;
+	
+}
+
+#rulesMenuLinkDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:32.0em;
+  top:12.25em;
+	
+}
+
+#addRulesLinkDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:32.0em;
+  top:14.0em;
+	
+}
+
+#editRulesLinkDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:32.0em;
+  top:15.75em;
+	
+}
+
+#searchAndDeleteRulesLinkDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:32.0em;
+  top:17.5em;
+	
+}
+
+#validateAndTestExistingRulesLinkDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:32.0em;
+  top:19.25em;
+	
+}
+
+#horizontalLine89HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:22.75em;
+	
+}
+

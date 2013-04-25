@@ -1,0 +1,176 @@
+
+#districtPaymentReportForReimbursementYearStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:1.75em;
+	text-align:right;
+	
+}
+
+#$1StDistributionStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:5.25em;
+	text-align:right;
+	
+}
+
+#organizationUnitMasterGridDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:14.0em;
+  
+}
+
+#horizontalLine1304HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:21.0em;
+	
+}
+
+#organizationNameDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:17.0em;
+  top:17.5em;
+	
+}
+
+#firstPaymentDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:32.0em;
+  top:17.5em;
+	
+}
+
+#secondPaymentDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:46.0em;
+  top:17.5em;
+	
+}
+
+#districtDistributionDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:60.0em;
+  top:17.5em;
+	
+}
+
+#downloadToExcelButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:22.75em;
+  
+}
+
+#noteAuditsShouldNotShowOnceUploadedStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:4.0em;
+  top:26.25em;
+	text-align:right;
+	
+}
+
+#districtNumberDynamicTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:17.5em;
+	
+}
+
+#prorateFactor2ndPaymentTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:42.0em;
+  top:7.0em;
+	
+}
+
+#$2NdProrationStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:26.0em;
+  top:7.0em;
+	text-align:right;
+	
+}
+
+#prorateFactor1stPaymentTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:16.0em;
+  top:7.0em;
+	
+}
+
+#$1StProrationStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:7.0em;
+	text-align:right;
+	
+}
+
+#totalDistributionTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:72.0em;
+  top:5.25em;
+	
+}
+
+#totalDistributionStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:52.0em;
+  top:5.25em;
+	text-align:right;
+	
+}
+
+#totalSecondPaymentTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:45.0em;
+  top:5.25em;
+	
+}
+
+#$2NdDistributionStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:26.0em;
+  top:5.25em;
+	text-align:right;
+	
+}
+
+#totalFirstPaymentTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:19.0em;
+  top:5.25em;
+	
+}
+
+#fiscalYearTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:48.0em;
+  top:1.75em;
+	
+}
+

@@ -1,0 +1,13 @@
+hibernate.dialect=org.hibernate.dialect.Oracle10gDialect
+#hibernate.hbm2ddl.auto=update
+hibernate.show_sql=true
+hibernate.use_query_cache=false
+hibernate.cache.use_second_level_cache=false
+hibernate.cache.region.factory_class=net.sf.ehcache.hibernate.EhCacheRegionFactory net.sf.ehcache.configurationResourceName=ehcache.xml
+hibernate.release_mode=auto
+hibernate.query.substitutions=true 'T', false 'F'
+hibernate.c3p0.minPoolSize=5
+hibernate.c3p0.maxPoolSize=20
+hibernate.c3p0.timeout=600
+hibernate.c3p0.max_statement=50
+hibernate.c3p0.testConnectionOnCheckout=false

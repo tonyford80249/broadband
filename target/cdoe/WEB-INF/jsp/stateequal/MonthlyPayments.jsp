@@ -1,0 +1,288 @@
+
+<%--
+(ref: jsp/jsp.jsp.et.jsp)
+-------------------------------------
+$Revision:   $
+$Date:  $
+$Author:   $
+$Modtime: $
+
+Version History:
+-------------------------------------
+$Log:$
+--%>
+<%@ page language="java"%>
+<%@ page import="com.cdoe.ui.*"%>
+<%@ page import="com.cdoe.biz.*"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+
+<%-- Wrap the entire JSP in a try/catch block so that runtime exceptions
+    in the JSP can be caught and reported. --%>
+<%@include file="/WEB-INF/jsp/JspTry.inc"%>
+<script language="javascript" type="text/javascript">
+     $(document).ready(
+    function() {
+       
+        
+        $('input#addOne').click(
+          function() {
+            $("select#source option:selected").each(
+             function() {
+               if ($(this).attr("id") != "sourceHeader")   {
+                   
+                var option = $(this).clone();
+                
+                option.attr("selected","selected");
+                
+               $('select#target').append(option);   
+               
+               $(this).remove();
+               }
+             }
+            );                                         
+         }
+        );
+        
+        $('input#removeOne').click(
+          function() {
+            $("select#target option:selected").each(
+             function() {
+               if ($(this).attr("id") != "targetHeader")   {  
+               $('select#source').append($(this).clone());   
+               
+               $(this).remove();
+               }
+             }
+            );                                         
+         }
+         );
+        
+        $('input#addAll').click(
+         function() {
+            $("select#source option").each(
+             function() {
+               if ($(this).attr("id") != "sourceHeader")   {
+                   
+               var option = $(this).clone();
+               
+               option.attr("selected","selected");
+               
+               $('select#target').append(option);   
+               
+               $(this).remove();
+               }
+             }
+            );                                         
+         }
+        );
+        
+        $('input#removeAll').click(
+         function() {
+            $("select#target option").each(
+             function() {
+               if ($(this).attr("id") != "targetHeader")   {
+                  $('select#source').append($(this).clone());   
+               
+                  $(this).remove();
+               }             
+             }
+            );                                         
+         }
+        );
+        
+          $('select#source').change(
+           function() {
+               
+               var reportId = "rptMonthlyPayments";
+                                                                                        
+               var varDistrictNumber = "";
+               $("select#source option:selected").each(
+                  function() {
+                    varDistrictNumber += $(this).text();
+                  }
+               );
+                   
+               var varMonth = "";
+               $("select#months option:selected").each(
+                  function() {
+                   varMonth += $(this).text();   
+                  }
+               );
+                                                                                              
+               var varYear = "";
+               $("select#years option:selected").each(
+                  function() {
+                     varYear += $(this).text();   
+                  }
+               );
+                
+               $('input#calcAndView').unbind();
+             
+             $('input#calcAndView').click(
+               function() {                
+                 window.open("${pageContext.request.contextPath}/secure/Reports/calc?reportId=" + reportId + "&districtNumberAndName=" + varDistrictNumber+ "&fiscalMonth=" +varMonth +"&fiscalYear=" + varYear);	
+               }
+            );         
+                   
+           }
+          );
+        
+        
+         
+        
+    });
+</script>
+
+<div id="mainContent">
+	<form:form commandName="pageInfo"
+               action="${pageContext.request.contextPath}/secure/MonthlyPayments/update"
+               method="post">
+
+		<!-- Main outer table -->
+		<h2>
+			<fmt:message
+				key="MonthlyPayments.StaticText.processMonthlyPaymentsStaticText" />
+		</h2>
+		<TABLE>
+			<TR>
+				<TD>
+				    <div class="formBlock boxShadow3 radius10">
+					<TABLE WIDTH="80%">
+						<TR>
+							<TD ALIGN="right"><LABEL FOR=""><fmt:message key="MonthlyPayments.StaticText.fiscalYearStaticText" /></LABEL></TD>
+							<TD>
+                                                             <form:select id="years" path="year">
+                                                                <form:option value="NONE" label="-- Choose Year --" />
+                                                                <form:options items="${pageInfo.availableYears}"></form:options>
+                                                             </form:select>   
+                                                        </TD>
+							<TD>
+                                                             <input type="Submit" id="updateAndView" name="updatePayment" value="Update View" onclick='$("form").attr("action", "${pageContext.request.contextPath}/secure/MonthlyPayments/update");' />
+                                                        </td>
+                                                        <TD>
+                                                             <input type="Submit" id="calcAndView" name="calculatePaymentReport" value="Calculate Payment(s) and Generate Report(s)" onclick='$("form").attr("action", "${pageContext.request.contextPath}/secure/MonthlyPayments/process");' />
+                                                        </TD>
+                                                        <TD>
+                                                             <input type="Submit" id="viewPayment" name="viewPaymentReport" value="View Report(s)" onclick='$("form").attr("action", "${pageContext.request.contextPath}/secure/ViewReports/monthlyPayment");' />
+                                                        </TD>
+						</TR>
+						<TR><TD></TD></TR>
+						<TR>
+							<TD ALIGN="right">
+                                                            <LABEL FOR=""><fmt:message key="MonthlyPayments.StaticText.monthStaticText" /></LABEL>
+                                                        </TD>
+							<TD>
+                                                            <form:select id="months" path="month">
+                                                              <form:option value="NONE" label="-- Choose Month --" />
+                                                              <form:options items="${pageInfo.availableMonths}"></form:options>
+                                                            </form:select>
+                                                        </TD>
+						</TR>
+					</TABLE>
+					</div>
+					</BR>
+					<TABLE>
+						<TR>
+							<TD>
+                                                            <fmt:message key="MonthlyPayments.StaticText.selectDistrictsToBePaidStaticText" />
+							</h3></TD>
+						</TR>
+					
+						<TR>
+							<TD>
+								<TABLE>
+									<TR>
+										<TD>
+                                                                                    <select id="source" name="selectCandidates" multiple="multiple" size="20" style="width:350px;">
+                                                                                     <option id="sourceHeader" name="sourceHeader" style="background-color: rgb(124,151,127); color: #ffffff;">  AVAILABLE DISTRICTS </option>   
+                                                                                     <c:forEach var="district" items="${pageInfo.candidatePayees}">                             
+                                                                                         <option id="${district.number}" value="${district.number}">  <c:out value="${district.nameAndNumber}"/> </option>
+                                                                                     </c:forEach>
+                                                                                    </select>
+                                                                                </TD>
+                                                                                
+									</TR>
+								</TABLE>
+							</TD>
+							<TD>
+
+								<TABLE>
+									<TR>
+										<TD>
+                                                                                    <input type="Button" id="addOne" name="addOne" value="<fmt:message key="MonthlyPayments.Button.button" />" />
+										</TD>
+									</TR>
+									<TR>
+										<TD>
+                                                                                    <input type="Button" id="removeOne" name="removeOne" value="<fmt:message key="MonthlyPayments.Button.button_2" />" />
+										</TD>
+									</TR>
+									<TR>
+										<TD>
+                                                                                    <input type="Button" id="addAll" name="addAll" value="<fmt:message key="MonthlyPayments.Button.allButton" />" />
+										</TD>
+									</TR>
+									<TR>
+										<TD>
+                                                                                    <input type="Button" id="removeAll" name="removeAll" value="<fmt:message key="MonthlyPayments.Button.allButton_2" />" />
+										</TD>
+									</TR>
+								</TABLE>
+							</TD>
+							<TD>
+								<TABLE>
+									<TR>
+										<TD>
+                                                                                    <select id="target" name="selectApprovedPayees" multiple="multiple" size="20" style="width:350px;"> 
+                                                                                     <option id="targetHeader" name="targetHeader" style="background-color: rgb(124,151,127); color: #ffffff;"> DISTRICTS SELECTED FOR PAYMENT </option>      
+                                                                                     <c:forEach var="payee" items="${pageInfo.approvedPayees}">                             
+                                                                                         <option style="background-color: #ffffff; color: #EB1539;" id="targetHeader" value="${payee.number}" disabled>  <c:out value="${payee.nameAndNumber}"/> </option>
+                                                                                     </c:forEach>
+                                                                                    </select>                                                                                                                                                                                                                                                                                                                                            
+                                                                                </TD>
+									</TR>
+								</TABLE>
+							</TD>
+                                                        <TD>
+								<TABLE>
+									<TR>
+										<TD>
+                                                                                    <select id="missing" name="missingPayees" multiple="multiple" size="20" style="width:350px;"> 
+                                                                                     <option id="missingHeader" name="missingHeader" style="background-color: rgb(124,151,127); color: #ffffff;"> DISTRICTS MISSING PAYMENT INFO</option>      
+                                                                                     <c:forEach var="missing" items="${pageInfo.missingPayees}">                             
+                                                                                         <option style="background-color: #ffffff; color: red;" id="missingHeader" value="${missing.number}">  <c:out value="${missing.nameAndNumber}"/> </option>
+                                                                                     </c:forEach>
+                                                                                    </select>                                                                                                                                                                                                                                                                                                                                            
+                                                                                </TD>
+									</TR>
+								</TABLE>
+							</TD>
+						</TR>
+					</TABLE>
+					</BR>
+                                        <TABLE>
+						<TR>
+                                                    <TD>
+                                                        <input type="Submit" id="cofrsReport" value="Generate Cofrs Report"  onclick='$("form").attr("action", "${pageContext.request.contextPath}/secure/MonthlyPayments/report");' />
+                                                    </TD>
+							<TD>
+                                                            <input type="Submit" id="coffers" value="<fmt:message key="MonthlyPayments.Button.confirmSendToCofrsButton" />"  onclick='$("form").attr("action", "${pageContext.request.contextPath}/secure/MonthlyPayments/upload");' />
+							</TD>
+						</TR>
+
+					</TABLE>
+				</TD>
+			</TR>
+		</TABLE>
+	</form:form>
+</div>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/static/scripts/screen/MonthlyPayments.js"></script>
+<%-- End of try/catch around complete JSP in order to log and display
+     runtime exceptions that occur in the JSP. --%>
+<%@include file="/WEB-INF/jsp/JspCatch.inc"%>

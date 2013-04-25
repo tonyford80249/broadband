@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/ui/stateequal
+END
+ReportsController.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/ui/stateequal/ReportsController.java
+END
+ImportAuditTransDataController.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/ui/stateequal/ImportAuditTransDataController.java
+END
+DisplayAdjustmentController.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/state_equal/!svn/ver/295/trunk/cdoe/src/main/java/com/cdoe/ui/stateequal/DisplayAdjustmentController.java
+END
+AltAtRiskFundingController.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/ui/stateequal/AltAtRiskFundingController.java
+END
+MonthlyPaymentsController.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/state_equal/!svn/ver/252/trunk/cdoe/src/main/java/com/cdoe/ui/stateequal/MonthlyPaymentsController.java
+END
+MillLevyCertController.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/state_equal/!svn/ver/246/trunk/cdoe/src/main/java/com/cdoe/ui/stateequal/MillLevyCertController.java
+END
+UploadVariablesController.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/state_equal/!svn/ver/278/trunk/cdoe/src/main/java/com/cdoe/ui/stateequal/UploadVariablesController.java
+END
+CrosswalkCollectionDataController.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/state_equal/!svn/ver/297/trunk/cdoe/src/main/java/com/cdoe/ui/stateequal/CrosswalkCollectionDataController.java
+END
+StateEqualHomePageController.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/state_equal/!svn/ver/308/trunk/cdoe/src/main/java/com/cdoe/ui/stateequal/StateEqualHomePageController.java
+END
+CSICalculationsController.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/ui/stateequal/CSICalculationsController.java
+END
+ImportAuditsController.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/state_equal/!svn/ver/312/trunk/cdoe/src/main/java/com/cdoe/ui/stateequal/ImportAuditsController.java
+END
+CommentsController.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/state_equal/!svn/ver/224/trunk/cdoe/src/main/java/com/cdoe/ui/stateequal/CommentsController.java
+END
+ElectionsController.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/state_equal/!svn/ver/291/trunk/cdoe/src/main/java/com/cdoe/ui/stateequal/ElectionsController.java
+END
+HelpController.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/state_equal/!svn/ver/295/trunk/cdoe/src/main/java/com/cdoe/ui/stateequal/HelpController.java
+END
+MillLevyOverrideWorksheetController.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/state_equal/!svn/ver/276/trunk/cdoe/src/main/java/com/cdoe/ui/stateequal/MillLevyOverrideWorksheetController.java
+END
+CalculateEntitlementsController.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/state_equal/!svn/ver/311/trunk/cdoe/src/main/java/com/cdoe/ui/stateequal/CalculateEntitlementsController.java
+END
+AdvanceAndEntitlementReportController.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/ui/stateequal/AdvanceAndEntitlementReportController.java
+END
+StateEqualMenuPageController.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/state_equal/!svn/ver/143/trunk/cdoe/src/main/java/com/cdoe/ui/stateequal/StateEqualMenuPageController.java
+END

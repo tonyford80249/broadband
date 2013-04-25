@@ -1,0 +1,271 @@
+
+#printButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:27.0em;
+  top:35.0em;
+  
+}
+
+#saveButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:16.0em;
+  top:35.0em;
+  
+}
+
+#vNumberTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:61.0em;
+  top:31.5em;
+	
+}
+
+#propertyTaxTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:61.0em;
+  top:29.75em;
+	
+}
+
+#vNumberTextbox_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:61.0em;
+  top:28.0em;
+	
+}
+
+#colAdjustTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:61.0em;
+  top:26.25em;
+	
+}
+
+#vNumberTextbox_3Div{
+  position:absolute;
+  white-space:nowrap;
+  left:61.0em;
+  top:24.5em;
+	
+}
+
+#vNumberTextbox_4Div{
+  position:absolute;
+  white-space:nowrap;
+  left:61.0em;
+  top:19.25em;
+	
+}
+
+#vNumberTextbox_5Div{
+  position:absolute;
+  white-space:nowrap;
+  left:61.0em;
+  top:21.0em;
+	
+}
+
+#totProgTextboxDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:61.0em;
+  top:17.5em;
+	
+}
+
+#amountStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:61.0em;
+  top:14.0em;
+	text-align:right;
+	
+}
+
+#districtCodeNameDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:54.0em;
+  top:8.75em;
+ 	
+}
+
+#districtCodeNameStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:36.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#propertyTaxYearDropdownListDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:17.0em;
+  top:8.75em;
+ 	
+}
+
+#horizontalLine400HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:1.75em;
+	
+}
+
+#reportStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:3.5em;
+	text-align:right;
+	
+}
+
+#horizontalLine402HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:5.25em;
+	
+}
+
+#propertyTaxYearStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:8.75em;
+	text-align:right;
+	
+}
+
+#horizontalLine407HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:12.25em;
+	
+}
+
+#allowableOverrideStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:8.0em;
+  top:14.0em;
+	text-align:right;
+	
+}
+
+#horizontalLine410HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:15.75em;
+	
+}
+
+#projectedTotalProgramFormulaFundingStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:8.0em;
+  top:17.5em;
+	text-align:right;
+	
+}
+
+#$25TotalProgramStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:13.0em;
+  top:19.25em;
+	text-align:right;
+	
+}
+
+#minimumOverrideAllowedStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:8.0em;
+  top:21.0em;
+	text-align:right;
+	
+}
+
+#allowableOverrideStaticText_2Div{
+  position:absolute;
+  white-space:nowrap;
+  left:8.0em;
+  top:22.75em;
+	text-align:right;
+	
+}
+
+#greaterOf25OfTotalProgramOr200000StaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:16.0em;
+  top:24.5em;
+	text-align:right;
+	
+}
+
+#plusCostOfLivingAdjustmentStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:8.0em;
+  top:26.25em;
+	text-align:right;
+	
+}
+
+#totalAllowableOverrideStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:8.0em;
+  top:28.0em;
+	text-align:right;
+	
+}
+
+#totalExisitngOverridePropertyTaxRevenuesStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:8.0em;
+  top:29.75em;
+	text-align:right;
+	
+}
+
+#remainingBalanceAt25LimitStaticTextDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:8.0em;
+  top:31.5em;
+	text-align:right;
+	
+}
+
+#calculateButtonDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:35.0em;
+  
+}
+
+#horizontalLine431HorizontalLineDiv{
+  position:absolute;
+  white-space:nowrap;
+  left:0.0em;
+  top:38.5em;
+	
+}
+

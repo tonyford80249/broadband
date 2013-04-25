@@ -1,0 +1,280 @@
+package com.cdoe.services.impl;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.log4j.Logger;
+
+import com.cdoe.biz.IOrganizationUnitMasterDAO;
+import com.cdoe.biz.impl.OrganizationUnitMasterDAO;
+import com.cdoe.biz.impl.StateEqualReferenceDAO;
+import com.cdoe.biz.impl.stateequal.SeMonthlyDao;
+import com.cdoe.biz.model.OrganizationUnitMaster;
+import com.cdoe.biz.model.StateEqualReference;
+import com.cdoe.biz.stateequal.ISeMonthlyDAO;
+import com.cdoe.services.IReferenceDataManager;
+import com.cdoe.util.DateUtil;
+import com.cdoe.util.UserInfo;
+
+/**
+ * This service provides access to reference data in
+ * the application.  This is data that is maintained in the
+ * database but that doesn't change very often, and is shared
+ * between all of the applications
+ * 
+ * @author dyn-8
+ *
+ */
+public class ReferenceDataManager implements IReferenceDataManager {
+	
+	private final Logger logger = Logger.getLogger(ReferenceDataManager.class);
+
+	private IOrganizationUnitMasterDAO orgMasterDao;
+	private StateEqualReferenceDAO stateEqualReferenceDao;
+	private ISeMonthlyDAO seMonthlyDao;
+
+	public ReferenceDataManager() {
+		super();
+	}
+	
+	public void setDistrictsDao(IOrganizationUnitMasterDAO orgMasterDao) {
+		this.orgMasterDao = orgMasterDao;
+	}
+
+	public void setStateEqualReferenceDao(StateEqualReferenceDAO stateEqualReferenceDao) {
+		this.stateEqualReferenceDao = stateEqualReferenceDao;
+	}
+	
+	public void setSeMonthlyDao(ISeMonthlyDAO seMonthlyDao) {
+		this.seMonthlyDao = seMonthlyDao;
+	}
+
+	/**
+	 * Returns the organization name for the given code
+	 * @param orgCode
+	 * @return
+	 */
+	public String getOrganizationName(String orgCode) {
+		return orgMasterDao.lookUpOrganization(orgCode).getOrganizationName();
+	}
+
+	/**
+	 * Returns the organization reference map for all organizations, which
+	 * includes DISTRICT, BOCES, FACILITY
+	 * @return
+	 */
+	public Map<String, String> getAllOrganizationsMap() {
+		List<OrganizationUnitMaster> districts = orgMasterDao.getAllOrganizations();
+		HashMap<String, String> districtReference = new HashMap<String, String>();
+		for (OrganizationUnitMaster district : districts) {
+			logger.debug("Organizational Code " + district.getOrganizationCode());
+			logger.debug("Organizational Name " + district.getOrganizationName());
+			districtReference.put(district.getOrganizationCode(), district.getOrganizationName());
+		}
+		return districtReference;
+	}
+	
+	/**
+	 * Returns the organization reference map for the input organization type (i.e. 'DISTRICT')
+	 * @param orgType
+	 * @return
+	 */
+	public Map<String, String> getOrganizationsMap(String orgType) {
+		List<OrganizationUnitMaster> districts = new OrganizationUnitMasterDAO().getOrganizationsByType(orgType);
+		HashMap<String, String> districtReference = new HashMap<String, String>();
+		for (OrganizationUnitMaster district : districts) {
+			logger.debug("Organizational Code " + district.getOrganizationCode());
+			logger.debug("Organizational Name " + district.getOrganizationName());
+			districtReference.put(district.getOrganizationCode(), district.getOrganizationName());
+		}
+		return districtReference;
+	}
+        
+        /**
+         * 
+         * @param userInfo 
+         */
+        public void populateUserInfo(UserInfo userInfo) {
+          List<OrganizationUnitMaster> districts = orgMasterDao.getAllOrganizations();
+	                    
+          HashMap<String, String> districtReference = new HashMap<String, String>();
+          HashMap<String,String> primaryCounty = new HashMap<String,String>();
+          HashMap<String,List<String>> allCounties = new HashMap<String,List<String>>();
+          
+	  for (OrganizationUnitMaster district : districts) {
+			logger.debug("Organizational Code " + district.getOrganizationCode());
+			logger.debug("Organizational Name " + district.getOrganizationName());
+			districtReference.put(district.getOrganizationCode(), district.getOrganizationName());
+                        primaryCounty.put(district.getOrganizationCode(), district.getPrimaryCounty());
+                        allCounties.put(district.getOrganizationCode(), district.getAllCounties());
+	  }  
+          
+          userInfo.setDistrictMap(districtReference);
+          
+          userInfo.setDistrictPrimaryCountyMap(primaryCounty);
+          
+          userInfo.setDistrictCountyMap(allCounties);
+        }
+        
+        /**
+         * 
+         * @param userInfo
+         * @param orgType 
+         */
+        public void populateUserInfo(UserInfo userInfo, String orgType) {
+          List<OrganizationUnitMaster> districts = orgMasterDao.getOrganizationsByType(orgType);
+	                    
+          HashMap<String, String> districtReference = new HashMap<String, String>();
+          HashMap<String,String> primaryCounty = new HashMap<String,String>();
+          HashMap<String,List<String>> allCounties = new HashMap<String,List<String>>();
+          
+	  for (OrganizationUnitMaster district : districts) {
+			logger.debug("Organizational Code " + district.getOrganizationCode());
+			logger.debug("Organizational Name " + district.getOrganizationName());
+			districtReference.put(district.getOrganizationCode(), district.getOrganizationName());
+                        primaryCounty.put(district.getOrganizationCode(), district.getPrimaryCounty());
+                        allCounties.put(district.getOrganizationCode(), district.getAllCounties());
+	  }  
+          
+          userInfo.setDistrictMap(districtReference);
+          
+          userInfo.setDistrictPrimaryCountyMap(primaryCounty);
+          
+          userInfo.setDistrictCountyMap(allCounties);
+        }
+
+	/**
+	 * Returns the list of months from the State_Equal_Master table
+	 * @return
+	 */
+	public List<String> getMonthList() {
+		return stateEqualReferenceDao.getElementValueList("Month_Of_a_Year");
+	}
+	
+	/**
+	 * Returns the list of Crosswalk Data Types
+	 * @return
+	 */
+	public List<String> getCrosswalkDataType() {
+		return stateEqualReferenceDao.getElementValueList("CROSSWALK_DATA_TYPE");
+	}
+	
+	/**
+	 * Returns the list of District Entitlement Calculation periods
+	 * @return
+	 */
+	public List<String> getDistrictEntitlementPeriod() {
+		return stateEqualReferenceDao.getElementValueList("DIST_ENTL_CALC_PERIOD");
+	}
+
+	/**
+	 * Returns the list of State Share Adjustments
+	 * @return
+	 */
+	public List<String> getStateShareAdjustments() {
+		return stateEqualReferenceDao.getElementValueList("STATE_SHARE_ADJUSTMENTS");
+	}
+	
+	/**
+	 * Returns the last payment date
+	 * @return
+	 */
+	public String getLastPaymentDate() {
+		return stateEqualReferenceDao.getElementValueList("PAYMENT_DATE").get(0);
+	}
+	
+	/**
+	 * Returns the list of Cross Walk DataType 
+	 * @return
+	 */
+	public List<String> getCrossWalkDataType() {
+		return stateEqualReferenceDao.getElementValueList("CROSSWALK_DATA_TYPE");
+	}
+	
+	/**
+	 * Returns the list of Audit Repayment Adjustment frequencies
+	 * @return
+	 */
+	public List<String> getAuditRepaymentAdjustmentFrequencies() {
+		return stateEqualReferenceDao.getElementValueList("AUDIT_REPAYMENT_ADJUSTMENT_FREQUENCY");
+	}
+	
+	/**
+	 * Returns the list of Capital outlay districts 
+	 * @return
+	 */ 
+	public List<String> getCapitalOutlayDistricts() {
+		return stateEqualReferenceDao.getElementValueList("CAPITAL_OUTLAY_DISTRICT");
+	}
+
+	/**
+	 * Returns the list of State Equal Other adjustments
+	 */
+	public List<String> getStateEqualAdjustments() {
+		return stateEqualReferenceDao.getElementValueList("STATE_EQUAL_ADJUSTMENTS");
+	}
+
+	/**
+	 * Returns the list of names of upload variables
+	 */
+	public List<String> getUploadVariables() {
+		return stateEqualReferenceDao.getElementValueList("UPLOAD_VARIABLES");
+	}
+	
+	/**
+	 * Returns the list of Calculation periods  
+	 * @return
+	 */ 
+	public List<String> getCalculationPeriods() {
+		return stateEqualReferenceDao.getElementValueList("CALCULATION_PERIOD");
+	}
+	
+	/**
+	 * Returns the list of ELECTION_TOPICs for the year
+	 * @return
+	 */ 
+	public List<String> getElectionTopics() {
+		return stateEqualReferenceDao.getElementValueList("ELECTION_TOPIC");
+	}
+	
+	public List<StateEqualReference> findByGroupName(String groupName) {
+		return stateEqualReferenceDao.findByGroupName(groupName);
+	}
+	
+	public List<String> getElementValueList(String groupName) {
+		return stateEqualReferenceDao.getElementValueList(groupName);
+	}
+	
+	/**
+	 * Returns the last payment month for the current fiscal year
+	 * @return
+	 */
+	public String[] getLastAndNextPaymentsMonthYear() {
+		try {
+			if (seMonthlyDao ==  null)
+				seMonthlyDao = new SeMonthlyDao();
+			Object[] monthYear = seMonthlyDao.findLatestPaymentMonth();
+			int monthNo = ((Integer ) monthYear[0]).intValue();
+			String[] monthNameYear =  new String[2];
+			monthNameYear[0] = DateUtil.getMonthName((String) monthYear[0].toString());
+			if (monthNo < 7)
+				monthNameYear[0] = monthNameYear[0] + ", " +  ((String) monthYear[1]).substring(4);
+			else 
+				monthNameYear[0] = monthNameYear[0] + ", " +  ((String) monthYear[1]).substring(0,4);
+			int nextMonthNo = monthNo + 1;
+			if (monthNo > 12)
+				nextMonthNo = 1;
+			monthNameYear[1] = DateUtil.getMonthName(String.valueOf(nextMonthNo));
+			if (nextMonthNo < 7)
+				monthNameYear[1] = monthNameYear[1] + ", " +  ((String) monthYear[1]).substring(4);
+			else 
+				monthNameYear[1] = monthNameYear[1] + ", " +  ((String) monthYear[1]).substring(0,4);
+			return monthNameYear;
+		} catch (Exception e) {
+			logger.debug(" Could not get getLastAndNextPaymentsMonthYear" + e);
+			
+		}
+		return null;
+	}
+}

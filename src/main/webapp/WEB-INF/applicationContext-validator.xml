@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- Validators -->
+	<bean id="vHeaderValidator" class="com.cdoe.ui.validator.VHeaderValidator"/>
+	<bean id="stateEqualValidator" class="com.cdoe.ui.validator.stateequal.StateEqualValidator"/>
+	<bean id="auditEqualValidator" class="com.cdoe.ui.validator.audit.AuditEqualValidator"/>
+	<bean id="commentInfoValidator" class="com.cdoe.ui.validator.stateequal.CommentInfoValidator"/>
+	<bean id="vDataValidator" class="com.cdoe.ui.validator.VDataValidator"/>
+	<bean id="electionsDetailValidator" class="com.cdoe.ui.validator.stateequal.ElectionsDetailValidator"/>
+	<bean id="transportationValidator" class="com.cdoe.ui.validator.transportation.TransportationValidator"/>
+	<bean id="prorateValidator" class="com.cdoe.ui.validator.transportation.ProrateValidator"/>
+	<bean id="cde40TransFormValidator" class="com.cdoe.ui.validator.transportation.Cde40TransFormValidator"/>
+	<bean id="cde40SummaryValidator" class="com.cdoe.ui.validator.transportation.Cde40SummaryValidator"/>
+	<bean id="capitalOutlayValidator" class="com.cdoe.ui.validator.transportation.CapitalOutlayValidator"/>
+	<bean id="auditFpcValidator" class="com.cdoe.ui.validator.AuditFpcValidator"/>
+	<bean id="auditSasidExceptionValidator" class="com.cdoe.ui.validator.audit.AuditSasidExceptionValidator"/>
+	<bean id="auditTrackingValidator" class="com.cdoe.ui.validator.audit.AuditTrackingValidator"/>
+	<bean id="auditTranValidator" class="com.cdoe.ui.validator.audit.AuditTranValidator"/>
+	<bean id="auditRepaymentAdjustmentValidator" class="com.cdoe.ui.validator.AuditRepaymentAdjustmentValidator"/>
+	<bean id="otherStateShareAdjustmentsValidator" class="com.cdoe.ui.validator.stateequal.OtherStateShareAdjustmentsValidator"/>
+       <bean id="reportGenerationValidator" class="com.cdoe.ui.validator.ReportGenerationValidator"/>
+	<bean id="displayAdjustmentsValidator" class="com.cdoe.ui.validator.stateequal.DisplayAdjustmentsValidator"/>
+        <bean id="reportUploadValidator" class="com.cdoe.ui.validator.ReportUploadValidator"/>
+        <bean id="reportPrintValidator" class="com.cdoe.ui.validator.ReportViewPrintValidator"/>
+        <bean id="millLevyValidator" class="com.cdoe.ui.validator.stateequal.MillLevyValidator"/>
+    <bean id="millLevyOverrideValidator" class="com.cdoe.ui.validator.stateequal.MillLevyOverrideValidator"/>
+	
+</beans>
